@@ -1,4 +1,4 @@
-![PyEWS](https://i.ibb.co/rpKp9KK/Logo-Py-EWS.jpg)
+![PyEWS](https://i.ibb.co/YD4XKb8/02.png)
 
 
 

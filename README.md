@@ -25,6 +25,7 @@ El módulo tiene dependencias por lo que es necesario instalar `tabulate` el cua
 #VL: Tensión de línea.
 #In: Corriente nominal total de una de las fases.
 #Nc: Número de conductores por fase.
+#L:  Longitud en metros.
 #FA: Número de conducrtores activos en el tubo conduit.
 #Type: Tipo de tubo conduit (1:PVC,2:AL,3:ACERO)
 #Ta: Temperatura ambiente en centigrados, únicamente ingresar la opcion númerica.

@@ -25,7 +25,7 @@ El módulo tiene dependencias por lo que es necesario instalar `tabulate` el cua
 #VL: Tensión de línea.
 #In: Corriente nominal total de una de las fases.
 #Nc: Número de conductores por fase.
-#L:  Longitud en metros.
+#L : Longitud en metros.
 #FA: Número de conducrtores activos en el tubo conduit.
 #Type: Tipo de tubo conduit (1:PVC,2:AL,3:ACERO)
 #Ta: Temperatura ambiente en centigrados, únicamente ingresar la opcion númerica.
@@ -46,7 +46,7 @@ PyEWS.MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S)
 
 | Id   | Descripción                                                  | Módulo | Versión |                     Descargar                      |
 | ---- | ------------------------------------------------------------ | ------ | ------- | :------------------------------------------------: |
-| 1    | Módulo de baja tensión para conductores de cobre clase B con máxima tensión de operación de 600 V hasta 2000V | MBTCU  | 0.1.8   | [PyEWS 0.1.8](https://github.com/jacometoss/PyEWS) |
+| 1    | Módulo de baja tensión para conductores de cobre clase B con máxima tensión de operación de 600 V hasta 2000V | MBTCU  | 0.1.9   | [PyEWS 0.1.9](https://github.com/jacometoss/PyEWS) |
 
 ## Test
 

@@ -1,7 +1,9 @@
 from tabulate import tabulate
 
 def MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S):
-
+    
+#Tablas para 60, 75 y 90 C para conductores de cobre de 20 a 75 centigrados
+    
     db20cu01=[["14 AWG",0.657,1.314,0.759,0.759,20,20,25],
     ["12 AWG",1.014,2.027,1.171,1.171,25,25,30],
     ["10 AWG",1.675,3.351,1.935,1.935,30,35,40],

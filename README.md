@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ![PyEWS](https://i.ibb.co/YD4XKb8/02.png)
 
 
@@ -156,4 +155,3 @@ Los se resultados muestran con la iteración de todos los conductores tanto para
 
 1. [Norma Oficial Mexicana NOM-001-SEDE-2012, Instalaciones Eléctricas (utilización)](http://www.issste-cmn20n.gob.mx/Datos/Normas/136NOM.pdf)
 
->>>>>>> bb867c45d2c06904402e77f00d3366b3048a9c02

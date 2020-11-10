@@ -6,7 +6,7 @@
 
 
 
-El módulo PyEWS (0.1.10) sirve para obtener el dimensionamiento de conductores para una instalación eléctrica. Es fácil de utilizar e interpretar sus resultados generando un panorama más general al poder visualizar por completo una lista de conductores con los parámetros de entrada.
+El módulo PyEWS (0.1.12) sirve para obtener el dimensionamiento de conductores para una instalación eléctrica. Es fácil de utilizar e interpretar sus resultados generando un panorama más general al poder visualizar por completo una lista de conductores con los parámetros de entrada.
 
 ## Instalación
 
@@ -47,7 +47,7 @@ PyEWS.MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp)
 
 | Id   | Descripción                                                  | Módulo | Versión |                      Descargar                      |
 | ---- | ------------------------------------------------------------ | ------ | ------- | :-------------------------------------------------: |
-| 1    | Módulo de baja tensión para conductores de cobre clase B,  tensión de 600V a 2000V | MBTCU  | 0.1.10  | [PyEWS 0.1.10](https://github.com/jacometoss/PyEWS) |
+| 1    | Módulo de baja tensión para conductores de cobre clase B,  tensión de 600V a 2000V | MBTCU  | 0.1.12  | [PyEWS 0.1.12](https://github.com/jacometoss/PyEWS) |
 
 ## Test
 
@@ -80,5 +80,4 @@ PyEWS.DBC()
 ## Referencias
 
 1. [Norma Oficial Mexicana NOM-001-SEDE-2012, Instalaciones Eléctricas (utilización)](http://www.issste-cmn20n.gob.mx/Datos/Normas/136NOM.pdf)
-
 

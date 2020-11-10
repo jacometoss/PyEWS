@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='ElectricalWireSizes',
-    version='0.1.10',
+    version='0.1.12',
     url='https://github.com/jacometoss/PyEWS',
     license='GPL-3.0',
     author='Marco Polo Jacome Toss',
@@ -26,3 +26,4 @@ setup(
         'Operating System :: POSIX :: Linux',
     ],
 )
+

@@ -5,7 +5,7 @@ import math
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 | PYEWS, ElectricalWireSizes, 09/11/2020                                 |
-| Version : 0.1.10                                                       |
+| Version : 0.1.12                                                       |
 | Autor : Marco Polo Jacome Toss                                         |
 | License: GNU Affero General Public License v3 (GPL-3.0)                |
 | Requires: Python >=3.5                                                 |
@@ -48,16 +48,25 @@ def DBC():
     print(tabulate(dbConductor, headers=["AWG/KCM","R(Ω/km)", "X (Ω/km)","R (Ω/km)","X (Ω/km)", "R (Ω/km)", "X (Ω/km)", "60°C", "75°C", "90°C"], tablefmt='psql'))
     
 def MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp):
-    
-    FT60=round(math.sqrt((60-Ta)/(60-30)),3)
-    FT75=round(math.sqrt((60-Ta)/(60-30)),3)
-    FT90=round(math.sqrt((60-Ta)/(60-30)),3)
-    
 
-    
-    #FT60=[0,1.155,1.080,1.00,0.913,0.816,0.707,0.577,0.408,0,0,0,0]
-    #FT75=[0,1.106,1.054,1.00,0.943,0.882,0.816,0.745,0.667,0.577,0.471,0.333,0]
-    #FT90=[0,1.080,1.041,1.00,0.957,0.913,0.866,0.816,0.764,0.707,0.645,0.577,0.5]
+    if Ta >= 60:
+        FT60=0.0
+    else :
+        FT60=round(math.sqrt((60-Ta)/(60-30)),3)
+
+    if Ta >= 75:
+        FT75=0.0
+    else :
+        FT75=round(math.sqrt((75-Ta)/(75-30)),3)
+
+
+    if Ta >= 90:
+        FT90=0.0
+    else :
+        FT90=round(math.sqrt((90-Ta)/(90-30)),3)
+
+
+
     SITM=[0,15,20,25,30,35,40,45,50,60,70,80,90,100,110,125,150,175,200,225,250,300,350,400,450,500,600,700,800,1000,1200,1600,2000,2500,3000,4000,5000,6000]
 
 
@@ -288,3 +297,4 @@ def MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp):
                     break
         
     print(tabulate(datos, headers=["AWG/KCM","1F/2H", "2F/3H","3F/3H","3F/4H", "60", "75", "90","%Vd/1F", "%Vd/2F","%Vd/3F","%Vd/3F","Nc", "In", "60", "75", "90", "Op", "ITM"], tablefmt='psql'))
+

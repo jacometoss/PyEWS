@@ -1,4 +1,4 @@
-![PyEWS](https://i.ibb.co/YD4XKb8/02.png)
+<img src="https://i.ibb.co/YD4XKb8/02.png" alt="PyEWS" style="zoom:50%;" />
 
 
 

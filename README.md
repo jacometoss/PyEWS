@@ -53,7 +53,7 @@ PyEWS.MBTAL(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,Op)
 | Id   | Descripción                                                  | Módulo | Versión |                      Descargar                      |
 | ---- | ------------------------------------------------------------ | ------ | ------- | :-------------------------------------------------: |
 | 1    | Módulo de baja tensión para conductores de cobre clase B, C y D  tensión de 600V a 2000V | MBTCU  | 0.1.15  | [PyEWS 0.1.15](https://github.com/jacometoss/PyEWS) |
-| 2    | Módulo de baja tensión para conductores de aluminio clase B, C y  d, tensión 600V a 200V | MBTAL  | 0.1.15  | [PyEWS 0.1.15](https://github.com/jacometoss/PyEWS) |
+| 2    | Módulo de baja tensión para conductores de aluminio clase B, C y  d, tensión 600V a 2000V | MBTAL  | 0.1.15  | [PyEWS 0.1.15](https://github.com/jacometoss/PyEWS) |
 
 ## Test
 

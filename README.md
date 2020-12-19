@@ -2,9 +2,9 @@
 
 
 
-# PyEWS - Python Electrical Wire Sizes 
+# Python Electrical Wire Sizes 
 
-El módulo PyEWS (0.1.14) sirve para obtener el dimensionamiento de conductores para una instalación eléctrica. Es fácil de utilizar e interpretar sus resultados generando un panorama más general al poder visualizar por completo una lista de conductores con los parámetros de entrada.
+El módulo PyEWS (0.1.15) puede ser utilizado para dimensionar conductores  de baja tensión de una instalación eléctrica. Es fácil de utilizar e interpretar sus resultados mostrando un panorama más general al poder visualizar por completo una lista de conductores propuestos con los parámetros de entrada.
 
 ## Instalación
 
@@ -41,15 +41,19 @@ El módulo tiene dependencias siendo necesario instalar `tabulate` el cual da un
 ```
 
 ```python
-import PyEWS 
+import PyEWS
+#Para conductores de cobre
 PyEWS.MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,Op)
+#Para conductores de aluminio
+PyEWS.MBTAL(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,Op)
 ```
 
 ## PyEWS Módulos
 
 | Id   | Descripción                                                  | Módulo | Versión |                      Descargar                      |
 | ---- | ------------------------------------------------------------ | ------ | ------- | :-------------------------------------------------: |
-| 1    | Módulo de baja tensión para conductores de cobre clase B,  tensión de 600V a 2000V | MBTCU  | 0.1.14  | [PyEWS 0.1.14](https://github.com/jacometoss/PyEWS) |
+| 1    | Módulo de baja tensión para conductores de cobre clase B, C y D  tensión de 600V a 2000V | MBTCU  | 0.1.15  | [PyEWS 0.1.15](https://github.com/jacometoss/PyEWS) |
+| 2    | Módulo de baja tensión para conductores de aluminio clase B, C y  d, tensión 600V a 200V | MBTAL  | 0.1.15  | [PyEWS 0.1.15](https://github.com/jacometoss/PyEWS) |
 
 ## Test
 
@@ -78,7 +82,8 @@ Para poder ampliar el módulo se agregó la tabla de conductores donde incluye l
 
 ```python
 import PyEWS
-PyEWS.DBC()
+#1 Conductores de cobre, 2 conductores de aluminio
+PyEWS.DBC(1)
 ```
 
 ## Múltiples cargas 
@@ -111,24 +116,34 @@ carga=[
 #Una forma sencilla de mostrar el total de cargas
 print("Total de cargas : ",len(carga))
 #Para mostar completo el desarrollo
-#----------PyEWS.DBCIRCUIT(carga,1)
+#----------PyEWS.DBCIRCUIT(carga,1,1) #Cobre
+#----------PyEWS.DBCIRCUIT(carga,1,2) #Aluminio
 #Para mostar el resumen únicamente 
-#----------PyEWS.DBCIRCUIT(carga,2)
+#----------PyEWS.DBCIRCUIT(carga,2,1) #Cobre
+#----------PyEWS.DBCIRCUIT(carga,2,2) #Aluminio
 ```
 
-Para mostrar el resumen únicamente
+Para mostrar el resumen para  conductores de cobre
 
 ```python
-PyEWS.DBCIRCUIT(carga,2)
+PyEWS.DBCIRCUIT(carga,2,1)
 ```
 
-![Resultados](https://i.ibb.co/hWV33Vj/Captura.jpg)
+![Resultados](https://i.ibb.co/Btdp62f/A.jpg)
+
+Para mostrar el resumen para conductores de aluminio
+
+```python
+PyEWS.DBCIRCUIT(carga,2,2)
+```
+
+![Resultados](https://i.ibb.co/DttdHzk/B.jpg)
 
 
 
 ## Referencias
 
-[1] Norma Oficial Mexicana NOM-001-SEDE-2012, Instalaciones Eléctricas (utilización)
+[1] Norma Oficial Mexicana NOM-001-SEDE-2012, *Instalaciones Eléctricas (utilización)*
 
 [2] Thue, W., 1978. *Electrical Power Cable Engineering*. 2nd ed. New York, Basel: Marcel Dekker Inc., p.34.
 

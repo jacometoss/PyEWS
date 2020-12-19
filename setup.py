@@ -2,12 +2,12 @@ from setuptools import setup, find_packages
 
 setup(
     name='ElectricalWireSizes',
-    version='0.1.14',
+    version='0.1.15',
     url='https://jacometoss.github.io/PyEWS/',
     license='GPL-3.0',
     author='Marco Polo Jacome Toss',
     author_email='jacometoss@outlook.com',
-    description='Module for dimensioning copper electrical conductors / Módulo para dimensionamiento de conductores eléctricos de cobre.',
+    description='Module for dimensioning copper electrical conductors / Módulo para dimensionamiento de conductores eléctricos de cobre y aluminio.',
     long_description=''.join(open('README.md', encoding='utf-8').readlines()),
     long_description_content_type='text/markdown',
     keywords=['PyEWS', 'electrical', 'conductor', 'size'],

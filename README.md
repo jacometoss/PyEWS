@@ -4,7 +4,7 @@
 
 # Python Electrical Wire Sizes 
 
-El módulo PyEWS (0.1.15) puede ser utilizado para dimensionar conductores  de baja tensión de una instalación eléctrica. Es fácil de utilizar e interpretar sus resultados mostrando un panorama más general al poder visualizar por completo una lista de conductores propuestos con los parámetros de entrada.
+El módulo PyEWS (**0.1.16**) puede ser utilizado para dimensionar conductores  de baja tensión de una instalación eléctrica. Es fácil de utilizar e interpretar sus resultados mostrando un panorama más general al poder visualizar por completo una lista de conductores propuestos con los parámetros de entrada.
 
 ## Instalación
 
@@ -48,12 +48,31 @@ PyEWS.MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,Op)
 PyEWS.MBTAL(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,Op)
 ```
 
+El módulo de corriente directa  necesita la información siguiente :
+
+```python
+#MODBTCUSTD(Vcd,In,Nc,L,Class,Ta,Vd,View):
+#Vcd   :  Tensión en corriente directa.
+#In    :  Corriente directa del circuito.
+#Nc    :  Número de conductores en corriente directa.
+#L     :  Longitud del circuito en metros.
+#Class :  Clase de conductor A:1 B:2 y C:3.
+#Ta	   :  Temperatura ambiente 
+#Vd	   :  Caída de tensión.
+#View  :  Mostrar los resultados adecuadamente en una tabla con 1 para multiples cargas debe ser 2.
+
+PyEWS.MBTCUSTD(1200,145,1,100,1,25,3,1)
+```
+
+
+
 ## PyEWS Módulos
 
-| Id   | Descripción                                                  | Módulo | Versión |                      Descargar                      |
-| ---- | ------------------------------------------------------------ | ------ | ------- | :-------------------------------------------------: |
-| 1    | Módulo de baja tensión para conductores de cobre clase B, C y D  tensión de 600V a 2000V | MBTCU  | 0.1.15  | [PyEWS 0.1.15](https://github.com/jacometoss/PyEWS) |
-| 2    | Módulo de baja tensión para conductores de aluminio clase B, C y  d, tensión 600V a 2000V | MBTAL  | 0.1.15  | [PyEWS 0.1.15](https://github.com/jacometoss/PyEWS) |
+| Id   | Descripción                                                  | Módulo   | Versión |                      Descargar                      |
+| ---- | ------------------------------------------------------------ | -------- | ------- | :-------------------------------------------------: |
+| 1    | Módulo de baja tensión para conductores de cobre clase B, C y D  tensión de 600V a 2000V | MBTCU    | 0.1.16  | [PyEWS 0.1.16](https://github.com/jacometoss/PyEWS) |
+| 2    | Módulo de baja tensión para conductores de aluminio clase B, C y  D, tensión 600V a 2000V | MBTAL    | 0.1.16  | [PyEWS 0.1.16](https://github.com/jacometoss/PyEWS) |
+| 3    | Módulo de baja tensión para conductores de cobre clase B, C  y D en corriente directa hasta 2000 V | MBTCUSTD | 0.1.16  | [PyEWS 0.1.16](https://github.com/jacometoss/PyEWS) |
 
 ## Test
 
@@ -82,11 +101,13 @@ Para poder ampliar el módulo se agregó la tabla de conductores donde incluye l
 
 ```python
 import PyEWS
-#1 Conductores de cobre, 2 conductores de aluminio
+#1 Conductores de cobre, 
+#2 conductores de aluminio, 
+#3 conductores de cobre estandar para corriente directa.
 PyEWS.DBC(1)
 ```
 
-## Múltiples cargas 
+## Múltiples cargas en corriente alterna
 
 Para implementar una gran variedad de cargas se organizan como se muestra en el bloque de código, puede agregar hasta 25 cargas.
 
@@ -139,7 +160,46 @@ PyEWS.DBCIRCUIT(carga,2,2)
 
 ![Resultados](https://i.ibb.co/DttdHzk/B.jpg)
 
+## Múltiples cargas en corriente directa 
 
+Para implementar una gran variedad de cargas se organizan como se muestra en el bloque de código, puede agregar hasta 25 cargas.
+
+```python
+#(Vcd,In,Nc,L,Class,Ta,Vd,View):
+cargacd=[
+    ["1",1200,30,1,100,1,25,3,2],
+    ["2",1200,30,1,100,1,25,3,2],
+    ["3",1200,30,1,100,1,25,3,2],
+    ["4",1200,30,1,100,1,25,3,2],
+    ["5",1200,30,1,100,1,25,3,2],
+    ["6",1200,30,1,100,1,25,3,2],
+    ["7",1200,30,1,100,1,25,3,2],
+    ["8",1200,30,1,100,1,25,3,2],
+    ["9",1200,30,1,100,1,25,3,2],
+    ["10",1200,30,1,100,1,25,3,2],
+    ["11",1200,30,1,100,1,25,3,2],
+    ["12",1200,30,1,100,1,25,3,2],
+    ["13",1200,30,1,100,1,25,3,2],
+    ["14",1200,30,1,100,1,25,3,2]
+    ]
+print("Total de cargas : ",len(cargacd))
+DBCIRCUITCD(cargacd,2,1)
+
+#Para mostar completo el desarrollo
+#----------PyEWS.DBCIRCUITCD(carga,1,1) #Cobre Estándar
+#----------PyEWS.DBCIRCUITCD(carga,1,2) #Aluminio No disponible
+#Para mostar el resumen únicamente 
+#----------PyEWS.DBCIRCUITCD(carga,2,1) #Cobre Estándar
+#----------PyEWS.DBCIRCUITCD(carga,2,2) #Aluminio No disponible
+```
+
+Para mostrar el resumen para  conductores de cobre estándar
+
+```
+DBCIRCUITCD(cargacd,2,2)
+```
+
+![MODBTCD](https://i.ibb.co/rswpHm2/04.jpg)
 
 ## Referencias
 

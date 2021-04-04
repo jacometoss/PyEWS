@@ -80,7 +80,7 @@ El módulo tiene dependencias por lo que es necesario instalar `tabulate` el cua
 
 ```python
 import PyEWS
-PyEWS.MBTCU(127,220,15,1,22,1,1,35,3,1,0.9,1)
+PyEWS.MBTCU(127,220,15,1,22,1,1,35,3,1,0.9,1,1.25)
 ```
 
 Los se resultados muestran con la iteración de todos los conductores tanto para tensión monofásica como trifásica.

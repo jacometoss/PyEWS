@@ -4,7 +4,7 @@
 
 # Python Electrical Wire Sizes 
 
-El módulo PyEWS (**0.1.16**) puede ser utilizado para dimensionar conductores  de baja tensión de una instalación eléctrica. Es fácil de utilizar e interpretar sus resultados mostrando un panorama más general al poder visualizar por completo una lista de conductores propuestos con los parámetros de entrada.
+El módulo PyEWS ( **Versión 0.1.17**) puede ser utilizado para dimensionar conductores  de baja tensión de una instalación eléctrica. Es fácil de utilizar e interpretar sus resultados mostrando un panorama más general al poder visualizar por completo una lista de conductores propuestos con los parámetros de entrada.
 
 ## Instalación
 
@@ -37,15 +37,15 @@ El módulo tiene dependencias siendo necesario instalar `tabulate` el cual da un
 	 1: Mostrar los resultados adecuadamente estructurado en una tabla. 
 	 2: Mostrar los resultados como datos acumulados. Esta opción es necesario cuando se activa
 	 	la función para múltiples cargas.
-	
+#Fsc: Factor de sobrecorriente (1.25,1.0)
 ```
 
 ```python
 import PyEWS
 #Para conductores de cobre
-PyEWS.MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,Op)
+PyEWS.MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc)
 #Para conductores de aluminio
-PyEWS.MBTAL(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,Op)
+PyEWS.MBTAL(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc)
 ```
 
 El módulo de corriente directa  necesita la información siguiente :
@@ -61,7 +61,7 @@ El módulo de corriente directa  necesita la información siguiente :
 #Vd	   :  Caída de tensión.
 #View  :  Mostrar los resultados adecuadamente en una tabla con 1 para multiples cargas debe ser 2.
 
-PyEWS.MBTCUSTD(1200,145,1,100,1,25,3,1)
+PyEWS.MBTCUSTD(1200,145,1,100,1,25,3,1,1.25)
 ```
 
 
@@ -70,9 +70,9 @@ PyEWS.MBTCUSTD(1200,145,1,100,1,25,3,1)
 
 | Id   | Descripción                                                  | Módulo   | Versión |                      Descargar                      |
 | ---- | ------------------------------------------------------------ | -------- | ------- | :-------------------------------------------------: |
-| 1    | Módulo de baja tensión para conductores de cobre clase B, C y D  tensión de 600V a 2000V | MBTCU    | 0.1.16  | [PyEWS 0.1.16](https://github.com/jacometoss/PyEWS) |
-| 2    | Módulo de baja tensión para conductores de aluminio clase B, C y  D, tensión 600V a 2000V | MBTAL    | 0.1.16  | [PyEWS 0.1.16](https://github.com/jacometoss/PyEWS) |
-| 3    | Módulo de baja tensión para conductores de cobre clase B, C  y D en corriente directa hasta 2000 V | MBTCUSTD | 0.1.16  | [PyEWS 0.1.16](https://github.com/jacometoss/PyEWS) |
+| 1    | Módulo de baja tensión para conductores de cobre clase B, C y D  tensión de 600V a 2000V | MBTCU    | 0.1.17  | [PyEWS 0.1.17](https://github.com/jacometoss/PyEWS) |
+| 2    | Módulo de baja tensión para conductores de aluminio clase B, C y  D, tensión 600V a 2000V | MBTAL    | 0.1.17  | [PyEWS 0.1.17](https://github.com/jacometoss/PyEWS) |
+| 3    | Módulo de baja tensión para conductores de cobre clase B, C  y D en corriente directa hasta 2000 V | MBTCUSTD | 0.1.17  | [PyEWS 0.1.17](https://github.com/jacometoss/PyEWS) |
 
 ## Test
 
@@ -113,26 +113,26 @@ Para implementar una gran variedad de cargas se organizan como se muestra en el 
 
 ```python
 carga=[
-     ["1",127,220,15,1,22,1,1,35,3,1,0.9,2],
-     ["2",127,220,12,1,22,1,1,25,3,1,0.9,2],
-     ["2",127,220,22,1,22,1,1,25,3,1,0.9,2],
-     ["2",127,220,22,1,22,1,1,25,3,1,0.9,2],
-     ["2",127,220,22,1,22,1,1,25,3,1,0.9,2],
-     ["2",127,220,22,1,22,1,1,25,3,1,0.9,2],
-     ["2",127,220,22,1,22,1,1,25,3,1,0.9,2],
-     ["2",127,220,22,1,22,1,1,25,3,1,0.9,2],
-     ["1",127,220,15,1,22,1,1,35,3,1,0.9,2],    
-     ["2",127,220,22,1,22,1,1,25,3,1,0.9,2],
-     ["1",127,220,15,1,22,1,1,35,3,1,0.9,2],
-     ["2",127,220,22,1,22,1,1,25,3,1,0.9,2],
-     ["2",127,220,22,1,22,1,1,25,3,1,0.9,2],
-     ["2",127,220,22,1,22,1,1,25,3,1,0.9,2],
-     ["2",127,220,22,1,22,1,1,25,3,1,0.9,2],
-     ["2",127,220,22,1,22,1,1,25,3,1,0.9,2],
-     ["2",127,220,22,1,22,1,1,25,3,1,0.9,2],    
-     ["2",127,220,22,1,22,1,1,25,3,1,0.9,2],
-     ["2",127,220,22,1,22,1,1,25,3,1,0.9,2],
-    ["3",127,220,196,3,55,0.8,3,75,3,3,0.9,2]
+     ["1",127,220,15,1,22,1,1,35,3,1,0.9,2,1.25],
+     ["2",127,220,12,1,22,1,1,25,3,1,0.9,2,1.25],
+     ["3",127,220,22,1,22,1,1,25,3,1,0.9,2,1.25],
+     ["4",127,220,22,1,22,1,1,25,3,1,0.9,2,1.25],
+     ["4",127,220,22,1,22,1,1,25,3,1,0.9,2,1.25],
+     ["6",127,220,22,1,22,1,1,25,3,1,0.9,2,1.25],
+     ["7",127,220,22,1,22,1,1,25,3,1,0.9,2,1.25],
+     ["8",127,220,22,1,22,1,1,25,3,1,0.9,2,1.25],
+     ["9",127,220,15,1,22,1,1,35,3,1,0.9,2,1.25],    
+     ["10",127,220,22,1,22,1,1,25,3,1,0.9,2,1.25],
+     ["11",127,220,15,1,22,1,1,35,3,1,0.9,2,1.25],
+     ["12",127,220,22,1,22,1,1,25,3,1,0.9,2,1.25],
+     ["13",127,220,22,1,22,1,1,25,3,1,0.9,2,1.25],
+     ["14",127,220,22,1,22,1,1,25,3,1,0.9,2,1.25],
+     ["15",127,220,22,1,22,1,1,25,3,1,0.9,2,1.25],
+     ["16",127,220,22,1,22,1,1,25,3,1,0.9,2,1.25],
+     ["17",127,220,22,1,22,1,1,25,3,1,0.9,2,1.25],    
+     ["18",127,220,22,1,22,1,1,25,3,1,0.9,2,1.25],
+     ["19",127,220,22,1,22,1,1,25,3,1,0.9,2,1.25],
+     ["20",127,220,196,3,55,0.8,3,75,3,3,0.9,2,1.25]
     ]
 #Una forma sencilla de mostrar el total de cargas
 print("Total de cargas : ",len(carga))
@@ -167,20 +167,20 @@ Para implementar una gran variedad de cargas se organizan como se muestra en el 
 ```python
 #(Vcd,In,Nc,L,Class,Ta,Vd,View):
 cargacd=[
-    ["1",1200,30,1,100,1,25,3,2],
-    ["2",1200,30,1,100,1,25,3,2],
-    ["3",1200,30,1,100,1,25,3,2],
-    ["4",1200,30,1,100,1,25,3,2],
-    ["5",1200,30,1,100,1,25,3,2],
-    ["6",1200,30,1,100,1,25,3,2],
-    ["7",1200,30,1,100,1,25,3,2],
-    ["8",1200,30,1,100,1,25,3,2],
-    ["9",1200,30,1,100,1,25,3,2],
-    ["10",1200,30,1,100,1,25,3,2],
-    ["11",1200,30,1,100,1,25,3,2],
-    ["12",1200,30,1,100,1,25,3,2],
-    ["13",1200,30,1,100,1,25,3,2],
-    ["14",1200,30,1,100,1,25,3,2]
+    ["1",1200,30,1,100,1,25,3,2,1.25],
+    ["2",1200,30,1,100,1,25,3,2,1.25],
+    ["3",1200,30,1,100,1,25,3,2,1.25],
+    ["4",1200,30,1,100,1,25,3,2,1.25],
+    ["5",1200,30,1,100,1,25,3,2,1.25],
+    ["6",1200,30,1,100,1,25,3,2,1.25],
+    ["7",1200,30,1,100,1,25,3,2,1.25],
+    ["8",1200,30,1,100,1,25,3,2,1.25],
+    ["9",1200,30,1,100,1,25,3,2,1.25],
+    ["10",1200,30,1,100,1,25,3,2,1.25],
+    ["11",1200,30,1,100,1,25,3,2,1.25],
+    ["12",1200,30,1,100,1,25,3,2,1.25],
+    ["13",1200,30,1,100,1,25,3,2,1.25],
+    ["14",1200,30,1,100,1,25,3,2,1.25]
     ]
 print("Total de cargas : ",len(cargacd))
 DBCIRCUITCD(cargacd,2,1)
@@ -200,6 +200,22 @@ DBCIRCUITCD(cargacd,2,2)
 ```
 
 ![MODBTCD](https://i.ibb.co/rswpHm2/04.jpg)
+
+## Impedancia unitaria 
+
+Para obtener las constantes únicamente utilice las líneas siguientes 
+
+```python
+import PyEWS
+#ZpuCu(Type,Ta,Fp,View)
+PyEWS.ZpuCu(1,10,0.9,1) 
+#ZpuAl(Type,Ta,Fp,View)
+PyEWS.ZpuAl(1,10,0.9,1) 
+```
+
+![Zpu](https://i.ibb.co/D1syMzL/Zpu.jpg)
+
+
 
 ## Referencias
 

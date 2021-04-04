@@ -3,8 +3,8 @@ import math
 
 '''
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-| PYEWS, ElectricalWireSizes, 24/01/2021                                 |
-| Version : 0.1.16                                                       |
+| PYEWS, ElectricalWireSizes, 03/04/2021                                 |
+| Version : 0.1.17                                                       |
 | Autor : Marco Polo Jacome Toss                                         |
 | License: GNU Affero General Public License v3 (GPL-3.0)                |
 | Requires: Python >=3.5                                                 |
@@ -120,9 +120,122 @@ def FCT(Ta):
     else :
         FT90=round(math.sqrt((90-Ta)/(90-30)),3)
         return FT90
-        
+
     
-def MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View):
+def ZpuCu(Type,Ta,Fp,View):
+
+    if Type==1:
+    #Conductores en ducto de PVC
+        Rj=1
+        Xj=2
+    elif Type==2:
+    #Conductores en ducto de Alumunio
+        Rj=3
+        Xj=4
+    elif Type==3:
+    #Conductores en ducto de Acero
+        Rj=5
+        Xj=6
+    #print(tabulate(datos))
+
+    datos=[["14 AWG"],
+        ["12 AWG"],
+        ["10 AWG"],
+        ["8 AWG"],
+        ["6 AWG"],
+        ["4 AWG"],
+        ["2 AWG"],
+        ["1/0 AWG"],
+        ["2/0 AWG"],
+        ["3/0 AWG"],
+        ["4/0 AWG"],
+        ["250 KCM"],
+        ["300 KCM"],
+        ["350 KCM"],
+        ["400 KCM"],
+        ["500 KCM"],
+        ["600 KCM"],
+        ["750 KCM"],
+        ["1000 KCM"]]
+
+    for i in range(len(dbConductorCu)):
+        Zunitaria=Z(round(Rn(dbConductorCu[i][Rj],Ta),4),dbConductorCu[i][Xj],Fp)
+        datos[i].append(Zunitaria[0])
+
+    for i in range(len(dbConductorCu)):
+        Zunitaria=Z(round(Rn(dbConductorCu[i][Rj],Ta),4),dbConductorCu[i][Xj],Fp)
+        datos[i].append(Zunitaria[1])
+
+    for i in range(len(dbConductorCu)):
+        Zunitaria=Z(round(Rn(dbConductorCu[i][Rj],Ta),4),dbConductorCu[i][Xj],Fp)
+        datos[i].append(Zunitaria[2])
+
+    for i in range(len(dbConductorCu)):
+        Zunitaria=Z(round(Rn(dbConductorCu[i][Rj],Ta),4),dbConductorCu[i][Xj],Fp)
+        datos[i].append(Zunitaria[3])
+        
+    if (View ==1):    
+        return print(tabulate(datos, headers=["AWG/KCM","1F/2H", "2F/3H","3F/3H","3F/4H"], tablefmt='psql'))
+    elif (View==2):
+        return  datos
+    
+
+def ZpuAl(Type,Ta,Fp,View):
+
+    if Type==1:
+    #Conductores en ducto de PVC
+        Rj=1
+        Xj=2
+    elif Type==2:
+    #Conductores en ducto de Alumunio
+        Rj=3
+        Xj=4
+    elif Type==3:
+    #Conductores en ducto de Acero
+        Rj=5
+        Xj=6
+    #print(tabulate(datos))
+
+    datos=[
+    ["6 AWG"],
+    ["4 AWG"],
+    ["2 AWG"],
+    ["1/0 AWG"],
+    ["2/0 AWG"],
+    ["3/0 AWG"],
+    ["4/0 AWG"],
+    ["250 KCM"],
+    ["300 KCM"],
+    ["350 KCM"],
+    ["400 KCM"],
+    ["500 KCM"],
+    ["600 KCM"],
+    ["750 KCM"],
+    ["1000 KCM"]]
+
+    for i in range(len(dbConductorAl)):
+         Zunitaria=Z(round(Rn(dbConductorAl[i][Rj],Ta),4),dbConductorAl[i][Xj],Fp)
+         datos[i].append(Zunitaria[0])
+         
+    for i in range(len(dbConductorAl)):
+         Zunitaria=Z(round(Rn(dbConductorAl[i][Rj],Ta),4),dbConductorAl[i][Xj],Fp)
+         datos[i].append(Zunitaria[1])
+         
+    for i in range(len(dbConductorAl)):
+         Zunitaria=Z(round(Rn(dbConductorAl[i][Rj],Ta),4),dbConductorAl[i][Xj],Fp)
+         datos[i].append(Zunitaria[2])
+         
+    for i in range(len(dbConductorAl)):
+         Zunitaria=Z(round(Rn(dbConductorAl[i][Rj],Ta),4),dbConductorAl[i][Xj],Fp)
+         datos[i].append(Zunitaria[3])
+        
+    if (View ==1):    
+        return print(tabulate(datos, headers=["AWG/KCM","1F/2H", "2F/3H","3F/3H","3F/4H"], tablefmt='psql'))
+    elif (View==2):
+        return  datos 
+
+    
+def MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View,Fsc):
 
     if Ta >= 60:
         FT60=0.0
@@ -251,7 +364,7 @@ def MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View):
                 datos[i].append('Not')
                 
             for j in range(len(SITM)):
-                if (SITM[j]>Nc*In*1.25):
+                if (SITM[j]>=Nc*In*Fsc):
                     datos[i].append(SITM[j])
                     break
                     
@@ -289,7 +402,7 @@ def MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View):
                 datos[i].append('Not')
             
             for j in range(len(SITM)):
-                if (SITM[j]>Nc*In*1.25):
+                if (SITM[j]>=Nc*In*Fsc):
                     datos[i].append(SITM[j])
                     break
                      
@@ -329,7 +442,7 @@ def MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View):
                 datos[i].append('Not')
 
             for j in range(len(SITM)):
-                if (SITM[j]>Nc*In*1.25):
+                if (SITM[j]>=Nc*In*Fsc):
                     datos[i].append(SITM[j])
                     break
                                     
@@ -366,7 +479,7 @@ def MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View):
                 datos[i].append('Not')
                     
             for j in range(len(SITM)):
-                if (SITM[j]>Nc*In*1.25):
+                if (SITM[j]>=Nc*In*Fsc):
                     datos[i].append(SITM[j])
                     break
     if View == 1:
@@ -377,7 +490,7 @@ def MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View):
         return datos
     
 
-def MBTAL(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View):
+def MBTAL(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View,Fsc):
 
     if Ta >= 60:
         FT60=0.0
@@ -503,7 +616,7 @@ def MBTAL(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View):
                 datos[i].append('Not')
                 
             for j in range(len(SITM)):
-                if (SITM[j]>Nc*In*1.25):
+                if (SITM[j]>=Nc*In*Fsc):
                     datos[i].append(SITM[j])
                     break
                     
@@ -541,7 +654,7 @@ def MBTAL(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View):
                 datos[i].append('Not')
             
             for j in range(len(SITM)):
-                if (SITM[j]>Nc*In*1.25):
+                if (SITM[j]>=Nc*In*Fsc):
                     datos[i].append(SITM[j])
                     break
                      
@@ -581,7 +694,7 @@ def MBTAL(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View):
                 datos[i].append('Not')
 
             for j in range(len(SITM)):
-                if (SITM[j]>Nc*In*1.25):
+                if (SITM[j]>=Nc*In*Fsc):
                     datos[i].append(SITM[j])
                     break
                                     
@@ -618,7 +731,7 @@ def MBTAL(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View):
                 datos[i].append('Not')
                     
             for j in range(len(SITM)):
-                if (SITM[j]>Nc*In*1.25):
+                if (SITM[j]>=Nc*In*Fsc):
                     datos[i].append(SITM[j])
                     break
     if View == 1:
@@ -628,7 +741,7 @@ def MBTAL(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View):
         #Mostrar la información en lista
         return datos
 ##-----------------------------------------------------------------------------------------------------------##
-def MBTCUSTD(Vcd,In,Nc,L,Class,Ta,Vd,View):
+def MBTCUSTD(Vcd,In,Nc,L,Class,Ta,Vd,View,Fsc):
 
     if Ta >= 60:
         FT60=0.0
@@ -736,7 +849,7 @@ def MBTCUSTD(Vcd,In,Nc,L,Class,Ta,Vd,View):
             datos[i].append('Not')                
         
         for j in range(len(SITM)):
-            if (SITM[j]>Nc*In*1.25):
+            if (SITM[j]>=Nc*In*Fsc):
                 datos[i].append(SITM[j])
                 break
                 
@@ -803,9 +916,9 @@ def DBCIRCUIT(carga,view,conductor):
     datos=[]  
     for i in range(len(carga)):
         if conductor ==1:
-            datos.append(MBTCU(carga[i][1],carga[i][2],carga[i][3],carga[i][4],carga[i][5],carga[i][6],carga[i][7],carga[i][8],carga[i][9],carga[i][10],carga[i][11],carga[i][12])) 
+            datos.append(MBTCU(carga[i][1],carga[i][2],carga[i][3],carga[i][4],carga[i][5],carga[i][6],carga[i][7],carga[i][8],carga[i][9],carga[i][10],carga[i][11],carga[i][12],carga[i][13])) 
         elif conductor ==2:
-            datos.append(MBTAL(carga[i][1],carga[i][2],carga[i][3],carga[i][4],carga[i][5],carga[i][6],carga[i][7],carga[i][8],carga[i][9],carga[i][10],carga[i][11],carga[i][12])) 
+            datos.append(MBTAL(carga[i][1],carga[i][2],carga[i][3],carga[i][4],carga[i][5],carga[i][6],carga[i][7],carga[i][8],carga[i][9],carga[i][10],carga[i][11],carga[i][12],carga[i][13])) 
         if view==1:
             print("Id [",i+1,"]========================================================================================================================================================================")
             print(tabulate(datos[i], headers=["AWG/KCM","1F/2H", "2F/3H","3F/3H","3F/4H", "60", "75", "90","%Vd/1F", "%Vd/2F","%Vd/3F","%Vd/3F","Nc", "In", "60", "75", "90", "Op", "ITM"], tablefmt='psql'))
@@ -932,12 +1045,12 @@ def DBCIRCUITCD(carga,view,conductor):
     datos=[]  
     for i in range(len(carga)):
         if conductor == 1:
-            datos.append(MBTCUSTD(carga[i][1],carga[i][2],carga[i][3],carga[i][4],carga[i][5],carga[i][6],carga[i][7],carga[i][8])) 
+            datos.append(MBTCUSTD(carga[i][1],carga[i][2],carga[i][3],carga[i][4],carga[i][5],carga[i][6],carga[i][7],carga[i][8],carga[i][9])) 
             if view==1:
                 print("Id [",i+1,"]============================================================================================================")
                 print(tabulate(datos[i], headers=["AWG/KCMxx","Kcd [A,B,C]", "", "60", "75", "90","%Vd","Nc", "In", "60", "75", "90", "Op", "ITM"], tablefmt='psql'))
         elif conductor == 2:
-            datos.append(MBTCUSTD(carga[i][1],carga[i][2],carga[i][3],carga[i][4],carga[i][5],carga[i][6],carga[i][7],carga[i][8]))
+            datos.append(MBTCUSTD(carga[i][1],carga[i][2],carga[i][3],carga[i][4],carga[i][5],carga[i][6],carga[i][7],carga[i][8],carga[i][9]))
             if view==1:
                 print("Id [",i+1,"]============================================================================================================")
                 print(tabulate(datos[i], headers=["AWG/KCM","Kcd [A,B,C]", "", "60", "75", "90","%Vd","Nc", "In", "60", "75", "90", "Op", "ITM"], tablefmt='psql'))

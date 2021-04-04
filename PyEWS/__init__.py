@@ -6,5 +6,5 @@ from .PyEWS import Rn
 from .PyEWS import Z
 from .PyEWS import DBCIRCUIT
 from .PyEWS import DBCIRCUITCD
-
-
+from .PyEWS import ZpuAl
+from .PyEWS import ZpuCu

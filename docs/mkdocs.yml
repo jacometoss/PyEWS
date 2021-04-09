@@ -1,0 +1,37 @@
+site_name: SELisp
+site_description: Autolisp SELisp
+copyright: Creado por Marco Polo Jácome Toss
+---repo_url: https://github.com/jacometoss/SELisp/
+
+nav:
+    - Inicio: index.md
+    - MODBTCU: modbtcu.md
+    - MODBTAL: modbtal.md
+    - ADUCT: aduct.md
+    - History: history.md
+    - Buy: buy.md
+    - License: license.md
+    
+    
+google_analytics: ['G-PZ0KN6X3RF', 'jacometoss.github.io/SELisp/']
+
+theme: 
+    name: readthedocs
+    nav_style: dark
+    highlightjs: true
+    hljs_languages:
+        - scilab
+        - lisp
+        - php
+    include_sidebar: false 
+
+markdown_extensions:
+    - smarty
+    
+version: 2
+    
+plugins:
+    - search:
+        min_search_length: 2
+        separator: '[\s\-\.]+'
+

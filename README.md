@@ -1,3 +1,7 @@
+[![PyPI version](https://badge.fury.io/py/ElectricalWireSizes.svg)](https://badge.fury.io/py/ElectricalWireSizes)
+[![versons of python supported by carsons](https://img.shields.io/badge/python-3%20%7C%203.5%20%7C%203.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue)](https://pypi.org/project/ElectricalWireSizes/)
+[![Build Status](https://travis-ci.org/jacometoss/PyEWS.svg?branch=master)](https://travis-ci.org/jacometoss/PyEWS)
+
 <img src="https://i.ibb.co/YD4XKb8/02.png" alt="PyEWS" style="zoom: 80%;" />
 
 

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>ADUCT - SELisp</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "ADUCT";
+    var mkdocs_page_input_path = "aduct.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scilab.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lisp.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/php.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'G-PZ0KN6X3RF', 'jacometoss.github.io/SELisp/');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> SELisp</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Inicio</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../modbtcu/">MODBTCU</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../modbtal/">MODBTAL</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">ADUCT</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#comando">Comando</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#informacion-general">Información General</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#porcentaje-de-la-seccion-transversal-en-tubo-conduit">Porcentaje de la sección transversal en tubo conduit</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../history/">History</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../buy/">Buy</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../license/">License</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">SELisp</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>ADUCT</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="documentacion-aduct">Documentación ADUCT</h1>
+<p>​   La rutina <code>aduct</code>tiene la propiedad de calcular la sección de tubería requerida para una instalación eléctrica. </p>
+<h2 id="comando">Comando</h2>
+<p>El módulo ADUCT para poder iniciarlo es necesario cargarlo e ingresar el comando siguiente :</p>
+<ul>
+<li><code>pipeline</code> - Iniciar la rutina ADUCT.</li>
+</ul>
+<h2 id="informacion-general">Información General</h2>
+<p>Para poder dimensionar la sección de la tubería siga los pasos que se muestran.</p>
+<pre><code>Las opciones de tubería son las siguientes ;
+
+    -EMT Tubo conduit metálico
+    -ENT Tubo conduit no metálico
+    -FMC Tubo conduit metálico flexible
+    -IMC Tubo conduit metálico semipesado
+    -LFNC-B Tubo conduit no metálico flexible hermético a los liquidos
+    -LFNC-A Tubo conduit no metálico flexible hermético a los liquidos
+    -LFMC Tubo conduit metálico flexible hermético a los liquidos
+    -RMC Tubo conduit metálico pesado 
+    -PVC-80 Tubo conduit rígido de pvc cédula 80
+    -PVC-40 Tubo conduit rígido de pvc cédula 40 y HDPE
+    -PVC-A Tubo conduit rígido de pvc tipo A
+    -PVC-80 Tubo conduit rígido de pvc cédula 80
+
+Seleccione el número de conductores para establecer el factor de relleno,
+
+    -1 Conductor
+    -2 Conductores
+    -3 Mas de tres conductores
+
+Ingrese la sección de todos los conductores en mm².
+
+</code></pre>
+
+<h2 id="porcentaje-de-la-seccion-transversal-en-tubo-conduit">Porcentaje de la sección transversal en tubo conduit</h2>
+<p>Se basa en las condiciones más comunes de cableado y alineación de los conductores, cuando la longitud de los tramos y el número de curvas de los cables están dentro de límites razonables. Sin embargo, en determinadas condiciones se podrá ocupar una parte mayor o menor de los conductos.</p>
+<table>
+<thead>
+<tr>
+<th>Número de conductores</th>
+<th>Todos los tipos de conductores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>53%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>31%</td>
+</tr>
+<tr>
+<td>Más de 2</td>
+<td>40%</td>
+</tr>
+</tbody>
+</table>
+<p>Los porcentajes anteriores son utilizados en la rutina ACDUCT , basando las secciones de la Tabla 4 del Capítulo 10 de la NOM-001-SEDE-2012.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../history/" class="btn btn-neutral float-right" title="History">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../modbtal/" class="btn btn-neutral" title="MODBTAL"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Creado por Marco Polo Jácome Toss</p>
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../modbtal/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../history/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

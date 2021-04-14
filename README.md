@@ -1,8 +1,9 @@
 [![PyPI version](https://badge.fury.io/py/ElectricalWireSizes.svg)](https://badge.fury.io/py/ElectricalWireSizes)
 [![Downloads](https://pepy.tech/badge/electricalwiresizes)](https://pepy.tech/project/electricalwiresizes)
 [![Downloads](https://pepy.tech/badge/electricalwiresizes/month)](https://pepy.tech/project/electricalwiresizes)
-[![versons of python supported by carsons](https://img.shields.io/badge/python-3%20%7C%203.5%20%7C%203.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue)](https://pypi.org/project/ElectricalWireSizes/)
-[![Build Status](https://travis-ci.org/jacometoss/PyEWS.svg?branch=master)](https://travis-ci.org/jacometoss/PyEWS)
+[![versons of python supported](https://img.shields.io/badge/python-3%20%7C%203.5%20%7C%203.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue)](https://pypi.org/project/ElectricalWireSizes/)
+[![Maintainability](https://api.codeclimate.com/v1/badges/27c48038801ee954796d/maintainability)](https://codeclimate.com/github/jacometoss/PyEWS/maintainability)
+
 
 <img src="https://i.ibb.co/YD4XKb8/02.png" alt="PyEWS" style="zoom: 80%;" />
 

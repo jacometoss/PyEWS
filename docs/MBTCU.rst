@@ -1,10 +1,6 @@
-| |image1|
-| |image2|
-| |image3|
-| |image4|
-| |image5|\ |image6|
+|image1|\ |image2|\ |image3|\ |image4|\ |image5|\ |image6|
 
-.. _header-n4:
+.. _header-n31:
 
 Módulo de baja tensión para conductores de cobre
 ================================================
@@ -12,7 +8,7 @@ Módulo de baja tensión para conductores de cobre
 El módulo comprende conductores de cobre estandarizados desde clase B, C
 y D.
 
-.. _header-n9:
+.. _header-n33:
 
 Iniciar paquete de instalación
 ------------------------------
@@ -22,33 +18,33 @@ cual da una mejor apariencia al momento de mostrar los resultados.
 
 .. code:: tex
 
-   #VF: Tensión de fase o en su defecto tensión de línea para sistemas de 1F2H, 2F.
-   #VL: Tensión de línea.
-   #In: Corriente nominal total de una de las fases.
-   #Nc: Número de conductores por fase.
-   #L : Longitud en metros.
-   #FA: Número de conducrtores activos en el tubo conduit.
-   #Type: Tipo de tubo conduit (1:PVC,2:AL,3:ACERO)
-   #Ta: Temperatura ambiente en centigrados, únicamente ingresar la opcion númerica.
-   ---- 1:20 2:25 3:30 4:35 5:40 6:45 7:50 8:55 9:60 10:65 11:70 12:75
-   #Vd: Caída de tensión (porcentual de 2, 3, 5)
-   ---- 2,3,5	
-   #S:  Seleccione el sistema que desea propner en base a este se muestran los resultados.
-   ---- 1:(1F-2H) 2:(2F-3H) 3:(3F-3H) 4:(3F-4H)
-   #Fp: Factor de potencia
-   #Op: Opción para mostrar resultados
-   	 1: Mostrar los resultados adecuadamente estructurado en una tabla. 
-   	 2: Mostrar los resultados como datos acumulados. Esta opción es necesario cuando se activa
-   	 	la función para múltiples cargas.
+   #VF: Tensión de fase o en su defecto tensión de línea para sistemas de 1F2H, 2F.
+   #VL: Tensión de línea.
+   #In: Corriente nominal total de una de las fases.
+   #Nc: Número de conductores por fase.
+   #L : Longitud en metros.
+   #FA: Número de conducrtores activos en el tubo conduit.
+   #Type: Tipo de tubo conduit (1:PVC,2:AL,3:ACERO)
+   #Ta: Temperatura ambiente en centigrados, únicamente ingresar la opcion númerica.
+   ---- 1:20 2:25 3:30 4:35 5:40 6:45 7:50 8:55 9:60 10:65 11:70 12:75
+   #Vd: Caída de tensión (porcentual de 2, 3, 5)
+   ---- 2,3,5	
+   #S:  Seleccione el sistema que desea propner en base a este se muestran los resultados.
+   ---- 1:(1F-2H) 2:(2F-3H) 3:(3F-3H) 4:(3F-4H)
+   #Fp: Factor de potencia
+   #Op: Opción para mostrar resultados
+   	 1: Mostrar los resultados adecuadamente estructurado en una tabla. 
+   	 2: Mostrar los resultados como datos acumulados. Esta opción es necesario cuando se activa
+   	 	la función para múltiples cargas.
    #Fsc: Factor de sobrecorriente (1.25,1.0)
 
 .. code:: python
 
-   import PyEWS
-   #Para conductores de cobre
+   import PyEWS
+   #Para conductores de cobre
    PyEWS.MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc)
 
-.. _header-n42:
+.. _header-n37:
 
 Test MBTCU
 ----------

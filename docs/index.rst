@@ -23,6 +23,8 @@ Contenido:
 
     Install
     MBTCU
+	MBTAL
+	REFERENCE
 
 
 .. _PyEWS: https://pypi.org/project/ElectricalWireSizes/

@@ -7,7 +7,7 @@
 Bienvenido a PyEWS Electrical Wire Sizes!
 =========================================
 
-PyEWS_ - Librería para cálculo de secciones de conductores eléctricos.
+PyEWS_ - Es un paquete para cálculo de secciones de conductores eléctricos.
 
 El módulo PyEWS ( Versión 0.1.18) puede ser utilizado para dimensionar 
 conductores de baja tensión de una instalación eléctrica. Es fácil de utilizar e interpretar sus resultados mostrando un panorama más general al poder visualizar 

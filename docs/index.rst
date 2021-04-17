@@ -1,7 +1,13 @@
 .. pyautocad documentation master file, created by
-   sphinx-quickstart on Sun Mar 25 09:29:19 2012.
+   sphinx-quickstart on Sat Abr 25 17:33:00 2021.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
+   
+| |image1|
+| |image2|
+| |image3|
+| |image4|
+| |image5|\ |image6|   
 
 Welcome to PyEWS Electrical Wire Sizes!
 =======================================
@@ -11,6 +17,7 @@ PyEWS_ - Librería para cálculo de secciones de conductores eléctricos.
 El módulo PyEWS ( Versión 0.1.18) puede ser utilizado para dimensionar 
 conductores de baja tensión de una instalación eléctrica. Es fácil de utilizar e interpretar sus resultados mostrando un panorama más general al poder visualizar 
 por completo una lista de conductores propuestos con los parámetros de entrada.
+
 
 
 Contents:
@@ -25,8 +32,7 @@ Contents:
 Indices and tables
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
+
 * :ref:`search`
 
 .. _PyEWS: https://pypi.org/project/ElectricalWireSizes/

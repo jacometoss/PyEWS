@@ -1,13 +1,9 @@
-| |image1|
-| |image2|
-| |image3|
-| |image4|
-| |image5|\ |image6|
+|image1|\ |image2|\ |image3|\ |image4|\ |image5|\ |image6|
 
-.. _header-n4:
+.. _header-n50:
 
-Instalación PyEWS
-=================
+Python Electrical Wire Sizes 
+============================
 
 El módulo PyEWS ( **Versión 0.1.18**) puede ser utilizado para
 dimensionar conductores de baja tensión de una instalación eléctrica. Es
@@ -15,7 +11,7 @@ fácil de utilizar e interpretar sus resultados mostrando un panorama más
 general al poder visualizar por completo una lista de conductores
 propuestos con los parámetros de entrada.
 
-.. _header-n6:
+.. _header-n52:
 
 Instalación
 -----------
@@ -26,7 +22,7 @@ La instalación del módulo se realiza con :
 
    pip install ElectricalWireSizes
 
-.. _header-n9:
+.. _header-n55:
 
 Iniciar paquete de instalación
 ------------------------------
@@ -81,7 +77,7 @@ El módulo de corriente directa necesita la información siguiente :
 
    PyEWS.MBTCUSTD(1200,145,1,100,1,25,3,1,1.25)
 
-.. _header-n16:
+.. _header-n62:
 
 PyEWS Módulos
 -------------

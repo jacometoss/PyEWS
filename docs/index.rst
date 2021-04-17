@@ -24,8 +24,8 @@ Contents:
     Install
     MBTCU
 
-Indices and tables
-==================
+Búsqueda de archivos
+====================
 
 
 * :ref:`search`

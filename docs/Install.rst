@@ -6,8 +6,8 @@
 
 .. _header-n4:
 
-Instalación de Python Electrical Wire Sizes 
-===========================================
+Instalación PyEWS
+=================
 
 El módulo PyEWS ( **Versión 0.1.18**) puede ser utilizado para
 dimensionar conductores de baja tensión de una instalación eléctrica. Es

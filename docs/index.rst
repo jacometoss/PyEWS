@@ -15,8 +15,8 @@ por completo una lista de conductores propuestos con los parámetros de entrada.
 
 
 
-Contents:
-=========
+Contenido:
+==========
 
 .. toctree::
     :maxdepth: 2
@@ -24,11 +24,6 @@ Contents:
     Install
     MBTCU
 
-Búsqueda de archivos
-====================
-
-
-* :ref:`search`
 
 .. _PyEWS: https://pypi.org/project/ElectricalWireSizes/
 

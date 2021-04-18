@@ -1,6 +1,6 @@
 |image1|\ |image2|\ |image3|\ |image4|\ |image5|\ |image6|
 
-.. _header-n5:
+.. _header-n50:
 
 Desarrollador y licencia
 ========================

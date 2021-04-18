@@ -11,11 +11,6 @@ El módulo tiene dependencias por lo que es necesario instalar
 ``tabulate`` el cual da una mejor apariencia al momento de mostrar los
 resultados.
 
-.. code:: python
-
-   import PyEWS
-   PyEWS.MBTAL(127,220,15,1,22,1,1,35,3,1,0.9,1,1.25)
-
 Los se resultados muestran con la iteración de todos los conductores
 tanto para tensión monofásica como trifásica.
 
@@ -28,6 +23,12 @@ tanto para tensión monofásica como trifásica.
 
 Tests MBTAL
 -----------
+
+.. code:: python
+
+   import PyEWS
+   PyEWS.MBTAL(127,220,15,1,22,1,1,35,3,1,0.9,1,1.25)
+
 
    Se puede observar en la columna ``%VD 1F-2H`` seleccionada la pérdida
    de tensión es aceptable con respecto a la mínima ingresada del

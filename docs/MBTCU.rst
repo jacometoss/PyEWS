@@ -1,10 +1,10 @@
-| |image1|
-| |image2|
-| |image3|
-| |image4|
-| |image5|\ |image6|
+|image1|
 
-.. _header-n4:
+|image2|\ |image3|\ |image4|
+
+|image5|\ |image6|
+
+.. _header-n31:
 
 Módulo de baja tensión para conductores de cobre
 ================================================
@@ -12,7 +12,7 @@ Módulo de baja tensión para conductores de cobre
 El módulo comprende conductores de cobre estandarizados desde clase B, C
 y D.
 
-.. _header-n9:
+.. _header-n33:
 
 Iniciar paquete de instalación
 ------------------------------
@@ -41,14 +41,13 @@ cual da una mejor apariencia al momento de mostrar los resultados.
    	 2: Mostrar los resultados como datos acumulados. Esta opción es necesario cuando se activa
    	 	la función para múltiples cargas.
    #Fsc: Factor de sobrecorriente (1.25,1.0)
-
 .. code:: python
 
-   import PyEWS
-   #Para conductores de cobre
+   import PyEWS
+   #Para conductores de cobre
    PyEWS.MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc)
 
-.. _header-n42:
+.. _header-n37:
 
 Test MBTCU
 ----------
@@ -66,14 +65,10 @@ Los se resultados muestran con la iteración de todos los conductores
 tanto para tensión monofásica como trifásica.
 
 -  ``Vd (Voltage Drop)`` es la pérdida de tensión porcentual
-
 -  ``60,75,90`` la ampacidad real de los conductores.
-
 -  ``Nc`` es el número de conductores por fase.
-
 -  ``Op`` muestra si el resultado es correcto al aparecerer en la
    columna como ``Yes`` .
-
 -  ``ITM`` es la protección del circuito.
 
    Se puede observar en la columna ``%VD 1F-2H`` seleccionada la pérdida

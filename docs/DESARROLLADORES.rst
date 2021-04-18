@@ -1,4 +1,6 @@
-|image1|\ |image2|\ |image3|\ |image4|\ |image5|\ |image6|
+|image1|
+|image2|\ |image3|\ |image4|
+|image5|\ |image6|
 
 .. _header-n5:
 
@@ -13,7 +15,7 @@ Desarrollador y licencia
 
 **Requerimientos:** Python >=3.5, tabulate 0.8.9
 
-.. _header-n10:
+.. _header-n52:
 
 Acerca del autor
 ----------------

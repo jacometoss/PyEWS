@@ -16,7 +16,7 @@ Desarrollador y licencia
 .. _header-n52:
 
 Acerca del autor
-================
+----------------
 
 Recibio el grado Maestro de Ingeniería Eléctrica en el Intituto de
 Ingeniería de la Universiad Autómoma de Méxcio. Lo ha llevado al

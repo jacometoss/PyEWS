@@ -2,8 +2,8 @@
 
 .. _header-n4:
 
-Test Módulo de baja tensión para conductores de aluminio
-========================================================
+Módulo de baja tensión para conductores de aluminio
+===================================================
 
 El módulo tiene dependencias por lo que es necesario instalar
 ``tabulate`` el cual da una mejor apariencia al momento de mostrar los

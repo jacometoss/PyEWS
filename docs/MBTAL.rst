@@ -18,14 +18,10 @@ Los se resultados muestran con la iteración de todos los conductores
 tanto para tensión monofásica como trifásica.
 
 -  ``Vd (Voltage Drop)`` es la pérdida de tensión porcentual
-
 -  ``60,75,90`` la ampacidad real de los conductores.
-
 -  ``Nc`` es el número de conductores por fase.
-
 -  ``Op`` muestra si el resultado es correcto al aparecerer en la
    columna como ``Yes`` .
-
 -  ``ITM`` es la protección del circuito.
 
    Se puede observar en la columna ``%VD 1F-2H`` seleccionada la pérdida

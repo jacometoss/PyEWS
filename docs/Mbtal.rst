@@ -30,11 +30,11 @@ Tests MBTAL
    PyEWS.MBTAL(127,220,15,1,22,1,1,35,3,1,0.9,1,1.25)
 
 
-   Se puede observar en la columna ``%VD 1F-2H`` seleccionada la pérdida
-   de tensión es aceptable con respecto a la mínima ingresada del
-   ``%3``. La confirmación de un resultado es aceptable se visualiza en
-   la columna ``OP`` . Al utilizar la opción de multiples cargas podrá
-   mostrar el resumen y el desglose como se muestra en la tabla.
+Se puede observar en la columna ``%VD 1F-2H`` seleccionada la pérdida
+de tensión es aceptable con respecto a la mínima ingresada del
+``%3``. La confirmación de un resultado es aceptable se visualiza en
+la columna ``OP`` . Al utilizar la opción de multiples cargas podrá
+mostrar el resumen y el desglose como se muestra en la tabla.
 
 .. figure:: https://i.ibb.co/mt8HPSg/0-1-18-3.jpg
    :alt: 

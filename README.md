@@ -160,6 +160,7 @@ print("Total de cargas : ",len(carga))
 Para mostrar el resumen para  conductores de cobre
 
 ```python
+from PyEWS import DBCIRCUIT
 PyEWS.DBCIRCUIT(carga,2,1)
 ```
 
@@ -209,6 +210,7 @@ DBCIRCUITCD(cargacd,2,1)
 Para mostrar el resumen para  conductores de cobre estándar
 
 ```
+from PyEWS import DBCIRCUITCD
 DBCIRCUITCD(cargacd,2,2)
 ```
 

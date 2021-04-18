@@ -19,14 +19,14 @@ Contenido:
 ==========
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 6
 
     Install
     MBTCU
-	MBTAL
-	DBCIRCUIT
-	REFERENCE
-	DENVELOPEDd
+    MBTAL
+    DBCIRCUIT
+    REFERENCE
+    DENVELOPEDd
 	
 
 

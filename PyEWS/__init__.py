@@ -1,3 +1,6 @@
+__docformat__ = 'restructuredtext es'
+__version__ = '0.1.18'
+
 from .PyEWS import MBTCU
 from .PyEWS import MBTAL
 from .PyEWS import MBTCUSTD

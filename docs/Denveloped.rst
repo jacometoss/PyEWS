@@ -23,9 +23,9 @@ Acerca del autor
 Recibio el grado Maestro de Ingeniería Eléctrica en el Intituto de
 Ingeniería de la Universiad Autómoma de Méxcio. Lo ha llevado al
 constante desarrollo de nuevas aplicaciones prácticas como complejas
-debido a las necesidades hoy tan demandantes en la industría y esta
-aplicación tiene como finalidad acortar los tiempo en el
-dimensionamiento de conductores eléctricos como en la obtención de
+debido a las necesidades hoy tan demandantes en la industría y el desarrollo de esta
+aplicación tiene como objetivo acortar los tiempo en el
+dimensionamiento de conductores eléctricos y obtención de
 resultados.
 
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg

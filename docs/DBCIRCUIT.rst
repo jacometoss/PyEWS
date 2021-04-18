@@ -6,8 +6,8 @@
 
 .. _header-n2:
 
-Test múltiples cargas
-=====================
+Múltiples cargas en corriente alterna
+=====================================
 
 Para implementar una gran variedad de cargas se organizan como se
 muestra en el bloque de código, puede agregar hasta **indefinido número
@@ -17,14 +17,14 @@ otro nombre corto para poder identificar la carga.
 
 .. code:: python
 
-   from PyEWS import DBCIRCUIT
-   #Definimos las cargas
-   carga=[
+   from PyEWS import DBCIRCUIT
+   #Definimos las cargas
+   carga=[
         ["1",127,220,15,1,22,1,1,35,3,1,0.9,2,1.25],
         ["2",127,220,12,1,10,1,1,25,3,1,0.9,2,1.25],
         ["3",127,220,22,1,15,1,1,25,3,1,0.9,2,1.25],
         ["4",127,220,22,1,15,1,1,25,3,1,0.9,2,1.25],
-        ["5",127,220,22,1,20,1,1,25,3,1,0.9,2,1.25],
+        ["4",127,220,22,1,20,1,1,25,3,1,0.9,2,1.25],
         ["6",127,220,22,1,10,1,1,25,3,1,0.9,2,1.25],
         ["7",127,220,22,1,30,1,1,25,3,1,0.9,2,1.25],
         ["8",127,220,22,1,25,1,1,25,3,1,0.9,2,1.25],
@@ -40,9 +40,9 @@ otro nombre corto para poder identificar la carga.
         ["18",127,220,22,1,10,1,1,25,3,1,0.9,2,1.25],
         ["19",127,220,22,1,21,1,1,25,3,1,0.9,2,1.25],
         ["20",127,220,196,3,55,0.8,3,75,3,3,0.9,2,1.25]
-       ]
-   #Una forma sencilla de mostrar el total de cargas
-   print("Total de cargas : ",len(carga))
+       ]
+   #Una forma sencilla de mostrar el total de cargas
+   print("Total de cargas : ",len(carga))
    #Para mostar completo el desarrollo
    #----------PyEWS.DBCIRCUIT(carga,1,1) #Cobre
    #----------PyEWS.DBCIRCUIT(carga,1,2) #Aluminio

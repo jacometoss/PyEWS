@@ -26,6 +26,9 @@ tanto para tensión monofásica como trifásica.
    columna como ``Yes`` .
 -  ``ITM`` es la protección del circuito.
 
+Tests MBTAL
+===========
+
    Se puede observar en la columna ``%VD 1F-2H`` seleccionada la pérdida
    de tensión es aceptable con respecto a la mínima ingresada del
    ``%3``. La confirmación de un resultado es aceptable se visualiza en

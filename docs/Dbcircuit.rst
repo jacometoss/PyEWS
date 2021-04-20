@@ -16,8 +16,8 @@ orden de las cargas no afecta a los resultados y puede colocar cualquier
 otro nombre corto para poder identificar la carga.
 
 .. code:: python
-   #Esta opción pude ser ocuada para simplificar el llamado de la función, por lo tanto no debe incluir PyEWS
-   #from PyEWS import DBCIRCUIT
+
+   from PyEWS import DBCIRCUIT
    #Definimos las cargas
    carga=[
         ["1",127,220,15,1,22,1,1,35,3,1,0.9,2,1.25],

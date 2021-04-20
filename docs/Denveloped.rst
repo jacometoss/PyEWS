@@ -13,20 +13,19 @@ Desarrollador y licencia
 
 **Tags** : PyEWS, electrical, conductor, size, ElectricalWireSizes
 
-**Requerimientos:** Python >=3.5, tabulate 0.8.9
+**Requerimientos:** Python >=3.5, tabulate  >= 0.8.9
 
 .. _header-n52:
 
 Acerca del autor
 ----------------
 
-Recibio el grado Maestro de Ingeniería Eléctrica en el Intituto de
-Ingeniería de la Universiad Autómoma de Méxcio. Lo ha llevado al
+Recibio el grado Maestro de Ingeniería Eléctrica en el Intituto de Ingeniería de la Universiad Autómoma de México. Lo ha llevado al
 constante desarrollo de nuevas aplicaciones prácticas como complejas
-debido a las necesidades hoy tan demandantes en la industría y el desarrollo de esta
-aplicación tiene como objetivo acortar los tiempo en el
-dimensionamiento de conductores eléctricos y obtención de
+debido a las necesidades hoy tan demandantes en la industría. 
+El desarrollo de esta aplicación tiene como objetivo acortar los tiempo en el dimensionamiento de conductores eléctricos y obtención de
 resultados.
+
 
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes

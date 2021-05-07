@@ -28,7 +28,6 @@ cual da una mejor apariencia al momento de mostrar los resultados.
    #FA: Número de conducrtores activos en el tubo conduit.
    #Type: Tipo de tubo conduit (1:PVC,2:AL,3:ACERO)
    #Ta: Temperatura ambiente en centigrados, únicamente ingresar la opcion númerica.
-   ---- 1:20 2:25 3:30 4:35 5:40 6:45 7:50 8:55 9:60 10:65 11:70 12:75
    #Vd: Caída de tensión (porcentual de 2, 3, 5)
    ---- 2,3,5	
    #S:  Seleccione el sistema que desea propner en base a este se muestran los resultados.

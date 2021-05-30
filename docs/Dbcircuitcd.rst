@@ -1,11 +1,10 @@
-|image1|
-|image2|\ |image3|\ |image4|
-|image5|\ |image6|
-
 .. _header-n2:
 
 Múltiples cargas en corriente directa 
 =====================================
+|image1|
+|image2|\ |image3|\ |image4|
+|image5|\ |image6|
 
 Para implementar una gran variedad de cargas se organizan como se
 muestra en el bloque de código, puede agregar indefinidamente cargas.

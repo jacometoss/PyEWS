@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
     
 
-Manual de Usuario PyEWS Electrical Wire Sizes!
+Manual de Usuario Python Electrical Wire Sizes
 ==============================================
 |image1|
 |image2|\ |image3|\ |image4|

@@ -178,7 +178,7 @@ html_show_sourcelink = True
 
 latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
-'papersize': 'a4paper',
+'papersize': 'letterpaper',
 
 # The font size ('10pt', '11pt' or '12pt').
 #'pointsize': '10pt',
@@ -194,16 +194,16 @@ latex_elements = {
 #''',
 
 # Additional stuff for the LaTeX preamble.
+
 'preamble': r'''
 \authoraddress{
-  \strong{Covantec R.L., Santa Cruz de Mara, Mara, Zulia. 4046.}\\
-  \strong{Telf.} +58-262-879.18.80 / +58-426-771.35.73 / +58-414-979.80.83\\
-  \strong{Contactos:} \email{covantec.ve@gmail.com} - 
-  \url{https://coderwall.com/team/covantec}
+  \strong{PyEWS, Ciudad de México, MH }\\
+  \url{https://pyews.readthedocs.io/}
 }
 \let\Verbatim=\OriginalVerbatim
 \let\endVerbatim=\endOriginalVerbatim
 ''',
+
 
 # Additional footer content (before the indices), default empty.
 #'footer': 'Asociación Cooperativa Vanguardista Tecnológica - Covantec R.L.'
@@ -212,9 +212,9 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-_stdauthor = r'Leonardo J. Caballero G.'
+_stdauthor = r'Marco Polo Jácome Toss'
 latex_documents = [
-  ('index', 'entrenamientopython_basico.tex', u'Materiales del curso de programación en Python - Nivel básico', _stdauthor, 'manual'),
+  ('index', 'pyews.tex', u'Python Electrical Wire Sizes, Manual de Usuario', _stdauthor, 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -317,6 +317,5 @@ latex_show_pagerefs = True
 # Add mappings
 # https://kev.inburke.com/kevin/sphinx-interlinks/
 intersphinx_mapping = {
-    'python': ('http://docs.python.org/2', None),
-#    'urllib3': ('http://urllib3.readthedocs.org/en/latest', None),
-}
+    'python': ('http://docs.python.org/3', None),
+#    'urllib3': ('http://urllib3

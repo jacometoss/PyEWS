@@ -197,7 +197,7 @@ latex_elements = {
 
 'preamble': r'''
 \authoraddress{
-  \strong{Autor: Marco Polo Jácome Toss }\\
+
   \strong{PyEWS, Ciudad de México, MH }\\
   \url{https://pyews.readthedocs.io/}
 }
@@ -215,8 +215,8 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 _stdauthor = r'Marco Polo Jácome Toss'
 latex_documents = [
- # ('index', 'pyews.tex', u'Python Electrical Wire Sizes', _stdauthor, 'Manual'),
-	 ('index', 'pyews.tex', u'Python Electrical Wire Sizes'),
+ ('index', 'pyews.tex', u'Python Electrical Wire Sizes', _stdauthor, 'Manual'),
+	
 ]
 
 # The name of an image file (relative to this directory) to place at the top of

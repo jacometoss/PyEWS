@@ -16,11 +16,6 @@ El módulo PyEWS ( Versión 0.1.18) puede ser utilizado para dimensionar
 conductores de baja tensión de una instalación eléctrica. Es fácil de utilizar e interpretar sus resultados mostrando un panorama más general al poder visualizar 
 por completo una lista de conductores propuestos con los parámetros de entrada.
 
-
-
-Contenido:
-==========
-
 .. toctree::
     :maxdepth: 7
 

@@ -4,8 +4,8 @@
    contain the root `toctree` directive.
     
 
-Bienvenido a PyEWS Electrical Wire Sizes!
-=========================================
+Manual de Usuario PyEWS Electrical Wire Sizes!
+==============================================
 |image1|
 |image2|\ |image3|\ |image4|
 |image5|\ |image6|
@@ -18,13 +18,19 @@ por completo una lista de conductores propuestos con los parámetros de entrada.
 
 
 
-Tabla de contenidos:
+Contenido:
+==========
 
 .. toctree::
-   :numbered:
-   :maxdepth: 2
+    :maxdepth: 7
 
-   parte1/index
+    Install
+    Mbtcu
+    Mbtal
+    Dbcircuit
+    Dbcircuitcd
+    Reference
+    Denveloped
 	
 	
 

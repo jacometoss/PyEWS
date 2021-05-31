@@ -117,7 +117,7 @@ html_short_title = u'Python Electrical Wire Sizes'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-######html_logo = '_static/covantec-logo.jpg'
+html_logo = '_static/logo.jpg'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -127,7 +127,7 @@ html_short_title = u'Python Electrical Wire Sizes'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-#####html_static_path = ['_static']
+html_static_path = ['_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
@@ -197,6 +197,7 @@ latex_elements = {
 
 'preamble': r'''
 \authoraddress{
+  \strong{Autor: Marco Polo Jácome Toss }\\
   \strong{PyEWS, Ciudad de México, MH }\\
   \url{https://pyews.readthedocs.io/}
 }
@@ -214,7 +215,8 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 _stdauthor = r'Marco Polo Jácome Toss'
 latex_documents = [
-  ('index', 'pyews.tex', u'Python Electrical Wire Sizes', _stdauthor, 'manual'),
+ # ('index', 'pyews.tex', u'Python Electrical Wire Sizes', _stdauthor, 'Manual'),
+	 ('index', 'pyews.tex', u'Python Electrical Wire Sizes', 'Manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of

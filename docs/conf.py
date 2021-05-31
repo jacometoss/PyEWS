@@ -216,7 +216,7 @@ latex_elements = {
 _stdauthor = r'Marco Polo Jácome Toss'
 latex_documents = [
  # ('index', 'pyews.tex', u'Python Electrical Wire Sizes', _stdauthor, 'Manual'),
-	 ('index', 'pyews.tex', u'Python Electrical Wire Sizes', 'manual'),
+	 ('index', 'pyews.tex', u'Python Electrical Wire Sizes'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of

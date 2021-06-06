@@ -48,7 +48,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Python Electrical Wire Sizes'
-copyright = u'2021'
+copyright = u'2021, Marco Polo Jácome Toss'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

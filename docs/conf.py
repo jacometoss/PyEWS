@@ -212,7 +212,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-_stdauthor = r'Marco Polo Jácome Toss.'
+_stdauthor = r''
 latex_documents = [
   ('index', 'pyews.tex', u'Python Electrical Wire Sizes', _stdauthor, 'manual'),
 ]

@@ -15,13 +15,4 @@ Repositorio de manuales y recursos del entrenamiento
    :numbered:
    :maxdepth: 2
 
-   leccion1/index
-   leccion2/index
-   leccion3/index
-   leccion4/index
-   leccion5/index
-   leccion6/index
-   leccion7/index
-   leccion8/index
-   leccion9/index
-   leccion10/index
+   parte1/index

@@ -196,10 +196,10 @@ latex_elements = {
 # Additional stuff for the LaTeX preamble.
 'preamble': r'''
 \authoraddress{
-  \strong{Covantec R.L., Santa Cruz de Mara, Mara, Zulia. 4046.}\\
-  \strong{Telf.} +58-262-879.18.80 / +58-426-771.35.73 / +58-414-979.80.83\\
-  \strong{Contactos:} \email{covantec.ve@gmail.com} - 
-  \url{https://coderwall.com/team/covantec}
+  \strong{}\\
+  \strong{} \\
+  \strong{Contactos:} \email{jacometoss@aol.com} - 
+  \url{https://pyews.readthedocs.io}
 }
 \let\Verbatim=\OriginalVerbatim
 \let\endVerbatim=\endOriginalVerbatim
@@ -212,14 +212,14 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-_stdauthor = r'Leonardo J. Caballero G.'
+_stdauthor = r'Marco Polo Jácome Toss.'
 latex_documents = [
-  ('index', 'entrenamientopython_basico.tex', u'Materiales del curso de programación en Python - Nivel básico', _stdauthor, 'manual'),
+  ('index', 'pyews.tex', u'Python Electrical Wire Sizes', _stdauthor, 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-latex_logo = '_static/covantec.jpg'
+latex_logo = '_static/logo.jpg'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.

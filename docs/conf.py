@@ -113,7 +113,7 @@ html_theme = 'sphinx_rtd_theme'
 html_title = 'Electrical Wire Sizes'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title = 'Programación en Python - Nivel básico'
+html_short_title = 'Python Electrical Wire Sizes'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -197,7 +197,7 @@ latex_elements = {
 'preamble': r'''
 \authoraddress{
   \strong{}\\
-  \strong{} \\
+  \strong{Autor:} Marco Polo Jácome Toss\\
   \strong{Contactos:} \email{jacometoss@aol.com} - 
   \url{https://pyews.readthedocs.io}
 }
@@ -229,7 +229,7 @@ latex_logo = '_static/logo.jpg'
 latex_show_pagerefs = True
 
 # If true, show URL addresses after external links.
-latex_show_urls = 'footnote'
+#latex_show_urls = 'footnote'
 
 # Documents to append as an appendix to all manuals.
 #latex_appendices = ['glosario','licencia']

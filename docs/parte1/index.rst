@@ -28,8 +28,6 @@ por completo una lista de conductores propuestos con los parámetros de entrada.
     Denveloped
 	
 	
-
-
 .. _PyEWS: https://pypi.org/project/ElectricalWireSizes/
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes

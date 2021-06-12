@@ -10,7 +10,7 @@
 #
 # All configuration values have a default; values that are commented out
 # serve to show the default.
-
+import sphinx_book_theme
 import sys
 import os
 
@@ -32,6 +32,7 @@ extensions = [
 	'sphinx.ext.todo',
 	'sphinx.ext.viewcode',
 	'sphinx.ext.intersphinx',
+	'sphinx_book_theme'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

@@ -32,7 +32,7 @@ extensions = [
 	'sphinx.ext.todo',
 	'sphinx.ext.viewcode',
 	'sphinx.ext.intersphinx',
-	'sphinx_book_theme'
+	'sphinx_book_theme',
 ]
 
 # Add any paths that contain templates here, relative to this directory.

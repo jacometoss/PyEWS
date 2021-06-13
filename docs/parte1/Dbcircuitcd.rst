@@ -1,52 +1,79 @@
-.. _header-n2:
+| |image1|
+| |image2|
+| |image3|
+| |image4|
+| |image5|\ |image6|
 
-Múltiples cargas en corriente directa 
-=====================================
-|image1|
-|image2|\ |image3|\ |image4|
-|image5|\ |image6|
+Múltiples cargas en corriente alterna DBCIRCUIT
+===============================================
 
 Para implementar una gran variedad de cargas se organizan como se
-muestra en el bloque de código, puede agregar indefinidamente cargas.
+muestra en el bloque de código, puede agregar hasta **indefinido número
+de cargas** . El número consecutivo de orden de las cargas no afecta a
+los resultados y puede colocar cualquier otro nombre corto para poder
+identificar la carga.
+
+Para mostrar el resumen de los resultados de cada carga ingresada usamos
+la siguiente línea de código.
 
 .. code:: python
 
-   from PyEWS import DBCIRCUITCD
-   #(Vcd,In,Nc,L,Class,Ta,Vd,View):
-   cargacd=[
-       ["1",1200,30,1,100,1,25,3,2,1,1],
-       ["2",1200,30,1,100,1,25,3,2,1,1],
-       ["3",1200,30,1,100,1,25,3,2,1,1],
-       ["4",1200,30,1,100,1,25,3,2,1,1],
-       ["5",1200,30,1,100,1,25,3,2,1,1],
-       ["6",1200,30,1,100,1,25,3,2,1,1],
-       ["7",1200,30,1,100,1,25,3,2,1,1],
-       ["8",1200,30,1,100,1,25,3,2,1,1],
-       ["9",1200,30,1,100,1,25,3,2,1,1],
-       ["10",1200,30,1,100,1,25,3,2,1,1],
-       ["11",1200,30,1,100,1,25,3,2,1,1],
-       ["12",1200,30,1,100,1,25,3,2,1,1],
-       ["13",1200,30,1,100,1,25,3,2,1,1],
-       ["14",1200,30,1,100,1,25,3,2,1,1]
+   dbcircuit()
+
+Para poder utilizar el módulo debemos primero definir el archivo de
+cargas
+
+.. code:: python
+
+   carga=[
+        ["1",VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm],
+        ["2",VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm],
+        ["3",VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm]
        ]
-   print("Total de cargas : ",len(cargacd))
-   DBCIRCUITCD(cargacd,2,1)
 
-   #Para mostar completo el desarrollo
-   #----------PyEWS.DBCIRCUITCD(carga,1,1) #Cobre Estándar
-   #----------PyEWS.DBCIRCUITCD(carga,1,2) #Aluminio No disponible
-   #Para mostar el resumen únicamente 
-   #----------PyEWS.DBCIRCUITCD(carga,2,1) #Cobre Estándar
-   #----------PyEWS.DBCIRCUITCD(carga,2,2) #Aluminio No disponible
+Podemos observar que son los mismos de los módulos ``mbtcu`` y ``mbtal``
+pero mostrado en una lista bien definida y ordenada. Este módulo se
+encuentra limitado al ser usado en el IDLE de Python pero no cuando lo
+ejecutamos en símbolo del sistema resulta más eficiente aunque suena un
+poco confuso si desconoce un poco de como ejecutar Python desde el
+símbolo del sistema.
 
-Para mostrar el resumen para conductores de cobre estándar
+   Para implementar la carga dentro del módulo ``dbcircuit`` cada carga
+   individual debe tener la lista como opción de visualización y no en
+   tabla.
 
-.. code:: 
+Iniciar el módulo DBCIRCUIT
+===========================
 
-   DBCIRCUITCD(cargacd,2,2)
+Configurado el archivo de cargas individuales y nombradas o numeradas a
+gusto personal se procede a llenar ``resultViewer`` y ``conductor``
 
-.. figure:: https://i.ibb.co/rswpHm2/04.jpg
-   :alt: 
+.. code:: python
+
+   dbcircuit(load,resultViewer,coductor)
+
+Información requerida en el módulo DBCIRCUIT
+============================================
+
+El llenado del módulo requiere la información siguiente :
+
+.. code:: tex
+
+   #load: Listado de cargas.
+   #resultViewer: Muestra los resultados de forma individual como resumida.
+   ---- 1:Muestra cada resultado individual y el resumen de resultados en una tabla.
+   -----2:Resumida de resultados en una tabla.
+   #conductor : Esta opción es para seleccionar los conductores de cobre y aluminio.
+   ---- 1:Conductores de cobre para corriente alterna.
+   -----2:Conductores de aluminio para corriente alterna.
+
+..
+
+   El módulo se limita a los conductores mostrados en el ``dbc`` que son
+   conductores comerciales.
+
+Esta obra está bajo una Licencia Creative Commons
+Atribución-CompartirIgual 4.0 Internacional.
 
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes

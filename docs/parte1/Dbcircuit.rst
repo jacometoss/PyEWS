@@ -1,68 +1,79 @@
-|image1|
-|image2|\ |image3|\ |image4|
-|image5|\ |image6|
+| |image1|
+| |image2|
+| |image3|
+| |image4|
+| |image5|\ |image6|
 
-.. _header-n2:
-
-Múltiples cargas en corriente alterna
-=====================================
+Múltiples cargas en corriente alterna DBCIRCUIT
+===============================================
 
 Para implementar una gran variedad de cargas se organizan como se
 muestra en el bloque de código, puede agregar hasta **indefinido número
-de cargas** en está nueva versión (0.1.18). El número consecutivo de
-orden de las cargas no afecta a los resultados y puede colocar cualquier
-otro nombre corto para poder identificar la carga.
-
-.. code:: python
-
-   from PyEWS import DBCIRCUIT
-   #Definimos las cargas
-   carga=[
-        ["1",127,220,15,1,22,1,1,35,3,1,0.9,2,1.25],
-        ["2",127,220,12,1,10,1,1,25,3,1,0.9,2,1.25],
-        ["3",127,220,22,1,15,1,1,25,3,1,0.9,2,1.25],
-        ["4",127,220,22,1,15,1,1,25,3,1,0.9,2,1.25],
-        ["4",127,220,22,1,20,1,1,25,3,1,0.9,2,1.25],
-        ["6",127,220,22,1,10,1,1,25,3,1,0.9,2,1.25],
-        ["7",127,220,22,1,30,1,1,25,3,1,0.9,2,1.25],
-        ["8",127,220,22,1,25,1,1,25,3,1,0.9,2,1.25],
-        ["9",127,220,15,1,31,1,1,35,3,1,0.9,2,1.25],    
-        ["10",127,220,22,1,14,1,1,25,3,1,0.9,2,1.25],
-        ["11",127,220,15,1,20,1,1,35,3,1,0.9,2,1.25],
-        ["12",127,220,22,1,32,1,1,25,3,1,0.9,2,1.25],
-        ["13",127,220,22,1,25,1,1,25,3,1,0.9,2,1.25],
-        ["14",127,220,22,1,24,1,1,25,3,1,0.9,2,1.25],
-        ["15",127,220,22,1,18,1,1,25,3,1,0.9,2,1.25],
-        ["16",127,220,22,1,17,1,1,25,3,1,0.9,2,1.25],
-        ["17",127,220,22,1,12,1,1,25,3,1,0.9,2,1.25],    
-        ["18",127,220,22,1,10,1,1,25,3,1,0.9,2,1.25],
-        ["19",127,220,22,1,21,1,1,25,3,1,0.9,2,1.25],
-        ["20",127,220,196,3,55,0.8,3,75,3,3,0.9,2,1.25]
-       ]
-   #Una forma sencilla de mostrar el total de cargas
-   print("Total de cargas : ",len(carga))
-   #Para mostar completo el desarrollo
-   #----------PyEWS.DBCIRCUIT(carga,1,1) #Cobre
-   #----------PyEWS.DBCIRCUIT(carga,1,2) #Aluminio
-   #Para mostar el resumen únicamente 
-   #----------PyEWS.DBCIRCUIT(carga,2,1) #Cobre
-   #----------PyEWS.DBCIRCUIT(carga,2,2) #Aluminio
+de cargas** . El número consecutivo de orden de las cargas no afecta a
+los resultados y puede colocar cualquier otro nombre corto para poder
+identificar la carga.
 
 Para mostrar el resumen de los resultados de cada carga ingresada usamos
 la siguiente línea de código.
 
 .. code:: python
 
-   PyEWS.DBCIRCUIT(carga,2,1)
+   dbcircuit()
 
-Al ingresar la línea de código siguiente pude obtener detalles de cada
-cálculo y al final el resumen de cada uno.
+Para poder utilizar el módulo debemos primero definir el archivo de
+cargas
 
 .. code:: python
 
-   PyEWS.DBCIRCUIT(carga,1,1)
+   carga=[
+        ["1",VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm],
+        ["2",VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm],
+        ["3",VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm]
+       ]
 
-Es más práctico obtener el reporte corto de cargas.
+Podemos observar que son los mismos de los módulos ``mbtcu`` y ``mbtal``
+pero mostrado en una lista bien definida y ordenada. Este módulo se
+encuentra limitado al ser usado en el IDLE de Python pero no cuando lo
+ejecutamos en símbolo del sistema resulta más eficiente aunque suena un
+poco confuso si desconoce un poco de como ejecutar Python desde el
+símbolo del sistema.
+
+   Para implementar la carga dentro del módulo ``dbcircuit`` cada carga
+   individual debe tener la lista como opción de visualización y no en
+   tabla.
+
+Iniciar el módulo DBCIRCUIT
+===========================
+
+Configurado el archivo de cargas individuales y nombradas o numeradas a
+gusto personal se procede a llenar ``resultViewer`` y ``conductor``
+
+.. code:: python
+
+   dbcircuit(load,resultViewer,coductor)
+
+Información requerida en el módulo DBCIRCUIT
+============================================
+
+El llenado del módulo requiere la información siguiente :
+
+.. code:: tex
+
+   #load: Listado de cargas.
+   #resultViewer: Muestra los resultados de forma individual como resumida.
+   ---- 1:Muestra cada resultado individual y el resumen de resultados en una tabla.
+   -----2:Resumida de resultados en una tabla.
+   #conductor : Esta opción es para seleccionar los conductores de cobre y aluminio.
+   ---- 1:Conductores de cobre para corriente alterna.
+   -----2:Conductores de aluminio para corriente alterna.
+
+..
+
+   El módulo se limita a los conductores mostrados en el ``dbc`` que son
+   conductores comerciales.
+
+Esta obra está bajo una Licencia Creative Commons
+Atribución-CompartirIgual 4.0 Internacional.
 
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes

@@ -1,114 +1,93 @@
-|image1|
-|image2|\ |image3|\ |image4|
-|image5|\ |image6|
-
-.. _header-n50:
+| |image1|
+| |image2|
+| |image3|
+| |image4|
+| |image5|\ |image6|
 
 Python Electrical Wire Sizes 
-----------------------------
+============================
 
-El módulo PyEWS ( **Versión 0.1.18**) puede ser utilizado para
-dimensionar conductores de baja tensión de una instalación eléctrica. Es
-fácil de utilizar e interpretar sus resultados mostrando un panorama más
-general al poder visualizar por completo una lista de conductores
-propuestos con los parámetros de entrada.
+El módulo Python Electrical Wire Sizes ( **Versión 0.1.19**) puede ser
+utilizado para dimensionar los conductores de alimentadores en baja
+tensión como los circuitos derivados de una instalación eléctrica. Esta
+herramienta es muy útil para ingenieros y arquitectos sumergidos en la
+rama de proyectos eléctricos y aquellos conocedores de algunos conceptos
+aquí mostrados que desean aprender temas relacionados como este.
 
-.. _header-n52:
+Instalación del paquete
+-----------------------
 
-Instalación
------------
-
-La instalación del módulo se realiza con :
+La instalación del paquete se realiza con la línea siguiente
 
 .. code:: python
 
    pip install ElectricalWireSizes
 
-.. _header-n55:
+Módulos
+-------
 
-Iniciar paquete de instalación
-------------------------------
+La lista de módulos disponibles en el paquete en esta última versión son
 
-El módulo tiene dependencias siendo necesario instalar ``tabulate`` el
-cual da una mejor apariencia al momento de mostrar los resultados.
++----+-------------------------------------------------+-------------+
+| Id | Descripción                                     | Módulo      |
++====+=================================================+=============+
+| 1  | Módulo de baja tensión para conductores de      | mbtcu       |
+|    | cobre clase B, C y D tensión de 600V a 2000V    |             |
++----+-------------------------------------------------+-------------+
+| 2  | Módulo de baja tensión para conductores de      | mbtal       |
+|    | aluminio clase B, C y D, tensión 600V a 2000V   |             |
++----+-------------------------------------------------+-------------+
+| 3  | Módulo de baja tensión para conductores de      | mbtcustd    |
+|    | cobre clase B, C y D en corriente directa hasta |             |
+|    | 2000 V                                          |             |
++----+-------------------------------------------------+-------------+
+| 4  | Base de datos de conductores eléctricos         | dbc         |
++----+-------------------------------------------------+-------------+
+| 5  | Cambio de resistencia en conductores de cobre   | zpucu       |
++----+-------------------------------------------------+-------------+
+| 6  | Cambio de resistencia en conductores de         | zpual       |
+|    | aluminio                                        |             |
++----+-------------------------------------------------+-------------+
+| 7  | Múltiples circuitos para conductores de cobre y | dbcircuit   |
+|    | aluminio                                        |             |
++----+-------------------------------------------------+-------------+
+| 8  | Múltiples circuitos para conductores de cobre   | dbcircuitcd |
++----+-------------------------------------------------+-------------+
 
-.. code:: tex
+Todos los módulos trabajan con unidades del Sistema Internacional y en
+versiones futuras versiones se incluirá el Sistema Ingles
 
-   #VF: Tensión de fase o en su defecto tensión de línea para sistemas de 1F2H, 2F.
-   #VL: Tensión de línea.
-   #In: Corriente nominal total de una de las fases.
-   #Nc: Número de conductores por fase.
-   #L : Longitud en metros.
-   #FA: Número de conducrtores activos en el tubo conduit.
-   #Type: Tipo de tubo conduit (1:PVC,2:AL,3:ACERO)
-   #Ta: Temperatura ambiente en centigrados, únicamente ingresar la opcion númerica.
-   ---- 1:20 2:25 3:30 4:35 5:40 6:45 7:50 8:55 9:60 10:65 11:70 12:75
-   #Vd: Caída de tensión (porcentual de 2, 3, 5)
-   ---- 2,3,5	
-   #S:  Seleccione el sistema que desea propner en base a este se muestran los resultados.
-   ---- 1:(1F-2H) 2:(2F-3H) 3:(3F-3H) 4:(3F-4H)
-   #Fp: Factor de potencia
-   #Op: Opción para mostrar resultados
-   	 1: Mostrar los resultados adecuadamente estructurado en una tabla. 
-   	 2: Mostrar los resultados como datos acumulados. Esta opción es necesario cuando se activa
-   	 	la función para múltiples cargas.
-   #Fsc: Factor de sobrecorriente (1.25,1.0)
+Iniciar paquete y módulo
+------------------------
+
+El módulo tiene dependencias siendo necesario instalar ``tabulate`` (se
+instala en forma automática) el cual sirve para dar una mejor apariencia
+al momento de mostrar los resultados.
+
+Antes de iniciar a usar los módulos debe importar el
+paquete\ ``kelectric`` .
 
 .. code:: python
 
-   import PyEWS
-   #Para conductores de cobre
-   PyEWS.MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc)
-   #Para conductores de aluminio
-   PyEWS.MBTAL(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc)
+   import kelectric
 
-El módulo de corriente directa necesita la información siguiente :
+La importación de la librería ``kelectric`` se hace de manera única al
+iniciar un archivo y para arrancar cada módulo debe anteponer
+``kelectric``. En este ejemplo importaremos el módulo de baja tensión
+para conductores de cobre, no mostraremos el llenado de este módulo
+únicamente el orden de llamado.
 
 .. code:: python
 
-   #MODBTCUSTD(Vcd,In,Nc,L,Class,Ta,Vd,View,Fsc):
-   #Vcd   :  Tensión en corriente directa.
-   #In    :  Corriente directa del circuito.
-   #Nc    :  Número de conductores en corriente directa.
-   #L     :  Longitud del circuito en metros.
-   #Class :  Clase de conductor A:1 B:2 y C:3.
-   #Ta	   :  Temperatura ambiente 
-   #Vd	   :  Caída de tensión.
-   #View  :  Mostrar los resultados adecuadamente en una tabla con 1 para multiples cargas debe ser 2.
-   #Fsc   :  Factor de sobrecorrriente
+   kelectric.mbtcu()
 
-   PyEWS.MBTCUSTD(1200,145,1,100,1,25,3,1,1.25)
+De esta manera sencilla podemos iniciar cada uno de los módulos
+mostrados en la tabla mostrada anteriormente. En los puntos siguientes
+se verá como llenar correctamente cada uno de los módulos y que
+resultado se muestra en cada uno de ellos
 
-.. _header-n62:
-
-PyEWS Módulos
--------------
-
-+----+---------------------+----------+---------+---------------------+
-| Id | Descripción         | Módulo   | Versión | Descargar           |
-+====+=====================+==========+=========+=====================+
-| 1  | Módulo de baja      | MBTCU    | 0.1.18  | `PyEWS              |
-|    | tensión para        |          |         | 0.1.18 <h           |
-|    | conductores de      |          |         | ttps://github.com/j |
-|    | cobre clase B, C y  |          |         | acometoss/PyEWS>`__ |
-|    | D tensión de 600V a |          |         |                     |
-|    | 2000V               |          |         |                     |
-+----+---------------------+----------+---------+---------------------+
-| 2  | Módulo de baja      | MBTAL    | 0.1.18  | `PyEWS              |
-|    | tensión para        |          |         | 0.1.18 <h           |
-|    | conductores de      |          |         | ttps://github.com/j |
-|    | aluminio clase B, C |          |         | acometoss/PyEWS>`__ |
-|    | y D, tensión 600V a |          |         |                     |
-|    | 2000V               |          |         |                     |
-+----+---------------------+----------+---------+---------------------+
-| 3  | Módulo de baja      | MBTCUSTD | 0.1.18  | `PyEWS              |
-|    | tensión para        |          |         | 0.1.18 <h           |
-|    | conductores de      |          |         | ttps://github.com/j |
-|    | cobre clase B, C y  |          |         | acometoss/PyEWS>`__ |
-|    | D en corriente      |          |         |                     |
-|    | directa hasta 2000  |          |         |                     |
-|    | V                   |          |         |                     |
-+----+---------------------+----------+---------+---------------------+
+Esta obra está bajo una Licencia Creative Commons
+Atribución-CompartirIgual 4.0 Internacional.
 
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes

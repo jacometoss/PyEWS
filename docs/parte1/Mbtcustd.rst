@@ -4,8 +4,8 @@
 | |image4|
 | |image5|\ |image6|
 
-Módulo de bata tensión MBTAL
-============================
+Módulo de bata tensión MBTCUSTD
+===============================
 
 El módulo comprende conductores de cobre estandarizados desde clase B, C
 y D. La información que debe ser ingresada en este módulo debe ser en
@@ -14,45 +14,41 @@ siguiente :
 
 .. code:: python
 
-   kelectric.mbtcu()
+   kelectric.mbtcustd()
 
 El resultado puede ser visualizado en un array o tabla mediante
 ``tabulate`` el cual se instala por defecto en el programa.
 
-Información requerida en el módulo MBTAL
+Información requerida en el módulo MBTCU
 ========================================
 
 El llenado del módulo requiere la información siguiente :
 
 .. code:: tex
 
-   #Vf: Tensión de fase o línea a línea para sistemas de 2F2H, 2F en Volts.
-   #Vl: Tensión de línea en Volts.
-   #P : Potencia que consume la carga en Watts.
+   #Vcd: Tensión de fase o línea a línea para sistemas de 2F2H, 2F en Volts.
+   #P : Potencia en Watts.
    #Nc: Número de conductores por fase.
    #L : Longitud en metros.
-   #Fa: Número de conducrtores activos en el tubo conduit.
-   #Type: Tipo de tubo conduit (1:PVC,2:AL,3:ACERO)
+   #Class: Clase de conductor (1:Clase A,2:Clase B,3:Clase C)
    #Ta: Temperatura ambiente en centigrados, únicamente ingresar la opcion númerica.
    #Vd: Caída de tensión (porcentual de 2, 3, 5)
    ---- 2,3,5	
-   #S:  Seleccione el sistema que desea propner en base a este se muestran los resultados.
-   ---- 1:(1F-2H) 2:(2F-3H) 3:(3F-3H) 4:(3F-4H)
-   #Fp: Factor de potencia
-   #Op: Opción para mostrar resultados
+   #View: Opción para mostrar resultados
    	 1: Mostrar los resultados adecuadamente estructurado en una tabla. 
    	 2: Mostrar los resultados como datos acumulados. Esta opción es necesario cuando se activa
    	 	la función para múltiples cargas.
    #Fsc: Factor de sobrecorriente (1.25,1.0) cuando existe carga continua
    #ITM: Esta opción determina el portentaje de uso de la protección eléctrica 
-   ---- 1:80%
-   -----2:100%
+   ---- 1:100%
+   -----2:80%
 
 Importado ``kelectric`` la información requerida en orden sería
 
 .. code:: python
 
-   mbtal(VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm)
+   #Módulo de baja tensión para conductores de cobre para corriente directa
+   mbtcustd(Vcd,P,Nc,L,Class,Ta,Vd,View,Fsc,ITM)
 
 ..
 

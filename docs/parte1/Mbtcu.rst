@@ -1,31 +1,37 @@
-|image1|
-|image2|\ |image3|\  |image4|
-|image5|\ |image6|
+| |image1|
+| |image2|
+| |image3|
+| |image4|
+| |image5|\ |image6|
 
-.. _header-n31:
-
-Módulo de baja tensión para conductores de cobre
-================================================
+Módulo de bata tensión MBTCU
+============================
 
 El módulo comprende conductores de cobre estandarizados desde clase B, C
-y D.
+y D. La información que debe ser ingresada en este módulo debe ser en
+Sistema Internacional y para poder hacer su llamado se escribe lo
+siguiente :
 
-.. _header-n33:
+.. code:: python
 
-Iniciar paquete de instalación
-------------------------------
+   kelectric.mbtcu()
 
-El módulo tiene dependencias siendo necesario instalar ``tabulate`` el
-cual da una mejor apariencia al momento de mostrar los resultados.
+El resultado puede ser visualizado en un array o tabla mediante
+``tabulate`` el cual se instala por defecto en el programa.
+
+Información requerida en el módulo MBTCU
+========================================
+
+El llenado del módulo requiere la información siguiente :
 
 .. code:: tex
 
-   #VF: Tensión de fase o en su defecto tensión de línea para sistemas de 1F2H, 2F.
-   #VL: Tensión de línea.
-   #In: Corriente nominal total de una de las fases.
+   #Vf: Tensión de fase o línea a línea para sistemas de 2F2H, 2F en Volts.
+   #Vl: Tensión de línea en Volts.
+   #P : Potencia que consume la carga en Watts.
    #Nc: Número de conductores por fase.
    #L : Longitud en metros.
-   #FA: Número de conducrtores activos en el tubo conduit.
+   #Fa: Número de conducrtores activos en el tubo conduit.
    #Type: Tipo de tubo conduit (1:PVC,2:AL,3:ACERO)
    #Ta: Temperatura ambiente en centigrados, únicamente ingresar la opcion númerica.
    #Vd: Caída de tensión (porcentual de 2, 3, 5)
@@ -37,45 +43,25 @@ cual da una mejor apariencia al momento de mostrar los resultados.
    	 1: Mostrar los resultados adecuadamente estructurado en una tabla. 
    	 2: Mostrar los resultados como datos acumulados. Esta opción es necesario cuando se activa
    	 	la función para múltiples cargas.
-   #Fsc: Factor de sobrecorriente (1.25,1.0)
-.. code:: python
+   #Fsc: Factor de sobrecorriente (1.25,1.0) cuando existe carga continua
+   #ITM: Esta opción determina el portentaje de uso de la protección eléctrica 
+   ---- 1:80%
+   -----2:100%
 
-   import PyEWS
-   #Para conductores de cobre
-   PyEWS.MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc)
-
-.. _header-n37:
-
-Test MBTCU
-----------
-
-El módulo tiene dependencias por lo que es necesario instalar
-``tabulate`` el cual da una mejor apariencia al momento de mostrar los
-resultados.
+Importado ``kelectric`` la información requerida en orden sería
 
 .. code:: python
 
-   import PyEWS
-   PyEWS.MBTCU(127,220,15,1,22,1,1,35,3,1,0.9,1,1.25)
+   #Módulo de baja tensión para conductores de cobre 
+   mbtcu(VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm)
 
-Los se resultados muestran con la iteración de todos los conductores
-tanto para tensión monofásica como trifásica.
+..
 
--  ``Vd (Voltage Drop)`` es la pérdida de tensión porcentual
--  ``60,75,90`` la ampacidad real de los conductores.
--  ``Nc`` es el número de conductores por fase.
--  ``Op`` muestra si el resultado es correcto al aparecerer en la
-   columna como ``Yes`` .
--  ``ITM`` es la protección del circuito.
+   El módulo se limita a los conductores mostrados en el ``dbc`` que son
+   conductores comerciales.
 
-   Se puede observar en la columna ``%VD 1F-2H`` seleccionada la pérdida
-   de tensión es aceptable con respecto a la mínima ingresada del
-   ``%3``. La confirmación de un resultado es aceptable se visualiza en
-   la columna ``OP`` . Al utilizar la opción de multiples cargas podrá
-   mostrar el resumen y el desglose como se muestra en la tabla.
-
-.. figure:: https://i.ibb.co/rbttQ7p/0-1-18.jpg
-   :alt: 
+Esta obra está bajo una Licencia Creative Commons
+Atribución-CompartirIgual 4.0 Internacional.
 
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes

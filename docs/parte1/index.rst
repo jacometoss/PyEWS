@@ -1,20 +1,18 @@
-.. pyautocad documentation master file, created by
-   sphinx-quickstart on Sat Abr 25 17:33:00 2021.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-    
-
-Manual de Usuario Python Electrical Wire Sizes
-==============================================
+Electrical Wire Sizes
+=====================
 |image1|
 |image2|\ |image3|\ |image4|
 |image5|\ |image6|
 
-PyEWS_ - Es un paquete para cálculo de secciones de conductores eléctricos.
+Electrical Wire Sizes
 
-El módulo PyEWS ( Versión 0.1.18) puede ser utilizado para dimensionar 
-conductores de baja tensión de una instalación eléctrica. Es fácil de utilizar e interpretar sus resultados mostrando un panorama más general al poder visualizar 
-por completo una lista de conductores propuestos con los parámetros de entrada.
+La librería Electrical Wire Sizes ( Versión 0.1.19) puede ser utilizada para dimensionar 
+alimentadores y circuitos derivados de baja tensión como son los conductores de las instalaciones eléctricas.
+
+El uso de la liberería es sencillo y la manera de mostrar los resultados lo lleva a una mejor 
+experiencia de interpretación mostrando un panorama más amplio al poder visualizar 
+por completo la lista completa de conductores.
+
 
 .. toctree::
     :maxdepth: 7
@@ -22,12 +20,18 @@ por completo una lista de conductores propuestos con los parámetros de entrada.
     Install
     Mbtcu
     Mbtal
+	Mbtcustd
+	Dbc
+	Zpual
+	Zpucu
     Dbcircuit
     Dbcircuitcd
     Reference
     Denveloped
 	
 	
+
+
 .. _PyEWS: https://pypi.org/project/ElectricalWireSizes/
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes

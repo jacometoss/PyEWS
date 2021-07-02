@@ -8,9 +8,9 @@ Electrical Wires Sizes es una librería hecha en el lenguaje de programación Py
 
 La librería cuenta por el momento con 8 módulos que internamente son llamados para realizar el dimensionamiento de conductores en baja tensión para conductores comerciales de 600 V a 2000 V, los resultados obtenidos se muestran en forma matricial o tabla para una mejor comprensión de los resultados.
 
-**************************************************
-¿Te gusta este proyecto?, puedes apoyarme mediante
-**************************************************
+
+**¿Te gusta este proyecto?, puedes apoyarme mediante**
+
 La vida es como una batería y en cada momento uno va perdiendo una pequeña parte de esta cada día,
 puedes apoyarme en el desarrollo de este proyecto y motivar aún más mi creatividad para 
 que sea de gran utilidad esta herramienta.
@@ -21,9 +21,9 @@ Puedes comprarme de un café :
 
 No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como sugerencias.
 
-*********
-Contenido
-*********
+
+**Contenido**
+
 
 .. toctree::
     :maxdepth: 11

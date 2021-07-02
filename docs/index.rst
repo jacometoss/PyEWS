@@ -10,15 +10,19 @@ de instalaciones eléctricas. En la práctica esta libería le será útil cuand
 dimensionar una cantidad considerable de alimentadores como circuitos derivados.
 
 Electrical Wires Sizes es una librería hecha en el lenguaje de programación Python
-y fue creado con la finalidad de acortar el tiempo en el dimensionamiento de conductores eléctricos
+y fue creada con la finalidad de acortar el tiempo en el dimensionamiento de conductores eléctricos
 u obtención de las secciones de los conductores de una instalación eléctrica. 
 
 La librería cuenta por el momento con 8 módulos que internamente son llamados 
-para realizar el dimensionamiento de conductores en baja tensión, los resultados obtenidos se
-muestran en forma matricial o tabla para una mejor comprensión de los resultados.
+para realizar el dimensionamiento de conductores en baja tensión para conductores comerciales
+de 600 V a 2000 V, los resultados obtenidos se muestran en forma matricial o tabla para una mejor comprensión de los resultados.
 
 Si te gusta este proyecto puedes apoyarme mediante
 
+**************************************************
+¿Te gusta este proyecto?, puedes apoyarme mediante
+**************************************************
+  
 |image7|
 
 

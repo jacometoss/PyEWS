@@ -19,7 +19,7 @@ muestran en forma matricial o tabla para una mejor comprensión de los resultado
 
 Si te gusta este proyecto puedes apoyarme mediante
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B356BR4)
+[![ko-fi]()]()
 
 
 Tabla de contenidos:
@@ -45,6 +45,7 @@ Tabla de contenidos:
    :target: https://codeclimate.com/github/jacometoss/PyEWS/maintainability
 .. |image6| image:: https://app.codacy.com/project/badge/Grade/8d8575adf7e149999e6bc84c657fc94e
    :target: https://www.codacy.com/gh/jacometoss/PyEWS/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jacometoss/PyEWS&amp;utm_campaign=Badge_Grade
-
+.. |image7| image:: https://ko-fi.com/img/githubbutton_sm.svg
+   :target: https://ko-fi.com/B0B356BR4
 
 

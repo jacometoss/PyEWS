@@ -4,7 +4,7 @@ Manual de usuario de Electrical Wire Sizes
 |image2|\  |image3|\  |image4|
 |image5|\  |image6|
 
-Esta idea nace debido a la popularidad de Python y encontrar una utilidad 
+Esta idea nace debido a la popularidad de Python y de encontrar una utilidad 
 adecuada dentro del área de ingeniería eléctrcica en la especialidad de diseño
 de instalaciones eléctricas. En la práctica esta libería le será útil cuando trate de  
 dimensionar una cantidad considerable de alimentadores como circuitos derivados.

@@ -19,9 +19,9 @@ de 600 V a 2000 V, los resultados obtenidos se muestran en forma matricial o tab
 
 Si te gusta este proyecto puedes apoyarme mediante
 
-**************************************************
-¿Te gusta este proyecto?, puedes apoyarme mediante
-**************************************************
+
+**¿Te gusta este proyecto?, puedes apoyarme mediante**
+
 La vida es como una batería y en cada momento uno va perdiendo una pequeña parte de esta cada día,
 puedes apoyarme en el desarrollo de este proyecto y motivar aún más mi creatividad para 
 que sea de gran utilidad esta herramienta.
@@ -32,9 +32,9 @@ Puedes comprarme de un café  :
 
 No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como sugerencias.
 
-********************
-Tabla de contenidos:
-********************
+
+**Tabla de contenido**
+
 .. toctree::
    :maxdepth: 2
 

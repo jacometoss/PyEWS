@@ -4,17 +4,22 @@ Manual de usuario de Electrical Wire Sizes
 |image2|\ |image3|\ |image4|
 |image5|\ |image6|
 
-La librería Python Electrical Wires Sizes tiene como finalidad acortar el tiempo
-en el dimensionamiento de conductores eléctricos de baja tensión. 
-
-Electrical Wire Sizes cuenta con una variedad de módulos que internamente son llamados 
-para realizar cálculos más exactos y finalmetne los resultados obtenidos son mostrados 
-mediante un resumen y tabla general.
-
 Esta idea nace debido a la popularidad de Python y encontrar una utilidad 
 adecuada dentro del área de ingeniería eléctrcica en la especialidad de diseño
-de instalaciones eléctricas, en la práctica le será útil cuando se trate de una 
-cantidad considerable de alimentadores como circuitos derivados.
+de instalaciones eléctricas. En la práctica esta libería le será útil cuando trate de  
+dimensionar una cantidad considerable de alimentadores como circuitos derivados.
+
+Electrical Wires Sizes es una librería hecha en el lenguaje de programación Python
+y fue creado con la finalidad de acortar el tiempo en el dimensionamiento de conductores eléctricos
+u obtención de las secciones de los conductores de una instalación eléctrica. 
+
+La librería cuenta por el momento con 8 módulos que internamente son llamados 
+para realizar el dimensionamiento de conductores en baja tensión, los resultados obtenidos se
+muestran en forma matricial o tabla para una mejor comprensión de los resultados.
+
+Si te gusta este proyecto puedes apoyarme mediante
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B356BR4)
 
 
 Tabla de contenidos:

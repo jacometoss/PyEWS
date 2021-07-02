@@ -19,7 +19,7 @@ muestran en forma matricial o tabla para una mejor comprensión de los resultado
 
 Si te gusta este proyecto puedes apoyarme mediante
 
-[![ko-fi]()]()
+|image7|
 
 
 Tabla de contenidos:

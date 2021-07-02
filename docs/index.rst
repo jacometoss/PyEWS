@@ -30,7 +30,7 @@ Puedes comprarme de un café  :
 
 |image7|
 
-No es mucho pero de algo sirve para mejorar este proyecto aceptando críticas como sugerencias.
+No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como sugerencias.
 
 
 Tabla de contenidos:

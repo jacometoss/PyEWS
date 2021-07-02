@@ -13,6 +13,22 @@ El uso de la liberería es sencillo y la manera de mostrar los resultados lo lle
 experiencia de interpretación mostrando un panorama más amplio al poder visualizar 
 por completo la lista completa de conductores.
 
+**************************************************
+¿Te gusta este proyecto?, puedes apoyarme mediante
+**************************************************
+La vida es como una batería y en cada momento uno va perdiendo una pequeña parte de esta cada día,
+puedes apoyarme en el desarrollo de este proyecto y motivar aún más mi creatividad para 
+que sea de gran utilidad esta herramienta.
+
+Puedes comprarme de un café  : 
+
+|image7|
+
+No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como sugerencias.
+
+*********
+Contenido
+*********
 
 .. toctree::
     :maxdepth: 11

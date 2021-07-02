@@ -1,7 +1,6 @@
 Manual de usuario de Electrical Wire Sizes
 ==========================================
-|image1|
-|image2|\  |image3|\  |image4|
+|image1| |image2| |image3| |image4|
 |image5|\  |image6|
 
 Esta idea nace debido a la popularidad de Python y de encontrar una utilidad 

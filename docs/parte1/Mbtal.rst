@@ -46,7 +46,10 @@ El llenado del módulo requiere la información siguiente :
    #Fsc: Factor de sobrecorriente (1.25,1.0) cuando existe carga continua
    #ITM: Esta opción determina el portentaje de uso de la protección eléctrica 
    ---- 1:80%
-   -----2:100%
+   ---- 2:100%
+   #Ad: Alimentador o derivado
+   ---- 1: Tipo alimentador
+   ---- 2: Tipo derivado
 
 Importado ``kelectric`` la información requerida en orden sería
 

@@ -47,13 +47,16 @@ El llenado del módulo requiere la información siguiente :
    #ITM: Esta opción determina el portentaje de uso de la protección eléctrica 
    ---- 1:80%
    -----2:100%
+   #Ad: Alimentador o derivado
+   -----1:Tipo alimentador
+   -----2_Tipo derivado
 
 Importado ``kelectric`` la información requerida en orden sería
 
 .. code:: python
 
    #Módulo de baja tensión para conductores de cobre 
-   mbtcu(VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm)
+   mbtcu(VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm,Ad)
 
 ..
 

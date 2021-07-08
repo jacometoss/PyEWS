@@ -26,9 +26,9 @@ cargas
 .. code:: python
 
    carga=[
-        ["1",VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm],
-        ["2",VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm],
-        ["3",VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm]
+        ["1",VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm,Ad],
+        ["2",VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm,Ad],
+        ["3",VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm,Ad]
        ]
 
 Podemos observar que son los mismos de los módulos ``mbtcu`` y ``mbtal``

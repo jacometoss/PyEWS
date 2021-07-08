@@ -55,7 +55,7 @@ Importado ``kelectric`` la información requerida en orden sería
 
 .. code:: python
 
-   mbtal(VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm)
+   mbtal(VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm,Ad)
 
 ..
 

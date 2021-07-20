@@ -1,4 +1,4 @@
-Electrical Wire Sizes (Español)
+Electrical Wire Sizes (English)
 ===============================
 |image1|
 |image2|\  |image3|\  |image4|

@@ -59,7 +59,7 @@ future versions will include the English System
 Start package and module
 ------------------------
 
-The module has dependencies being necessary to install `` tabulate`` (it is
+The module has dependencies being necessary to install ``tabulate`` (it is
 installs automatically) which serves to give a better appearance
 at the time of displaying the results
 
@@ -71,8 +71,8 @@ package\ ``kelectric`` .
    import kelectric
 
 The import of the ``kelectric`` library is done in a unique way when
-start a file and to start each module you must prepend
-`` kelectric``. In this example we will import the low voltage module
+start a file and to start each module you must prepend 
+``kelectric``. In this example we will import the low voltage module
 for copper conductors, we will not show the filling of this module
 only the order of call.
 

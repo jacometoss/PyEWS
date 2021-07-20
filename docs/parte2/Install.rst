@@ -7,7 +7,7 @@
 Python Electrical Wire Sizes 
 ============================
 
-The Python Electrical Wire Sizes module (``Version 0.1.19``) can be
+The Python Electrical Wire Sizes module ``Version 0.1.19`` can be
 used to size feeder conductors in low voltage such as the branch circuits 
 of an electrical installation. Is tool is very useful for engineers and 
 architects immersed in the branch of electrical projects and those familiar 

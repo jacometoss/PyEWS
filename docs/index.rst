@@ -38,6 +38,7 @@ No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como
    :maxdepth: 2
 
    parte1/index
+   parte2/index
 	
 	
 

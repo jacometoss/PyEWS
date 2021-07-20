@@ -16,3 +16,4 @@ Repositorio de manuales y recursos del entrenamiento
    :maxdepth: 2
 
    parte1/index
+   parte2/index

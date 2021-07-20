@@ -35,7 +35,7 @@ No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como
 **Tabla de contenido**
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    parte1/index
    parte2/index

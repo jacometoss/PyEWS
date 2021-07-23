@@ -53,8 +53,6 @@ Importado ``kelectric`` la información requerida en orden sería
 
 Nota : Recuerda importar ``kelectric``
 
-Esta obra está bajo una Licencia Creative Commons
-Atribución-CompartirIgual 4.0 Internacional.
 
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes

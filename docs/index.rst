@@ -31,7 +31,7 @@ Puedes comprarme un café  :
 
 No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como sugerencias.
 
-
+|image8|
 
 **Tabla de contenido**
 
@@ -62,7 +62,3 @@ No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como
    :target: https://ko-fi.com/B0B356BR4
 .. |image8| image:: https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
    :target: https://www.facebook.com/SELisp.Autodesk
-   
-   
-
-

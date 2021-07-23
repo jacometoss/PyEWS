@@ -33,6 +33,9 @@ No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como
 
 |image8|
 
+Redes Sociales
+|image9|
+
 **Tabla de contenido**
 
 .. toctree::

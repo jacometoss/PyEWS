@@ -30,13 +30,13 @@ resultados.
 Redes sociales
 =======================
 
-|image7|\ |image8| \
+|image7|
 
 
 Sitios y blogs
 ==============
 
-|image9|
+|image9|\ |image8|
 
 
 

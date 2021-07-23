@@ -23,6 +23,7 @@ Acerca del autor
 Recibió el grado Maestro de Ingeniería Eléctrica en el Intituto de Ingeniería de la Universiad Autómoma de México. Lo ha llevado al
 constante desarrollo de nuevas aplicaciones prácticas como complejas
 debido a las necesidades hoy tan demandantes en la industría. 
+
 El desarrollo de esta aplicación tiene como objetivo acortar los tiempo en el dimensionamiento de conductores eléctricos y obtención de
 resultados.
 

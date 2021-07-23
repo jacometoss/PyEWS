@@ -33,7 +33,8 @@ No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como
 
 |image8|
 
-Redes Sociales
+**Redes sociales**
+
 |image9|
 
 **Tabla de contenido**
@@ -67,5 +68,3 @@ Redes Sociales
    :target: https://www.facebook.com/SELisp.Autodesk
 .. |image9| image:: https://img.icons8.com/doodle/48/000000/facebook-new.png
    :target: https://www.facebook.com/profile.php?id=100010010467825  
-   
-   

@@ -30,7 +30,7 @@ resultados.
 Redes sociales
 ==============
 
-|image7|\|image 8|
+|image7|\ |image8|
 
 
 

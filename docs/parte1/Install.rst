@@ -86,9 +86,6 @@ mostrados en la tabla mostrada anteriormente. En los puntos siguientes
 se verá como llenar correctamente cada uno de los módulos y que
 resultado se muestra en cada uno de ellos
 
-Esta obra está bajo una Licencia Creative Commons
-Atribución-CompartirIgual 4.0 Internacional.
-
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes
 .. |image2| image:: https://static.pepy.tech/personalized-badge/electricalwiresizes?period=total&units=none&left_color=grey&right_color=blue&left_text=Downloads

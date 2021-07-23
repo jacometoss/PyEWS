@@ -28,9 +28,9 @@ El desarrollo de esta aplicación tiene como objetivo acortar los tiempo en el d
 resultados.
 
 Redes sociales
-----------------
+==============
 
-|image7|
+|image7|\|image8|
 
 
 
@@ -48,3 +48,7 @@ Redes sociales
    :target: https://www.codacy.com/gh/jacometoss/PyEWS/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jacometoss/PyEWS&amp;utm_campaign=Badge_Grade
 .. |image7| image:: https://img.icons8.com/doodle/48/000000/facebook-new.png
    :target: https://www.facebook.com/profile.php?id=100010010467825 
+.. |image8| image:: https://img.icons8.com/doodle/48/000000/blogger--v1.png
+   :target: https://k-denveloper.blogspot.com/    
+   
+   

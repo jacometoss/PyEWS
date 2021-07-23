@@ -27,8 +27,8 @@ debido a las necesidades hoy tan demandantes en la industría.
 El desarrollo de esta aplicación tiene como objetivo acortar los tiempo en el dimensionamiento de conductores eléctricos y obtención de
 resultados.
 
-Redes sociales
-==============
+sitios y redes sociales
+=======================
 
 |image7|\ |image8|
 

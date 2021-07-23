@@ -198,7 +198,7 @@ latex_elements = {
 \authoraddress{
   \strong{}\\
   \strong{Autor:} Marco Polo Jácome Toss\\
-  \strong{Contactos:} \email{jacometoss@aol.com} - 
+  \strong{Contacto:} \email{jacometoss@aol.com} - 
   \url{https://pyews.readthedocs.io}
 }
 \let\Verbatim=\OriginalVerbatim

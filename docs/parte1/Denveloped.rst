@@ -27,10 +27,16 @@ debido a las necesidades hoy tan demandantes en la industría.
 El desarrollo de esta aplicación tiene como objetivo acortar los tiempo en el dimensionamiento de conductores eléctricos y obtención de
 resultados.
 
-Sitios y redes sociales
+Redes sociales
 =======================
 
-|image7|\ |image8| \ |image9|
+|image7|\ |image8| \
+
+
+Sitios y blogs
+==============
+
+|image9|
 
 
 
@@ -51,7 +57,7 @@ Sitios y redes sociales
 .. |image8| image:: https://img.icons8.com/doodle/48/000000/blogger--v1.png
    :target: https://k-denveloper.blogspot.com/
 .. |image9| image:: https://img.icons8.com/color/48/000000/github--v1.png
-   :target: https://github.com/jacometoss 
+   :target: https://jacometoss.github.io/SELisp/ 
    
    
 

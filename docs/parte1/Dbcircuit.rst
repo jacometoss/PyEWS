@@ -72,8 +72,6 @@ El llenado del módulo requiere la información siguiente :
    El módulo se limita a los conductores mostrados en el ``dbc`` que son
    conductores comerciales.
 
-Esta obra está bajo una Licencia Creative Commons
-Atribución-CompartirIgual 4.0 Internacional.
 
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes

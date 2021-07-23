@@ -65,7 +65,7 @@ Redes Sociales
    :target: https://ko-fi.com/jacometoss
 .. |image8| image:: https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
    :target: https://www.facebook.com/SELisp.Autodesk
-.. |image9| image:: https://github.com/primer/octicons/blob/main/icons/zap-16.svg
+.. |image9| image:: https://img.icons8.com/doodle/48/000000/facebook-new.png
    :target: https://www.facebook.com/profile.php?id=100010010467825  
    
    

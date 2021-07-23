@@ -30,7 +30,7 @@ resultados.
 Sitios y redes sociales
 =======================
 
-|image7|\ |image8|
+|image7|\ |image8| \ |image9|
 
 
 
@@ -49,6 +49,11 @@ Sitios y redes sociales
 .. |image7| image:: https://img.icons8.com/doodle/48/000000/facebook-new.png
    :target: https://www.facebook.com/Mark-Polo-1920945868169736 
 .. |image8| image:: https://img.icons8.com/doodle/48/000000/blogger--v1.png
-   :target: https://k-denveloper.blogspot.com/    
+   :target: https://k-denveloper.blogspot.com/
+.. |image9| image:: https://img.icons8.com/color/48/000000/github--v1.png
+   :target: https://github.com/jacometoss 
+   
+   
+
    
    

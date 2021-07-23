@@ -60,8 +60,6 @@ Importado ``kelectric`` la información requerida en orden sería
 
 ..
 
-   El módulo se limita a los conductores mostrados en el ``dbc`` que son
-   conductores comerciales.
 
 Esta obra está bajo una Licencia Creative Commons
 Atribución-CompartirIgual 4.0 Internacional.

@@ -3,7 +3,7 @@ Electrical Wire Sizes, kElectric
 |image1| |image2| |image3| |image4|
 |image5|\  |image6|
 
-**ElectricalWireSizes_**
+## ElectricalWireSizes_ 
 
 Esta idea nace debido a la popularidad de Python y de encontrar una utilidad 
 adecuada dentro del área de ingeniería eléctrcica en la especialidad de diseño

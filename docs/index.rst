@@ -3,7 +3,7 @@ Electrical Wire Sizes, kElectric
 |image1| |image2| |image3| |image4|
 |image5|\  |image6|
 
-Esta idea nace debido a la popularidad de Python y de encontrar una utilidad 
+kElectric_ : Esta idea nace debido a la popularidad de Python y de encontrar una utilidad 
 adecuada dentro del área de ingeniería eléctrcica en la especialidad de diseño
 de instalaciones eléctricas. En la práctica esta libería le será útil cuando trate de  
 dimensionar una cantidad considerable de alimentadores como circuitos derivados.
@@ -49,7 +49,7 @@ No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como
 	
 
 
-.. _PyEWS: https://pypi.org/project/ElectricalWireSizes/
+.. _kElectric: https://pypi.org/project/ElectricalWireSizes/
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes
 .. |image2| image:: https://static.pepy.tech/personalized-badge/electricalwiresizes?period=total&units=none&left_color=grey&right_color=blue&left_text=Downloads

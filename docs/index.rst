@@ -5,6 +5,10 @@ Electrical Wire Sizes, kElectric
 
 ElectricalWireSizes_  version 0.1.18 Estable 
 
+*****************************************************
+Documentación kElectric 0.1.19 versión no disponible
+*****************************************************
+
 Esta idea nace debido a la popularidad de Python y de encontrar una utilidad 
 adecuada dentro del área de ingeniería eléctrcica en la especialidad de diseño
 de instalaciones eléctricas. En la práctica esta libería le será útil cuando trate de  

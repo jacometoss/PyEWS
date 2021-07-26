@@ -3,7 +3,7 @@ Electrical Wire Sizes, kElectric
 |image1| |image2| |image3| |image4|
 |image5|\  |image6|
 
-ElectricalWireSizes_ Paquete PyEWS version 0.1.20 Estable 
+ElectricalWireSizes_ Paquete PyEWS version 0.1.21rc1 Semiestable 
 
 *******************************************************************
 Documentación kElectric 0.1.21 versión no disponible por el momento
@@ -55,7 +55,7 @@ No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como
 	
 
 
-.. _ElectricalWireSizes: https://pypi.org/project/ElectricalWireSizes/0.1.20/
+.. _ElectricalWireSizes: https://pypi.org/project/ElectricalWireSizes/0.1.21rc1/
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes
 .. |image2| image:: https://static.pepy.tech/personalized-badge/electricalwiresizes?period=total&units=none&left_color=grey&right_color=blue&left_text=Downloads

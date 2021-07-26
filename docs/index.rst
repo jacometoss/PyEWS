@@ -55,7 +55,7 @@ No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como
 	
 
 
-.. _ElectricalWireSizes: https://pypi.org/project/ElectricalWireSizes/0.1.18/
+.. _ElectricalWireSizes: https://pypi.org/project/ElectricalWireSizes/0.1.19/
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes
 .. |image2| image:: https://static.pepy.tech/personalized-badge/electricalwiresizes?period=total&units=none&left_color=grey&right_color=blue&left_text=Downloads

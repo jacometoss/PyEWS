@@ -268,7 +268,7 @@ zpual(1,10,0.9,1)
 
 La presente versión tiene corrección de entrada de parámetros.
 
-```toml
+```text
 [Packqge]: ElectricalWireSizes 0.1.19
 [Autor]: Marco Polo Jácome Toss
 [Licencia]: GNU General Public License v3.0

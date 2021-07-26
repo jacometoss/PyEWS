@@ -150,7 +150,7 @@ PyEWS.dbc(1)
 
 ## Múltiples cargas en corriente alterna
 
-Para implementar una gran variedad de cargas se organizan como se muestra en el bloque de código, puede agregar hasta ***indefinido número de cargas*** en está nueva versión (0.1.20).
+Para implementar una gran variedad de cargas se organizan como se muestra en el bloque de código, puede agregar hasta ***indefinido número de cargas*** en está nueva versión (0.1.21rc1).
 
 ```python
 from PyEWS import mbtcu, dbcircuit
@@ -286,7 +286,7 @@ El llenado del módulo es un poco complejo
   graph(mydata,"Calibre Inicial","Calibre Final", Ancho, Alto, Aluminio/Cobre, "Color",Sistema)
   ```
 
-  Los calibres deben ir como se muestra en los resultados y entre comillas dobles indicando un conductor inicial y final dispobible, el ancho y alto son pulgadas en formato `integer` o `float`. Dependiendo el material del conductor (`1:Cobre, 2:Aluminio`) y el color de las barras puede usar `k: negro`, `b: azul`, `g:verde`, `r:rojo` que son estándar en reportes, finalmente el sistema `1:1F-2H`,`2:2F-3H`,`3:3F-3H` y `4:3F:4H`.
+  Los calibres deben ir como se muestra en los resultados y entre comillas dobles indicando un conductor inicial y final disponible, el ancho y alto son pulgadas en formato `integer` o `float`. Dependiendo el material del conductor (`1:Cobre, 2:Aluminio`) y el color de las barras puede usar `k: negro`, `b: azul`, `g:verde`, `r:rojo` que son estándar en reportes, finalmente el sistema `1:1F-2H`,`2:2F-3H`,`3:3F-3H` y `4:3F:4H`.
 
   No olvide que el arreglo de datos  `mydata` debe ser correcto y definido.
 
@@ -303,10 +303,8 @@ El llenado del módulo es un poco complejo
 La presente versión tiene corrección de entrada de parámetros.
 
 ```text
-[Packqge]: ElectricalWireSizes 0.1.19
+[Packqge]: ElectricalWireSizes 0.1.21rc1
 [Autor]: Marco Polo Jácome Toss
 [Licencia]: GNU General Public License v3.0
 ```
-
-
 

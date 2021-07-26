@@ -10,7 +10,7 @@ t = time.localtime() # Establecemos la fecha la cual es mostrada en los errores.
 '''
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 | PYEWS, ElectricalWireSizes, 17/04/2021                                 |
-| Version : 0.1.20                                                       |
+| Version : 0.1.21rc1                                                       |
 | Autor : Marco Polo Jacome Toss                                         |
 | License: GNU Affero General Public License v3 (GPL-3.0)                |
 | Requires: Python >=3.5                                                 |
@@ -91,7 +91,7 @@ def version():
     print("                                                                          ")
     print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
     print("| Python ElectricalWireSizes, 26/07/2021                                 |")
-    print("| Version : 0.1.20                                                       |")
+    print("| Version : 0.1.21rc1                                                       |")
     print("| Autor : Marco Polo Jacome Toss                                         |")
     print("| License: GNU Affero General Public License v3 (GPL-3.0)                |")
     print("| Requires: Python >=3.5                                                 |")
@@ -215,7 +215,7 @@ def zpucu(Type=None,Ta=None,Fp=None,View=None):
         print("                                                           ")
         print("-----------------------------------------------------------")
         print("| Los parámetros no son correctos para el                 |")
-        print("| módulo ZpuCu(Type,Ta,Fp,View)                           |")
+        print("| módulo zpucu(Type,Ta,Fp,View)                           |")
         print("-----------------------------------------------------------")
         return 
 
@@ -291,7 +291,7 @@ def zpual(Type=None,Ta=None,Fp=None,View=None):
         print("                                                           ")
         print("-----------------------------------------------------------")
         print("| Los parámetros no son correctos para                    |")
-        print("| el módulo ZpuAl(Type,Ta,Fp,View)                        |")
+        print("| el módulo zpual(Type,Ta,Fp,View)                        |")
         print("-----------------------------------------------------------")
         return     
     
@@ -875,7 +875,7 @@ def mbtal(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View,Fsc):
 ##-----------------------------------------------------------------------------------------------------------##
 def mbtcustd(Vcd=None,In=None,Nc=None,L=None,Class=None,Ta=None,Vd=None,View=None,Fsc=None):
 
-    if(Vcd==None,In==None,Nc==None,L==None,Class==None,Ta==None,Vd==None,View==None,Fsc==None):
+    if(Vcd==None or In==None or Nc==None or L==None or Class==None or Ta==None or Vd==None or View==None or Fsc==None):
         print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
         print("                    ElectricalWireSizes                      ")
         print("                 ",time.asctime(t))
@@ -889,7 +889,7 @@ def mbtcustd(Vcd=None,In=None,Nc=None,L=None,Class=None,Ta=None,Vd=None,View=Non
         print("                                                             ")
         print("-------------------------------------------------------------")
         print("| Los parámetros no son correctos                           |")
-        print("| para el módulo MBTCUSTD(Vcd,In,Nc,L,Class,Ta,Vd,View,Fsc) |")
+        print("| para el módulo mbtcustd(Vcd,In,Nc,L,Class,Ta,Vd,View,Fsc) |")
         print("-------------------------------------------------------------")
         return  
 
@@ -1027,7 +1027,7 @@ def dbcircuit(carga=None,view=None,conductor=None):
         print("                                                             ")
         print("-------------------------------------------------------------")
         print("| Los parámetros no son correctos                           |")
-        print("| para el módulo DBCIRCUIT(carga,view,conductor)            |")
+        print("| para el módulo dbcircuit(carga,view,conductor)            |")
         print("-------------------------------------------------------------")
         return  
     

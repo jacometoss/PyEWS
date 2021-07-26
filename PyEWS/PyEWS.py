@@ -1,5 +1,8 @@
 from tabulate import tabulate
 import math
+import time
+
+t = time.localtime() # Establecemos la fecha la cual es mostrada en los errores.
 
 '''
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -74,6 +77,23 @@ dbConductorCuStd=[["14 AWG",8.43,8.43,8.43,15,20,25],
 ["2000 KCM",0.0177,0.0177,0.0177,555,665,750]]
 
 
+def version():
+    print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+    print("                                                                          ")
+    print("                             ─▄▀─▄▀")
+    print("                         ──▀──▀")
+    print("                         █▀▀▀▀▀█▄")
+    print("                         █░░░░░█─█")
+    print("                         ▀▄▄▄▄▄▀▀")
+    print("                                                                          ")
+    print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+    print("| Python ElectricalWireSizes, 26/07/2021                                 |")
+    print("| Version : 0.1.19                                                       |")
+    print("| Autor : Marco Polo Jacome Toss                                         |")
+    print("| License: GNU Affero General Public License v3 (GPL-3.0)                |")
+    print("| Requires: Python >=3.5                                                 |")
+    print("| Url : https://pypi.org/project/ElectricalWireSizes/                    |")    
+    print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")  
 
 def Rn(Ra,T2):
     Rb=(Ra/(234.5+75))*(234.5+T2)
@@ -86,7 +106,7 @@ def RnCd(Ra,T2):
 def Z(R,X,FP):
     Z=(R*FP+X*math.sin(math.acos(FP)))
     FN=1/((2*100)*((R*FP+X*math.sin(math.acos(FP)))/1000))
-    FFN=1/((100)*((R*FP+X*math.sin(math.acos(FP)))/1000))
+    FFN=1/((math.sqrt(3)*100)*((R*FP+X*math.sin(math.acos(FP)))/1000))
     FFFN=1/((math.sqrt(3)*100)*((R*FP+X*math.sin(math.acos(FP)))/1000))
     FFF=1/((math.sqrt(3)*100)*((R*FP+X*math.sin(math.acos(FP)))/1000))
     return [round(FN,4),round(FFN,4),round(FFFN,4),round(FFF,4),round(Z,4)]
@@ -96,15 +116,69 @@ def Rcd(R):
     PN=1/((2*100)*((Rcond)/1000))
     return [round(PN,4),round(Rcond,4)]
 
-def DBC(conductor):
+def dbc(conductor=None):
+
+    if(conductor==None):
+        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                    ElectricalWireSizes                    ")
+        print("                 ",time.asctime(t))
+        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                                                           ")
+        print("                             ─▄▀─▄▀")
+        print("                         ──▀──▀")
+        print("                         █▀▀▀▀▀█▄")
+        print("                         █░░░░░█─█")
+        print("                         ▀▄▄▄▄▄▀▀")
+        print("                                                           ")
+        print("-----------------------------------------------------------")
+        print("| Los parámetros no son correctos para el                 |")
+        print("| módulo dbc(conductor)                                   |")
+        print("-----------------------------------------------------------")
+        return  
+
     if conductor ==1:
         print(tabulate(dbConductorCu, headers=["AWG/KCM","R(Ω/km)", "X (Ω/km)","R (Ω/km)","X (Ω/km)", "R (Ω/km)", "X (Ω/km)", "60°C", "75°C", "90°C"], tablefmt='psql'))
     elif conductor==2:
         print(tabulate(dbConductorAl, headers=["AWG/KCM","R(Ω/km)", "X (Ω/km)","R (Ω/km)","X (Ω/km)", "R (Ω/km)", "X (Ω/km)", "60°C", "75°C", "90°C"], tablefmt='psql'))
     elif conductor==3:
-        print(tabulate(dbConductorCuStd, headers=["AWG/KCM","R[A](Ω/km)", "R[B](Ω/km)","R[C](Ω/km)", "60°C", "75°C", "90°C"], tablefmt='psql'))        
+        print(tabulate(dbConductorCuStd, headers=["AWG/KCM","R[A](Ω/km)", "R[B](Ω/km)","R[C](Ω/km)", "60°C", "75°C", "90°C"], tablefmt='psql'))
+    elif (conductor>3 or conductor<=0):
+        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                    ElectricalWireSizes                    ")
+        print("                 ",time.asctime(t))
+        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                                                           ")
+        print("                             ─▄▀─▄▀")
+        print("                         ──▀──▀")
+        print("                         █▀▀▀▀▀█▄")
+        print("                         █░░░░░█─█")
+        print("                         ▀▄▄▄▄▄▀▀")
+        print("                                                           ")
+        print("-----------------------------------------------------------")
+        print("| Por el momento tenemos únicamente tres opciones         |")
+        print("| Cobre 1, Aluminio 2, Cobre CD                           |")
+        print("-----------------------------------------------------------")        
     
-def FCT(Ta):
+def FCT(Ta=None):
+
+    if(Ta==None):
+        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                    ElectricalWireSizes                    ")
+        print("                 ",time.asctime(t))
+        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                                                           ")
+        print("                             ─▄▀─▄▀")
+        print("                         ──▀──▀")
+        print("                         █▀▀▀▀▀█▄")
+        print("                         █░░░░░█─█")
+        print("                         ▀▄▄▄▄▄▀▀")
+        print("                                                           ")
+        print("-----------------------------------------------------------")
+        print("| Los parámetros no son correctos para el                 |")
+        print("| módulo FCT(Ta)                                          |")
+        print("-----------------------------------------------------------")
+        return  
+
     if Ta >= 60:
         FT60=0.0
     else:
@@ -122,7 +196,25 @@ def FCT(Ta):
         return FT90
 
     
-def ZpuCu(Type,Ta,Fp,View):
+def zpucu(Type=None,Ta=None,Fp=None,View=None):
+
+    if(Type==None or Ta==None or Fp==None or View==None):
+        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                    ElectricalWireSizes                    ")
+        print("                 ",time.asctime(t))
+        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                                                           ")
+        print("                             ─▄▀─▄▀")
+        print("                         ──▀──▀")
+        print("                         █▀▀▀▀▀█▄")
+        print("                         █░░░░░█─█")
+        print("                         ▀▄▄▄▄▄▀▀")
+        print("                                                           ")
+        print("-----------------------------------------------------------")
+        print("| Los parámetros no son correctos para el                 |")
+        print("| módulo ZpuCu(Type,Ta,Fp,View)                           |")
+        print("-----------------------------------------------------------")
+        return 
 
     if Type==1:
     #Conductores en ducto de PVC
@@ -180,7 +272,26 @@ def ZpuCu(Type,Ta,Fp,View):
         return  datos
     
 
-def ZpuAl(Type,Ta,Fp,View):
+def zpual(Type=None,Ta=None,Fp=None,View=None):
+
+    if(Type==None or Ta==None or Fp==None or View==None):
+        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                    ElectricalWireSizes                    ")
+        print("                 ",time.asctime(t))
+        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                                                           ")
+        print("                             ─▄▀─▄▀")
+        print("                         ──▀──▀")
+        print("                         █▀▀▀▀▀█▄")
+        print("                         █░░░░░█─█")
+        print("                         ▀▄▄▄▄▄▀▀")
+        print("                                                           ")
+        print("-----------------------------------------------------------")
+        print("| Los parámetros no son correctos para                    |")
+        print("| el módulo ZpuAl(Type,Ta,Fp,View)                        |")
+        print("-----------------------------------------------------------")
+        return     
+    
 
     if Type==1:
     #Conductores en ducto de PVC
@@ -235,7 +346,25 @@ def ZpuAl(Type,Ta,Fp,View):
         return  datos 
 
     
-def MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View,Fsc):
+def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=None,S=None,Fp=None,View=None,Fsc=None):
+
+    if(Type==None or Ta==None or Fp==None or View==None):
+        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                    ElectricalWireSizes                    ")
+        print("                 ",time.asctime(t))
+        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                                                           ")
+        print("                             ─▄▀─▄▀")
+        print("                         ──▀──▀")
+        print("                         █▀▀▀▀▀█▄")
+        print("                         █░░░░░█─█")
+        print("                         ▀▄▄▄▄▄▀▀")
+        print("                                                           ")
+        print("-----------------------------------------------------------")
+        print("| Los parámetros no son correctos para el                 |")
+        print("| módulo MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View,Fsc) |")
+        print("-----------------------------------------------------------")
+        return         
 
     if Ta >= 60:
         FT60=0.0
@@ -490,7 +619,7 @@ def MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View,Fsc):
         return datos
     
 
-def MBTAL(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View,Fsc):
+def mbtal(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View,Fsc):
 
     if Ta >= 60:
         FT60=0.0
@@ -741,7 +870,25 @@ def MBTAL(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View,Fsc):
         #Mostrar la información en lista
         return datos
 ##-----------------------------------------------------------------------------------------------------------##
-def MBTCUSTD(Vcd,In,Nc,L,Class,Ta,Vd,View,Fsc):
+def mbtcustd(Vcd=None,In=None,Nc=None,L=None,Class=None,Ta=None,Vd=None,View=None,Fsc=None):
+
+    if(Vcd==None,In==None,Nc==None,L==None,Class==None,Ta==None,Vd==None,View==None,Fsc==None):
+        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                    ElectricalWireSizes                      ")
+        print("                 ",time.asctime(t))
+        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                                                             ")
+        print("                             ─▄▀─▄▀")
+        print("                         ──▀──▀")
+        print("                         █▀▀▀▀▀█▄")
+        print("                         █░░░░░█─█")
+        print("                         ▀▄▄▄▄▄▀▀")
+        print("                                                             ")
+        print("-------------------------------------------------------------")
+        print("| Los parámetros no son correctos                           |")
+        print("| para el módulo MBTCUSTD(Vcd,In,Nc,L,Class,Ta,Vd,View,Fsc) |")
+        print("-------------------------------------------------------------")
+        return  
 
     if Ta >= 60:
         FT60=0.0
@@ -860,16 +1007,35 @@ def MBTCUSTD(Vcd,In,Nc,L,Class,Ta,Vd,View,Fsc):
         #Mostrar la información en lista
         return datos
     
-def DBCIRCUIT(carga,view,conductor):
+def dbcircuit(carga=None,view=None,conductor=None):
+
+
+    if(carga==None or view==None or conductor==None):
+        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                    ElectricalWireSizes                      ")
+        print("                 ",time.asctime(t))
+        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                                                             ")
+        print("                             ─▄▀─▄▀")
+        print("                         ──▀──▀")
+        print("                         █▀▀▀▀▀█▄")
+        print("                         █░░░░░█─█")
+        print("                         ▀▄▄▄▄▄▀▀")
+        print("                                                             ")
+        print("-------------------------------------------------------------")
+        print("| Los parámetros no son correctos                           |")
+        print("| para el módulo DBCIRCUIT(carga,view,conductor)            |")
+        print("-------------------------------------------------------------")
+        return  
     
     dbcircuit = [[str(i + 1)] for i in range(len(carga))]
         
     datos=[]  
     for i in range(len(carga)):
         if conductor ==1:
-            datos.append(MBTCU(carga[i][1],carga[i][2],carga[i][3],carga[i][4],carga[i][5],carga[i][6],carga[i][7],carga[i][8],carga[i][9],carga[i][10],carga[i][11],carga[i][12],carga[i][13])) 
+            datos.append(mbtcu(carga[i][1],carga[i][2],carga[i][3],carga[i][4],carga[i][5],carga[i][6],carga[i][7],carga[i][8],carga[i][9],carga[i][10],carga[i][11],carga[i][12],carga[i][13])) 
         elif conductor ==2:
-            datos.append(MBTAL(carga[i][1],carga[i][2],carga[i][3],carga[i][4],carga[i][5],carga[i][6],carga[i][7],carga[i][8],carga[i][9],carga[i][10],carga[i][11],carga[i][12],carga[i][13])) 
+            datos.append(mbtal(carga[i][1],carga[i][2],carga[i][3],carga[i][4],carga[i][5],carga[i][6],carga[i][7],carga[i][8],carga[i][9],carga[i][10],carga[i][11],carga[i][12],carga[i][13])) 
         if view==1:
             print("Id [",i+1,"]========================================================================================================================================================================")
             print(tabulate(datos[i], headers=["AWG/KCM","1F/2H", "2F/3H","3F/3H","3F/4H", "60", "75", "90","%Vd/1F", "%Vd/2F","%Vd/3F","%Vd/3F","Nc", "In", "60", "75", "90", "Op", "ITM"], tablefmt='psql'))
@@ -943,19 +1109,37 @@ def DBCIRCUIT(carga,view,conductor):
     print(tabulate(dbcircuit, headers=["Id","#CAL","L[m]", "Vd","FP","ALM", "Fct","Fa","60", "75", "90","Vd[%]","Nc", "In", "60", "75", "90", "ITM"], tablefmt='psql'))
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------#            
-def DBCIRCUITCD(carga,view,conductor):
+def dbcircuitcd(carga,view,conductor):
+
+    if(carga==None or view==None or conductor==None):
+        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                    ElectricalWireSizes                      ")
+        print("                 ",time.asctime(t))
+        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                                                             ")
+        print("                             ─▄▀─▄▀")
+        print("                         ──▀──▀")
+        print("                         █▀▀▀▀▀█▄")
+        print("                         █░░░░░█─█")
+        print("                         ▀▄▄▄▄▄▀▀")
+        print("                                                             ")
+        print("-------------------------------------------------------------")
+        print("| Los parámetros no son correctos                           |")
+        print("| para el módulo DBCIRCUITCD(carga,view,conductor)          |")
+        print("-------------------------------------------------------------")
+        return      
     
     dbcircuit = [[str(i + 1)] for i in range(len(carga))]
     
     datos=[]  
     for i in range(len(carga)):
         if conductor == 1:
-            datos.append(MBTCUSTD(carga[i][1],carga[i][2],carga[i][3],carga[i][4],carga[i][5],carga[i][6],carga[i][7],carga[i][8],carga[i][9])) 
+            datos.append(mbtcustd(carga[i][1],carga[i][2],carga[i][3],carga[i][4],carga[i][5],carga[i][6],carga[i][7],carga[i][8],carga[i][9])) 
             if view==1:
                 print("Id [",i+1,"]============================================================================================================")
                 print(tabulate(datos[i], headers=["AWG/KCMxx","Kcd [A,B,C]", "", "60", "75", "90","%Vd","Nc", "In", "60", "75", "90", "Op", "ITM"], tablefmt='psql'))
         elif conductor == 2:
-            datos.append(MBTCUSTD(carga[i][1],carga[i][2],carga[i][3],carga[i][4],carga[i][5],carga[i][6],carga[i][7],carga[i][8],carga[i][9]))
+            datos.append(mbtcustd(carga[i][1],carga[i][2],carga[i][3],carga[i][4],carga[i][5],carga[i][6],carga[i][7],carga[i][8],carga[i][9]))
             if view==1:
                 print("Id [",i+1,"]============================================================================================================")
                 print(tabulate(datos[i], headers=["AWG/KCM","Kcd [A,B,C]", "", "60", "75", "90","%Vd","Nc", "In", "60", "75", "90", "Op", "ITM"], tablefmt='psql'))

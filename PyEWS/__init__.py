@@ -1,13 +1,10 @@
-__docformat__ = 'restructuredtext es'
-__version__ = '0.1.18'
-
-from .PyEWS import MBTCU
-from .PyEWS import MBTAL
-from .PyEWS import MBTCUSTD
-from .PyEWS import DBC
+from .PyEWS import mbtcu
+from .PyEWS import mbtal
+from .PyEWS import mbtcustd
+from .PyEWS import dbc
 from .PyEWS import Rn
 from .PyEWS import Z
-from .PyEWS import DBCIRCUIT
-from .PyEWS import DBCIRCUITCD
-from .PyEWS import ZpuAl
-from .PyEWS import ZpuCu
+from .PyEWS import dbcircuit
+from .PyEWS import dbcircuitcd
+from .PyEWS import zpual
+from .PyEWS import zpucu

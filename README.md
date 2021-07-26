@@ -1,16 +1,39 @@
+<img src="https://i.ibb.co/86M4K2Z/PYEWS.jpg" alt="PyEWS" style="zoom: 100%;" />
 
-
-<img src="https://i.ibb.co/YD4XKb8/02.png" alt="PyEWS" style="zoom: 80%;" />
-
-[![PyPI version](https://badge.fury.io/py/ElectricalWireSizes.svg)](https://badge.fury.io/py/ElectricalWireSizes)
-[![Downloads](https://static.pepy.tech/personalized-badge/electricalwiresizes?period=total&units=none&left_color=grey&right_color=blue&left_text=Downloads)](https://pepy.tech/project/electricalwiresizes)
-[![Downloads](https://pepy.tech/badge/electricalwiresizes/month)](https://pepy.tech/project/electricalwiresizes)
-[![versons of python supported](https://img.shields.io/badge/python-3%20%7C%203.5%20%7C%203.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue)](https://pypi.org/project/ElectricalWireSizes/)
-[![Maintainability](https://api.codeclimate.com/v1/badges/27c48038801ee954796d/maintainability)](https://codeclimate.com/github/jacometoss/PyEWS/maintainability)[![Codacy Badge](https://app.codacy.com/project/badge/Grade/8d8575adf7e149999e6bc84c657fc94e)](https://www.codacy.com/gh/jacometoss/PyEWS/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jacometoss/PyEWS&amp;utm_campaign=Badge_Grade)
+[![PyPI version](https://badge.fury.io/py/ElectricalWireSizes.svg)](https://badge.fury.io/py/ElectricalWireSizes) [![Downloads](https://static.pepy.tech/personalized-badge/electricalwiresizes?period=total&units=none&left_color=grey&right_color=blue&left_text=Downloads)](https://pepy.tech/project/electricalwiresizes) [![Downloads](https://pepy.tech/badge/electricalwiresizes/month)](https://pepy.tech/project/electricalwiresizes) [![versons of python supported](https://img.shields.io/badge/python-3%20%7C%203.5%20%7C%203.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue)](https://pypi.org/project/ElectricalWireSizes/) [![Maintainability](https://api.codeclimate.com/v1/badges/27c48038801ee954796d/maintainability)](https://codeclimate.com/github/jacometoss/PyEWS/maintainability)[![Codacy Badge](https://app.codacy.com/project/badge/Grade/8d8575adf7e149999e6bc84c657fc94e)](https://www.codacy.com/gh/jacometoss/PyEWS/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jacometoss/PyEWS&amp;utm_campaign=Badge_Grade)
 
 # Python Electrical Wire Sizes 
 
-El módulo PyEWS ( **Versión 0.1.18**) puede ser utilizado para dimensionar conductores  de baja tensión de una instalación eléctrica. Es fácil de utilizar e interpretar sus resultados mostrando un panorama más general al poder visualizar por completo una lista de conductores propuestos con los parámetros de entrada.
+Esta idea nace debido a la popularidad de Python y de encontrar una utilidad adecuada dentro del área de ingeniería eléctrica en la especialidad de diseño de instalaciones eléctricas. En la práctica esta librería le será útil cuando trate de dimensionar una cantidad considerable de alimentadores como circuitos derivados.
+
+[Electrical Wires Sizes](https://pyews.readthedocs.io/) es una librería hecha en el lenguaje de programación Python y fue creada con la finalidad de acortar el tiempo en el dimensionamiento de conductores eléctricos u obtención de las secciones de los conductores de una instalación eléctrica.
+
+La librería cuenta por el momento con 8 módulos que internamente son llamados para realizar el dimensionamiento de conductores en baja tensión para conductores comerciales de 600 V a 2000 V, los resultados obtenidos se muestran en forma matricial o tabla para una mejor comprensión de los resultados.
+
+La versión disponible la puedes consular mediante :
+
+```python
+import PyEWS
+PyEWS.version()
+```
+
+## [Donativos](https://ko-fi.com/jacometoss) 
+
+**¿Te gusta este proyecto?, puedes apoyarme mediante**
+
+La vida es como una batería y en cada momento uno va perdiendo una pequeña parte de esta cada día, puedes apoyarme en el desarrollo de este proyecto y motivar aún más mi creatividad para que sea de gran utilidad esta herramienta.
+
+[El apoyo es mediante un café :](https://ko-fi.com/jacometoss)
+
+           ─▄▀─▄▀
+           ──▀──▀
+           █▀▀▀▀▀█▄
+           █░░░░░█─█
+           ▀▄▄▄▄▄▀▀
+       Url para donativos      
+    https://ko-fi.com/jacometoss                     
+
+Este donativo es mínimo pero ayuda a mi creatividad.
 
 ## Instalación
 
@@ -75,19 +98,23 @@ PyEWS.MBTCUSTD(1200,145,1,100,1,25,3,1,1.25)
 
 ## PyEWS Módulos
 
-| Id   | Descripción                                                  | Módulo   | Versión |                      Descargar                      |
-| ---- | ------------------------------------------------------------ | -------- | ------- | :-------------------------------------------------: |
-| 1    | Módulo de baja tensión para conductores de cobre clase B, C y D  tensión de 600V a 2000V | MBTCU    | 0.1.18  | [PyEWS 0.1.18](https://github.com/jacometoss/PyEWS) |
-| 2    | Módulo de baja tensión para conductores de aluminio clase B, C y  D, tensión 600V a 2000V | MBTAL    | 0.1.18  | [PyEWS 0.1.18](https://github.com/jacometoss/PyEWS) |
-| 3    | Módulo de baja tensión para conductores de cobre clase B, C  y D en corriente directa hasta 2000 V | MBTCUSTD | 0.1.18  | [PyEWS 0.1.18](https://github.com/jacometoss/PyEWS) |
+| Id   | Descripción                                                  | Módulo        |
+| ---- | ------------------------------------------------------------ | ------------- |
+| 1    | Módulo de baja tensión para conductores de cobre clase B, C y D  tensión de 600V a 2000V. | mbtcu()       |
+| 2    | Módulo de baja tensión para conductores de aluminio clase B, C y  D, tensión 600V a 2000V. | mbtal()       |
+| 3    | Módulo de baja tensión para conductores de cobre clase B, C  y D en corriente directa hasta 2000 V. | mbtcustd()    |
+| 4    | Módulo para el cálculo de la impedancia para conductores de cobre. | zpucu()       |
+| 5    | Módulo para el cálculo de la impedancia para conductores de aluminio. | zpual()       |
+| 6    | Módulo para dimensionar múltiples conductores de cobre y aluminio., corriente alterna. | dbcircuit()   |
+| 7    | Módulo para dimensionar múltiples conductores de cobre, corriente directa. | dbcircuitcd() |
 
 ## Test
 
 El módulo tiene dependencias por lo que es necesario instalar `tabulate` el cual da una mejor apariencia al momento de mostrar los resultados.
 
 ```python
-import PyEWS
-PyEWS.MBTCU(127,220,15,1,22,1,1,35,3,1,0.9,1,1.25)
+from PyEWS impor mbtcu
+mbtcu(127,220,15,1,22,1,1,35,3,1,0.9,1,1.25)
 ```
 
 Los se resultados muestran con la iteración de todos los conductores tanto para tensión monofásica como trifásica.
@@ -125,6 +152,7 @@ PyEWS.DBC(1)
 Para implementar una gran variedad de cargas se organizan como se muestra en el bloque de código, puede agregar hasta ***indefinido número de cargas*** en está nueva versión (0.1.18).
 
 ```python
+from PyEWS import mbtcu, dbcircuit
 carga=[
      ["1",127,220,15,1,22,1,1,35,3,1,0.9,2,1.25],
      ["2",127,220,12,1,10,1,1,25,3,1,0.9,2,1.25],
@@ -160,8 +188,7 @@ print("Total de cargas : ",len(carga))
 Para mostrar el resumen para  conductores de cobre
 
 ```python
-from PyEWS import DBCIRCUIT
-PyEWS.DBCIRCUIT(carga,2,1)
+dbcircuit(carga,2,1)
 ```
 
 <img src="https://i.ibb.co/PzFM1sJ/0-1-18-2.jpg" alt="Resultados" style="zoom:100%;" />
@@ -169,7 +196,7 @@ PyEWS.DBCIRCUIT(carga,2,1)
 Para mostrar el resumen para conductores de aluminio
 
 ```python
-PyEWS.DBCIRCUIT(carga,2,2)
+dbcircuit(carga,2,2)
 ```
 
 ![Resultados](https://i.ibb.co/DttdHzk/B.jpg)
@@ -197,7 +224,7 @@ cargacd=[
     ["14",1200,30,1,100,1,25,3,2,1]
     ]
 print("Total de cargas : ",len(cargacd))
-DBCIRCUITCD(cargacd,2,1)
+dbcircuitcd(cargacd,2,1)
 
 #Para mostar completo el desarrollo
 #----------PyEWS.DBCIRCUITCD(carga,1,1) #Cobre Estándar
@@ -210,8 +237,7 @@ DBCIRCUITCD(cargacd,2,1)
 Para mostrar el resumen para  conductores de cobre estándar
 
 ```
-from PyEWS import DBCIRCUITCD
-DBCIRCUITCD(cargacd,2,2)
+dbcircuitcd(cargacd,2,2)
 ```
 
 ![MODBTCD](https://i.ibb.co/rswpHm2/04.jpg)
@@ -221,11 +247,11 @@ DBCIRCUITCD(cargacd,2,2)
 Para obtener las constantes únicamente utilice las líneas siguientes 
 
 ```python
-import PyEWS
+from PyEWS import zpucu, zpual
 #ZpuCu(Type,Ta,Fp,View)
-PyEWS.ZpuCu(1,10,0.9,1) 
+zpucu(1,10,0.9,1) 
 #ZpuAl(Type,Ta,Fp,View)
-PyEWS.ZpuAl(1,10,0.9,1) 
+zpual(1,10,0.9,1) 
 ```
 
 <img src="https://i.ibb.co/D1syMzL/Zpu.jpg" alt="Zpu" style="zoom:70%;" />
@@ -236,5 +262,15 @@ PyEWS.ZpuAl(1,10,0.9,1)
 
 [2] Thue, W., 1978. *Electrical Power Cable Engineering*. 2nd ed. New York, Basel: Marcel Dekker Inc., p.34.
 
+[3] Norma Oficial Mexicana NOM-001-SEDE-2018, *Instalaciones Eléctricas (utilización)*
 
+## Acerca de la versión
+
+La presente versión tiene corrección de entrada de parámetros.
+
+```toml
+[Packqge]: ElectricalWireSizes 0.1.19
+[Autor]: Marco Polo Jácome Toss
+[Licencia]: GNU General Public License v3.0
+```
 

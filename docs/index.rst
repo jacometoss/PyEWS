@@ -10,7 +10,7 @@ Documentación kElectric 0.1.20 versión no disponible por el momento
 *******************************************************************
 
 Esta idea nace debido a la popularidad de Python y de encontrar una utilidad 
-adecuada dentro del área de ingeniería eléctrcica en la especialidad de diseño
+adecuada dentro del área de ingeniería eléctrica en la especialidad de diseño
 de instalaciones eléctricas. En la práctica esta libería le será útil cuando trate de  
 dimensionar una cantidad considerable de alimentadores como circuitos derivados.
 

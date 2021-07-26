@@ -8,3 +8,5 @@ from .PyEWS import dbcircuit
 from .PyEWS import dbcircuitcd
 from .PyEWS import zpual
 from .PyEWS import zpucu
+from .PyEWS import graph
+from .PyEWS import version

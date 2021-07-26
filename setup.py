@@ -2,12 +2,10 @@ from setuptools import setup, find_packages
 
 setup(
     name='ElectricalWireSizes',
-    version='0.1.19',
+    version='0.1.20',
     url='https://pyews.readthedocs.io/',
     project_urls={
-        
         'Documentation': 'https://pyews.readthedocs.io/',
-        'Source': 'https://github.com/jacometoss/PyEWS',
         'Source': 'https://github.com/jacometoss/PyEWS',
         'Funding': 'https://ko-fi.com/jacometoss',
     },    
@@ -20,7 +18,7 @@ setup(
     keywords=['PyEWS', 'electrical', 'conductor', 'size', 'ElectricalWireSizes'],
     packages=find_packages(include=["PyEWS"]),
     include_package_data=True,
-    install_requires=['tabulate==0.8.9'],
+    install_requires=['tabulate==0.8.9','numpy','matplotlib'],
     python_requires='>=3.5',
     classifiers=[
         'License :: OSI Approved :: GNU Affero General Public License v3',

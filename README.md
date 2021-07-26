@@ -72,9 +72,9 @@ El módulo tiene dependencias siendo necesario instalar `tabulate` el cual da un
 ```python
 import PyEWS
 #Para conductores de cobre
-PyEWS.MBTCU(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc)
+PyEWS.mbtcu(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc)
 #Para conductores de aluminio
-PyEWS.MBTAL(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc)
+PyEWS.mbtal(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc)
 ```
 
 El módulo de corriente directa  necesita la información siguiente :
@@ -91,7 +91,7 @@ El módulo de corriente directa  necesita la información siguiente :
 #View  :  Mostrar los resultados adecuadamente en una tabla con 1 para multiples cargas debe ser 2.
 #Fsc   :  Factor de sobrecorrriente
 
-PyEWS.MBTCUSTD(1200,145,1,100,1,25,3,1,1.25)
+PyEWS.mbtcustd(1200,145,1,100,1,25,3,1,1.25)
 ```
 
 
@@ -102,11 +102,12 @@ PyEWS.MBTCUSTD(1200,145,1,100,1,25,3,1,1.25)
 | ---- | ------------------------------------------------------------ | ------------- |
 | 1    | Módulo de baja tensión para conductores de cobre clase B, C y D  tensión de 600V a 2000V. | mbtcu()       |
 | 2    | Módulo de baja tensión para conductores de aluminio clase B, C y  D, tensión 600V a 2000V. | mbtal()       |
-| 3    | Módulo de baja tensión para conductores de cobre clase B, C  y D en corriente directa hasta 2000 V. | mbtcustd()    |
+| 3    | Módulo de baja tensión para conductores de cobre clase B, C  y D en CD hasta 2000 V. | mbtcustd()    |
 | 4    | Módulo para el cálculo de la impedancia para conductores de cobre. | zpucu()       |
 | 5    | Módulo para el cálculo de la impedancia para conductores de aluminio. | zpual()       |
 | 6    | Módulo para dimensionar múltiples conductores de cobre y aluminio., corriente alterna. | dbcircuit()   |
 | 7    | Módulo para dimensionar múltiples conductores de cobre, corriente directa. | dbcircuitcd() |
+| 8    | Módulo para graficar resultados                              | graph()       |
 
 ## Test
 
@@ -125,11 +126,11 @@ Los se resultados muestran con la iteración de todos los conductores tanto para
 
 - `Nc` es el número de conductores por fase.
 
-- `Op` muestra si el resultado es correcto al aparecerer en la columna como  `Yes` .
+- `Op` muestra si el resultado es correcto al aparecer en la columna la palabra en ingles  `Yes` .
 
 - `ITM` es la protección del circuito.
 
-  Se puede observar en la columna  `%VD 1F-2H` seleccionada la pérdida de tensión es aceptable con respecto a la mínima ingresada del `%3`. La confirmación de un resultado es aceptable se visualiza en la columna `OP` .  Al utilizar la opción de multiples cargas podrá mostrar el resumen y el desglose como se muestra en la tabla.
+  Se puede observar en la columna  `%VD 1F-2H` seleccionada la pérdida de tensión es aceptable con respecto a la mínima ingresada del `%3`. La confirmación de un resultado es aceptable se visualiza en la columna `OP` .  Al utilizar la opción de múltiples cargas podrá mostrar el resumen y el desglose como se muestra en la tabla.
 
 ![Resultados](https://i.ibb.co/rbttQ7p/0-1-18.jpg)
 
@@ -144,12 +145,12 @@ import PyEWS
 #1 Conductores de cobre, 
 #2 conductores de aluminio, 
 #3 conductores de cobre estandar para corriente directa.
-PyEWS.DBC(1)
+PyEWS.dbc(1)
 ```
 
 ## Múltiples cargas en corriente alterna
 
-Para implementar una gran variedad de cargas se organizan como se muestra en el bloque de código, puede agregar hasta ***indefinido número de cargas*** en está nueva versión (0.1.18).
+Para implementar una gran variedad de cargas se organizan como se muestra en el bloque de código, puede agregar hasta ***indefinido número de cargas*** en está nueva versión (0.1.20).
 
 ```python
 from PyEWS import mbtcu, dbcircuit
@@ -178,11 +179,11 @@ carga=[
 #Una forma sencilla de mostrar el total de cargas
 print("Total de cargas : ",len(carga))
 #Para mostar completo el desarrollo
-#----------PyEWS.DBCIRCUIT(carga,1,1) #Cobre
-#----------PyEWS.DBCIRCUIT(carga,1,2) #Aluminio
+#----------dbcircuit(carga,1,1) #Cobre
+#----------dbcircuit(carga,1,2) #Aluminio
 #Para mostar el resumen únicamente 
-#----------PyEWS.DBCIRCUIT(carga,2,1) #Cobre
-#----------PyEWS.DBCIRCUIT(carga,2,2) #Aluminio
+#----------dbcircuit(carga,2,1) #Cobre
+#----------dbcircuit(carga,2,2) #Aluminio
 ```
 
 Para mostrar el resumen para  conductores de cobre
@@ -206,6 +207,7 @@ dbcircuit(carga,2,2)
 Para implementar una gran variedad de cargas se organizan como se muestra en el bloque de código, puede agregar hasta 25 cargas.
 
 ```python
+from PyEWS import dbcircuitcd
 #(Vcd,In,Nc,L,Class,Ta,Vd,View):
 cargacd=[
     ["1",1200,30,1,100,1,25,3,2,1],
@@ -227,11 +229,11 @@ print("Total de cargas : ",len(cargacd))
 dbcircuitcd(cargacd,2,1)
 
 #Para mostar completo el desarrollo
-#----------PyEWS.DBCIRCUITCD(carga,1,1) #Cobre Estándar
-#----------PyEWS.DBCIRCUITCD(carga,1,2) #Aluminio No disponible
+#----------dbcircuitcd(carga,1,1) #Cobre Estándar
+#----------dbcircuitcd(carga,1,2) #Aluminio No disponible
 #Para mostar el resumen únicamente 
-#----------PyEWS.DBCIRCUITCD(carga,2,1) #Cobre Estándar
-#----------PyEWS.DBCIRCUITCD(carga,2,2) #Aluminio No disponible
+#----------dbcircuitcd(carga,2,1) #Cobre Estándar
+#----------dbcircuitcd(carga,2,2) #Aluminio No disponible
 ```
 
 Para mostrar el resumen para  conductores de cobre estándar
@@ -256,6 +258,38 @@ zpual(1,10,0.9,1)
 
 <img src="https://i.ibb.co/D1syMzL/Zpu.jpg" alt="Zpu" style="zoom:70%;" />
 
+
+
+## Graficar resultados
+
+Mediante  `matplotlib` y`numpy`  es posible obtener gráficos, la instalación de esta librería es automática al instalar  `ElectricalWireSizes`.
+
+Es posible graficar los resultados de pérdida de tensión de un único cálculo por el momento como se muestra en la figura siguiente :
+
+![graph](https://i.ibb.co/XFzQyZJ/Graph2.jpg)
+
+Esta limitado para conductores en corriente alterna, el procedimiento para generar la figura es mediante :
+
+```python
+from PyEWS import mbtal, graph
+mydata=mbtal(127,220,55,1,45,1,1,35,3,1,0.9,2,1)
+graph(mydata,"6 AWG","4/0 AWG", 8, 5, 2,"k",1)
+```
+
+El llenado del módulo es un poco complejo
+
+- Realice un cálculo para conductores de cobre, en el ejemplo se guardo en  `mydata` .
+
+- Llamamos al módulo llenamos como se indica 
+
+  ```python
+  graph(mydata,"Calibre Inicial","Calibre Final", Ancho, Alto, Aluminio/Cobre, "Color",Sistema)
+  ```
+
+  Los calibres deben ir como se muestra en los resultados y entre comillas dobles indicando un conductor inicial y final dispobible, el ancho y alto son pulgadas en formato `integer` o `float`. Dependiendo el material del conductor (`1:Cobre, 2:Aluminio`) y el color de las barras puede usar `k: negro`, `b: azul`, `g:verde`, `r:rojo` que son estándar en reportes, finalmente el sistema `1:1F-2H`,`2:2F-3H`,`3:3F-3H` y `4:3F:4H`.
+
+  No olvide que el arreglo de datos  `mydata` debe ser correcto y definido.
+
 ## Referencias
 
 [1] Norma Oficial Mexicana NOM-001-SEDE-2012, *Instalaciones Eléctricas (utilización)*
@@ -273,4 +307,6 @@ La presente versión tiene corrección de entrada de parámetros.
 [Autor]: Marco Polo Jácome Toss
 [Licencia]: GNU General Public License v3.0
 ```
+
+
 

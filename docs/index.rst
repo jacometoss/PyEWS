@@ -3,11 +3,11 @@ Electrical Wire Sizes, kElectric
 |image1| |image2| |image3| |image4|
 |image5|\  |image6|
 
-ElectricalWireSizes_  version 0.1.18 Estable 
+ElectricalWireSizes_ Paquete PyEWS version 0.1.19 Estable 
 
-*****************************************************
-Documentación kElectric 0.1.19 versión no disponible
-*****************************************************
+*******************************************************************
+Documentación kElectric 0.1.20 versión no disponible por el momento
+*******************************************************************
 
 Esta idea nace debido a la popularidad de Python y de encontrar una utilidad 
 adecuada dentro del área de ingeniería eléctrcica en la especialidad de diseño

@@ -4,11 +4,13 @@
 
 # Python Electrical Wire Sizes 
 
-Esta idea nace debido a la popularidad de Python y de encontrar una utilidad adecuada dentro del área de ingeniería eléctrica en la especialidad de diseño de instalaciones eléctricas. En la práctica esta librería le será útil cuando trate de dimensionar una cantidad considerable de alimentadores como circuitos derivados.
-
 [Electrical Wires Sizes](https://pyews.readthedocs.io/) es una librería hecha en el lenguaje de programación Python y fue creada con la finalidad de acortar el tiempo en el dimensionamiento de conductores eléctricos u obtención de las secciones de los conductores de una instalación eléctrica.
 
-La librería cuenta por el momento con 8 módulos que internamente son llamados para realizar el dimensionamiento de conductores en baja tensión para conductores comerciales de 600 V a 2000 V, los resultados obtenidos se muestran en forma matricial o tabla para una mejor comprensión de los resultados.
+Esta idea nace debido a la popularidad del lenguaje de programación Python y buscar una aplicación de este lenguaje dentro del área de ingeniería eléctrica en la especialidad de diseño de instalaciones eléctricas. En la práctica esta librería le será útil cuando trate de dimensionar una cantidad considerable de alimentadores como circuitos derivados.
+
+La librería cuenta por el momento con 8 módulos que internamente son llamados para realizar el dimensionamiento de conductores en baja tensión para conductores comerciales de 600 V hasta 2000 V, los resultados obtenidos se muestran en forma matricial o tabla para una mejor comprensión de los resultados.
+
+La dependencia de este lenguaje de otros paquetes es baja únicamente usa `tabulate` en primer grado y en forma muy secundaría `numpy` y `matplotlib` no encontrándose limitado por el momento a una versión. Estas últimas dos librerías se usan para graficar las pérdidas de tensión de los conductores de corriente alterna.
 
 La versión disponible la puedes consular mediante :
 
@@ -21,7 +23,7 @@ PyEWS.version()
 
 **¿Te gusta este proyecto?, puedes apoyarme mediante**
 
-La vida es como una batería y en cada momento uno va perdiendo una pequeña parte de esta cada día, puedes apoyarme en el desarrollo de este proyecto y motivar aún más mi creatividad para que sea de gran utilidad esta herramienta.
+La vida es como una batería y en cada momento uno va perdiendo una pequeña parte de esta cada día, puedes apoyarme en el desarrollo de este proyecto y motivar aún más mi creatividad para que sea de gran utilidad esta herramienta. Puedes contactarme si desconoces del medio proporcionado pero se basa en el sistema de pagos de PayPal.
 
 [El apoyo es mediante un café :](https://ko-fi.com/jacometoss)
 
@@ -33,11 +35,11 @@ La vida es como una batería y en cada momento uno va perdiendo una pequeña par
        Url para donativos      
     https://ko-fi.com/jacometoss                     
 
-Este donativo es mínimo pero ayuda a mi creatividad.
+Este donativo es mínimo pero ayuda a mi creatividad, realmente la mínima cantidad es de $2 dólares.
 
 ## Instalación
 
-La instalación del módulo se realiza con :
+La instalación del paquete se realiza mediante la instrucción siguiente :
 
 ```Python
 pip install ElectricalWireSizes
@@ -45,7 +47,7 @@ pip install ElectricalWireSizes
 
 ## Iniciar paquete de instalación
 
-El módulo tiene dependencias siendo necesario instalar `tabulate` el cual da una mejor apariencia al momento de mostrar los resultados.
+El módulo tiene dependencias siendo necesario instalar `tabulate` el cual da una mejor apariencia al momento de mostrar los resultados, la instalación es automática de este paquete. La información que se muestra en el bloque son algunas de las variables de llenado para cada uno de los módulos.
 
 ```tex
 #VF: Tensión de fase o en su defecto tensión de línea para sistemas de 1F2H, 2F.
@@ -55,8 +57,8 @@ El módulo tiene dependencias siendo necesario instalar `tabulate` el cual da un
 #L : Longitud en metros.
 #FA: Número de conducrtores activos en el tubo conduit.
 #Type: Tipo de tubo conduit (1:PVC,2:AL,3:ACERO)
-#Ta: Temperatura ambiente en centigrados, únicamente ingresar la opcion númerica.
----- 1:20 2:25 3:30 4:35 5:40 6:45 7:50 8:55 9:60 10:65 11:70 12:75
+#Ta: Temperatura ambiente en centigrados.
+---- Valor númerico de temperatura, por ejemplo 30°C.
 #Vd: Caída de tensión (porcentual de 2, 3, 5)
 ---- 2,3,5	
 #S:  Seleccione el sistema que desea propner en base a este se muestran los resultados.
@@ -69,6 +71,8 @@ El módulo tiene dependencias siendo necesario instalar `tabulate` el cual da un
 #Fsc: Factor de sobrecorriente (1.25,1.0)
 ```
 
+Esta es la estructura básica de llenado de los módulos de bata tensión para conductores de cobre y aluminio en corriente alterna.
+
 ```python
 import PyEWS
 #Para conductores de cobre
@@ -80,7 +84,8 @@ PyEWS.mbtal(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc)
 El módulo de corriente directa  necesita la información siguiente :
 
 ```python
-#MODBTCUSTD(Vcd,In,Nc,L,Class,Ta,Vd,View,Fsc):
+#modbtcustd(Vcd,In,Nc,L,Class,Ta,Vd,View,Fsc):
+
 #Vcd   :  Tensión en corriente directa.
 #In    :  Corriente directa del circuito.
 #Nc    :  Número de conductores en corriente directa.
@@ -94,9 +99,9 @@ El módulo de corriente directa  necesita la información siguiente :
 PyEWS.mbtcustd(1200,145,1,100,1,25,3,1,1.25)
 ```
 
-
-
 ## PyEWS Módulos
+
+Los módulos disponibles por el momento son los siguientes :
 
 | Id   | Descripción                                                  | Módulo        |
 | ---- | ------------------------------------------------------------ | ------------- |
@@ -111,14 +116,14 @@ PyEWS.mbtcustd(1200,145,1,100,1,25,3,1,1.25)
 
 ## Test
 
-El módulo tiene dependencias por lo que es necesario instalar `tabulate` el cual da una mejor apariencia al momento de mostrar los resultados.
+En el ejemplo siguiente vamos a realizar un pequeño calculo donde es usado el módulo `mbtcu`.
 
 ```python
-from PyEWS impor mbtcu
+from PyEWS import mbtcu
 mbtcu(127,220,15,1,22,1,1,35,3,1,0.9,1,1.25)
 ```
 
-Los se resultados muestran con la iteración de todos los conductores tanto para tensión monofásica como trifásica.
+Los resultados  se muestran con la iteración de todos los conductores tanto para tensión monofásica como trifásica, recordando que debe seleccionar el sistema como la cantidad de pérdida de tensión permitida.
 
 - `Vd (Voltage Drop)` es la pérdida de tensión porcentual 
 
@@ -130,11 +135,11 @@ Los se resultados muestran con la iteración de todos los conductores tanto para
 
 - `ITM` es la protección del circuito.
 
-  Se puede observar en la columna  `%VD 1F-2H` seleccionada la pérdida de tensión es aceptable con respecto a la mínima ingresada del `%3`. La confirmación de un resultado es aceptable se visualiza en la columna `OP` .  Al utilizar la opción de múltiples cargas podrá mostrar el resumen y el desglose como se muestra en la tabla.
+  Se puede observar en la columna  `%VD 1F-2H` seleccionada, la pérdida de tensión es aceptable con respecto a la mínima ingresada del `%3`. La confirmación de un resultado aceptable se visualiza en la columna `OP` .  Al utilizar la opción de múltiples cargas podrá mostrar el resumen y el desglose como se muestra en la tabla.
 
 ![Resultados](https://i.ibb.co/rbttQ7p/0-1-18.jpg)
 
-El circuito mostrado es la solución y para ver el resumen este fue agregado para la opción multiples cargas.
+El circuito marcado en amarillo es la solución para realizar un resumen use la opción múltiples cargas.
 
 ## Base de datos de conductores
 
@@ -150,7 +155,7 @@ PyEWS.dbc(1)
 
 ## Múltiples cargas en corriente alterna
 
-Para implementar una gran variedad de cargas se organizan como se muestra en el bloque de código, puede agregar hasta ***indefinido número de cargas*** en está nueva versión (0.1.21rc1).
+Para implementar una gran variedad de cargas se organizan como se muestra en el bloque de código. 
 
 ```python
 from PyEWS import mbtcu, dbcircuit
@@ -186,7 +191,7 @@ print("Total de cargas : ",len(carga))
 #----------dbcircuit(carga,2,2) #Aluminio
 ```
 
-Para mostrar el resumen para  conductores de cobre
+Para mostrar el resumen de los resultados utilizando conductores de cobre (ca) se utiliza el código :
 
 ```python
 dbcircuit(carga,2,1)
@@ -194,7 +199,7 @@ dbcircuit(carga,2,1)
 
 <img src="https://i.ibb.co/PzFM1sJ/0-1-18-2.jpg" alt="Resultados" style="zoom:100%;" />
 
-Para mostrar el resumen para conductores de aluminio
+Para mostrar el resumen de los resultados utilizando conductores de aluminio (ca) se utiliza el código :
 
 ```python
 dbcircuit(carga,2,2)
@@ -204,7 +209,7 @@ dbcircuit(carga,2,2)
 
 ## Múltiples cargas en corriente directa 
 
-Para implementar una gran variedad de cargas se organizan como se muestra en el bloque de código, puede agregar hasta 25 cargas.
+Para implementar una gran variedad de cargas se organizan como se muestra en el bloque de código.
 
 ```python
 from PyEWS import dbcircuitcd
@@ -236,7 +241,7 @@ dbcircuitcd(cargacd,2,1)
 #----------dbcircuitcd(carga,2,2) #Aluminio No disponible
 ```
 
-Para mostrar el resumen para  conductores de cobre estándar
+Para mostrar el resumen de los resultados utilizando conductores de cobre estándar se utiliza el código :
 
 ```
 dbcircuitcd(cargacd,2,2)
@@ -258,8 +263,6 @@ zpual(1,10,0.9,1)
 
 <img src="https://i.ibb.co/D1syMzL/Zpu.jpg" alt="Zpu" style="zoom:70%;" />
 
-
-
 ## Graficar resultados
 
 Mediante  `matplotlib` y`numpy`  es posible obtener gráficos, la instalación de esta librería es automática al instalar  `ElectricalWireSizes`.
@@ -279,16 +282,15 @@ graph(mydata,"6 AWG","4/0 AWG", 8, 5, 2,"k",1)
 El llenado del módulo es un poco complejo
 
 - Realice un cálculo para conductores de cobre, en el ejemplo se guardo en  `mydata` .
-
 - Llamamos al módulo llenamos como se indica 
 
-  ```python
-  graph(mydata,"Calibre Inicial","Calibre Final", Ancho, Alto, Aluminio/Cobre, "Color",Sistema)
-  ```
+```python
+graph(mydata,"Calibre Inicial","Calibre Final", Ancho, Alto, Aluminio/Cobre, "Color",Sistema)
+```
 
-  Los calibres deben ir como se muestra en los resultados y entre comillas dobles indicando un conductor inicial y final disponible, el ancho y alto son pulgadas en formato `integer` o `float`. Dependiendo el material del conductor (`1:Cobre, 2:Aluminio`) y el color de las barras puede usar `k: negro`, `b: azul`, `g:verde`, `r:rojo` que son estándar en reportes, finalmente el sistema `1:1F-2H`,`2:2F-3H`,`3:3F-3H` y `4:3F:4H`.
+Los calibres deben ir como se muestra en los resultados y entre comillas dobles indicando un conductor inicial y final disponible, el ancho y alto son pulgadas en formato `integer` o `float`. Dependiendo el material del conductor (`1:Cobre, 2:Aluminio`) y el color de las barras puede usar `k: negro`, `b: azul`, `g:verde`, `r:rojo` que son estándar en reportes, finalmente el sistema `1:1F-2H`,`2:2F-3H`,`3:3F-3H` y `4:3F:4H`.
 
-  No olvide que el arreglo de datos  `mydata` debe ser correcto y definido.
+No olvide que el arreglo de datos  `mydata` debe ser correcto y definido.
 
 ## Referencias
 
@@ -300,11 +302,10 @@ El llenado del módulo es un poco complejo
 
 ## Acerca de la versión
 
-La presente versión tiene corrección de entrada de parámetros.
+La presente versión tiene corrección de entrada de parámetros como ampliación de la base de datos y corrección de errores mínimos dentro de algunas estructuras del  paquete.
 
 ```text
-[Packqge]: ElectricalWireSizes 0.1.21rc1
+[Packqge]: ElectricalWireSizes 0.1.21
 [Autor]: Marco Polo Jácome Toss
 [Licencia]: GNU General Public License v3.0
 ```
-

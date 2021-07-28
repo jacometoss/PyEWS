@@ -1,13 +1,9 @@
-| |image1|
-| |image2|
-| |image3|
-| |image4|
-| |image5|\ |image6|
+| |image1|\ | |image2|\ |image3|\ |image4|\ |image5|\ |image6|
 
 Python Electrical Wire Sizes 
 ============================
 
-The Python Electrical Wire Sizes module ``Version 0.1.19`` can be
+The Python Electrical Wire Sizes module ``Version 0.1.21`` can be
 used to size feeder conductors in low voltage such as the branch circuits 
 of an electrical installation. Is tool is very useful for engineers and 
 architects immersed in the branch of electrical projects and those familiar 
@@ -68,7 +64,7 @@ package\ ``kelectric`` .
 
 .. code:: python
 
-   import kelectric
+   import PyEWS
 
 The import of the ``kelectric`` library is done in a unique way when
 start a file and to start each module you must prepend 
@@ -78,7 +74,7 @@ only the order of call.
 
 .. code:: python
 
-   kelectric.mbtcu()
+   mbtcu()
 
 In this simple way we can start each of the modules
 shown in the table shown above. In the following points

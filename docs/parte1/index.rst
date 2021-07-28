@@ -1,8 +1,6 @@
 Electrical Wire Sizes (Español)
 ===============================
-|image1|
-|image2|\  |image3|\  |image4|
-|image5|\  |image6|
+|image1|\ |image2|\  |image3|\  |image4|\ |image5|\  |image6|
 
 Electrical Wires Sizes es una librería hecha en el lenguaje de programación Python y fue creada con la finalidad de acortar el tiempo en el dimensionamiento de conductores eléctricos u obtención de las secciones de los conductores de una instalación eléctrica.
 
@@ -10,7 +8,7 @@ Esta idea nace debido a la popularidad del lenguaje de programación Python y bu
 
 La librería cuenta por el momento con 8 módulos que internamente son llamados para realizar el dimensionamiento de conductores en baja tensión para conductores comerciales de 600 V hasta 2000 V, los resultados obtenidos se muestran en forma matricial o tabla para una mejor comprensión de los resultados.
 
-La dependencia de este lenguaje de otros paquetes es baja únicamente usa tabulate en primer grado y en forma muy secundaría numpy y matplotlib no encontrándose limitado por el momento a una versión. Estas últimas dos librerías se usan para graficar las pérdidas de tensión de los conductores de corriente alterna.
+La dependencia de este lenguaje de otros paquetes es baja únicamente usa ``tabulate`` en primer grado y en forma muy secundaría ``numpy`` y ``matplotlib`` no encontrándose limitado por el momento a una versión. Estas últimas dos librerías se usan para graficar las pérdidas de tensión de los conductores de corriente alterna.
 
 La versión disponible la puedes consular mediante :
 

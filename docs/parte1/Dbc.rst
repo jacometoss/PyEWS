@@ -45,7 +45,7 @@ El llenado del módulo requiere la información siguiente :
    ---- 1:100%
    -----2:80%
 
-Importado ``kelectric`` la información requerida en orden sería
+Importado ``PyEWS`` la información requerida en orden sería
 
 .. code:: python
 

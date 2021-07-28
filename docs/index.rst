@@ -3,8 +3,6 @@ Electrical Wire Sizes, kElectric
 |image1| |image2| |image3| |image4|
 |image5|\  |image6|
 
-ElectricalWireSizes_ Paquete PyEWS version 0.1.21rc1 Semiestable 
-
 *******************************************************************
 Documentación kElectric 0.1.21 versión no disponible por el momento
 *******************************************************************

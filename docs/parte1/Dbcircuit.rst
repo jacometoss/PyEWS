@@ -1,11 +1,7 @@
-| |image1|
-| |image2|
-| |image3|
-| |image4|
-| |image5|\ |image6|
+|image1| |image2| |image3| |image4| |image5|\ |image6|
 
-Múltiples cargas en corriente alterna DBCIRCUIT
-===============================================
+Múltiples cargas en corriente alterna con dbcircuit
+===================================================
 
 Para implementar una gran variedad de cargas se organizan como se
 muestra en el bloque de código, puede agregar hasta **indefinido número
@@ -25,10 +21,10 @@ cargas
 
 .. code:: python
 
-   carga=[
-        ["1",VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm,Ad],
-        ["2",VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm,Ad],
-        ["3",VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm,Ad]
+   load=[
+        ["1",VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm],
+        ["2",VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm],
+        ["3",VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm]
        ]
 
 Podemos observar que son los mismos de los módulos ``mbtcu`` y ``mbtal``
@@ -42,7 +38,7 @@ símbolo del sistema.
    individual debe tener la lista como opción de visualización y no en
    tabla.
 
-Iniciar el módulo DBCIRCUIT
+Iniciar el módulo dbcircuit
 ===========================
 
 Configurado el archivo de cargas individuales y nombradas o numeradas a
@@ -52,7 +48,7 @@ gusto personal se procede a llenar ``resultViewer`` y ``conductor``
 
    dbcircuit(load,resultViewer,coductor)
 
-Información requerida en el módulo DBCIRCUIT
+Información requerida en el módulo dbcircuit
 ============================================
 
 El llenado del módulo requiere la información siguiente :
@@ -71,7 +67,6 @@ El llenado del módulo requiere la información siguiente :
 
    El módulo se limita a los conductores mostrados en el ``dbc`` que son
    conductores comerciales.
-
 
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes

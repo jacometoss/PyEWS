@@ -1,10 +1,6 @@
-| |image1|
-| |image2|
-| |image3|
-| |image4|
-| |image5|\ |image6|
+|image1| |image2| |image3| |image4| |image5|\ |image6|
 
-Módulo de bata tensión MBTAL
+Módulo de bata tensión mbtal
 ============================
 
 El módulo comprende conductores de cobre estandarizados desde clase B, C
@@ -14,12 +10,12 @@ siguiente :
 
 .. code:: python
 
-   kelectric.mbtcu()
+   mbtcu()
 
 El resultado puede ser visualizado en un array o tabla mediante
 ``tabulate`` el cual se instala por defecto en el programa.
 
-Información requerida en el módulo MBTAL
+Información requerida en el módulo mbtal
 ========================================
 
 El llenado del módulo requiere la información siguiente :
@@ -46,22 +42,18 @@ El llenado del módulo requiere la información siguiente :
    #Fsc: Factor de sobrecorriente (1.25,1.0) cuando existe carga continua
    #ITM: Esta opción determina el portentaje de uso de la protección eléctrica 
    ---- 1:80%
-   ---- 2:100%
-   #Ad: Alimentador o derivado
-   ---- 1: Tipo alimentador
-   ---- 2: Tipo derivado
+   -----2:100%
 
 Importado ``kelectric`` la información requerida en orden sería
 
 .. code:: python
 
-   mbtal(VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm,Ad)
+   mbtal(VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm)
 
 ..
 
    El módulo se limita a los conductores mostrados en el ``dbc`` que son
    conductores comerciales.
-
 
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes

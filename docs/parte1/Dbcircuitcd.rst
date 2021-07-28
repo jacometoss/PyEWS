@@ -1,11 +1,7 @@
-| |image1|
-| |image2|
-| |image3|
-| |image4|
-| |image5|\ |image6|
+|image1| |image2| |image3| |image4| |image5|\ |image6|
 
-Múltiples cargas en corriente alterna DBCIRCUIT
-===============================================
+Múltiples cargas en corriente alterna dbcircuitcd
+=================================================
 
 Para implementar una gran variedad de cargas se organizan como se
 muestra en el bloque de código, puede agregar hasta **indefinido número
@@ -18,32 +14,32 @@ la siguiente línea de código.
 
 .. code:: python
 
-   dbcircuit()
+   dbcircuitcd()
 
 Para poder utilizar el módulo debemos primero definir el archivo de
 cargas
 
 .. code:: python
 
-   carga=[
-        ["1",VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm],
-        ["2",VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm],
-        ["3",VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm]
+   load=[
+        ["1",Vcd,In,Nc,L,Class,Ta,Vd,View,Fsc],
+        ["2",Vcd,In,Nc,L,Class,Ta,Vd,View,Fsc],
+        ["3",Vcd,In,Nc,L,Class,Ta,Vd,View,Fsc]
        ]
 
-Podemos observar que son los mismos de los módulos ``mbtcu`` y ``mbtal``
-pero mostrado en una lista bien definida y ordenada. Este módulo se
-encuentra limitado al ser usado en el IDLE de Python pero no cuando lo
-ejecutamos en símbolo del sistema resulta más eficiente aunque suena un
-poco confuso si desconoce un poco de como ejecutar Python desde el
-símbolo del sistema.
+Este módulo se encuentra limitado al ser usado en el IDLE de Python pero
+no cuando lo ejecutamos en símbolo del sistema resulta más eficiente
+aunque suena un poco confuso si desconoce un poco de como ejecutar
+Python desde el símbolo del sistema. El ``View`` debe encontrarse en el
+número\ ``2`` para poder ejecutar las múltiples cargas, recuerde es muy
+diferentes un array que una tabla en forma visual.
 
-   Para implementar la carga dentro del módulo ``dbcircuit`` cada carga
-   individual debe tener la lista como opción de visualización y no en
-   tabla.
+   Para implementar la carga dentro del módulo ``dbcircuitcd`` cada
+   carga individual debe tener la lista como opción de visualización y
+   no en tabla.
 
-Iniciar el módulo DBCIRCUIT
-===========================
+Iniciar el módulo dbcircuitcd
+=============================
 
 Configurado el archivo de cargas individuales y nombradas o numeradas a
 gusto personal se procede a llenar ``resultViewer`` y ``conductor``
@@ -52,8 +48,8 @@ gusto personal se procede a llenar ``resultViewer`` y ``conductor``
 
    dbcircuit(load,resultViewer,coductor)
 
-Información requerida en el módulo DBCIRCUIT
-============================================
+Información requerida en el módulo dbcircuitcd
+==============================================
 
 El llenado del módulo requiere la información siguiente :
 

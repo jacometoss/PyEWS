@@ -1,10 +1,6 @@
-| |image1|
-| |image2|
-| |image3|
-| |image4|
-| |image5|\ |image6|
+|image1| |image2| |image3| |image4| |image5|\ |image6|
 
-Constantes de impedancia para conductores de cobre ZPUAL
+Constantes de impedancia para conductores de cobre zpual
 ========================================================
 
 Este módulo se utiliza internamente pero puede ser usado para calcular
@@ -17,29 +13,29 @@ en los diferentes sistemas de alimentación o circuitos derivados.
 
    zpual()
 
--  Type : Selecciona la tubería y resistencia del conductor de corriente
-   alterna. 1 (PVC), 2 (Aluminio), 3 (Acero).
+-  ``type`` : Selecciona la tubería y resistencia del conductor de
+   corriente alterna. 1 (PVC), 2 (Aluminio), 3 (Acero).
 
--  Ta : La temperatura ambiente del lugar.
+-  ``ta`` : La temperatura ambiente del lugar.
 
--  Fp : Factor de potencia de la carga.
+-  ``fp`` : Factor de potencia de la carga.
 
--  View : Esta opción nos deja ver una tabla ordenada (1) y un arreglo
-   (2).
+-  ``view`` : Esta opción nos deja ver una tabla ordenada (1) y un
+   arreglo (2).
 
-Información requerida en el módulo ZPUAL
+Información requerida en el módulo zpual
 ========================================
 
 El llenado del módulo requiere la información siguiente :
 
 .. code:: tex
 
-   #Type : Selecciona la tubería y resistencia del conductor de corriente alterna. 1 (PVC), 2 (Aluminio), 3 (Acero)
-   #Ta : La temperatura ambiente del lugar
-   #Fp : Factor de potencia de la carga
+   #Type : Selecciona la tubería y resistencia del conductor de corriente alterna. 1 (PVC), 2 (Aluminio), 3 (Acero)
+   #Ta : La temperatura ambiente del lugar
+   #Fp : Factor de potencia de la carga
    #View :  Esta opción nos deja ver una tabla ordenada (1) y un arreglo (2)
 
-Importado ``kelectric`` la información requerida en orden sería
+Importado ``PyEWS`` la información requerida en orden sería
 
 .. code:: python
 
@@ -51,8 +47,7 @@ Importado ``kelectric`` la información requerida en orden sería
    El módulo se limita a los conductores mostrados en el ``dbc`` que son
    conductores comerciales.
 
-Nota : Recuerda importar ``kelectric``
-
+Nota : Recuerda importar ``PyEWS``
 
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes

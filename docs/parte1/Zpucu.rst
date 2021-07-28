@@ -1,10 +1,6 @@
-| |image1|
-| |image2|
-| |image3|
-| |image4|
-| |image5|\ |image6|
+|image1| |image2| |image3| |image4| |image5|\ |image6|
 
-Constantes de impedancia para conductores de cobre ZPUCU
+Constantes de impedancia para conductores de cobre zpucu
 ========================================================
 
 Este módulo se utiliza internamente pero puede ser usado para calcular
@@ -17,17 +13,17 @@ en los diferentes sistemas de alimentación o circuitos derivados.
 
    zpucu()
 
--  Type : Selecciona la tubería y resistencia del conductor de corriente
-   alterna. 1 (PVC), 2 (Aluminio), 3 (Acero).
+-  ``Type`` : Selecciona la tubería y resistencia del conductor de
+   corriente alterna. 1 (PVC), 2 (Aluminio), 3 (Acero).
 
--  Ta : La temperatura ambiente del lugar.
+-  ``Ta`` : La temperatura ambiente del lugar.
 
--  Fp : Factor de potencia de la carga.
+-  ``Fp`` : Factor de potencia de la carga.
 
--  View : Esta opción nos deja ver una tabla ordenada (1) y un arreglo
-   (2).
+-  ``View`` : Esta opción nos deja ver una tabla ordenada (1) y un
+   arreglo (2).
 
-Información requerida en el módulo ZPUCU
+Información requerida en el módulo zpucu
 ========================================
 
 El llenado del módulo requiere la información siguiente :
@@ -51,9 +47,7 @@ Importado ``kelectric`` la información requerida en orden sería
    El módulo se limita a los conductores mostrados en el ``dbc`` que son
    conductores comerciales.
 
-Nota : Recuerda importar ``kelectric``
-
-
+Nota : Recuerda importar ``PyEWS``
 
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes
@@ -67,4 +61,3 @@ Nota : Recuerda importar ``kelectric``
    :target: https://codeclimate.com/github/jacometoss/PyEWS/maintainability
 .. |image6| image:: https://app.codacy.com/project/badge/Grade/8d8575adf7e149999e6bc84c657fc94e
    :target: https://www.codacy.com/gh/jacometoss/PyEWS/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jacometoss/PyEWS&amp;utm_campaign=Badge_Grade
-

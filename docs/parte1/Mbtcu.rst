@@ -1,10 +1,6 @@
-| |image1|
-| |image2|
-| |image3|
-| |image4|
-| |image5|\ |image6|
+|image1| |image2| |image3| |image4| |image5|\ |image6|
 
-Módulo de bata tensión MBTCU
+Módulo de bata tensión mbtcu
 ============================
 
 El módulo comprende conductores de cobre estandarizados desde clase B, C
@@ -14,26 +10,27 @@ siguiente :
 
 .. code:: python
 
-   kelectric.mbtcu()
+   mbtcu()
 
 El resultado puede ser visualizado en un array o tabla mediante
 ``tabulate`` el cual se instala por defecto en el programa.
 
-Información requerida en el módulo MBTCU
+Información requerida en el módulo mbtcu
 ========================================
 
 El llenado del módulo requiere la información siguiente :
 
 .. code:: tex
 
-   #Vf: Tensión de fase o línea a línea para sistemas de 2F2H, 2F en Volts.
-   #Vl: Tensión de línea en Volts.
-   #P : Potencia que consume la carga en Watts.
+   #VF: Tensión de fase o en su defecto tensión de línea para sistemas de 1F2H, 2F.
+   #VL: Tensión de línea.
+   #In: Corriente nominal total de una de las fases.
    #Nc: Número de conductores por fase.
    #L : Longitud en metros.
-   #Fa: Número de conducrtores activos en el tubo conduit.
+   #FA: Número de conducrtores activos en el tubo conduit.
    #Type: Tipo de tubo conduit (1:PVC,2:AL,3:ACERO)
-   #Ta: Temperatura ambiente en centigrados, únicamente ingresar la opcion númerica.
+   #Ta: Temperatura ambiente en centigrados.
+   ---- Valor númerico de temperatura, por ejemplo 30°C.
    #Vd: Caída de tensión (porcentual de 2, 3, 5)
    ---- 2,3,5	
    #S:  Seleccione el sistema que desea propner en base a este se muestran los resultados.
@@ -43,23 +40,19 @@ El llenado del módulo requiere la información siguiente :
    	 1: Mostrar los resultados adecuadamente estructurado en una tabla. 
    	 2: Mostrar los resultados como datos acumulados. Esta opción es necesario cuando se activa
    	 	la función para múltiples cargas.
-   #Fsc: Factor de sobrecorriente (1.25,1.0) cuando existe carga continua
-   #ITM: Esta opción determina el portentaje de uso de la protección eléctrica 
-   ---- 1:80%
-   -----2:100%
-   #Ad: Alimentador o derivado
-   -----1:Tipo alimentador
-   -----2_Tipo derivado
+   #Fsc: Factor de sobrecorriente (1.25,1.0)
 
-Importado ``kelectric`` la información requerida en orden sería
+Importado ``PyEWS`` la información requerida en orden sería
 
 .. code:: python
 
-   #Módulo de baja tensión para conductores de cobre 
-   mbtcu(VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm,Ad)
+   #Módulo de baja tensión para conductores de cobre
+   mbtcu(VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm)
 
 ..
 
+   El módulo se limita a los conductores mostrados en el ``dbc`` que son
+   conductores comerciales.
 
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes

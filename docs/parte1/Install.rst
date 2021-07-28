@@ -1,13 +1,9 @@
-| |image1|
-| |image2|
-| |image3|
-| |image4|
-| |image5|\ |image6|
+|image1| |image2| |image3| |image4| |image5|\ |image6|
 
 Python Electrical Wire Sizes 
 ============================
 
-El módulo Python Electrical Wire Sizes ``Versión 0.1.19`` puede ser
+El módulo Python Electrical Wire Sizes ( **Versión 0.1.21**) puede ser
 utilizado para dimensionar los conductores de alimentadores en baja
 tensión como los circuitos derivados de una instalación eléctrica. Esta
 herramienta es muy útil para ingenieros y arquitectos sumergidos en la
@@ -17,42 +13,44 @@ aquí mostrados que desean aprender temas relacionados como este.
 Instalación del paquete
 -----------------------
 
-La instalación del paquete se realiza con la línea siguiente
+La instalación del paquete se realiza con la línea siguiente :
 
 .. code:: python
 
    pip install ElectricalWireSizes
 
-Módulos
--------
+PyEWS Módulos
+-------------
 
-La lista de módulos disponibles en el paquete en esta última versión son
+Los módulos disponibles por el momento son los siguientes :
 
-+----+-------------------------------------------------+-------------+
-| Id | Descripción                                     | Módulo      |
-+====+=================================================+=============+
-| 1  | Módulo de baja tensión para conductores de      | mbtcu       |
-|    | cobre clase B, C y D tensión de 600V a 2000V    |             |
-+----+-------------------------------------------------+-------------+
-| 2  | Módulo de baja tensión para conductores de      | mbtal       |
-|    | aluminio clase B, C y D, tensión 600V a 2000V   |             |
-+----+-------------------------------------------------+-------------+
-| 3  | Módulo de baja tensión para conductores de      | mbtcustd    |
-|    | cobre clase B, C y D en corriente directa hasta |             |
-|    | 2000 V                                          |             |
-+----+-------------------------------------------------+-------------+
-| 4  | Base de datos de conductores eléctricos         | dbc         |
-+----+-------------------------------------------------+-------------+
-| 5  | Cambio de resistencia en conductores de cobre   | zpucu       |
-+----+-------------------------------------------------+-------------+
-| 6  | Cambio de resistencia en conductores de         | zpual       |
-|    | aluminio                                        |             |
-+----+-------------------------------------------------+-------------+
-| 7  | Múltiples circuitos para conductores de cobre y | dbcircuit   |
-|    | aluminio                                        |             |
-+----+-------------------------------------------------+-------------+
-| 8  | Múltiples circuitos para conductores de cobre   | dbcircuitcd |
-+----+-------------------------------------------------+-------------+
++----+-----------------------------------------------+---------------+
+| Id | Descripción                                   | Módulo        |
++====+===============================================+===============+
+| 1  | Módulo de baja tensión para conductores de    | mbtcu()       |
+|    | cobre clase B, C y D tensión de 600V a 2000V. |               |
++----+-----------------------------------------------+---------------+
+| 2  | Módulo de baja tensión para conductores de    | mbtal()       |
+|    | aluminio clase B, C y D, tensión 600V a       |               |
+|    | 2000V.                                        |               |
++----+-----------------------------------------------+---------------+
+| 3  | Módulo de baja tensión para conductores de    | mbtcustd()    |
+|    | cobre clase B, C y D en CD hasta 2000 V.      |               |
++----+-----------------------------------------------+---------------+
+| 4  | Módulo para el cálculo de la impedancia para  | zpucu()       |
+|    | conductores de cobre.                         |               |
++----+-----------------------------------------------+---------------+
+| 5  | Módulo para el cálculo de la impedancia para  | zpual()       |
+|    | conductores de aluminio.                      |               |
++----+-----------------------------------------------+---------------+
+| 6  | Módulo para dimensionar múltiples conductores | dbcircuit()   |
+|    | de cobre y aluminio., corriente alterna.      |               |
++----+-----------------------------------------------+---------------+
+| 7  | Módulo para dimensionar múltiples conductores | dbcircuitcd() |
+|    | de cobre, corriente directa.                  |               |
++----+-----------------------------------------------+---------------+
+| 8  | Módulo para graficar resultados               | graph()       |
++----+-----------------------------------------------+---------------+
 
 Todos los módulos trabajan con unidades del Sistema Internacional y en
 versiones futuras versiones se incluirá el Sistema Ingles
@@ -64,22 +62,22 @@ El módulo tiene dependencias siendo necesario instalar ``tabulate`` (se
 instala en forma automática) el cual sirve para dar una mejor apariencia
 al momento de mostrar los resultados.
 
-Antes de iniciar a usar los módulos debe importar el
-paquete\ ``kelectric`` .
+Antes de iniciar a usar los módulos debe importar el paquete\ ``PyEWS``
+.
 
 .. code:: python
 
-   import kelectric
+   import PyEWS
 
-La importación de la librería ``kelectric`` se hace de manera única al
-iniciar un archivo y para arrancar cada módulo debe anteponer
-``kelectric``. En este ejemplo importaremos el módulo de baja tensión
-para conductores de cobre, no mostraremos el llenado de este módulo
-únicamente el orden de llamado.
+La importación de la librería ``PyEWS`` se hace de manera única al
+iniciar un archivo y para arrancar cada módulo debe anteponer ``PyEWS``.
+En este ejemplo importaremos el módulo de baja tensión para conductores
+de cobre, no mostraremos el llenado de este módulo únicamente el orden
+de llamado.
 
 .. code:: python
 
-   kelectric.mbtcu()
+   PyEWS.mbtcu()
 
 De esta manera sencilla podemos iniciar cada uno de los módulos
 mostrados en la tabla mostrada anteriormente. En los puntos siguientes

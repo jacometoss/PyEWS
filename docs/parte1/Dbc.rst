@@ -1,8 +1,4 @@
-| |image1|
-| |image2|
-| |image3|
-| |image4|
-| |image5|\ |image6|
+|image1| |image2| |image3| |image4| |image5|\ |image6|
 
 Base de datos de conductores DBC
 ================================
@@ -25,8 +21,8 @@ visualizada con la siguiente línea
 3. Muestra la resistencia en corriente directa para conductores clase B,
    C y D.
 
-Información requerida en el módulo MBTCU
-========================================
+Información requerida en el módulo mbtcustd
+===========================================
 
 El llenado del módulo requiere la información siguiente :
 
@@ -48,22 +44,18 @@ El llenado del módulo requiere la información siguiente :
    #ITM: Esta opción determina el portentaje de uso de la protección eléctrica 
    ---- 1:100%
    -----2:80%
-   #Ad: Alimentador o derivado
-   ---- 1: Tipo alimentador
-   ---- 2: Tipo derivado
 
 Importado ``kelectric`` la información requerida en orden sería
 
 .. code:: python
 
    #Módulo de baja tensión para conductores de cobre para corriente directa
-   mbtcustd(Vcd,P,Nc,L,Class,Ta,Vd,View,Fsc,ITM,Ad)
+   mbtcustd(Vcd,P,Nc,L,Class,Ta,Vd,View,Fsc,ITM)
 
 ..
 
    El módulo se limita a los conductores mostrados en el ``dbc`` que son
    conductores comerciales.
-
 
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes

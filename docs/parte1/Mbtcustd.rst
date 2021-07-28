@@ -1,10 +1,6 @@
-| |image1|
-| |image2|
-| |image3|
-| |image4|
-| |image5|\ |image6|
+|image1| |image2| |image3| |image4| |image5|\ |image6|
 
-Módulo de bata tensión MBTCUSTD
+Módulo de bata tensión mbtcustd
 ===============================
 
 El módulo comprende conductores de cobre estandarizados desde clase B, C
@@ -19,8 +15,8 @@ siguiente :
 El resultado puede ser visualizado en un array o tabla mediante
 ``tabulate`` el cual se instala por defecto en el programa.
 
-Información requerida en el módulo MBTCU
-========================================
+Información requerida en el módulo mbtcustd
+===========================================
 
 El llenado del módulo requiere la información siguiente :
 
@@ -54,7 +50,6 @@ Importado ``kelectric`` la información requerida en orden sería
 
    El módulo se limita a los conductores mostrados en el ``dbc`` que son
    conductores comerciales.
-
 
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes

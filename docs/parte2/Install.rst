@@ -36,7 +36,7 @@ The list of modules available in the package in this latest version are
 |    | cobre clase B, C y D en corriente directa hasta |               |
 |    | 2000 V                                          |               |
 +----+-------------------------------------------------+---------------+
-| 4  | Electrical conductors database                  | dbc           |
+| 4  | Module to grpah results                         | graph         |
 +----+-------------------------------------------------+---------------+
 | 5  | Resistance change in copper conductors          | zpucu         |
 +----+-------------------------------------------------+---------------+

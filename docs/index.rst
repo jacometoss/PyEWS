@@ -1,11 +1,11 @@
-Electrical Wire Sizes, kElectric
+Electrical Wire Sizes
 ================================
 |image1| |image2| |image3| |image4|
 |image5|\  |image6|
 
-*******************************************************************
-Documentación kElectric 0.1.21 versión no disponible por el momento
-*******************************************************************
+*********************************
+Documentación ElectricalWiresizes
+*********************************
 
 Esta idea nace debido a la popularidad de Python y de encontrar una utilidad 
 adecuada dentro del área de ingeniería eléctrica en la especialidad de diseño

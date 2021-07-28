@@ -26,27 +26,27 @@ The list of modules available in the package in this latest version are
 +----+-------------------------------------------------+---------------+
 | Id | Descripción                                     | Módulo        |
 +====+=================================================+===============+
-| 1  | Low voltage module for conductors of copper     | mbtcu_esm     |
+| 1  | Low voltage module for conductors of copper     | mbtcu         |
 |    | class B, C and D voltage from 600V to 2000V     |               |
 +----+-------------------------------------------------+---------------+
-| 2  | Low voltage module for class B, C and D aluminum| mbtal_esm     |
+| 2  | Low voltage module for class B, C and D aluminum| mbtal         |
 |    | conductors, voltage 600V to 2000V               |               |
 +----+-------------------------------------------------+---------------+
-| 3  | Módulo de baja tensión para conductores de      | mbtcustd_esm  |
+| 3  | Módulo de baja tensión para conductores de      | mbtcustd      |
 |    | cobre clase B, C y D en corriente directa hasta |               |
 |    | 2000 V                                          |               |
 +----+-------------------------------------------------+---------------+
-| 4  | Electrical conductors database                  | dbc_si        |
+| 4  | Electrical conductors database                  | dbc           |
 +----+-------------------------------------------------+---------------+
-| 5  | Resistance change in copper conductors          | zpucu_si      |
+| 5  | Resistance change in copper conductors          | zpucu         |
 +----+-------------------------------------------------+---------------+
-| 6  | Resistance change in aluminum conductor         | zpual_si      |
+| 6  | Resistance change in aluminum conductor         | zpual         |
 |    |                                                 |               |
 +----+-------------------------------------------------+---------------+
-| 7  | Multiple circuits for copper and aluminum       |dbcircuit_esm  |
+| 7  | Multiple circuits for copper and aluminum       |dbcircuit      |
 |    | conductors                                      |               |
 +----+-------------------------------------------------+---------------+
-| 8  | Multiple circuits for copper conductors         |dbcircuitcd_esm|
+| 8  | Multiple circuits for copper conductors         |dbcircuitcd    |
 +----+-------------------------------------------------+---------------+
 
 All modules work with units of the International System and in

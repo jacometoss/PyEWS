@@ -15,9 +15,8 @@ La librería cuenta por el momento con 8 módulos que internamente son llamados 
 
 La dependencia de este lenguaje de otros paquetes es baja únicamente usa tabulate en primer grado y en forma muy secundaría numpy y matplotlib no encontrándose limitado por el momento a una versión. Estas últimas dos librerías se usan para graficar las pérdidas de tensión de los conductores de corriente alterna.
 
-*********
 Donativos
-*********
+---------
 
 **¿Te gusta este proyecto?, puedes apoyarme mediante**
 
@@ -32,9 +31,9 @@ Puedes comprarme un café  :
 
 No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como sugerencias.
 
-**********************
+
 Licencia del documento
-**********************
+----------------------
 
 |image8|
 

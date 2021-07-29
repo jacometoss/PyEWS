@@ -47,8 +47,6 @@ No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como
    parte1/index
    parte2/index
 	
-	
-
 
 .. _ElectricalWireSizes: https://pypi.org/project/ElectricalWireSizes/0.1.21/
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg

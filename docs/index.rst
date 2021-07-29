@@ -21,7 +21,9 @@ La vida es como una batería y en cada momento uno va perdiendo una pequeña par
 puedes apoyarme en el desarrollo de este proyecto y motivar aún más mi creatividad para 
 que sea de gran utilidad esta herramienta.
 
-**Donativo**
+*********
+Donativos
+*********
 
 Puedes comprarme un café  : 
 
@@ -29,7 +31,9 @@ Puedes comprarme un café  :
 
 No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como sugerencias.
 
-**Licencia de uso**
+**********************
+Licencia del documento
+**********************
 
 |image8|
 

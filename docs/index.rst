@@ -34,7 +34,7 @@ No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como
 |image8|
 
 
-**ElectricalWireSizes**
+**ElectricalWireSizes_**
 
 |image9|
 

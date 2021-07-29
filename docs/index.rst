@@ -39,12 +39,6 @@ Licencia del documento
 |image8|
 
 
-*****************
-Repositiorio PyPi
-*****************
-
-|image9|
-
 **Tabla de contenido**
 
 .. toctree::

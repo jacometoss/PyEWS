@@ -12,6 +12,9 @@ La dependencia de este lenguaje de otros paquetes es baja únicamente usa ``tabu
 
 La versión disponible la puedes consular mediante :
 
+==========
+Donativos
+==========
 
 **¿Te gusta este proyecto?, puedes apoyarme mediante**
 

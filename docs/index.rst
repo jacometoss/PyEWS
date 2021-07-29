@@ -33,6 +33,11 @@ No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como
 
 |image8|
 
+
+**ElectricalWireSizes_**
+
+|image9|
+
 **Tabla de contenido**
 
 .. toctree::
@@ -45,7 +50,7 @@ No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como
 	
 
 
-.. _ElectricalWireSizes: https://pypi.org/project/ElectricalWireSizes/0.1.21rc1/
+.. _ElectricalWireSizes: https://pypi.org/project/ElectricalWireSizes/0.1.21/
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes
 .. |image2| image:: https://static.pepy.tech/personalized-badge/electricalwiresizes?period=total&units=none&left_color=grey&right_color=blue&left_text=Downloads
@@ -61,4 +66,7 @@ No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como
 .. |image7| image:: https://ko-fi.com/img/githubbutton_sm.svg
    :target: https://ko-fi.com/jacometoss
 .. |image8| image:: https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
-   :target: https://www.facebook.com/SELisp.Autodesk 
+   :target: https://www.facebook.com/SELisp.Autodesk
+.. |image9| image:: https://camo.githubusercontent.com/a49312fe5229c3edc2ce44f77956a57c336f9f358d3e73cebdd25086cae03cbe/68747470733a2f2f692e6962622e636f2f38364d344b325a2f50594557532e6a7067
+   :target: https://pypi.org/project/ElectricalWireSizes/0.1.21/
+   

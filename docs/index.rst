@@ -30,9 +30,9 @@ Puedes comprarme un café  :
 
 No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como sugerencias.
 
-***********************
+========================
 Licencia del documento
-***********************
+========================
 
 |image8|
 

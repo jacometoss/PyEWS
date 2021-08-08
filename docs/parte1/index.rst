@@ -52,10 +52,12 @@ No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como
 
 
 .. _PyEWS: https://pypi.org/project/ElectricalWireSizes/
+.. _ElectricalWireSizes: https://pypi.org/project/ElectricalWireSizes/0.1.21/
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
-   :target: https://badge.fury.io/py/ElectricalWireSizes
-.. |image2| image:: https://static.pepy.tech/personalized-badge/electricalwiresizes?period=total&units=none&left_color=grey&right_color=blue&left_text=Downloads
-   :target: https://pepy.tech/project/electricalwiresizes
+   :target: https://badge.fury.io/py/ElectricalWireSizes   
+.. |image2| image:: https://static.pepy.tech/personalized-badge/electricalwiresizes?period=total&units=international_system&left_color=red&right_color=grey&left_text=Downloads
+  :target: https://pepy.tech/project/electricalwiresizes
+
 .. |image3| image:: https://pepy.tech/badge/electricalwiresizes/month
    :target: https://pepy.tech/project/electricalwiresizes
 .. |image4| image:: https://img.shields.io/badge/python-3 | 3.5 | 3.6 | 3.7 | 3.8 | 3.9-blue
@@ -64,5 +66,6 @@ No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como
    :target: https://codeclimate.com/github/jacometoss/PyEWS/maintainability
 .. |image6| image:: https://app.codacy.com/project/badge/Grade/8d8575adf7e149999e6bc84c657fc94e
    :target: https://www.codacy.com/gh/jacometoss/PyEWS/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jacometoss/PyEWS&amp;utm_campaign=Badge_Grade
+
 .. |image7| image:: https://ko-fi.com/img/githubbutton_sm.svg
    :target: https://ko-fi.com/B0B356BR4

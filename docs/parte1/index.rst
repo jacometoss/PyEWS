@@ -47,9 +47,6 @@ No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como
     Dbcircuitcd
     Reference
     Denveloped
-	
-	
-
 
 .. _PyEWS: https://pypi.org/project/ElectricalWireSizes/
 .. _ElectricalWireSizes: https://pypi.org/project/ElectricalWireSizes/0.1.21/

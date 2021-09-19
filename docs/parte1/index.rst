@@ -22,7 +22,7 @@ La vida es como una batería y en cada momento uno va perdiendo una pequeña par
 puedes apoyarme en el desarrollo de este proyecto y motivar aún más mi creatividad para 
 que sea de gran utilidad esta herramienta.
 
-Puedes comprarme un café : 
+Puedes comprarme un café en forma de donativo en el enlace siguiente : 
 
 |image7|
 

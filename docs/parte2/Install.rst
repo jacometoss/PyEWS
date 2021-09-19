@@ -32,9 +32,8 @@ The list of modules available in the package in this latest version are
 | 2  | Low voltage module for class B, C and D aluminum| mbtal         |
 |    | conductors, voltage 600V to 2000V               |               |
 +----+-------------------------------------------------+---------------+
-| 3  | Módulo de baja tensión para conductores de      | mbtcustd      |
-|    | cobre clase B, C y D en corriente directa hasta |               |
-|    | 2000 V                                          |               |
+| 3  |Low voltage module for class B, C and D copper   | mbtcustd      |
+|    |conductors in direct current up to 2000 V        |               |
 +----+-------------------------------------------------+---------------+
 | 4  | Module to grpah results                         | graph         |
 +----+-------------------------------------------------+---------------+

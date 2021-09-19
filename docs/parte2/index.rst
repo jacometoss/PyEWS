@@ -14,7 +14,7 @@ Life is like a battery and at every moment one is losing a small part of it ever
 you can support me in the development of this project and further motivate my creativity to
 make this tool very useful.
 
-You can buy me a coffee:
+You can buy me a coffee as a donation at the following link:
 
 |image7|
 

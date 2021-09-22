@@ -1,6 +1,6 @@
 |image1| |image2| |image3| |image4| |image5|\ |image6|
 
-Módulo de bata tensión mbtcu
+Módulo de baja tensión mbtcu
 ============================
 
 El módulo comprende conductores de cobre estandarizados desde clase B, C

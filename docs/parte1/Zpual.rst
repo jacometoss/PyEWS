@@ -30,9 +30,9 @@ El llenado del módulo requiere la información siguiente :
 
 .. code:: tex
 
-   #Type : Selecciona la tubería y resistencia del conductor de corriente alterna. 1 (PVC), 2 (Aluminio), 3 (Acero)
-   #Ta : La temperatura ambiente del lugar
-   #Fp : Factor de potencia de la carga
+   #Type : Selecciona la tubería y resistencia del conductor de corriente alterna. 1 (PVC), 2 (Aluminio), 3 (Acero)
+   #Ta : La temperatura ambiente del lugar
+   #Fp : Factor de potencia de la carga
    #View :  Esta opción nos deja ver una tabla ordenada (1) y un arreglo (2)
 
 Importado ``PyEWS`` la información requerida en orden sería

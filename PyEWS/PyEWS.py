@@ -5,16 +5,20 @@ import matplotlib.pyplot as plt
 import math
 import time
 
-t = time.localtime() # Establecemos la fecha la cual es mostrada en los errores.
+ # Establecemos la fecha la cual es mostrada en los errores.
 
 '''
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 | PYEWS, ElectricalWireSizes, 27/07/2021                                 |
-| Version : 0.1.21rc2                                                    |
+| Version : 0.1.22                                                    |
 | Autor : Marco Polo Jacome Toss                                         |
 | License: GNU Affero General Public License v3 (GPL-3.0)                |
 | Requires: Python >=3.5                                                 |
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Esta  actualización se agrega Icc para conductores de cobre y aluminio como
+una consulta.
+
 '''
 dbConductorCu=[["14 AWG",10.171,0.1903,10.171,0.1903,10.171,0.2395,15,20,25,2.08],
 ["12 AWG",6.5617,0.1772,6.5617,0.1772,6.5617,0.2231,20,25,30,3.31],
@@ -90,8 +94,8 @@ def version():
     print("                         ▀▄▄▄▄▄▀▀")
     print("                                                                          ")
     print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-    print("| Python ElectricalWireSizes, 27/07/2021                                 |")
-    print("| Version : 0.1.21                                                       |")
+    print("| Python ElectricalWireSizes, 07/08/2021                                 |")
+    print("| Version : 0.1.22                                                       |")
     print("| Autor : Marco Polo Jacome Toss                                         |")
     print("| License: GNU Affero General Public License v3 (GPL-3.0)                |")
     print("| Requires: Python >=3.5                                                 |")
@@ -123,6 +127,7 @@ def Rcd(R):
 def dbc(conductor=None):
 
     if(conductor==None):
+        t = time.localtime()
         print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
         print("                    ElectricalWireSizes                    ")
         print("                 ",time.asctime(t))
@@ -147,6 +152,7 @@ def dbc(conductor=None):
     elif conductor==3:
         print(tabulate(dbConductorCuStd, headers=["AWG/KCM","R[A](Ω/km)", "R[B](Ω/km)","R[C](Ω/km)", "60°C", "75°C", "90°C","S[mm²]"], tablefmt='psql'))
     elif (conductor>3 or conductor<=0):
+        t = time.localtime()
         print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
         print("                    ElectricalWireSizes                    ")
         print("                 ",time.asctime(t))
@@ -166,6 +172,7 @@ def dbc(conductor=None):
 def FCT(Ta=None):
 
     if(Ta==None):
+        t = time.localtime()
         print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
         print("                    ElectricalWireSizes                    ")
         print("                 ",time.asctime(t))
@@ -203,6 +210,7 @@ def FCT(Ta=None):
 def zpucu(Type=None,Ta=None,Fp=None,View=None):
 
     if(Type==None or Ta==None or Fp==None or View==None):
+        t = time.localtime()
         print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
         print("                    ElectricalWireSizes                    ")
         print("                 ",time.asctime(t))
@@ -279,6 +287,7 @@ def zpucu(Type=None,Ta=None,Fp=None,View=None):
 def zpual(Type=None,Ta=None,Fp=None,View=None):
 
     if(Type==None or Ta==None or Fp==None or View==None):
+        t = time.localtime()
         print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
         print("                    ElectricalWireSizes                    ")
         print("                 ",time.asctime(t))
@@ -353,6 +362,7 @@ def zpual(Type=None,Ta=None,Fp=None,View=None):
 def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=None,S=None,Fp=None,View=None,Fsc=None):
 
     if(Type==None or Ta==None or Fp==None or View==None):
+        t = time.localtime()
         print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
         print("                    ElectricalWireSizes                    ")
         print("                 ",time.asctime(t))
@@ -875,6 +885,7 @@ def mbtal(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View,Fsc):
 def mbtcustd(Vcd=None,In=None,Nc=None,L=None,Class=None,Ta=None,Vd=None,View=None,Fsc=None):
 
     if(Vcd==None or In==None or Nc==None or L==None or Class==None or Ta==None or Vd==None or View==None or Fsc==None):
+        t = time.localtime()
         print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
         print("                    ElectricalWireSizes                      ")
         print("                 ",time.asctime(t))
@@ -1013,6 +1024,7 @@ def dbcircuit(carga=None,view=None,conductor=None):
 
 
     if(carga==None or view==None or conductor==None):
+        t = time.localtime()
         print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
         print("                    ElectricalWireSizes                      ")
         print("                 ",time.asctime(t))
@@ -1114,6 +1126,7 @@ def dbcircuit(carga=None,view=None,conductor=None):
 def dbcircuitcd(carga,view,conductor):
 
     if(carga==None or view==None or conductor==None):
+        t = time.localtime()
         print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
         print("                    ElectricalWireSizes                      ")
         print("                 ",time.asctime(t))
@@ -1199,7 +1212,9 @@ def autolabel(rects):
 
 def graph(mydata=None,condA=None,condB=None,w=None,h=None,material=None,color=None,sistema=None):
 
+
     if((mydata==None or not mydata) or condA==None or condB==None or w==None or h==None or material==None or color==None or sistema==None):
+        t = time.localtime()
         print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
         print("                    ElectricalWireSizes                      ")
         print("                 ",time.asctime(t))
@@ -1273,3 +1288,168 @@ def graph(mydata=None,condA=None,condB=None,w=None,h=None,material=None,color=No
     plt.title('Caída de tensión en conductores eléctricos')
     plt.grid()
     plt.show()
+
+
+
+def icc(conductor=None,T1=None,T2=None,fhz=None,view=None):
+
+    if((conductor==None or T1==None or T2==None or fhz==None or view==None)):
+        t = time.localtime()
+        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                    ElectricalWireSizes                      ")
+        print("                 ",time.asctime(t))
+        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                                                             ")
+        print("                         ─▄▀─▄▀")
+        print("                         ──▀──▀")
+        print("                         █▀▀▀▀▀█▄")
+        print("                         █░░░░░█─█")
+        print("                         ▀▄▄▄▄▄▀▀")
+        print("                                                             ")
+        print("-------------------------------------------------------------")
+        print("| Los parámetros no son correctos                           |")
+        print("| para el módulo                                            |")
+        print("| icc(conductor,T1,T2,fhz,view)                             |") 
+        print("----------------------------------------------- -------------")
+        return  
+    
+    if conductor==1:
+        datos=[["14 AWG"],
+            ["12 AWG"],
+            ["10 AWG"],
+            ["8 AWG"],
+            ["6 AWG"],
+            ["4 AWG"],
+            ["2 AWG"],
+            ["1/0 AWG"],
+            ["2/0 AWG"],
+            ["3/0 AWG"],
+            ["4/0 AWG"],
+            ["250 KCM"],
+            ["300 KCM"],
+            ["350 KCM"],
+            ["400 KCM"],
+            ["500 KCM"],
+            ["600 KCM"],
+            ["750 KCM"],
+            ["1000 KCM"]]
+
+        k=0.0297
+
+        for i in range(len(dbConductorCu)):
+            Seccion=dbConductorCu[i][10]
+            datos[i].append(Seccion)
+
+        t=1/fhz
+        for i in range(len(dbConductorCu)):
+            CM=round(dbConductorCu[i][10]*1973.525241,2)
+            datos[i].append(round(math.sqrt(((pow(CM,2)*(k*math.log10((T2+234)/(T1+234)))))/t)/1000,2))
+
+        t=2/fhz
+        for i in range(len(dbConductorCu)):
+            CM=round(dbConductorCu[i][10]*1973.525241,2)
+            datos[i].append(round(math.sqrt(((pow(CM,2)*(k*math.log10((T2+234)/(T1+234)))))/t)/1000,2))
+
+        t=4/fhz
+        for i in range(len(dbConductorCu)):
+            CM=round(dbConductorCu[i][10]*1973.525241,2)
+            datos[i].append(round(math.sqrt(((pow(CM,2)*(k*math.log10((T2+234)/(T1+234)))))/t)/1000,2))
+        t=8/fhz
+        for i in range(len(dbConductorCu)):
+            CM=round(dbConductorCu[i][10]*1973.525241,2)
+            datos[i].append(round(math.sqrt(((pow(CM,2)*(k*math.log10((T2+234)/(T1+234)))))/t)/1000,2))
+
+        t=16/fhz
+        for i in range(len(dbConductorCu)):
+            CM=round(dbConductorCu[i][10]*1973.525241,2)
+            datos[i].append(round(math.sqrt(((pow(CM,2)*(k*math.log10((T2+234)/(T1+234)))))/t)/1000,2))
+
+        t=30/fhz
+        for i in range(len(dbConductorCu)):
+            CM=round(dbConductorCu[i][10]*1973.525241,2)
+            datos[i].append(round(math.sqrt(((pow(CM,2)*(k*math.log10((T2+234)/(T1+234)))))/t)/1000,2))
+
+        t=60/fhz
+        for i in range(len(dbConductorCu)):
+            CM=round(dbConductorCu[i][10]*1973.525241,2)
+            datos[i].append(round(math.sqrt(((pow(CM,2)*(k*math.log10((T2+234)/(T1+234)))))/t)/1000,2))
+
+        t=100/fhz
+        for i in range(len(dbConductorCu)):
+            CM=round(dbConductorCu[i][10]*1973.525241,2)
+            datos[i].append(round(math.sqrt(((pow(CM,2)*(k*math.log10((T2+234)/(T1+234)))))/t)/1000,2))
+
+        if view==1:
+            headers = ["Calibre","S[mm²]","1C[kA]","2C[kA]","4C[kA]", "8C[kA]", "16C[kA]", "30C[kA]", "60C[kA]", "100C[kA]"]
+            print(tabulate(datos, headers, tablefmt="pretty"))
+        elif view==2:
+            return datos
+    
+    elif conductor==2:
+        
+        datos=[["6 AWG"],
+            ["4 AWG"],
+            ["2 AWG"],
+            ["1/0 AWG"],
+            ["2/0 AWG"],
+            ["3/0 AWG"],
+            ["4/0 AWG"],
+            ["250 KCM"],
+            ["300 KCM"],
+            ["350 KCM"],
+            ["400 KCM"],
+            ["500 KCM"],
+            ["600 KCM"],
+            ["750 KCM"],
+            ["1000 KCM"]]
+
+        k=0.0125
+
+        for i in range(len(dbConductorAl)):
+            Seccion=dbConductorAl[i][10]
+            datos[i].append(Seccion)
+
+        t=1/fhz
+        for i in range(len(dbConductorAl)):
+            CM=round(dbConductorAl[i][10]*1973.525241,2)
+            datos[i].append(round(math.sqrt(((pow(CM,2)*(k*math.log10((T2+234)/(T1+234)))))/t)/1000,2))
+
+        t=2/fhz
+        for i in range(len(dbConductorAl)):
+            CM=round(dbConductorAl[i][10]*1973.525241,2)
+            datos[i].append(round(math.sqrt(((pow(CM,2)*(k*math.log10((T2+234)/(T1+234)))))/t)/1000,2))
+
+        t=4/fhz
+        for i in range(len(dbConductorAl)):
+            CM=round(dbConductorAl[i][10]*1973.525241,2)
+            datos[i].append(round(math.sqrt(((pow(CM,2)*(k*math.log10((T2+234)/(T1+234)))))/t)/1000,2))
+        t=8/fhz
+        for i in range(len(dbConductorAl)):
+            CM=round(dbConductorAl[i][10]*1973.525241,2)
+            datos[i].append(round(math.sqrt(((pow(CM,2)*(k*math.log10((T2+234)/(T1+234)))))/t)/1000,2))
+
+        t=16/fhz
+        for i in range(len(dbConductorAl)):
+            CM=round(dbConductorAl[i][10]*1973.525241,2)
+            datos[i].append(round(math.sqrt(((pow(CM,2)*(k*math.log10((T2+234)/(T1+234)))))/t)/1000,2))
+
+        t=30/fhz
+        for i in range(len(dbConductorAl)):
+            CM=round(dbConductorCu[i][10]*1973.525241,2)
+            datos[i].append(round(math.sqrt(((pow(CM,2)*(k*math.log10((T2+234)/(T1+234)))))/t)/1000,2))
+
+        t=60/fhz
+        for i in range(len(dbConductorAl)):
+            CM=round(dbConductorAl[i][10]*1973.525241,2)
+            datos[i].append(round(math.sqrt(((pow(CM,2)*(k*math.log10((T2+234)/(T1+234)))))/t)/1000,2))
+
+        t=100/fhz
+        for i in range(len(dbConductorAl)):
+            CM=round(dbConductorAl[i][10]*1973.525241,2)
+            datos[i].append(round(math.sqrt(((pow(CM,2)*(k*math.log10((T2+234)/(T1+234)))))/t)/1000,2))
+
+        if view==1:
+            headers = ["Calibre","S[mm²]","1C[kA]","2C[kA]","4C[kA]", "8C[kA]", "16C[kA]", "30C[kA]", "60C[kA]", "100C[kA]"]
+            print(tabulate(datos, headers, tablefmt="pretty"))
+        elif view==2:
+            return datos

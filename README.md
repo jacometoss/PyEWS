@@ -8,7 +8,7 @@
 
 Esta idea nace debido a la popularidad del lenguaje de programación Python y buscar una aplicación de este lenguaje dentro del área de ingeniería eléctrica en la especialidad de diseño de instalaciones eléctricas. En la práctica esta librería le será útil cuando trate de dimensionar una cantidad considerable de alimentadores como circuitos derivados.
 
-La librería cuenta por el momento con 8 módulos que internamente son llamados para realizar el dimensionamiento de conductores en baja tensión para conductores comerciales de 600 V hasta 2000 V, los resultados obtenidos se muestran en forma matricial o tabla para una mejor comprensión de los resultados.
+La librería cuenta por el momento con **9 módulos** que internamente son llamados para realizar el dimensionamiento de conductores en baja tensión para conductores comerciales de 600 V hasta 2000 V, los resultados obtenidos se muestran en forma matricial o tabla para una mejor comprensión de los resultados.
 
 La dependencia de este lenguaje de otros paquetes es baja únicamente usa `tabulate` en primer grado y en forma muy secundaría `numpy` y `matplotlib` no encontrándose limitado por el momento a una versión. Estas últimas dos librerías se usan para graficar las pérdidas de tensión de los conductores de corriente alterna.
 
@@ -113,6 +113,7 @@ Los módulos disponibles por el momento son los siguientes :
 | 6    | Módulo para dimensionar múltiples conductores de cobre y aluminio., corriente alterna. | dbcircuit()   |
 | 7    | Módulo para dimensionar múltiples conductores de cobre, corriente directa. | dbcircuitcd() |
 | 8    | Módulo para graficar resultados                              | graph()       |
+| 9    | Módulo de Icc para conductores de cobre y aluminio           | icc()         |
 
 ## Test
 
@@ -292,6 +293,33 @@ Los calibres deben ir como se muestra en los resultados y entre comillas dobles 
 
 No olvide que el arreglo de datos  `mydata` debe ser correcto y definido.
 
+## Nivel de corto circuito en conductores 
+
+En esta versión (0.1.22) se incluye el cálculo del corto circuito de los conductores de cobre y aluminio en corriente alterna. Únicamente por el momento sirve de consulta para  determinar si el conductor.
+
+Una forma sencilla de ingresar a este módulo usando la línea siguiente :
+
+```text
+icc(conductor,t1,t2,fhz,view)
+#conductor: Material conductor.
+---- 1:(1F-2H) 2:(2F-3H) 3:(3F-3H) 4:(3F-4H)
+#t1: Temperatura de operación en °C.
+#t2: Temperatura de corto circuito en °C.
+#fhz: Frecuencia 50hz o 60hz.
+#view: Modo de visualizar
+---- 1:(Tabla) 2:(Lista)
+```
+
+Un ejemplo práctico
+
+```python
+icc(1,75,200,60,1)
+```
+
+![](https://i.ibb.co/PwpdbTj/nivel-corto-circuito-conductores-cobre-aluminio.jpg)
+
+> En forma práctica los termoplásticos como lo son el **PVC** tienen temperatura en corto circuito de 105,130,150 para las temperaturas de operación continua de 60,75,90. Los termoestables **XLPE**  y **EPR** en corto circuito usan temperaturas de 250 cada uno para una temperatura de operación continua de 90 °C.
+
 ## Referencias
 
 [1] Norma Oficial Mexicana NOM-001-SEDE-2012, *Instalaciones Eléctricas (utilización)*
@@ -300,7 +328,7 @@ No olvide que el arreglo de datos  `mydata` debe ser correcto y definido.
 
 [3] Norma Oficial Mexicana NOM-001-SEDE-2018, *Instalaciones Eléctricas (utilización)*
 
-## Acerca de la versión
+## Desarrollador y versión
 
 La presente versión tiene corrección de entrada de parámetros como ampliación de la base de datos y corrección de errores mínimos dentro de algunas estructuras del  paquete.
 

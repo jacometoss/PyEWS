@@ -51,6 +51,9 @@ Los módulos disponibles por el momento son los siguientes :
 +----+-----------------------------------------------+---------------+
 | 8  | Módulo para graficar resultados               | graph()       |
 +----+-----------------------------------------------+---------------+
+| 9  | Módulo de corto circuito para conductores     | icc()         |
+|    | en corriente alterna, aluminio y cobre.       |               |    
++----+-----------------------------------------------+---------------+
 
 Todos los módulos trabajan con unidades del Sistema Internacional y en
 versiones futuras versiones se incluirá el Sistema Ingles

@@ -63,7 +63,7 @@ package\ ``kelectric`` .
 
 .. code:: python
 
-   import PyEWS
+   import kElectric
 
 The import of the ``kelectric`` library is done in a unique way when
 start a file and to start each module you must prepend 

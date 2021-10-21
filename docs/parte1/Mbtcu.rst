@@ -40,14 +40,15 @@ El llenado del módulo requiere la información siguiente :
    	 1: Mostrar los resultados adecuadamente estructurado en una tabla. 
    	 2: Mostrar los resultados como datos acumulados. Esta opción es necesario cuando se activa
    	 	la función para múltiples cargas.
-   #Fsc: Factor de sobrecorriente (1.25,1.0)
-
-Importado ``PyEWS`` la información requerida en orden sería
+   #Fsc: Factor de sobrecorriente
+   #To: Temperatura de operación
+   
+Importado ``kElectric`` la información requerida en orden sería
 
 .. code:: python
 
    #Módulo de baja tensión para conductores de cobre
-   mbtcu(VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm)
+   mbtcu(VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm,To)
 
 ..
 

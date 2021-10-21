@@ -41,14 +41,13 @@ El llenado del módulo requiere la información siguiente :
    	 	la función para múltiples cargas.
    #Fsc: Factor de sobrecorriente (1.25,1.0) cuando existe carga continua
    #ITM: Esta opción determina el portentaje de uso de la protección eléctrica 
-   ---- 1:80%
-   -----2:100%
+   #To:  Temperatura de operación
 
 Importado ``kelectric`` la información requerida en orden sería
 
 .. code:: python
 
-   mbtal(VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm)
+   mbtal(VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm,To)
 
 ..
 

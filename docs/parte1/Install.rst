@@ -70,7 +70,7 @@ Antes de iniciar a usar los módulos debe importar el paquete\ ``PyEWS``
 
 .. code:: python
 
-   import kElectric
+   import pyews
 
 La importación de la librería ``PyEWS`` se hace de manera única al
 iniciar un archivo y para arrancar cada módulo debe anteponer ``PyEWS``.

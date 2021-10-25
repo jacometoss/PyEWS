@@ -72,8 +72,8 @@ Antes de iniciar a usar los módulos debe importar el paquete\ ``PyEWS``
 
    import pyews
 
-La importación de la librería ``PyEWS`` se hace de manera única al
-iniciar un archivo y para arrancar cada módulo debe anteponer ``PyEWS``.
+La importación de la librería ``pyews`` se hace de manera única al
+iniciar un archivo y para arrancar cada módulo debe anteponer ``pyews``.
 En este ejemplo importaremos el módulo de baja tensión para conductores
 de cobre, no mostraremos el llenado de este módulo únicamente el orden
 de llamado.

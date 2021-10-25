@@ -59,15 +59,15 @@ installs automatically) which serves to give a better appearance
 at the time of displaying the results
 
 Before starting to use the modules, you must import the 
-package\ ``kelectric`` .
+package\ ``pyews`` .
 
 .. code:: python
 
    import kElectric
 
-The import of the ``kelectric`` library is done in a unique way when
+The import of the ``pyews`` library is done in a unique way when
 start a file and to start each module you must prepend 
-``kelectric``. In this example we will import the low voltage module
+``pyews``. In this example we will import the low voltage module
 for copper conductors, we will not show the filling of this module
 only the order of call.
 

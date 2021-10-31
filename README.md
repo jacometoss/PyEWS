@@ -49,12 +49,12 @@ pip install ElectricalWireSizes
 Los módulos disponibles por el momento para esta versión son los siguientes :
 
 | Id   | Descripción                                                  | Módulo        |
-| ---- | ------------------------------------------------------------ | ------------- |
-| 1    | Módulo de baja tensión para conductores de cobre clase B, C y D  tensión de 600V a 2000V. | mbtcu()       |
-| 2    | Módulo de baja tensión para conductores de aluminio clase B, C y  D, tensión 600V a 2000V. | mbtal()       |
-| 3    | Módulo de baja tensión para conductores de cobre clase B, C  y D en CD hasta 2000 V. | mbtcustd()    |
-| 4    | Módulo para el cálculo de la impedancia para conductores de cobre. | zpucu()       |
-| 5    | Módulo para el cálculo de la impedancia para conductores de aluminio. | zpual()       |
+| :--- | :----------------------------------------------------------- | :------------ |
+| 1    | Módulo para conductores de cobre clase B, C y D tensión de 600V a 2000V. | mbtcu()       |
+| 2    | Módulo para conductores de aluminio clase B, C y D, tensión 600V a 2000V. | mbtal()       |
+| 3    | Módulo para conductores de cobre clase B, C y D en CD hasta 2000 V. | mbtcustd()    |
+| 4    | Módulo para el cálculo de impedancia, conductores de cobre.  | zpucu()       |
+| 5    | Módulo para el cálculo de impedancia, conductores de aluminio. | zpual()       |
 | 6    | Módulo para dimensionar múltiples conductores de cobre y aluminio., corriente alterna. | dbcircuit()   |
 | 7    | Módulo para dimensionar múltiples conductores de cobre, corriente directa. | dbcircuitcd() |
 | 8    | Módulo para graficar resultados                              | graph()       |

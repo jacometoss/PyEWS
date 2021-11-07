@@ -65,7 +65,7 @@ El módulo tiene dependencias siendo necesario instalar ``tabulate`` (se
 instala en forma automática) el cual sirve para dar una mejor apariencia
 al momento de mostrar los resultados.
 
-Antes de iniciar a usar los módulos debe importar el paquete\ ``PyEWS``
+Antes de iniciar a usar los módulos debe importar el paquete\ ``pyews``
 .
 
 .. code:: python

@@ -1,9 +1,9 @@
 |image1| |image2| |image3| |image4| |image5| |image6|
 
-Python Electrical Wire Sizes 
-============================
+Electrical Wire Sizes 
+=====================
 
-El módulo Python Electrical Wire Sizes ( **Versión 0.1.22**) puede ser
+El módulo Python Electrical Wire Sizes ( **Versión 0.1.24**) puede ser
 utilizado para dimensionar los conductores de alimentadores en baja
 tensión como los circuitos derivados de una instalación eléctrica. Esta
 herramienta es muy útil para ingenieros y arquitectos sumergidos en la
@@ -65,15 +65,8 @@ El módulo tiene dependencias siendo necesario instalar ``tabulate`` (se
 instala en forma automática) el cual sirve para dar una mejor apariencia
 al momento de mostrar los resultados.
 
-Antes de iniciar a usar los módulos debe importar el paquete\ ``pyews``
-.
+Antes de iniciar a usar los módulos debe importar el paquete. 
 
-.. code:: python
-
-   import pyews
-
-La importación de la librería ``pyews`` se hace de manera única al
-iniciar un archivo y para arrancar cada módulo debe anteponer ``pyews``.
 En este ejemplo importaremos el módulo de baja tensión para conductores
 de cobre, no mostraremos el llenado de este módulo únicamente el orden
 de llamado.

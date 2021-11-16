@@ -1,9 +1,9 @@
 |image1|  |image2| |image3| |image4| |image5| |image6|
 
-Python Electrical Wire Sizes 
-============================
+Electrical Wire Sizes 
+=====================
 
-The Python Electrical Wire Sizes module ``Version 0.1.21`` can be
+The Python Electrical Wire Sizes module ``Version 0.1.25`` can be
 used to size feeder conductors in low voltage such as the branch circuits 
 of an electrical installation. Is tool is very useful for engineers and 
 architects immersed in the branch of electrical projects and those familiar 
@@ -58,16 +58,7 @@ The module has dependencies being necessary to install ``tabulate`` (it is
 installs automatically) which serves to give a better appearance
 at the time of displaying the results
 
-Before starting to use the modules, you must import the 
-package\ ``pyews`` .
-
-.. code:: python
-
-   import kElectric
-
-The import of the ``pyews`` library is done in a unique way when
-start a file and to start each module you must prepend 
-``pyews``. In this example we will import the low voltage module
+ In this example we will import the low voltage module
 for copper conductors, we will not show the filling of this module
 only the order of call.
 

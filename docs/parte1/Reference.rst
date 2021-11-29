@@ -23,8 +23,10 @@ Este programa es software libre: usted puede redistribuirlo y /o modificarlo baj
 
 Este programa se distribuye con la esperanza de que sea útil pero sin ninguna garantía; incluso sin la garantía implícita de comercialización o idoneidad para un propósito en particular.
 
-Vea la información de Licencia de kelectric para más detalle.
+Vea la información de Licencia de `electricalwiresizes`_ para más detalle.
 
+
+.. _electricalwiresizes: https://github.com/jacometoss/PyEWS/blob/master/LICENSE
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes
 .. |image2| image:: https://static.pepy.tech/personalized-badge/electricalwiresizes?period=total&units=none&left_color=grey&right_color=blue&left_text=Downloads

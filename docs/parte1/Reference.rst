@@ -17,7 +17,7 @@ York, Basel: Marcel Dekker Inc., p.34.
 Copyright
 =========
 
-Copyright © 2021 en adelante, Marco Polo Jácome Toss (https://pyews.readthedocs.io/).
+Copyright © 2020 en adelante, Marco Polo Jácome Toss (https://pyews.readthedocs.io/).
 
 Este programa es software libre: usted puede redistribuirlo y /o modificarlo bajo los términos de la Licencia General GNU (GNU General Public License) publicado por la Fundación para el Software Libre para la versión 3 de dicha Licencia o anterior, o cualquier versión posterior.
 

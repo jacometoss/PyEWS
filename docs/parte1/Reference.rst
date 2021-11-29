@@ -13,6 +13,18 @@ Referencias
 [2] Thue, W., 1978. *Electrical Power Cable Engineering*. 2nd ed. New
 York, Basel: Marcel Dekker Inc., p.34.
 
+
+Copyright
+=========
+
+Copyright © 2021 en adelante, Marco Polo Jácome Toss (http://kelectric.org).
+
+Este programa es software libre: usted puede redistribuirlo y /o modificarlo bajo los términos de la Licencia General GNU (GNU General Public License) publicado por la Fundación para el Software Libre para la versión 3 de dicha Licencia o anterior, o cualquier versión posterior.
+
+Este programa se distribuye con la esperanza de que sea útil pero sin ninguna garantía; incluso sin la garantía implícita de comercialización o idoneidad para un propósito en particular.
+
+Vea la información de Licencia de kelectric para más detalle.
+
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes
 .. |image2| image:: https://static.pepy.tech/personalized-badge/electricalwiresizes?period=total&units=none&left_color=grey&right_color=blue&left_text=Downloads

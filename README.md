@@ -135,22 +135,6 @@ La presente versión tiene corrección de entrada de parámetros como ampliació
 [Páis]: México
 ```
 
-```mermaid
-graph TD
-
-B[ElectricalWireSizes]-->db[(Database)]
-	db -->|load| A[mbtcu]-->|result| I[graph]
-    db -->|load| C[mbtal]-->|result| I[graph]	
-    db -->|load| D[mbtcustd]
-    db -->|parameters| E[zpucu]
-    db -->|parameters| F[zpual]
-    db -->|parameters| J[icc]
-    db -->|loads| G[dbcircuit] --> H[[Subroutine]]
-    H -->|loads| k[mbtcu]--> id1>Not Graph]
-    H -->|loads| l[mbtcu]--> id1>Not Graph]
-    
-
-```
 
 ## Referencias
 

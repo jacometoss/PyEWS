@@ -134,7 +134,7 @@ La presente versión tiene corrección de entrada de parámetros como ampliació
 [Fecha]: 06-Diciembre-2021
 [Páis]: México
 ```
-
+![Estructura](https://i.ibb.co/jhsW1Kg/Estrcutura-Electrical-Wire-Sizes.jpg)
 
 ## Referencias
 

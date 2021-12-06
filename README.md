@@ -1,8 +1,6 @@
-<img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/07dd58e07a7999d21a7006484b86782e8c006192/68747470733a2f2f692e6962622e636f2f6a5652506e70482f456c656374726963616c2d576972652d53697a657330312e6a7067" alt="kElectric" style="zoom: 100%;" />
-
 [![PyPI version](https://badge.fury.io/py/ElectricalWireSizes.svg)](https://badge.fury.io/py/ElectricalWireSizes) [![Downloads](https://static.pepy.tech/personalized-badge/electricalwiresizes?period=total&units=none&left_color=grey&right_color=blue&left_text=Downloads)](https://pepy.tech/project/electricalwiresizes) [![Downloads](https://pepy.tech/badge/electricalwiresizes/month)](https://pepy.tech/project/electricalwiresizes) [![versons of python supported](https://img.shields.io/badge/python-3%20%7C%203.5%20%7C%203.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue)](https://pypi.org/project/ElectricalWireSizes/) [![Maintainability](https://api.codeclimate.com/v1/badges/27c48038801ee954796d/maintainability)](https://codeclimate.com/github/jacometoss/PyEWS/maintainability)[![Codacy Badge](https://app.codacy.com/project/badge/Grade/8d8575adf7e149999e6bc84c657fc94e)](https://www.codacy.com/gh/jacometoss/PyEWS/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jacometoss/PyEWS&amp;utm_campaign=Badge_Grade)
 
-# Python Electrical Wire Sizes 
+# Electrical Wire Sizes 
 
 [Electrical Wires Sizes](https://pyews.readthedocs.io/) es una librería hecha en el lenguaje de programación Python y fue creada con la finalidad de acortar el tiempo en el dimensionamiento de conductores eléctricos u obtención de las secciones de los conductores de una instalación eléctrica.
 
@@ -44,47 +42,21 @@ La instalación del paquete se realiza mediante la instrucción siguiente :
 pip install ElectricalWireSizes
 ```
 
-## PyEWS Módulos
+## Módulos
 
 Los módulos disponibles por el momento para esta versión son los siguientes :
 
 | Id   | Descripción                                                  | Módulo        |
-| :--- | :----------------------------------------------------------- | :------------ |
-| 1    | Módulo para conductores de cobre clase B, C y D tensión de 600V a 2000V. | mbtcu()       |
-| 2    | Módulo para conductores de aluminio clase B, C y D, tensión 600V a 2000V. | mbtal()       |
-| 3    | Módulo para conductores de cobre clase B, C y D en CD hasta 2000 V. | mbtcustd()    |
-| 4    | Módulo para el cálculo de impedancia, conductores de cobre.  | zpucu()       |
-| 5    | Módulo para el cálculo de impedancia, conductores de aluminio. | zpual()       |
+| ---- | ------------------------------------------------------------ | ------------- |
+| 1    | Módulo de baja tensión para conductores de cobre clase B, C y D  tensión de 600V a 2000V. | mbtcu()       |
+| 2    | Módulo de baja tensión para conductores de aluminio clase B, C y  D, tensión 600V a 2000V. | mbtal()       |
+| 3    | Módulo de baja tensión para conductores de cobre clase B, C  y D en CD hasta 2000 V. | mbtcustd()    |
+| 4    | Módulo para el cálculo de la impedancia para conductores de cobre. | zpucu()       |
+| 5    | Módulo para el cálculo de la impedancia para conductores de aluminio. | zpual()       |
 | 6    | Módulo para dimensionar múltiples conductores de cobre y aluminio., corriente alterna. | dbcircuit()   |
 | 7    | Módulo para dimensionar múltiples conductores de cobre, corriente directa. | dbcircuitcd() |
 | 8    | Módulo para graficar resultados                              | graph()       |
 | 9    | Módulo de Icc para conductores de cobre y aluminio           | icc()         |
-
-## Test básico
-
-En el ejemplo siguiente vamos a realizar un pequeño calculo donde es usado el módulo `mbtcu`.
-
-```python
-mbtcu(120,220,15,1,10,1,1,35,3,1,0.9,1,1.00,60)
-```
-
-Los resultados  se muestran con la iteración de todos los conductores tanto para tensión monofásica como trifásica, recordando que debe seleccionar el sistema como la cantidad de pérdida de tensión permitida.
-
-- `Vd (Voltage Drop)` es la pérdida de tensión porcentual 
-
-- `60,75,90` la ampacidad real de los conductores.
-
-- `Nc` es el número de conductores por fase.
-
-- `Op` muestra si el resultado es correcto al aparecer en la columna la palabra en ingles  `Yes` .
-
-- `ITM` es la protección del circuito.
-
-  Se puede observar en la columna  `%VD 1F-2H` seleccionada, la pérdida de tensión es aceptable con respecto a la mínima ingresada del `%3`. La confirmación de un resultado aceptable se visualiza en la columna `OP` .  Al utilizar la opción de múltiples cargas podrá mostrar el resumen y el desglose como se muestra en la tabla.
-
-![ElectricalWireSizes0.1.23](https://i.ibb.co/yVPWvxN/k-Electric-0-1-23.jpg)
-
-El circuito marcado en amarillo es la solución para realizar un resumen use la opción múltiples cargas.
 
 ## Base de datos de conductores
 
@@ -167,10 +139,10 @@ icc(1,75,200,60,1)
 La presente versión tiene corrección de entrada de parámetros como ampliación de la base de datos y corrección de errores mínimos dentro de algunas estructuras del  paquete.
 
 ```text
-[Packqge]: ElectricalWireSizes 0.1.23
+[Packqge]: ElectricalWireSizes 0.1.24
 [Autor]: Marco Polo Jácome Toss
 [Licencia]: GNU General Public License v3.0
-[Fecha]: 20-Octubre-2021
+[Fecha]: 24-Octubre-2021
 [Páis]: México
 ```
 

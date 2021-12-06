@@ -61,7 +61,7 @@ Importado ``kElectric`` la información requerida en orden sería
    :target: https://pepy.tech/project/electricalwiresizes
 .. |image3| image:: https://pepy.tech/badge/electricalwiresizes/month
    :target: https://pepy.tech/project/electricalwiresizes
-.. |image4| image:: https://img.shields.io/badge/python-3 | 3.5 | 3.6 | 3.7 | 3.8 | 3.9-blue
+.. |image4| image:: https://img.shields.io/badge/python-3 | 3.5 | 3.6 | 3.7 | 3.8 | 3.9 | 3.10-blue
    :target: https://pypi.org/project/ElectricalWireSizes/
 .. |image5| image:: https://api.codeclimate.com/v1/badges/27c48038801ee954796d/maintainability
    :target: https://codeclimate.com/github/jacometoss/PyEWS/maintainability

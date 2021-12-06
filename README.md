@@ -1,3 +1,5 @@
+![ElectricalWireSizes](https://i.ibb.co/jVRPnpH/Electrical-Wire-Sizes01.jpg)
+
 [![PyPI version](https://badge.fury.io/py/ElectricalWireSizes.svg)](https://badge.fury.io/py/ElectricalWireSizes) [![Downloads](https://static.pepy.tech/personalized-badge/electricalwiresizes?period=total&units=none&left_color=grey&right_color=blue&left_text=Downloads)](https://pepy.tech/project/electricalwiresizes) [![Downloads](https://pepy.tech/badge/electricalwiresizes/month)](https://pepy.tech/project/electricalwiresizes) [![versons of python supported](https://img.shields.io/badge/python-3%20%7C%203.5%20%7C%203.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue)](https://pypi.org/project/ElectricalWireSizes/) [![Maintainability](https://api.codeclimate.com/v1/badges/27c48038801ee954796d/maintainability)](https://codeclimate.com/github/jacometoss/PyEWS/maintainability)[![Codacy Badge](https://app.codacy.com/project/badge/Grade/8d8575adf7e149999e6bc84c657fc94e)](https://www.codacy.com/gh/jacometoss/PyEWS/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jacometoss/PyEWS&amp;utm_campaign=Badge_Grade)
 
 # Electrical Wire Sizes 
@@ -66,19 +68,6 @@ Para poder ampliar el módulo se agregó la tabla de conductores donde incluye l
 dbc(1)
 ```
 
-## Impedancia unitaria 
-
-Para obtener las constantes únicamente utilice las líneas siguientes 
-
-```python
-#ZpuCu(Type,Ta,Fp,View)
-zpucu(1,10,0.9,1) 
-#ZpuAl(Type,Ta,Fp,View)
-zpual(1,10,0.9,1) 
-```
-
-<img src="https://i.ibb.co/D1syMzL/Zpu.jpg" alt="Zpu" style="zoom:70%;" />
-
 ## Graficar resultados
 
 Mediante  `matplotlib` y`numpy`  es posible obtener gráficos, la instalación de esta librería es automática al instalar  `ElectricalWireSizes`.
@@ -139,11 +128,28 @@ icc(1,75,200,60,1)
 La presente versión tiene corrección de entrada de parámetros como ampliación de la base de datos y corrección de errores mínimos dentro de algunas estructuras del  paquete.
 
 ```text
-[Packqge]: ElectricalWireSizes 0.1.24
+[Packqge]: ElectricalWireSizes 0.1.25rc2
 [Autor]: Marco Polo Jácome Toss
 [Licencia]: GNU General Public License v3.0
-[Fecha]: 24-Octubre-2021
+[Fecha]: 06-Diciembre-2021
 [Páis]: México
+```
+
+```mermaid
+graph TD
+
+B[ElectricalWireSizes]-->db[(Database)]
+	db -->|load| A[mbtcu]-->|result| I[graph]
+    db -->|load| C[mbtal]-->|result| I[graph]	
+    db -->|load| D[mbtcustd]
+    db -->|parameters| E[zpucu]
+    db -->|parameters| F[zpual]
+    db -->|parameters| J[icc]
+    db -->|loads| G[dbcircuit] --> H[[Subroutine]]
+    H -->|loads| k[mbtcu]--> id1>Not Graph]
+    H -->|loads| l[mbtcu]--> id1>Not Graph]
+    
+
 ```
 
 ## Referencias
@@ -154,3 +160,12 @@ La presente versión tiene corrección de entrada de parámetros como ampliació
 
 [3] Norma Oficial Mexicana NOM-001-SEDE-2018, *Instalaciones Eléctricas (utilización)*
 
+## Copyright
+
+Copyright © 2020 en adelante, Marco Polo Jácome Toss (http://electricalwiresizes.org).
+
+Este programa es software libre: usted puede redistribuirlo y /o modificarlo bajo los términos de la Licencia General GNU (GNU General Public License) publicado por la Fundación para el Software Libre para la versión 3 de dicha Licencia o anterior, o cualquier versión posterior.
+
+Este programa se distribuye con la esperanza de que sea útil pero sin ninguna garantía; incluso sin la garantía implícita de comercialización o idoneidad para  un propósito en particular.
+
+Vea la información de Licencia de `ElectricalWireSizes` para más detalle.

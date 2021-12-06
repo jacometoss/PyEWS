@@ -3,7 +3,7 @@
 Electrical Wire Sizes 
 =====================
 
-El módulo Python Electrical Wire Sizes ( **Versión 0.1.24**) puede ser
+El módulo Python Electrical Wire Sizes ( **Versión 0.1.26**) puede ser
 utilizado para dimensionar los conductores de alimentadores en baja
 tensión como los circuitos derivados de una instalación eléctrica. Esta
 herramienta es muy útil para ingenieros y arquitectos sumergidos en la
@@ -89,7 +89,7 @@ resultado se muestra en cada uno de ellos
    :target: https://pepy.tech/project/electricalwiresizes
 .. |image3| image:: https://pepy.tech/badge/electricalwiresizes/month
    :target: https://pepy.tech/project/electricalwiresizes
-.. |image4| image:: https://img.shields.io/badge/python-3 | 3.5 | 3.6 | 3.7 | 3.8 | 3.9-blue
+.. |image4| image:: https://img.shields.io/badge/python-3 | 3.5 | 3.6 | 3.7 | 3.8 | 3.9 | 3.10-blue
    :target: https://pypi.org/project/ElectricalWireSizes/
 .. |image5| image:: https://api.codeclimate.com/v1/badges/27c48038801ee954796d/maintainability
    :target: https://codeclimate.com/github/jacometoss/PyEWS/maintainability

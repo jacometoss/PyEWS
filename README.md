@@ -153,3 +153,7 @@ Este programa es software libre: usted puede redistribuirlo y /o modificarlo baj
 Este programa se distribuye con la esperanza de que sea útil pero sin ninguna garantía; incluso sin la garantía implícita de comercialización o idoneidad para  un propósito en particular.
 
 Vea la información de Licencia de `ElectricalWireSizes` para más detalle.
+
+## Estadísticas
+
+<a href="https://info.flagcounter.com/c5eD"><img src="https://s11.flagcounter.com/count2/c5eD/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>

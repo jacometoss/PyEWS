@@ -43,7 +43,7 @@ El llenado del módulo requiere la información siguiente :
    #Fsc: Factor de sobrecorriente
    #To: Temperatura de operación
    
-Importado el módulo ``mbtcu`` ingrese la informaciíon que requiere siguiente:
+Importado el módulo ``mbtcu`` ingrese la informaciíon requerida.
 
 .. code:: python
 

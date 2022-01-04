@@ -29,7 +29,7 @@ Puedes comprarme un café en forma de donativo en el enlace siguiente :
 
 |image7|
 
-No es mucho pero de algo sirve para mejorar este proyecto, acepto críticas como sugerencias.
+No es mucho pero sirve de algo para mejorar este proyecto, acepto críticas como sugerencias.
 
 
 **Contenido**

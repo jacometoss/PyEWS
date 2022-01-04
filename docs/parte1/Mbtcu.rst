@@ -43,7 +43,7 @@ El llenado del módulo requiere la información siguiente :
    #Fsc: Factor de sobrecorriente
    #To: Temperatura de operación
    
-Importado ``kElectric`` la información requerida en orden sería
+Importado el ``Packages y módulo`` la información que requiere es el siguiente:
 
 .. code:: python
 

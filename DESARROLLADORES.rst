@@ -21,10 +21,13 @@ Acerca del autor
 Recibio el grado Maestro de Ingeniería Eléctrica en el Intituto de
 Ingeniería de la Universiad Autómoma de Méxcio. Lo ha llevado al
 constante desarrollo de nuevas aplicaciones prácticas como complejas
-debido a las necesidades hoy tan demandantes en la industría y esta
-aplicación tiene como finalidad acortar los tiempo en el
+debido a las necesidades hoy tan demandantes de la industría.
+
+Esta aplicación tiene como finalidad acortar los tiempo en el
 dimensionamiento de conductores eléctricos como en la obtención de
 resultados.
+
+
 
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes
@@ -32,7 +35,7 @@ resultados.
    :target: https://pepy.tech/project/electricalwiresizes
 .. |image3| image:: https://pepy.tech/badge/electricalwiresizes/month
    :target: https://pepy.tech/project/electricalwiresizes
-.. |image4| image:: https://img.shields.io/badge/python-3 | 3.5 | 3.6 | 3.7 | 3.8 | 3.9-blue
+.. |image4| image:: https://img.shields.io/badge/python-3 | 3.5 | 3.6 | 3.7 | 3.8 | 3.9 | 3.10-blue
    :target: https://pypi.org/project/ElectricalWireSizes/
 .. |image5| image:: https://api.codeclimate.com/v1/badges/27c48038801ee954796d/maintainability
    :target: https://codeclimate.com/github/jacometoss/PyEWS/maintainability

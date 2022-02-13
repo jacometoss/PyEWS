@@ -336,25 +336,25 @@ def zpual(Type=None,Ta=None,Fp=None,View=None):
         return  datos 
 
     
-def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=None,S=None,Fp=None,View=None,Fsc=None,To=None):
+def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=None,S=None,Fp=None,View=None,Fsc=None,To=None,Break=None):
 
-    if(VF==None or VL==None or In==None or Nc==None or L==None or FA==None or Type==None or Ta==None or Vd==None or S==None or Fp==None or View==None or Fsc==None or To==None):
+    if(VF==None or VL==None or In==None or Nc==None or L==None or FA==None or Type==None or Ta==None or Vd==None or S==None or Fp==None or View==None or Fsc==None or To==None or Break==None):
         t = time.localtime()
-        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                    ElectricalWireSizes                       ")
+        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                    ElectricalWireSizes                             ")
         print("                 ",time.asctime(t))
-        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                                                             ")
+        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                                                                    ")
         print("                         ─▄▀─▄▀")
         print("                         ──▀──▀")
         print("                         █▀▀▀▀▀█▄")
         print("                         █░░░░░█─█")
         print("                         ▀▄▄▄▄▄▀▀")
         print("                                                             ")
-        print("--------------------------------------------------------------")
-        print("| Los parámetros no son correctos para el                    |")
-        print("| módulo mbtcu(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View,Fsc,To) |")
-        print("--------------------------------------------------------------")
+        print("--------------------------------------------------------------------")
+        print("| Los parámetros no son correctos para el                          |")
+        print("| módulo mbtcu(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View,Fsc,To,Break) |")
+        print("--------------------------------------------------------------------")
         return         
 
     if Ta >= 60:
@@ -392,7 +392,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
         Xj=6
     #print(tabulate(datos))
 
-    In=(In*Fsc)/Nc
+    In=(In)/Nc
 
     LIn=L*In
     
@@ -477,14 +477,14 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
                 if (To==60):
 
-                    if ((round(datos[i][5],3)*FA*FT60>=In)):
+                    if ((round(datos[i][5],3)*FA*FT60>=(In*Fsc))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
 
                 elif (To==75):
 
-                    if ((round(datos[i][6],3)*FA*FT75>=In)):
+                    if ((round(datos[i][6],3)*FA*FT75>=(In*Fsc))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -492,7 +492,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
                 elif (To==90):
                     
-                    if ((round(datos[i][7],3)*FA*FT90>=In)):
+                    if ((round(datos[i][7],3)*FA*FT90>=(In*Fsc))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -503,7 +503,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                 datos[i].append('Not')
                 
             for j in range(len(SITM)):
-                if (SITM[j]>=Nc*In):
+                if (SITM[j]>=Nc*In*Break):
                     datos[i].append(SITM[j])
                     break
                     
@@ -534,14 +534,14 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
                 if (To==60):
 
-                    if ((round(datos[i][5],3)*FA*FT60>=In)):
+                    if ((round(datos[i][5],3)*FA*FT60>=(In*Fsc))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
 
                 elif (To==75):
 
-                    if ((round(datos[i][6],3)*FA*FT75>=In)):
+                    if ((round(datos[i][6],3)*FA*FT75>=(In*Fsc))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -549,7 +549,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
                 elif (To==90):
                     
-                    if ((round(datos[i][7],3)*FA*FT90>=In)):
+                    if ((round(datos[i][7],3)*FA*FT90>=(In*Fsc))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -559,7 +559,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                 datos[i].append('Not')
             
             for j in range(len(SITM)):
-                if (SITM[j]>=Nc*In):
+                if (SITM[j]>=Nc*In*Break):
                     datos[i].append(SITM[j])
                     break
                      
@@ -589,14 +589,14 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                 
                 if (To==60):
 
-                    if ((round(datos[i][5],3)*FA*FT60>=In)):
+                    if ((round(datos[i][5],3)*FA*FT60>=(In*Fsc))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
 
                 elif (To==75):
 
-                    if ((round(datos[i][6],3)*FA*FT75>=In)):
+                    if ((round(datos[i][6],3)*FA*FT75>=(In*Fsc))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -604,7 +604,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
                 elif (To==90):
                     
-                    if ((round(datos[i][7],3)*FA*FT90>=In)):
+                    if ((round(datos[i][7],3)*FA*FT90>=(In*Fsc))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -614,7 +614,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                 datos[i].append('Not')
 
             for j in range(len(SITM)):
-                if (SITM[j]>=Nc*In):
+                if (SITM[j]>=Nc*In*Break):
                     datos[i].append(SITM[j])
                     break
                                     
@@ -644,14 +644,14 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                 
                 if (To==60):
 
-                    if ((round(datos[i][5],3)*FA*FT60>=In)):
+                    if ((round(datos[i][5],3)*FA*FT60>=(In*Fsc))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
 
                 elif (To==75):
 
-                    if ((round(datos[i][6],3)*FA*FT75>=In)):
+                    if ((round(datos[i][6],3)*FA*FT75>=(In*Fsc))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -659,7 +659,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
                 elif (To==90):
                     
-                    if ((round(datos[i][7],3)*FA*FT90>=In)):
+                    if ((round(datos[i][7],3)*FA*FT90>=(In*Fsc))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -668,7 +668,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                 datos[i].append('Not')
                     
             for j in range(len(SITM)):
-                if (SITM[j]>=Nc*In):
+                if (SITM[j]>=Nc*In*Break):
                     datos[i].append(SITM[j])
                     break
     if View == 1:
@@ -679,25 +679,25 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
         return datos
     
 
-def mbtal(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=None,S=None,Fp=None,View=None,Fsc=None,To=None):
+def mbtal(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=None,S=None,Fp=None,View=None,Fsc=None,To=None, Break=None):
 
-    if(VF==None or VL==None or In==None or Nc==None or L==None or FA==None or Type==None or Ta==None or Vd==None or S==None or Fp==None or View==None or Fsc==None or To==None):
+    if(VF==None or VL==None or In==None or Nc==None or L==None or FA==None or Type==None or Ta==None or Vd==None or S==None or Fp==None or View==None or Fsc==None or To==None or Break==None):
         t = time.localtime()
-        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                    ElectricalWireSizes                       ")
+        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                    ElectricalWireSizes                             ")
         print("                 ",time.asctime(t))
-        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                                                             ")
+        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                                                                    ")
         print("                         ─▄▀─▄▀")
         print("                         ──▀──▀")
         print("                         █▀▀▀▀▀█▄")
         print("                         █░░░░░█─█")
         print("                         ▀▄▄▄▄▄▀▀")
-        print("                                                             ")
-        print("--------------------------------------------------------------")
-        print("| Los parámetros no son correctos para el                    |")
-        print("| módulo mbtal(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View,Fsc,To) |")
-        print("--------------------------------------------------------------")
+        print("                                                                    ")
+        print("--------------------------------------------------------------------")
+        print("| Los parámetros no son correctos para el                          |")
+        print("| módulo mbtal(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View,Fsc,To,Break) |")
+        print("--------------------------------------------------------------------")
         return 
 
     if Ta >= 60:
@@ -841,7 +841,7 @@ def mbtal(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                 datos[i].append('Not')
                 
             for j in range(len(SITM)):
-                if (SITM[j]>=Nc*In):
+                if (SITM[j]>=Nc*In*Break):
                     datos[i].append(SITM[j])
                     break
                     
@@ -896,7 +896,7 @@ def mbtal(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                 datos[i].append('Not')
             
             for j in range(len(SITM)):
-                if (SITM[j]>=Nc*In):
+                if (SITM[j]>=Nc*In*Break):
                     datos[i].append(SITM[j])
                     break
                      
@@ -953,7 +953,7 @@ def mbtal(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                 datos[i].append('Not')
 
             for j in range(len(SITM)):
-                if (SITM[j]>=Nc*In):
+                if (SITM[j]>=Nc*In*Break):
                     datos[i].append(SITM[j])
                     break
                                     
@@ -1007,7 +1007,7 @@ def mbtal(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                 datos[i].append('Not')
                     
             for j in range(len(SITM)):
-                if (SITM[j]>=Nc*In):
+                if (SITM[j]>=Nc*In*Break):
                     datos[i].append(SITM[j])
                     break
     if View == 1:
@@ -1194,9 +1194,9 @@ def dbcircuit(carga=None,view=None,conductor=None):
     datos=[]  
     for i in range(len(carga)):
         if conductor ==1:
-            datos.append(mbtcu(carga[i][1],carga[i][2],carga[i][3],carga[i][4],carga[i][5],carga[i][6],carga[i][7],carga[i][8],carga[i][9],carga[i][10],carga[i][11],carga[i][12],carga[i][13],carga[i][14])) 
+            datos.append(mbtcu(carga[i][1],carga[i][2],carga[i][3],carga[i][4],carga[i][5],carga[i][6],carga[i][7],carga[i][8],carga[i][9],carga[i][10],carga[i][11],carga[i][12],carga[i][13],carga[i][14],carga[i][15])) 
         elif conductor ==2:
-            datos.append(mbtal(carga[i][1],carga[i][2],carga[i][3],carga[i][4],carga[i][5],carga[i][6],carga[i][7],carga[i][8],carga[i][9],carga[i][10],carga[i][11],carga[i][12],carga[i][13],carga[i][14])) 
+            datos.append(mbtal(carga[i][1],carga[i][2],carga[i][3],carga[i][4],carga[i][5],carga[i][6],carga[i][7],carga[i][8],carga[i][9],carga[i][10],carga[i][11],carga[i][12],carga[i][13],carga[i][14],carga[i][15])) 
         if view==1:
             print("Id [",i+1,"]========================================================================================================================================================================")
             print(tabulate(datos[i], headers=["AWG/KCM","1F/2H", "2F/3H","3F/3H","3F/4H", "60", "75", "90","%Vd/1F", "%Vd/2F","%Vd/3F","%Vd/3F","Nc", "In", "60", "75", "90", "Op", "ITM"], tablefmt='psql'))

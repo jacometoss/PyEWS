@@ -79,7 +79,7 @@ Es posible graficar los resultados de pérdida de tensión de un único cálculo
 Esta limitado para conductores en corriente alterna, el procedimiento para generar la figura es mediante :
 
 ```python
-mydata=mbtal(127,220,55,1,45,1,1,35,3,1,0.9,2,1)
+mydata=mbtal(127,220,55,1,45,1,1,35,3,1,0.9,2,1,1)
 graph(mydata,"6 AWG","4/0 AWG", 8, 5, 2,"k",1)
 ```
 
@@ -125,16 +125,37 @@ icc(1,75,200,60,1)
 
 ## Desarrollador y versión
 
-La presente versión tiene corrección de entrada de parámetros como ampliación de la base de datos y corrección de errores mínimos dentro de algunas estructuras del  paquete.
+La versión 0.1.27rc1 es un pre-release candidato a presentarse como proyecto. 
 
 ```text
-[Packqge]: ElectricalWireSizes 0.1.25rc2
+[Packqge]: ElectricalWireSizes 0.1.27rc1
 [Autor]: Marco Polo Jácome Toss
 [Licencia]: GNU General Public License v3.0
-[Fecha]: 06-Diciembre-2021
+[Fecha]: 13-Diciembre-2022
 [Páis]: México
 ```
-![Estructura](https://i.ibb.co/jhsW1Kg/Estrcutura-Electrical-Wire-Sizes.jpg)
+
+## Changelog 
+
+**0.1.27rc1** - Presenta un nuevo campo para el ajuste de la protección conforme a la NOM-001-SEDE-2012 de instalaciones eléctricas. Los módulos que sufrieron cambios son: `mtbcu` ,`mbtal`, `dbcircuit`.
+
+```mermaid
+
+graph TD
+
+B[ElectricalWireSizes]-->db[(Database)]
+	db -->|load| A[mbtcu]-->|result| I[graph]
+    db -->|load| C[mbtal]-->|result| I[graph]	
+    db -->|load| D[mbtcustd]
+    db -->|parameters| E[zpucu]
+    db -->|parameters| F[zpual]
+    db -->|parameters| J[icc]
+    db -->|loads| G[dbcircuit] --> H[[Subroutine]]
+    H -->|loads| k[mbtcu]--> id1>Not Graph]
+    H -->|loads| l[mbtcu]--> id1>Not Graph]
+    
+
+```
 
 ## Referencias
 
@@ -154,6 +175,3 @@ Este programa se distribuye con la esperanza de que sea útil pero sin ninguna g
 
 Vea la información de Licencia de `ElectricalWireSizes` para más detalle.
 
-## Estadísticas
-
-<a href="https://info.flagcounter.com/c5eD"><img src="https://s11.flagcounter.com/count2/c5eD/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>

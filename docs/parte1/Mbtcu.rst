@@ -42,13 +42,14 @@ El llenado del módulo requiere la información siguiente :
    	 	la función para múltiples cargas.
    #Fsc: Factor de sobrecorriente
    #To: Temperatura de operación
+   #Break: Ajuste de protección
    
 Importado el módulo ``mbtcu`` ingrese la informaciíon requerida.
 
 .. code:: python
 
    #Módulo de baja tensión para conductores de cobre
-   mbtcu(VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm,To)
+   mbtcu(VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm,To,Break)
 
 ..
 

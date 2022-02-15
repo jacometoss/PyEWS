@@ -35,14 +35,14 @@ El llenado del módulo requiere la información siguiente :
    ---- 2,3,5	
    #S:  Seleccione el sistema que desea propner en base a este se muestran los resultados.
    ---- 1:(1F-2H) 2:(2F-3H) 3:(3F-3H) 4:(3F-4H)
-   #Fp: Factor de potencia
-   #Op: Opción para mostrar resultados
+   #Fp: Factor de potencia.
+   #Op: Opción para mostrar resultados.
    	 1: Mostrar los resultados adecuadamente estructurado en una tabla. 
    	 2: Mostrar los resultados como datos acumulados. Esta opción es necesario cuando se activa
    	 	la función para múltiples cargas.
-   #Fsc: Factor de sobrecorriente
-   #To: Temperatura de operación
-   #Break: Ajuste de protección
+   #Fsc: Factor de sobrecorriente.
+   #To: Temperatura de operación.
+   #Break: Ajuste de protección.
    
 Importado el módulo ``mbtcu`` ingrese la informaciíon requerida.
 

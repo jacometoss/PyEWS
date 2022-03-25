@@ -10,7 +10,7 @@ siguiente :
 
 .. code:: python
 
-   kelectric.mbtcustd()
+   mbtcustd()
 
 El resultado puede ser visualizado en un array o tabla mediante
 ``tabulate`` el cual se instala por defecto en el programa.

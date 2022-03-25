@@ -47,7 +47,7 @@ Importado ``kelectric`` la información requerida en orden sería
    El módulo se limita a los conductores mostrados en el ``dbc`` que son
    conductores comerciales.
 
-Nota : Recuerda importar ``PyEWS``
+Nota : Recuerda importar correctamento ``ElectricalWireSizes``
 
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes

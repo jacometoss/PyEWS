@@ -75,7 +75,7 @@ de cobre, no se muestra el llenado de este módulo únicamente la llamada.
    mbtcu()
 
 De esta manera sencilla podemos iniciar cada uno de los módulos
-mostrados al inicio (`REFA`_). En los puntos siguientes
+mostrados al inicio (`Tabla`_). En los puntos siguientes
 se verá como llenar correctamente cada uno de los módulos y que
 resultado se muestra en cada uno de ellos
 
@@ -95,4 +95,4 @@ resultado se muestra en cada uno de ellos
 .. |image6| image:: https://app.codacy.com/project/badge/Grade/8d8575adf7e149999e6bc84c657fc94e
    :target: https://www.codacy.com/gh/jacometoss/PyEWS/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jacometoss/PyEWS&amp;utm_campaign=Badge_Grade
    
-.. _REFA: https://pyews.readthedocs.io/parte1/Install.html
+.. _Tabla: https://pyews.readthedocs.io/parte1/Install.html

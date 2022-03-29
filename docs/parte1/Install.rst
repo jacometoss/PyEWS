@@ -61,22 +61,21 @@ versiones futuras versiones se incluirá el Sistema Ingles
 Iniciar paquete y módulo
 ------------------------
 
-El módulo tiene dependencias siendo necesario instalar ``tabulate`` (se
-instala en forma automática) el cual sirve para dar una mejor apariencia
-al momento de mostrar los resultados.
+El módulo tiene dependencias siendo necesario instalar ``tabulate``el cual sirve para dar 
+una mejor apariencia al momento de mostrar los resultados y no mostrar un arreglo
+común como en los lenguajes de programación.
 
-Antes de iniciar a usar los módulos debe importar el paquete. 
+Antes de iniciar a usar los módulos debe importar el paquete.
 
 En este ejemplo importaremos el módulo de baja tensión para conductores
-de cobre, no mostraremos el llenado de este módulo únicamente el orden
-de llamado.
+de cobre, no se muestra el llenado de este módulo únicamente la llamada.
 
 .. code:: python
 
    mbtcu()
 
 De esta manera sencilla podemos iniciar cada uno de los módulos
-mostrados en la tabla mostrada anteriormente. En los puntos siguientes
+mostrados al inicio (`REFA`_). En los puntos siguientes
 se verá como llenar correctamente cada uno de los módulos y que
 resultado se muestra en cada uno de ellos
 
@@ -95,3 +94,5 @@ resultado se muestra en cada uno de ellos
    :target: https://codeclimate.com/github/jacometoss/PyEWS/maintainability
 .. |image6| image:: https://app.codacy.com/project/badge/Grade/8d8575adf7e149999e6bc84c657fc94e
    :target: https://www.codacy.com/gh/jacometoss/PyEWS/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jacometoss/PyEWS&amp;utm_campaign=Badge_Grade
+   
+.. _REFA: https://pyews.readthedocs.io/parte1/Install.html

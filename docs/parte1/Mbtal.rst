@@ -44,7 +44,8 @@ El llenado del módulo requiere la información siguiente :
    #To:  Temperatura de operación.
    #Break: Ajuste de protección.
 
-Importado ``kelectric`` la información requerida en orden sería
+Importado el paquete y llamando al módulo ``mbtal`` se debe llenar correctamente 
+la información que requiere.
 
 .. code:: python
 

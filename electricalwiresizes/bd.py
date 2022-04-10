@@ -10,8 +10,8 @@
 ╚═╝░░╚═╝╚══════╝╚══════╝╚══════╝░╚════╝░░░░╚═╝░░░╚═╝░░╚═╝╚═╝░╚════╝░.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-| Web :  www.electricalwiresizes.org, 06/12/2021                         |            |
-| Version : 0.1.26                                                       |
+| Web :  www.electricalwiresizes.org, 19/02/2022                         |            |
+| Version : 0.1.27rc2                                                    |
 | Autor : Marco Polo Jacome Toss                                         |
 | License: GNU Affero General Public License v3 (GPL-3.0)                |
 | Requires: Python >=3.5                                                 |

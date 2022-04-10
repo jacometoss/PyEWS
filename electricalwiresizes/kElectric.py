@@ -5,18 +5,17 @@ import matplotlib.pyplot as plt
 import math
 import time
 
- # Establecemos la fecha la cual es mostrada en los errores.
 
 '''
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-| PYEWS, ElectricalWireSizes, 06/12/2021                                 |
-| Version : 0.1.26                                                       |
+| PYEWS, ElectricalWireSizes, 19/02/2022                                 |
+| Version : 0.1.27rc2                                                    |
 | Autor : Marco Polo Jacome Toss                                         |
 | License: GNU Affero General Public License v3 (GPL-3.0)                |
 | Requires: Python >=3.5                                                 |
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Corrección de la base de datos de conductores para corriente continua
+Las correcciones de este archivo se muestran en el control de cambios.
 
 '''
 
@@ -31,8 +30,8 @@ def version():
     print("                         ▀▄▄▄▄▄▀▀")
     print("                                                                          ")
     print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-    print("| Python ElectricalWireSizes, 06/12/2021                                 |")
-    print("| Version : 0.1.26                                                       |")
+    print("| Python ElectricalWireSizes, 19/12/2022                                 |")
+    print("| Version : 0.1.27rc2                                                    |")
     print("| Autor : Marco Polo Jacome Toss                                         |")
     print("| License: GNU Affero General Public License v3 (GPL-3.0)                |")
     print("| Requires: Python >=3.5                                                 |")
@@ -1017,9 +1016,9 @@ def mbtal(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
         #Mostrar la información en lista
         return datos
 ##-----------------------------------------------------------------------------------------------------------##
-def mbtcustd(Vcd=None,In=None,Nc=None,L=None,Class=None,Ta=None,Vd=None,View=None,Fsc=None, To=None):
+def mbtcustd(Vcd=None,In=None,Nc=None,L=None,Class=None,Ta=None,Vd=None,View=None,Fsc=None, To=None, Break=None):
 
-    if(Vcd==None or In==None or Nc==None or L==None or Class==None or Ta==None or Vd==None or View==None or Fsc==None or To==None):
+    if(Vcd==None or In==None or Nc==None or L==None or Class==None or Ta==None or Vd==None or View==None or Fsc==None or To==None or Break==None):
         t = time.localtime()
         print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
         print("                    ElectricalWireSizes                      ")
@@ -1069,7 +1068,7 @@ def mbtcustd(Vcd=None,In=None,Nc=None,L=None,Class=None,Ta=None,Vd=None,View=Non
         Rj=3
     #print(tabulate(datos))
 
-    In=(In*Fsc)/Nc
+    In=(In)/Nc
 
     LIn=L*In
     
@@ -1137,18 +1136,18 @@ def mbtcustd(Vcd=None,In=None,Nc=None,L=None,Class=None,Ta=None,Vd=None,View=Non
         
         if Vd > D1:
             if (To==60):
-                if ((round(datos[i][4],3)*FT60>=In)):
+                if ((round(datos[i][4],3)*FT60>=(In*Fsc))):
                     datos[i].append('Yes')
                 else:
                     datos[i].append('Not')
 
             elif (To==75):
-                if ((round(datos[i][5],3)*FT75>=In)):
+                if ((round(datos[i][5],3)*FT75>=(In*Fsc))):
                     datos[i].append('Yes')
                 else:
                     datos[i].append('Not')
             elif (To==90):
-                if ((round(datos[i][6],3)*FT90>=In)):
+                if ((round(datos[i][6],3)*FT90>=(In*Fsc))):
                     datos[i].append('Yes')
                 else:
                     datos[i].append('Not')
@@ -1156,7 +1155,7 @@ def mbtcustd(Vcd=None,In=None,Nc=None,L=None,Class=None,Ta=None,Vd=None,View=Non
             datos[i].append('Not')                
         
         for j in range(len(SITM)):
-            if (SITM[j]>=Nc*In):
+            if (SITM[j]>=Nc*In*Break):
                 datos[i].append(SITM[j])
                 break
                 

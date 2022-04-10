@@ -45,7 +45,7 @@ El llenado del módulo requiere la información siguiente :
    #Break: Ajuste de protección.
 
 Importado el paquete y llamando al módulo ``mbtal`` se debe llenar correctamente 
-la información que requiere.
+la información que requiere como se muestra en el bloque siguiente:
 
 .. code:: python
 

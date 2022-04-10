@@ -52,8 +52,8 @@ Importado ``kelectric`` la información requerida en orden sería
 
 ..
 
-   El módulo se limita a los conductores mostrados en el ``dbc`` que son
-   conductores comerciales.
+   El módulo se limita a los conductores mostrados en la base de datos y esta
+   puede ser condultada con ``dbc``, todos son conductores comerciales.
 
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes

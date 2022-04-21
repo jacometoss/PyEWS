@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='ElectricalWireSizes',
-    version='0.1.27rc1',
+    version='0.1.27',
     url='https://pyews.readthedocs.io/',
     project_urls={
         'Documentation': 'https://pyews.readthedocs.io/',
@@ -17,7 +17,7 @@ setup(
     description='Module for dimensioning copper electrical conductors, feeder conductor and branch circuits ',
     long_description=''.join(open('README.md', encoding='utf-8').readlines()),
     long_description_content_type='text/markdown',
-    keywords=['electrical', 'conductor', 'size', 'electricalwiresizes'],
+    keywords=['electrical', 'conductor', 'size', 'electricalwiresizes','nom-001-sede-2012','branch','feeder','ElectricalWireSizesRC2'],
     packages=find_packages(include=["electricalwiresizes"]),
     include_package_data=True,
     install_requires=[],

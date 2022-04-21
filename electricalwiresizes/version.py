@@ -1,20 +1,3 @@
-from tabulate import tabulate
-from .bd import dbConductorCu, dbConductorAl, dbConductorCuStd
-from .basicelecfunc import Rn, RnCd, Z, Rcd, dbc, FCT, zpucu, zpual
-from .mbtcu import mbtcu
-from .mbtal import mbtal
-from .mbtcustd import mbtcustd
-from .dbcircuit import dbcircuit
-from .dbcircuitcd import dbcircuitcd
-from .graph import autolabel, graph
-from .shortcircuit import icc
-
-import numpy as np
-import matplotlib.pyplot as plt
-import math
-import time
-
-
 '''
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 | PYEWS, ElectricalWireSizes, 20/04/2022                                 |
@@ -45,7 +28,7 @@ def version():
     print("                         ▀▄▄▄▄▄▀▀")
     print("                                                                          ")
     print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-    print("| Python ElectricalWireSizes, 13/04/2022                                 |")
+    print("| Python ElectricalWireSizes, 20/04/2022                                 |")
     print("| Version : 0.1.27                                                       |")
     print("| Autor : Marco Polo Jacome Toss                                         |")
     print("| License: GNU Affero General Public License v3 (GPL-3.0)                |")

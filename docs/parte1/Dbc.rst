@@ -33,7 +33,7 @@ El llenado del módulo requiere la información siguiente :
    #Nc: Número de conductores por fase.
    #L : Longitud en metros.
    #Class: Clase de conductor (1:Clase A,2:Clase B,3:Clase C)
-   #Ta: Temperatura ambiente en centigrados, únicamente ingresar la opcion númerica.
+   #Ta: Temperatura ambiente en centigrados, únicamente ingresar la opción numérica.
    #Vd: Caída de tensión (porcentual de 2, 3, 5)
    ---- 2,3,5	
    #View: Opción para mostrar resultados
@@ -41,7 +41,7 @@ El llenado del módulo requiere la información siguiente :
    	 2: Mostrar los resultados como datos acumulados. Esta opción es necesario cuando se activa
    	 	la función para múltiples cargas.
    #Fsc: Factor de sobrecorriente (1.25,1.0) cuando existe carga continua
-   #ITM: Esta opción determina el portentaje de uso de la protección eléctrica 
+   #Break: Esta opción determina el portentaje de uso de la protección eléctrica.
    ---- 1:100%
    -----2:80%
 

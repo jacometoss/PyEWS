@@ -3,7 +3,7 @@
 Electrical Wire Sizes 
 =====================
 
-El módulo Python Electrical Wire Sizes ( **Versión 0.1.26**) puede ser
+El módulo Python Electrical Wire Sizes ( **Versión 0.1.27**) puede ser
 utilizado para dimensionar los conductores de alimentadores en baja
 tensión como los circuitos derivados de una instalación eléctrica. Esta
 herramienta es muy útil para ingenieros y arquitectos sumergidos en la

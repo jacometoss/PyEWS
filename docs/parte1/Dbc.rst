@@ -50,7 +50,7 @@ Importado ``PyEWS`` la información requerida en orden sería
 .. code:: python
 
    #Módulo de baja tensión para conductores de cobre para corriente directa
-   mbtcustd(Vcd,P,Nc,L,Class,Ta,Vd,View,Fsc,ITM)
+   mbtcustd(Vcd,P,Nc,L,Class,Ta,Vd,View,Fsc,To,Break)
 
 ..
 

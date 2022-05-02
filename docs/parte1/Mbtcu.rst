@@ -49,7 +49,7 @@ Importado el módulo ``mbtcu`` ingrese la informaciíon requerida.
 .. code:: python
 
    #Módulo de baja tensión para conductores de cobre
-   mbtcu(VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm,To,Break)
+   mbtcu(VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,To,Break)
 
 ..
 

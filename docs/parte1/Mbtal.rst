@@ -49,7 +49,7 @@ la información que requiere como se muestra en el bloque siguiente:
 
 .. code:: python
 
-   mbtal(VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,Itm,To,Break)
+   mbtal(VF,VL,P,Nc,L,FA,Type,Ta,Vd,S,Fp,Op,Fsc,To,Break)
 
 ..
 

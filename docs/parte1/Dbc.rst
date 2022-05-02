@@ -40,7 +40,8 @@ El llenado del módulo requiere la información siguiente :
    	 1: Mostrar los resultados adecuadamente estructurado en una tabla. 
    	 2: Mostrar los resultados como datos acumulados. Esta opción es necesario cuando se activa
    	 	la función para múltiples cargas.
-   #Fsc: Factor de sobrecorriente (1.25,1.0) cuando existe carga continua
+   #Fsc: Factor de sobrecorriente (1.25,1.0) cuando existe carga continua.
+   #To:  Temperatura de operación del conductor.
    #Break: Esta opción determina el portentaje de uso de la protección eléctrica.
    ---- 1:100%
    -----2:80%

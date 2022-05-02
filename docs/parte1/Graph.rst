@@ -19,8 +19,8 @@ para generar la figura es mediante :
 .. code:: python
 
    from PyEWS import mbtal, graph
-   mydata=mbtal(127,220,55,1,45,1,1,35,3,1,0.9,2,1)
-   graph(mydata,"6 AWG","4/0 AWG", 8, 5, 2,"k",1)
+   mydata=mbtcu(127,220,30,1,45,1,1,35,3,1,0.9,2,1,60,1.00)
+   graph(mydata,"10 AWG","4/0 AWG", 10, 5, 1,"rbkg",1)
 
 El llenado del módulo es un poco complejo
 

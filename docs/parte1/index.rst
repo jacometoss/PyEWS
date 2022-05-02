@@ -6,7 +6,7 @@ Electrical Wires Sizes es una librería hecha en el lenguaje de programación Py
 
 Esta idea nace debido a la popularidad del lenguaje de programación Python y establecer un paquete para este lenguaje dentro del área de ingeniería eléctrica en la especialidad de diseño de instalaciones eléctricas. En la práctica esta librería le será útil cuando trate de dimensionar una cantidad considerable de alimentadores como de circuitos derivados.
 
-La librería cuenta por el momento con 9 módulos que internamente son llamados para realizar el dimensionamiento de conductores en baja tensión de conductores comerciales de 600 V hasta 2000 V, los resultados obtenidos se muestran en forma matricial o tabla para una mejor comprensión de los resultados.
+La librería cuenta por el momento con 9 módulos para dimensionar conductores eléctricos con aislamiento de 600 V y 2000 V. Los resultados obtenidos con estos módulos los puede visualizar mediante una arreglo matricial o tabla esta para una mejor comprensión de los resultados.
 
 La dependencia de este paquete de otros es baja, únicamente usa ``tabulate`` en primer grado y en forma secundaría ``numpy`` como ``matplotlib``. No se encuentra limitado por el momento a una versión de ``Python3``. Las últimas librerías mencionadas se usan para graficar las pérdidas de tensión de los conductores de corriente alterna con la finalidad de comparar cada uno de los conductores disponibles.
 

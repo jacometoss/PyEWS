@@ -10,7 +10,7 @@ instalación de esta librería es automática al instalar
 Es posible graficar los resultados de pérdida de tensión de un único
 cálculo por el momento como se muestra en la figura siguiente :
 
-.. figure:: https://i.ibb.co/XFzQyZJ/Graph2.jpg
+.. figure:: https://i.ibb.co/LkYKVqS/graph-mbtcu.png
    :alt: 
 
 Esta limitado para conductores en corriente alterna, el procedimiento

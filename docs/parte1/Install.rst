@@ -80,7 +80,7 @@ se verá como llenar correctamente cada uno de los módulos y que
 resultado se muestra en cada uno de ellos
 
 .. note::
-   Las importacion de los módulos puede ser variada.
+   Existe diferentes formas de importar un módulo o módulos
 
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes

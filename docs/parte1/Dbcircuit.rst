@@ -73,7 +73,8 @@ Resultados del módulo ``dbc`` para conductores de cobre
 
 El módulo ``dbc`` muestra en forma resumida el cálculo de múltiples circuitos.
 
- ====  ======  ======  ====  ====  =====  =====  ====  ====  ====  ====  =======  ====  =====  ======  ======  ======  =====
+
+====  ======  ======  ====  ====  =====  =====  ====  ====  ====  ====  =======  ====  =====  ======  ======  ======  =====
   Id  #CAL      L[m]    Vd    FP  ALM      Fct    Fa    60    75    90    Vd[%]    Nc     In      60      75      90    ITM
 ====  ======  ======  ====  ====  =====  =====  ====  ====  ====  ====  =======  ====  =====  ======  ======  ======  =====
    1  10 AWG      20     3   0.9  1F/2H  0.913   0.8    30    35    40    1.754     6  16.67  21.912  26.404  30.624    100
@@ -84,7 +85,6 @@ El módulo ``dbc`` muestra en forma resumida el cálculo de múltiples circuitos
    6  6 AWG       20     3   0.9  1F/2H  0.913   0.8    55    65    75    1.111     1  25     40.172  49.036  57.42      35
    7  4 AWG       50     3   0.9  3F/4H  0.913   0.8    70    85    95    1.39      3  40     51.128  64.124  72.732    150
 ====  ======  ======  ====  ====  =====  =====  ====  ====  ====  ====  =======  ====  =====  ======  ======  ======  =====
-
 
 .. |image1| image:: https://badge.fury.io/py/ElectricalWireSizes.svg
    :target: https://badge.fury.io/py/ElectricalWireSizes

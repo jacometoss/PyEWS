@@ -17,7 +17,7 @@ la siguiente línea de código.
    dbcircuit()
 
 Para poder utilizar el módulo debemos primero definir el archivo de
-cargas
+cargas.
 
 .. code:: python
 

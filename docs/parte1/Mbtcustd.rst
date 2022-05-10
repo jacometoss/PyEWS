@@ -18,7 +18,7 @@ El resultado puede ser visualizado en un array o tabla mediante
 Información requerida en el módulo mbtcustd
 ===========================================
 
-El llenado del módulo requiere la información siguiente :
+El llenado del módulo requiere la información siguiente:
 
 .. code:: tex
 
@@ -39,7 +39,7 @@ El llenado del módulo requiere la información siguiente :
    ---- 1:100%
    -----2:80%
 
-Importado ``mbtcustd`` la información requerida en orden sería
+Importado ``mbtcustd`` la información requerida en orden sería:
 
 .. code:: python
 

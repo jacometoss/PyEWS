@@ -28,11 +28,10 @@ Los módulos disponibles por el momento son los siguientes :
 | Id | Descripción                                   | Módulo        |
 +====+===============================================+===============+
 | 1  | Módulo de baja tensión para conductores de    | mbtcu()       |
-|    | cobre clase B, C y D tensión de 600V a 2000V. |               |
+|    | cobre clase B, C y D tensión hasta 2000V.     |               |
 +----+-----------------------------------------------+---------------+
 | 2  | Módulo de baja tensión para conductores de    | mbtal()       |
-|    | aluminio clase B, C y D, tensión 600V a       |               |
-|    | 2000V.                                        |               |
+|    | aluminio clase B, C y D, tensión hasta 2000V. |               |
 +----+-----------------------------------------------+---------------+
 | 3  | Módulo de baja tensión para conductores de    | mbtcustd()    |
 |    | cobre clase B, C y D en CD hasta 2000 V.      |               |

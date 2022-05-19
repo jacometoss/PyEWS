@@ -1,6 +1,10 @@
 Electrical Wire Sizes (Español)
 ===============================
+|image8|
+
 |image1|\ |image2|\  |image3|\  |image4|\ |image5|\  |image6|
+
+
 
 Electrical Wires Sizes es una librería hecha en el lenguaje de programación Python creada con la finalidad de acortar el tiempo en el dimensionamiento de conductores eléctricos u obtención de las secciones de los conductores de una instalación eléctrica.
 
@@ -69,3 +73,5 @@ No es mucho pero sirve de algo para mejorar este proyecto, acepto críticas como
 
 .. |image7| image:: https://ko-fi.com/img/githubbutton_sm.svg
    :target: https://ko-fi.com/B0B356BR4
+.. |image8| image:: https://github.com/jacometoss/PyEWS/blob/master/docs/logoElectricalWireSizes.svg
+   :target: https://pyews.readthedocs.io/

@@ -1,13 +1,18 @@
 '''
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-| PYEWS, ElectricalWireSizes, 20/04/2022                                 |
-| Version : 0.1.27                                                       |
+| PYEWS, ElectricalWireSizes, 01/06/2022                                 |
+| Version : 0.1.28rc1                                                    |
 | Autor : Marco Polo Jacome Toss                                         |
 | License: GNU Affero General Public License v3 (GPL-3.0)                |
 | Requires: Python >=3.5                                                 |
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Changelog:
+
+0.1.28rc1: En esta versión se actualiza las protecciones y se actaliza
+           la fórmula de corriente incluyendo el factor de sobrecorriente,
+           en la versión 0.1.27 no se logra ver la actualización de la
+           corriente nominal.
 
 0.1.27rc3: En esta versión los módulos se han clasificado e independizado
            en distintos archivos además se mejora la salida de datos
@@ -19,7 +24,7 @@ Changelog:
 
 import math, time
 from tabulate import tabulate
-from .bd import dbConductorCu, dbConductorAl
+from .bd import dbConductorCu, dbConductorAl, SITM
 from .basicelecfunc import Rn, RnCd, Z, Rcd, dbc, FCT, zpucu, zpual
 
 def mbtal(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=None,S=None,Fp=None,View=None,Fsc=None,To=None, Break=None):
@@ -78,9 +83,9 @@ def mbtal(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
         Xj=6
     #print(tabulate(datos))
 
-    In=In/Nc
+    In=(In*Fsc)/Nc
 
-    LIn=L*In*Fsc
+    LIn=L*In
     
     datos=[
     ["6 AWG"],

@@ -1,13 +1,18 @@
 '''
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-| PYEWS, ElectricalWireSizes, 20/04/2022                                 |
-| Version : 0.1.27                                                       |
+| PYEWS, ElectricalWireSizes, 01/06/2022                                 |
+| Version : 0.1.28rc                                                     |
 | Autor : Marco Polo Jacome Toss                                         |
 | License: GNU Affero General Public License v3 (GPL-3.0)                |
 | Requires: Python >=3.5                                                 |
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Changelog:
+
+0.1.28rc1: En esta versión se actualiza las protecciones y se actaliza
+           la fórmula de corriente incluyendo el factor de sobrecorriente,
+           en la versión 0.1.27 no se logra ver la actualización de la
+           corriente nominal.
 
 0.1.27rc3: En esta versión los módulos se han clasificado e independizado
            en distintos archivos además se mejora la salida de datos
@@ -28,8 +33,8 @@ def version():
     print("                         ▀▄▄▄▄▄▀▀")
     print("                                                                          ")
     print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-    print("| Python ElectricalWireSizes, 20/04/2022                                 |")
-    print("| Version : 0.1.27                                                       |")
+    print("| Python ElectricalWireSizes, 01/06/2022                                 |")
+    print("| Version : 0.1.28rc1                                                    |")
     print("| Autor : Marco Polo Jacome Toss                                         |")
     print("| License: GNU Affero General Public License v3 (GPL-3.0)                |")
     print("| Requires: Python >=3.5                                                 |")

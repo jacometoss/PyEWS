@@ -1,7 +1,7 @@
 '''
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-| PYEWS, ElectricalWireSizes, 20/04/2022                                 |
-| Version : 0.1.27                                                       |
+| PYEWS, ElectricalWireSizes, 01/06/2022                                 |
+| Version : 0.1.28rc1                                                    |
 | Autor : Marco Polo Jacome Toss                                         |
 | License: GNU Affero General Public License v3 (GPL-3.0)                |
 | Requires: Python >=3.5                                                 |
@@ -9,6 +9,11 @@
 
 Changelog:
 
+0.1.28rc1: En esta versión se actualiza las protecciones y se actaliza
+           la fórmula de corriente incluyendo el factor de sobrecorriente,
+           en la versión 0.1.27 no se logra ver la actualización de la
+           corriente nominal.
+           
 0.1.27rc3: En esta versión los móduos se han clasificado e independizado
            en distintos archivos además se mejora la salida de datos
            del módulo dbcircuit para funciones futuras.
@@ -18,7 +23,7 @@ Changelog:
 '''
 import math, time
 from tabulate import tabulate
-from .bd import dbConductorCu, dbConductorAl
+from .bd import dbConductorCu, dbConductorAl, SITM
 from .basicelecfunc import Rn, RnCd, Z, Rcd, dbc, FCT, zpucu, zpual
 
 
@@ -59,10 +64,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
     else :
         FT90=round(math.sqrt((90-Ta)/(90-30)),3)
 
-
-
-    SITM=[0,15,20,25,30,35,40,45,50,60,70,80,90,100,110,125,150,175,200,225,250,300,350,400,450,500,600,700,800,1000,1200,1600,2000,2500,3000,4000,5000,6000]
-
+    #SITM
 
     if Type==1:
     #Conductores en ducto de PVC
@@ -78,7 +80,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
         Xj=6
     #print(tabulate(datos))
 
-    In=(In)/Nc
+    In=(In*Fsc)/Nc
 
     LIn=L*In
     
@@ -163,14 +165,14 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
                 if (To==60):
 
-                    if ((round(datos[i][5],3)*FA*FT60>=(In*Fsc))):
+                    if ((round(datos[i][5],3)*FA*FT60>=(In))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
 
                 elif (To==75):
 
-                    if ((round(datos[i][6],3)*FA*FT75>=(In*Fsc))):
+                    if ((round(datos[i][6],3)*FA*FT75>=(In))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -178,7 +180,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
                 elif (To==90):
                     
-                    if ((round(datos[i][7],3)*FA*FT90>=(In*Fsc))):
+                    if ((round(datos[i][7],3)*FA*FT90>=(In))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -220,14 +222,14 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
                 if (To==60):
 
-                    if ((round(datos[i][5],3)*FA*FT60>=(In*Fsc))):
+                    if ((round(datos[i][5],3)*FA*FT60>=(In))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
 
                 elif (To==75):
 
-                    if ((round(datos[i][6],3)*FA*FT75>=(In*Fsc))):
+                    if ((round(datos[i][6],3)*FA*FT75>=(In))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -235,7 +237,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
                 elif (To==90):
                     
-                    if ((round(datos[i][7],3)*FA*FT90>=(In*Fsc))):
+                    if ((round(datos[i][7],3)*FA*FT90>=(In))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -275,14 +277,14 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                 
                 if (To==60):
 
-                    if ((round(datos[i][5],3)*FA*FT60>=(In*Fsc))):
+                    if ((round(datos[i][5],3)*FA*FT60>=(In))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
 
                 elif (To==75):
 
-                    if ((round(datos[i][6],3)*FA*FT75>=(In*Fsc))):
+                    if ((round(datos[i][6],3)*FA*FT75>=(In))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -290,7 +292,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
                 elif (To==90):
                     
-                    if ((round(datos[i][7],3)*FA*FT90>=(In*Fsc))):
+                    if ((round(datos[i][7],3)*FA*FT90>=(In))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -330,14 +332,14 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                 
                 if (To==60):
 
-                    if ((round(datos[i][5],3)*FA*FT60>=(In*Fsc))):
+                    if ((round(datos[i][5],3)*FA*FT60>=(In))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
 
                 elif (To==75):
 
-                    if ((round(datos[i][6],3)*FA*FT75>=(In*Fsc))):
+                    if ((round(datos[i][6],3)*FA*FT75>=(In))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -345,7 +347,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
                 elif (To==90):
                     
-                    if ((round(datos[i][7],3)*FA*FT90>=(In*Fsc))):
+                    if ((round(datos[i][7],3)*FA*FT90>=(In))):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')

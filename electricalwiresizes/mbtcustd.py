@@ -1,13 +1,18 @@
 '''
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-| PYEWS, ElectricalWireSizes, 20/04/2022                                 |
-| Version : 0.1.27                                                       |
+| PYEWS, ElectricalWireSizes, 01/06/2022                                 |
+| Version : 0.1.28rc1                                                    |
 | Autor : Marco Polo Jacome Toss                                         |
 | License: GNU Affero General Public License v3 (GPL-3.0)                |
 | Requires: Python >=3.5                                                 |
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Changelog:
+
+0.1.28rc1: En esta versión se actualiza las protecciones y se actaliza
+           la fórmula de corriente incluyendo el factor de sobrecorriente,
+           en la versión 0.1.27 no se logra ver la actualización de la
+           corriente nominal.
 
 0.1.27rc3: En esta versión los módulos se han clasificado e independizado
            en distintos archivos además se mejora la salida de datos
@@ -19,7 +24,7 @@ Changelog:
 
 import math, time
 from tabulate import tabulate
-from .bd import dbConductorCuStd
+from .bd import dbConductorCuStd, SITM
 from .basicelecfunc import Rn, RnCd, Rcd
 
 def mbtcustd(Vcd=None,In=None,Nc=None,L=None,Class=None,Ta=None,Vd=None,View=None,Fsc=None, To=None, Break=None):
@@ -74,7 +79,7 @@ def mbtcustd(Vcd=None,In=None,Nc=None,L=None,Class=None,Ta=None,Vd=None,View=Non
         Rj=3
     #print(tabulate(datos))
 
-    In=(In)/Nc
+    In=(In*Fsc)/Nc
 
     LIn=L*In
     
@@ -142,18 +147,18 @@ def mbtcustd(Vcd=None,In=None,Nc=None,L=None,Class=None,Ta=None,Vd=None,View=Non
         
         if Vd > D1:
             if (To==60):
-                if ((round(datos[i][4],3)*FT60>=(In*Fsc))):
+                if ((round(datos[i][4],3)*FT60>=(In))):
                     datos[i].append('Yes')
                 else:
                     datos[i].append('Not')
 
             elif (To==75):
-                if ((round(datos[i][5],3)*FT75>=(In*Fsc))):
+                if ((round(datos[i][5],3)*FT75>=(In))):
                     datos[i].append('Yes')
                 else:
                     datos[i].append('Not')
             elif (To==90):
-                if ((round(datos[i][6],3)*FT90>=(In*Fsc))):
+                if ((round(datos[i][6],3)*FT90>=(In))):
                     datos[i].append('Yes')
                 else:
                     datos[i].append('Not')

@@ -1,10 +1,10 @@
-![ElectricalWireSizes](https://raw.githubusercontent.com/jacometoss/PyEWS/9ef7e6aa3b8d96bf294d485e73ccaa24263d3d29/docs/logoElectricalWireSizes.svg)
+![ElectricalWireSizes](https://raw.githubusercontent.com/jacometoss/PyEWS/2d9a120c2e96200550d415797cd04340050112e0/docs/logoElectricalWireSizes.svg)
 
 [![PyPI version](https://badge.fury.io/py/ElectricalWireSizes.svg)](https://badge.fury.io/py/ElectricalWireSizes) [![Downloads](https://static.pepy.tech/personalized-badge/electricalwiresizes?period=total&units=none&left_color=grey&right_color=blue&left_text=Downloads)](https://pepy.tech/project/electricalwiresizes) [![Downloads](https://pepy.tech/badge/electricalwiresizes/month)](https://pepy.tech/project/electricalwiresizes) [![versons of python supported](https://img.shields.io/badge/python-3%20%7C%203.5%20%7C%203.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue)](https://pypi.org/project/ElectricalWireSizes/) [![Maintainability](https://api.codeclimate.com/v1/badges/27c48038801ee954796d/maintainability)](https://codeclimate.com/github/jacometoss/PyEWS/maintainability)[![Codacy Badge](https://app.codacy.com/project/badge/Grade/8d8575adf7e149999e6bc84c657fc94e)](https://www.codacy.com/gh/jacometoss/PyEWS/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jacometoss/PyEWS&amp;utm_campaign=Badge_Grade)
 
 # **Electrical Wire Sizes** 
 
-[Electrical Wires Sizes](https://pyews.readthedocs.io/) es una librería hecha en el lenguaje de programación Python creada con la finalidad de acortar el tiempo en el dimensionamiento de conductores eléctricos u obtención de las secciones de los conductores de una instalación eléctrica.
+[Electrical Wires Sizes](https://electricalwiresizes.org/) es una librería hecha en el lenguaje de programación Python creada con la finalidad de acortar el tiempo en el dimensionamiento de conductores eléctricos u obtención de las secciones de los conductores de una instalación eléctrica.
 
 Esta idea nace debido a la popularidad del lenguaje de programación Python y en la búsqueda de una aplicación en relación a este lenguaje dentro del área de ingeniería eléctrica. En la práctica esta librería le será útil cuando trate de dimensionar una cantidad considerable de alimentadores como circuitos derivados.
 
@@ -36,7 +36,7 @@ La vida es como una batería y en cada momento uno va perdiendo una pequeña par
 
 Este donativo apoya este proyecto, la mínima cantidad aceptada es de $2 dólares algo prácticamente insignificante para algo de este nivel, espero puedas apoyar donando.
 
-## Instalación
+## **Instalación**
 
 La instalación del paquete se realiza mediante la instrucción siguiente:
 
@@ -44,21 +44,21 @@ La instalación del paquete se realiza mediante la instrucción siguiente:
 pip install ElectricalWireSizes
 ```
 
-## Módulos
+## **Módulos**
 
 En la tabla que se muestra a continuación contiene los módulos disponibles los cuales son:
 
-| Id   | Descripción                                                  | Módulo        |
-| ---- | ------------------------------------------------------------ | ------------- |
-| 1    | Módulo de baja tensión (c.a.) para conductores de cobre en clase B, C y D,  tensión máxima de servicio de 600V a 2000V. | mbtcu()       |
-| 2    | Módulo de baja tensión (c.a.) para conductores de aluminio clase B, C y  D, tensión máxima de servicio de 600V a 2000V. | mbtal()       |
-| 3    | Módulo de baja tensión (c.d.) para conductores de cobre clase B, C  y D, tensión máxima de servicio hasta 2000 V. | mbtcustd()    |
-| 4    | Módulo para el cálculo de la impedancia en conductores de cobre. | zpucu()       |
-| 5    | Módulo para el cálculo de la impedancia en conductores de aluminio. | zpual()       |
-| 6    | Módulo para dimensionar múltiples conductores de cobre y aluminio en tensión alterna. | dbcircuit()   |
-| 7    | Módulo para dimensionar múltiples conductores de cobre en tensión de directa. | dbcircuitcd() |
-| 8    | Módulo para graficar resultados.                             | graph()       |
-| 9    | Módulo de corto circuito (Icc) para conductores de cobre y aluminio. | icc()         |
+| **Id** | **Descripción**                                              | **Módulo**                                                   |
+| ------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 1      | Módulo de baja tensión (c.a.) para conductores de cobre en clase B, C y D,  tensión máxima de servicio de 600V a 2000V. | [mbtcu()](https://electricalwiresizes.org/mbtcu.html)        |
+| 2      | Módulo de baja tensión (c.a.) para conductores de aluminio clase B, C y  D, tensión máxima de servicio de 600V a 2000V. | [mbtal()](https://electricalwiresizes.org/mbtal.html)        |
+| 3      | Módulo de baja tensión (c.d.) para conductores de cobre clase B, C  y D, tensión máxima de servicio hasta 2000 V. | [mbtcustd()](https://electricalwiresizes.org/mbtcustd.tml)   |
+| 4      | Módulo para el cálculo de la impedancia en conductores de cobre. | [zpucu()](https://electricalwiresizes.org/zpucu.html)        |
+| 5      | Módulo para el cálculo de la impedancia en conductores de aluminio. | [zpual()](https://electricalwiresizes.org/zpual.html)        |
+| 6      | Módulo para dimensionar múltiples conductores de cobre y aluminio en tensión alterna. | [dbcircuit()](https://electricalwiresizes.org/dbcircuit.html) |
+| 7      | Módulo para dimensionar múltiples conductores de cobre en tensión de directa. | [dbcircuitcd()](https://electricalwiresizes.org/dbcircuitcd.html) |
+| 8      | Módulo para graficar resultados.                             | [graph()](https://electricalwiresizes.org/graph.html)        |
+| 9      | Módulo de corto circuito (Icc) para conductores de cobre y aluminio. | [icc()](https://electricalwiresizes.org/icc.html)            |
 
 ## **Base de datos de conductores**
 
@@ -125,17 +125,19 @@ icc(1,75,200,60,1)
 
 ## Desarrollador y versión
 
-La versión 0.1.28rc1 es por el momento la más reciente. 
+La versión 0.1.28 es por el momento la más reciente. 
 
 ```text
-[Packqge]: ElectricalWireSizes 0.1.28rc2
+[Packqge]: ElectricalWireSizes 0.1.28
 [Autor]: Marco Polo Jácome Toss
 [Licencia]: GNU General Public License v3.0
-[Fecha]: 02-Junio-2022
+[Fecha]: 15-Junio-2022
 [Páis]: México
 ```
 
 ## **Control de versiones (Changelog)**
+
+**0.1.28**: Versión estable.
 
 **0.1.28rc2**: Separación de operaciones, conductor y protección.
 
@@ -173,11 +175,11 @@ B[ElectricalWireSizes]-->db[(Database)]
 
 ## **Referencias**
 
-***[1]** Norma Oficial Mexicana NOM-001-SEDE-2012, Instalaciones Eléctricas (utilización)*
+**[1]** Norma Oficial Mexicana NOM-001-SEDE-2012, Instalaciones Eléctricas (utilización)
 
-***[2]** Thue, W., 1978. Electrical Power Cable Engineering. 2nd ed. New York, Basel: Marcel Dekker Inc., p.34.*
+**[2]** Thue, W., 1978. Electrical Power Cable Engineering. 2nd ed. New York, Basel: Marcel Dekker Inc., p.34.
 
-***[3]** Norma Oficial Mexicana NOM-001-SEDE-2018, Instalaciones Eléctricas (utilización)*
+**[3]** Norma Oficial Mexicana NOM-001-SEDE-2018, Instalaciones Eléctricas (utilización)
 
 ## **Copyright**
 
@@ -189,8 +191,7 @@ Este programa se distribuye con la esperanza de que sea útil pero sin ninguna g
 
 Vea la información de Licencia de `ElectricalWireSizes` para más detalle.
 
-
-
 ------
 
-Copyright © 2020  ElectricalWireSizes
+Copyright © 2020  en adelante, [ElectricalWireSizes](https://electricalwiresizes.org/)
+

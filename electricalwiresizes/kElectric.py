@@ -18,13 +18,15 @@ import time
 '''
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 | PYEWS, ElectricalWireSizes, 02/06/2022                                 |
-| Version : 0.1.28rc2                                                    |
+| Version : 0.1.28                                                       |
 | Autor : Marco Polo Jacome Toss                                         |
 | License: GNU Affero General Public License v3 (GPL-3.0)                |
 | Requires: Python >=3.5                                                 |
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Changelog:
+
+0.1.28   : Versión estable.
 
 0.1.28rc2: Separación de operaciones, conductor y protección.
 
@@ -52,8 +54,8 @@ def version():
     print("                         ▀▄▄▄▄▄▀▀")
     print("                                                                          ")
     print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-    print("| Python ElectricalWireSizes, 02/06/2022                                 |")
-    print("| Version : 0.1.28rc2                                                    |")
+    print("| Python ElectricalWireSizes, 15/06/2022                                 |")
+    print("| Version : 0.1.28                                                       |")
     print("| Autor : Marco Polo Jacome Toss                                         |")
     print("| License: GNU Affero General Public License v3 (GPL-3.0)                |")
     print("| Requires: Python >=3.5                                                 |")

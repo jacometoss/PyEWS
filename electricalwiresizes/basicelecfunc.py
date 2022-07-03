@@ -1,13 +1,27 @@
 '''
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-| PYEWS, ElectricalWireSizes, 15/06/2022                                 |
-| Version : 0.1.28                                                       |
+| PYEWS, ElectricalWireSizes, 03/07/2022                                 |
+| Version : 0.1.29rc1                                                    |
 | Autor : Marco Polo Jacome Toss                                         |
 | License: GNU Affero General Public License v3 (GPL-3.0)                |
 | Requires: Python >=3.5                                                 |
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Changelog:
+
+0.1.29rc1: Se modifican los módulos mbtcu, mbtal, mbtcustd, dbcircuit, dbcircuitcd
+           adicionando un nuevo argumento Fcond y condiciones para el cumplimento
+           del 125% de ampacidad en alimentadores y circuitos derivados sin considerar
+           cualquier factor de ajuste, todas las versiones anteriores no cuentan con
+           esta condición y esto puede causar error cuando se tienen las condiciones
+           ideales en un conductor, sin agrupar y a temperatura ambiente de 30°C.
+
+0.1.29rc1: Se modifican los módulos mbtcu, mbtal, mbtcustd, dbcircuit, dbcircuitcd
+           adicionando un nuevo argumento Fcond y condiciones para el cumplimento
+           del 125% de ampacidad en alimentadores y circuitos derivados sin considerar
+           cualquier factor de ajuste, todas las versiones anteriores no cuentan con
+           esta condición y esto puede causar error cuando se tienen las condiciones
+           ideales en un conductor, sin agrupar y a temperatura ambiente de 30°C.
 
 0.1.28   : Versión estable.
 

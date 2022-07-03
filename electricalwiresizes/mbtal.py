@@ -1,13 +1,20 @@
 '''
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-| PYEWS, ElectricalWireSizes, 15/06/2022                                 |
-| Version : 0.1.28                                                       |
+| PYEWS, ElectricalWireSizes, 03/07/2022                                 |
+| Version : 0.1.29rc1                                                    |
 | Autor : Marco Polo Jacome Toss                                         |
 | License: GNU Affero General Public License v3 (GPL-3.0)                |
 | Requires: Python >=3.5                                                 |
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Changelog:
+
+0.1.29rc1: Se modifican los módulos mbtcu, mbtal, mbtcustd, dbcircuit, dbcircuitcd
+           adicionando un nuevo argumento Fcond y condiciones para el cumplimento
+           del 125% de ampacidad en alimentadores y circuitos derivados sin considerar
+           cualquier factor de ajuste, todas las versiones anteriores no cuentan con
+           esta condición y esto puede causar error cuando se tienen las condiciones
+           ideales en un conductor, sin agrupar y a temperatura ambiente de 30°C.
 
 0.1.28   : Versión estable.
 
@@ -31,26 +38,27 @@ from tabulate import tabulate
 from .bd import dbConductorCu, dbConductorAl, SITM
 from .basicelecfunc import Rn, RnCd, Z, Rcd, dbc, FCT, zpucu, zpual
 
-def mbtal(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=None,S=None,Fp=None,View=None,Fsc=None,To=None, Break=None):
+def mbtal(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=None,S=None,Fp=None,View=None,Fsc=None,To=None, Break=None, Fcond=None):
 
-    if(VF==None or VL==None or In==None or Nc==None or L==None or FA==None or Type==None or Ta==None or Vd==None or S==None or Fp==None or View==None or Fsc==None or To==None or Break==None):
+    if(VF==None or VL==None or In==None or Nc==None or L==None or FA==None or Type==None or Ta==None or Vd==None or S==None or Fp==None or View==None or Fsc==None or To==None or Break==None or Fcond==None):
         t = time.localtime()
-        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                    ElectricalWireSizes                             ")
+        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                    ElectricalWireSizes                   ")
         print("                 ",time.asctime(t))
-        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                                                                    ")
+        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("                                                          ")
         print("                         ─▄▀─▄▀")
         print("                         ──▀──▀")
         print("                         █▀▀▀▀▀█▄")
         print("                         █░░░░░█─█")
         print("                         ▀▄▄▄▄▄▀▀")
-        print("                                                                    ")
-        print("--------------------------------------------------------------------")
-        print("| Los parámetros no son correctos para el                          |")
-        print("| módulo mbtal(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View,Fsc,To,Break) |")
-        print("--------------------------------------------------------------------")
-        return 
+        print("                                                          ")
+        print("----------------------------------------------------------")
+        print("| Los parámetros no son correctos para el                |")
+        print("| módulo mbtal(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View,Fsc,|")
+        print("|               To,Break,Fcond)                          |")
+        print("----------------------------------------------------------")
+        return  
 
     if Ta >= 60:
         FT60=0.0
@@ -169,14 +177,14 @@ def mbtal(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                 
                 if (To==60):
 
-                    if ((round(datos[i][5],3)*FA*FT60>=In)):
+                    if ((round(datos[i][5],3)*FA*FT60>=In) and (((round(datos[i][5],3))/In)>Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
 
                 elif (To==75):
 
-                    if ((round(datos[i][6],3)*FA*FT75>=In)):
+                    if ((round(datos[i][6],3)*FA*FT75>=In) and (((round(datos[i][6],3))/In)>Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -184,7 +192,7 @@ def mbtal(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
                 elif (To==90):
                     
-                    if ((round(datos[i][7],3)*FA*FT90>=In)):
+                    if ((round(datos[i][7],3)*FA*FT90>=In) and (((round(datos[i][7],3))/In)>Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -224,14 +232,14 @@ def mbtal(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                 
                 if (To==60):
 
-                    if ((round(datos[i][5],3)*FA*FT60>=In)):
+                    if ((round(datos[i][5],3)*FA*FT60>=In) and (((round(datos[i][5],3))/In)>Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
 
                 elif (To==75):
 
-                    if ((round(datos[i][6],3)*FA*FT75>=In)):
+                    if ((round(datos[i][6],3)*FA*FT75>=In) and (((round(datos[i][6],3))/In)>Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -239,7 +247,7 @@ def mbtal(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
                 elif (To==90):
                     
-                    if ((round(datos[i][7],3)*FA*FT90>=In)):
+                    if ((round(datos[i][7],3)*FA*FT90>=In) and (((round(datos[i][7],3))/In)>Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -280,14 +288,14 @@ def mbtal(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                 
                 if (To==60):
 
-                    if ((round(datos[i][5],3)*FA*FT60>=In)):
+                    if ((round(datos[i][5],3)*FA*FT60>=In) and (((round(datos[i][5],3))/In)>Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
 
                 elif (To==75):
 
-                    if ((round(datos[i][6],3)*FA*FT75>=In)):
+                    if ((round(datos[i][6],3)*FA*FT75>=In) and (((round(datos[i][6],3))/In)>Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -295,7 +303,7 @@ def mbtal(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
                 elif (To==90):
                     
-                    if ((round(datos[i][7],3)*FA*FT90>=In)):
+                    if ((round(datos[i][7],3)*FA*FT90>=In) and (((round(datos[i][7],3))/In)>Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -335,14 +343,14 @@ def mbtal(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                 
                 if (To==60):
 
-                    if ((round(datos[i][5],3)*FA*FT60>=In)):
+                    if ((round(datos[i][5],3)*FA*FT60>=In) and (((round(datos[i][5],3))/In)>Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
 
                 elif (To==75):
 
-                    if ((round(datos[i][6],3)*FA*FT75>=In)):
+                    if ((round(datos[i][6],3)*FA*FT75>=In) and (((round(datos[i][6],3))/In)>Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -350,7 +358,7 @@ def mbtal(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
                 elif (To==90):
                     
-                    if ((round(datos[i][7],3)*FA*FT90>=In)):
+                    if ((round(datos[i][7],3)*FA*FT90>=In) and (((round(datos[i][7],3))/In)>Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')

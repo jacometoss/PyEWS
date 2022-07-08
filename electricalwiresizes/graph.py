@@ -1,13 +1,16 @@
 '''
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-| PYEWS, ElectricalWireSizes, 03/07/2022                                 |
-| Version : 0.1.29rc1                                                    |
+| PYEWS, ElectricalWireSizes, 07/07/2022                                 |
+| Version : 0.1.29                                                       |
 | Autor : Marco Polo Jacome Toss                                         |
 | License: GNU Affero General Public License v3 (GPL-3.0)                |
 | Requires: Python >=3.5                                                 |
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Changelog:
+
+0.1.29     Versión estable, en esta nueva actualización se agrega al módulo
+           graph una línea indicadora de pérdida de tensión.
 
 0.1.29rc1: Se modifican los módulos mbtcu, mbtal, mbtcustd, dbcircuit, dbcircuitcd
            adicionando un nuevo argumento Fcond y condiciones para el cumplimento
@@ -47,10 +50,10 @@ def autolabel(rects):
                     textcoords="offset points",
                     ha='center', va='bottom')
 
-def graph(mydata=None,condA=None,condB=None,w=None,h=None,material=None,color=None,sistema=None):
+def graph(mydata=None,condA=None,condB=None,w=None,h=None,material=None,color=None,sistema=None, vd=None):
 
 
-    if((mydata==None or not mydata) or condA==None or condB==None or w==None or h==None or material==None or color==None or sistema==None):
+    if((mydata==None or not mydata) or condA==None or condB==None or w==None or h==None or material==None or color==None or sistema==None or vd==None):
         t = time.localtime()
         print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
         print("                    ElectricalWireSizes                      ")
@@ -66,7 +69,7 @@ def graph(mydata=None,condA=None,condB=None,w=None,h=None,material=None,color=No
         print("-------------------------------------------------------------")
         print("| Los parámetros no son correctos                           |")
         print("| para el módulo                                            |")
-        print("| graph(mydata,Cal,Cal,Ancho,Alto,Material,Color,Sistema)   |") 
+        print("| graph(mydata,Cal,Cal,Ancho,Alto,Material,Color,Sistema,Vd)|") 
         print("----------------------------------------------- -------------")
         return         
 
@@ -119,7 +122,7 @@ def graph(mydata=None,condA=None,condB=None,w=None,h=None,material=None,color=No
     plt.legend(loc='best')
     autolabel(rects1)
     plt.xticks(indice_barras, (x[a:b]))
-  
+    plt.axhline(y=vd, xmin=0, xmax=1.0, color='black')
     plt.ylabel('Caída de tensión porcentual [%Vd]')
     plt.xlabel('Calibre de conductores elécticos')
     plt.title('Caída de tensión en conductores eléctricos')

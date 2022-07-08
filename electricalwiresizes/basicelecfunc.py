@@ -1,7 +1,7 @@
 '''
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-| PYEWS, ElectricalWireSizes, 03/07/2022                                 |
-| Version : 0.1.29rc1                                                    |
+| PYEWS, ElectricalWireSizes, 07/07/2022                                 |
+| Version : 0.1.29                                                       |
 | Autor : Marco Polo Jacome Toss                                         |
 | License: GNU Affero General Public License v3 (GPL-3.0)                |
 | Requires: Python >=3.5                                                 |
@@ -9,6 +9,9 @@
 
 Changelog:
 
+0.1.29     Versión estable, en esta nueva actualización se agrega al módulo
+           graph una línea indicadora de pérdida de tensión.
+           
 0.1.29rc1: Se modifican los módulos mbtcu, mbtal, mbtcustd, dbcircuit, dbcircuitcd
            adicionando un nuevo argumento Fcond y condiciones para el cumplimento
            del 125% de ampacidad en alimentadores y circuitos derivados sin considerar

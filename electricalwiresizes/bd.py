@@ -1,7 +1,7 @@
 '''
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-| Web :  www.electricalwiresizes.org, 03/07/2022                         |            |
-| Version : 0.1.29rc1                                                    |
+| Web :  www.electricalwiresizes.org, 07/07/2022                         |            |
+| Version : 0.1.29                                                       |
 | Autor : Marco Polo Jacome Toss                                         |
 | License: GNU Affero General Public License v3 (GPL-3.0)                |
 | Requires: Python >=3.5                                                 |

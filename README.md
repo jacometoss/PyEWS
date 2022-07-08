@@ -8,9 +8,9 @@
 
 Esta idea nace debido a la popularidad del lenguaje de programación Python y en la búsqueda de una aplicación en relación a este lenguaje dentro del área de ingeniería eléctrica. En la práctica esta librería le será útil cuando trate de dimensionar una cantidad considerable de alimentadores como circuitos derivados.
 
-La librería cuenta por el momento con **9 módulos** que internamente son llamados para realizar el dimensionamiento de conductores en baja tensión especialmente conductores comerciales con aislamiento de 600V hasta 2000V.  Los resultados obtenidos con este paquete es posible obtenerlos en forma matricial o en formato tabla para una mejor comprensión.
+La librería cuenta por el momento con **9 módulos** que internamente realizan el dimensionamiento de conductores en baja tensión, especialmente conductores comerciales con aislamiento de 600V hasta 2000V,  la salida de resultados es posible configurarla ya sea en forma matricial o en formato tabla para una mejor comprensión visual.
 
-La dependencia de este lenguaje de otros paquetes es baja únicamente usa `tabulate` en primer grado y en forma muy secundaría `numpy` y `matplotlib` no encontrándose limitado a una versión en especifico, estas últimas dos librerías se usan para graficar las pérdidas de tensión en los conductores cuando se utiliza corriente alterna.
+La dependencia de este paquete de otros es baja, únicamente usa `tabulate` en primer grado y en forma muy secundaría `numpy` y `matplotlib`, no limitándose a una versión en especifico, estas últimas dos librerías se usan para graficar las pérdidas de tensión en los conductores cuando se utiliza corriente alterna.
 
 La versión disponible de este paquete puede ser consultada con el bloque siguiente:
 
@@ -46,7 +46,7 @@ pip install ElectricalWireSizes
 
 ## **Módulos**
 
-En la tabla que se muestra a continuación contiene los módulos disponibles los cuales son:
+La tabla siguiente contiene e los módulos disponibles de este paquete los cuales son:
 
 | **Id** | **Descripción**                                              | **Módulo**                                                   |
 | ------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -155,13 +155,10 @@ La versión 0.1.29rc1 es por el momento la más reciente.
 
 **0.1.27rc1** - Presenta un nuevo campo para el ajuste de la protección conforme a la NOM-001-SEDE-2012 de instalaciones eléctricas. Los módulos que sufrieron cambios son: `mtbcu` ,`mbtal`, `dbcircuit` conforme a los requerimientos de protección y capacidad de conductores.  [*13.03.2022*]
 
-
-
 ```mermaid
-
 graph TD
 
-B[ElectricalWireSizes]-->db[(Database)]
+B[ElectricalWireSizes 0.1.29]-->db[(Database)]
 	db -->|load| A[mbtcu]-->|result| I[graph]
     db -->|load| C[mbtal]-->|result| I[graph]	
     db -->|load| D[mbtcustd]

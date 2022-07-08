@@ -1,4 +1,4 @@
-![ElectricalWireSizes](https://raw.githubusercontent.com/jacometoss/PyEWS/f2268317055262b2836cbb6196fcca11806ad108/docs/logoElectricalWireSizes.svg)
+![ElectricalWireSizes](https://raw.githubusercontent.com/jacometoss/PyEWS/e162939c4b633f5470adb7733043c579924ded47/docs/logoElectricalWireSizes.svg)
 
 [![PyPI version](https://badge.fury.io/py/ElectricalWireSizes.svg)](https://badge.fury.io/py/ElectricalWireSizes) [![Downloads](https://static.pepy.tech/personalized-badge/electricalwiresizes?period=total&units=none&left_color=grey&right_color=blue&left_text=Downloads)](https://pepy.tech/project/electricalwiresizes) [![Downloads](https://pepy.tech/badge/electricalwiresizes/month)](https://pepy.tech/project/electricalwiresizes) [![versons of python supported](https://img.shields.io/badge/python-3%20%7C%203.5%20%7C%203.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue)](https://pypi.org/project/ElectricalWireSizes/) [![Maintainability](https://api.codeclimate.com/v1/badges/27c48038801ee954796d/maintainability) ](https://codeclimate.com/github/jacometoss/PyEWS/maintainability) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/8d8575adf7e149999e6bc84c657fc94e)](https://www.codacy.com/gh/jacometoss/PyEWS/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jacometoss/PyEWS&amp;utm_campaign=Badge_Grade)
 
@@ -79,8 +79,8 @@ El gráfico que se muestra a continuación presenta las pérdidas de tensión de
 Este módulo esta limitado por el momento para conductores de cobre y aluminio cuando se utiliza tensión alterna. El procedimiento para generar el gráfico anterior es usando el bloque de código siguiente:
 
 ```python
-mydata=mbtal(127,220,55,1,45,1,1,35,3,1,0.9,2,1,1,1,1.25)
-graph(mydata,"6 AWG","4/0 AWG", 8, 5, 2,"k",1)
+mydata=mbtal(127,220,55,1,45,1,1,35,3,1,0.9,2,1,60,1.25,1.25)
+graph(mydata,"6 AWG","4/0 AWG", 8, 5, 2,"k",1,3)
 ```
 
 El llenado del módulo es un poco complejo
@@ -123,25 +123,27 @@ icc(1,75,200,60,1)
 
 > En forma práctica los termoplásticos como lo es el **PVC** tienen temperatura de operación en corto circuito de 105,130,150 centígrados y en condiciones  normales de 60,75,90 centígrados. Los termoestables **XLPE**  y **EPR** en corto circuito usan temperaturas de 250 cada uno para una temperatura de operación continua de 90 °C.
 
-## Desarrollador y versión
+## **Desarrollador y versión**
 
 La versión 0.1.29rc1 es por el momento la más reciente. 
 
 ```text
-[Packqge]: ElectricalWireSizes 0.1.29rc1
+[Packqge]: ElectricalWireSizes 0.1.29
 [Autor]: Marco Polo Jácome Toss
 [Licencia]: GNU General Public License v3.0
-[Fecha]: 03-Julio-2022
+[Fecha]: 07-Julio-2022
 [Páis]: México
 ```
 
 ## **Control de versiones (Changelog)**
 
-**0.1.29rc1**: Se modifican los módulos `mbtcu`, `mbtal`, `mbtcustd`, `dbcircuit`, `dbcircuitcd` adicionando un nuevo argumento `Fcond` y condiciones para el cumplimento del 125% de ampacidad en alimentadores y circuitos derivados sin considerar cualquier factor de ajuste, todas las versiones anteriores no cuentan con esta condición y esto puede causar error cuando se tienen las condiciones ideales en un conductor, sin agrupar y a temperatura ambiente de 30°C.
+**0.1.29**: Versión estable, en esta nueva actualización se agrega al módulo `graph` una línea indicadora de pérdida de tensión.[*07.07.2022*]
 
-**0.1.28**: Versión estable.
+**0.1.29rc1**: Se modifican los módulos `mbtcu`, `mbtal`, `mbtcustd`, `dbcircuit`, `dbcircuitcd` adicionando un nuevo argumento `Fcond` y condiciones para el cumplimento del 125% de ampacidad en alimentadores y circuitos derivados sin considerar cualquier factor de ajuste, todas las versiones anteriores no cuentan con esta condición y esto puede causar error cuando se tienen las condiciones ideales en un conductor, sin agrupar y a temperatura ambiente de 30°C. [*03.07.2022*]
 
-**0.1.28rc2**: Separación de operaciones, conductor y protección.
+**0.1.28**: Versión estable.[*15.06.2022*]
+
+**0.1.28rc2**: Separación de operaciones, conductor y protección.[*02.06.2022*]
 
 **0.1.28rc1** - En esta versión se actualiza las protecciones y se actualiza la fórmula de corriente incluyendo el factor de sobrecorriente en la versión 0.1.27 no se logra ver la actualización de la corriente nominal. [*01.06.2022*]
 

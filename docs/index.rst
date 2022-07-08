@@ -13,7 +13,7 @@ Esta idea nace debido a la popularidad del lenguaje de programación Python y bu
 
 La librería cuenta por el momento con 9 módulos para dimensionar conductores eléctricos con aislamiento de 600 V y 2000 V. Los resultados obtenidos con estos módulos los puede visualizar mediante una arreglo matricial o tabla esta para una mejor comprensión de los resultados.
 
-La dependencia de este lenguaje de otros paquetes es baja únicamente usa tabulate en primer grado y en forma muy secundaría numpy y matplotlib no encontrándose limitado por el momento a una versión. Estas últimas dos librerías se usan para graficar las pérdidas de tensión de los conductores de corriente alterna.
+La dependencia de este paquete de otros es baja únicamente usa tabulate en primer grado y en forma muy secundaría numpy como matplotlib no encontrándose limitado por el momento a una versión en especifico de estos últimos, estas últimas dos librerías se usan para graficar las pérdidas de tensión de los conductores de corriente alterna.
 
 
 **Donativos : ¿Te gusta este proyecto?, puedes apoyarme mediante**

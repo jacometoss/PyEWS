@@ -1,7 +1,7 @@
 '''
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-| PYEWS, ElectricalWireSizes, 03/07/2022                                 |
-| Version : 0.1.29                                                       |
+| PYEWS, ElectricalWireSizes, 10/07/2022                                 |
+| Version : 0.1.30rc1                                                    |
 | Autor : Marco Polo Jacome Toss                                         |
 | License: GNU Affero General Public License v3 (GPL-3.0)                |
 | Requires: Python >=3.5                                                 |
@@ -9,7 +9,10 @@
 
 Changelog:
 
-0.1.29     Versión estable, en esta nueva actualización se agrega al módulo
+0.1.30rc1: Se modifica y clasifica las protecciones por sistema descartando
+           las no comerciales.
+
+0.1.29:    Versión estable, en esta nueva actualización se agrega al módulo
            graph una línea indicadora de pérdida de tensión.
 
 0.1.29rc1: Se modifican los módulos mbtcu, mbtal, mbtcustd, dbcircuit, dbcircuitcd
@@ -37,7 +40,7 @@ Changelog:
 '''
 import math, time
 from tabulate import tabulate
-from .bd import dbConductorCu, dbConductorAl, SITM
+from .bd import dbConductorCu, dbConductorAl
 from .basicelecfunc import Rn, RnCd, Z, Rcd, dbc, FCT, zpucu, zpual
 
 
@@ -199,17 +202,28 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
-
-
                     
             else:
                 datos[i].append('Not')
                 
+
+            if VF<200:
+
+                SITM=[0,15,20,30,40,50,60,70,"NA"]
+
+            elif VF>=200:
+                
+                SITM=[0,15,20,30,40,50,60,70,80,100,125,"NA"]
+
+            
             for j in range(len(SITM)):
-                if (SITM[j]>=Nc*(In/Fsc)*Break):
-                    datos[i].append(SITM[j])
+                if (SITM[j]=="NA"):
+                    datos[i].append('NA')
                     break
                     
+                elif (SITM[j]>=Nc*(In/Fsc)*Break):
+                    datos[i].append(SITM[j])
+                    break
                     
             
         elif S==2:
@@ -260,12 +274,18 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
             else:
                 datos[i].append('Not')
-            
+                
+
+            SITM=[0,15,20,30,40,50,60,70,80,100,125,"NA"]
+
             for j in range(len(SITM)):
-                if (SITM[j]>=Nc*(In/Fsc)*Break):
-                    datos[i].append(SITM[j])
+                if (SITM[j]=="NA"):
+                    datos[i].append('NA')
                     break
-                     
+                    
+                elif (SITM[j]>=Nc*(In/Fsc)*Break):
+                    datos[i].append(SITM[j])
+                    break                     
         
         elif S==3:
             
@@ -316,10 +336,18 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
             else:
                 datos[i].append('Not')
 
+
+            SITM=[0,15,20,30,40,50,60,70,80,100,125,150,175,200,225,250,300,350,400,450,500,600,700,800,1000,1200,1600,2000,2500,3000,4000,5000,6000,"NA"]
+
             for j in range(len(SITM)):
-                if (SITM[j]>=Nc*(In/Fsc)*Break):
+                if (SITM[j]=="NA"):
+                    datos[i].append('NA')
+                    break
+                    
+                elif (SITM[j]>=Nc*(In/Fsc)*Break):
                     datos[i].append(SITM[j])
                     break
+
                                     
         
         elif S==4:
@@ -369,9 +397,15 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                         
             else:
                 datos[i].append('Not')
+
+            SITM=[0,15,20,30,40,50,60,70,80,100,125,150,175,200,225,250,300,350,400,450,500,600,700,800,1000,1200,1600,2000,2500,3000,4000,5000,6000,"NA"]                
                     
             for j in range(len(SITM)):
-                if (SITM[j]>=Nc*(In/Fsc)*Break):
+                if (SITM[j]=="NA"):
+                    datos[i].append('NA')
+                    break
+                    
+                elif (SITM[j]>=Nc*(In/Fsc)*Break):
                     datos[i].append(SITM[j])
                     break
     if View == 1:

@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='ElectricalWireSizes',
-    version='0.1.29',
+    version='0.1.30rc1',
     url='https://electricalwiresizes.org/',
     project_urls={
         'Documentation': 'https://pyews.readthedocs.io/',

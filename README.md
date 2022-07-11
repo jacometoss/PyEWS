@@ -1,4 +1,4 @@
-![ElectricalWireSizes](https://raw.githubusercontent.com/jacometoss/PyEWS/e162939c4b633f5470adb7733043c579924ded47/docs/logoElectricalWireSizes.svg)
+![ElectricalWireSizes](https://raw.githubusercontent.com/jacometoss/PyEWS/652107a9dedfdff1dc38770a3deb567abf24c1bb/docs/logoElectricalWireSizes.svg)
 
 [![PyPI version](https://badge.fury.io/py/ElectricalWireSizes.svg)](https://badge.fury.io/py/ElectricalWireSizes) [![Downloads](https://static.pepy.tech/personalized-badge/electricalwiresizes?period=total&units=none&left_color=grey&right_color=blue&left_text=Downloads)](https://pepy.tech/project/electricalwiresizes) [![Downloads](https://pepy.tech/badge/electricalwiresizes/month)](https://pepy.tech/project/electricalwiresizes) [![versons of python supported](https://img.shields.io/badge/python-3%20%7C%203.5%20%7C%203.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue)](https://pypi.org/project/ElectricalWireSizes/) [![Maintainability](https://api.codeclimate.com/v1/badges/27c48038801ee954796d/maintainability) ](https://codeclimate.com/github/jacometoss/PyEWS/maintainability) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/8d8575adf7e149999e6bc84c657fc94e)](https://www.codacy.com/gh/jacometoss/PyEWS/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jacometoss/PyEWS&amp;utm_campaign=Badge_Grade)
 
@@ -125,17 +125,19 @@ icc(1,75,200,60,1)
 
 ## **Desarrollador y versión**
 
-La versión 0.1.29rc1 es por el momento la más reciente. 
+La versión `0.1.30rc1` es por el momento la más reciente. 
 
 ```text
-[Packqge]: ElectricalWireSizes 0.1.29
+[Packqge]: ElectricalWireSizes 0.1.30rc1
 [Autor]: Marco Polo Jácome Toss
 [Licencia]: GNU General Public License v3.0
-[Fecha]: 07-Julio-2022
+[Fecha]: 10-Julio-2022
 [Páis]: México
 ```
 
 ## **Control de versiones (Changelog)**
+
+**0.1.30rc1**:  Se modifica y clasifica las protecciones por sistema descartando las no comerciales. [*10.07.2022*]
 
 **0.1.29**: Versión estable, en esta nueva actualización se agrega al módulo `graph` una línea indicadora de pérdida de tensión.[*07.07.2022*]
 
@@ -158,7 +160,7 @@ La versión 0.1.29rc1 es por el momento la más reciente.
 ```mermaid
 graph TD
 
-B[ElectricalWireSizes 0.1.29]-->db[(Database)]
+B[ElectricalWireSizes 0.1.30rc1]-->db[(Database)]
 	db -->|load| A[mbtcu]-->|result| I[graph]
     db -->|load| C[mbtal]-->|result| I[graph]	
     db -->|load| D[mbtcustd]

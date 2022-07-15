@@ -3,7 +3,10 @@
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 
-<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+<style type='text/css'>html {overflow-x: initial !important;}:root { --mermaid-theme: default; --mermaid-sequence-numbers: off; --mermaid-flowchart-curve: linear; --mermaid--gantt-left-padding: 75; --sequence-theme: simple; }
+
+
+:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
 .mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
@@ -282,54 +285,32 @@ span.cm-strikethrough { text-decoration: line-through; }
 }
 
 
+import url(https://fonts.googleapis.com/css?family=Open%20Sans);
 :root {
-    --side-bar-bg-color: #fafafa;
-    --control-text-color: #777;
+    --code-block-bg-color: inherit;//#f8f8f8;
+
+    --item-hover-bg-color: #0a0d16;
+    --control-text-color: #b7b7b7;
+    --control-text-hover-color: #eee;
+    --window-border: 1px dashed #9b9b9b;
+
+    --active-file-bg-color: #0070E0;
+    --active-file-border-color: #8d8df0;
+
+    --primary-color: #a3d5fe;
+
+    --active-file-text-color: #0070e0;
+    --item-hover-bg-color: #70717d;
+    --item-hover-text-color: white;
+    --primary-color: #6dc1e7;
 }
 
-@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
-
-/* open-sans-regular - latin-ext_latin */
-  /* open-sans-italic - latin-ext_latin */
-    /* open-sans-700 - latin-ext_latin */
-    /* open-sans-700italic - latin-ext_latin */
-  html {
-    font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-}
-
-body {
-    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
-    color: rgb(51, 51, 51);
-    line-height: 1.6;
-}
-
-#write {
-    max-width: 860px;
-  	margin: 0 auto;
-  	padding: 30px;
-    padding-bottom: 100px;
-}
-
-@media only screen and (min-width: 1400px) {
-	#write {
-		max-width: 1024px;
-	}
-}
-
-@media only screen and (min-width: 1800px) {
-	#write {
-		max-width: 1200px;
-	}
-}
-
-#write > ul:first-child,
-#write > ol:first-child{
-    margin-top: 30px;
-}
-
-a {
-    color: #4183C4;
+html,
+body,
+#write{
+	/*color: #5e676d;*/
+	color: #232323;
+	font-family: "Open Sans", "Clear Sans", sans-serif;
 }
 h1,
 h2,
@@ -337,338 +318,347 @@ h3,
 h4,
 h5,
 h6 {
-    position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    line-height: 1.4;
-    cursor: text;
+	/*font-weight: lighter;*/
+	font-weight: 100;
+	color: #232323;
+	font-family: "Open Sans", sans-serif;
+	margin: 0.5rem 0;
 }
-h1:hover a.anchor,
-h2:hover a.anchor,
-h3:hover a.anchor,
-h4:hover a.anchor,
-h5:hover a.anchor,
-h6:hover a.anchor {
-    text-decoration: none;
+
+html {
+	font-size:16px;
 }
-h1 tt,
-h1 code {
-    font-size: inherit;
+
+#write {
+	max-width: 914px;
+	text-align: justify;
 }
-h2 tt,
-h2 code {
-    font-size: inherit;
+
+#write>h1:first-child {
+	margin-top: 2.75rem;
 }
-h3 tt,
-h3 code {
-    font-size: inherit;
+#write>h2:first-child {
+	margin-top: 1.75rem;
 }
-h4 tt,
-h4 code {
-    font-size: inherit;
+#write>h3:first-child {
+	margin-top: 1rem;
 }
-h5 tt,
-h5 code {
-    font-size: inherit;
-}
-h6 tt,
-h6 code {
-    font-size: inherit;
+#write>h4:first-child {
+	margin-top: 0.5rem;
 }
 h1 {
-    font-size: 2.25em;
-    line-height: 1.2;
-    border-bottom: 1px solid #eee;
+	margin: 1rem 0;
+	/*line-height: 4rem;
+	padding: 5px 30px;
+	text-align: center;
+	margin-top: 4rem;*/
 }
 h2 {
-    font-size: 1.75em;
-    line-height: 1.225;
-    border-bottom: 1px solid #eee;
+	margin: 0.8rem 0;
+	/*
+	line-height: 3rem;
+	padding: 0 30px;
+	text-align: center;
+	margin-top: 3rem
+	*/
 }
-
-/*@media print {
-    .typora-export h1,
-    .typora-export h2 {
-        border-bottom: none;
-        padding-bottom: initial;
-    }
-
-    .typora-export h1::after,
-    .typora-export h2::after {
-        content: "";
-        display: block;
-        height: 100px;
-        margin-top: -96px;
-        border-top: 1px solid #eee;
-    }
-}*/
-
 h3 {
-    font-size: 1.5em;
-    line-height: 1.43;
 }
 h4 {
-    font-size: 1.25em;
 }
 h5 {
-    font-size: 1em;
+	font-size: 1.125rem;
 }
 h6 {
-   font-size: 1em;
-    color: #777;
+	font-size: 1.1rem;
 }
-p,
-blockquote,
-ul,
-ol,
-dl,
-table{
-    margin: 0.8em 0;
+p {
+	color: #232323;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	margin: 0 0 1.25rem;
 }
-li>ol,
-li>ul {
-    margin: 0 0;
+#write>h3.md-focus:before {
+	left: -1.875rem;
+	top: 0.5rem;
+	padding: 2px;
 }
-hr {
-    height: 2px;
-    padding: 0;
-    margin: 16px 0;
-    background-color: #e7e7e7;
-    border: 0 none;
-    overflow: hidden;
-    box-sizing: content-box;
+#write>h4.md-focus:before {
+	left: -1.875rem;
+	top: 0.3125rem;
+	padding: 2px;
 }
-
-li p.first {
-    display: inline-block;
+#write>h5.md-focus:before {
+	left: -1.875rem;
+	top: 0.25rem;
+	padding: 2px;
 }
-ul,
-ol {
-    padding-left: 30px;
+#write>h6.md-focus:before {
+	left: -1.875rem;
+	top: .125rem;
+	padding: 2px;
 }
-ul:first-child,
-ol:first-child {
-    margin-top: 0;
+/*@media screen and (min-width: 48em) {
+	.h1,
+	h1 {
+		font-size: 3.250rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.298rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.625rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.250rem;
+	}
+	.h5,
+	h5 {
+		font-size: 1.150rem;
+	}
+	.h6,
+	h6 {
+		font-size: 1rem;
+	}
+	#write>h4.md-focus:before,
+	#write>h5.md-focus:before,
+	#write>h6.md-focus:before {
+		top: 1px;
+	}
+	p {
+		font-size: 1.25rem;
+		line-height: 1.8;
+	}
+	table {
+		font-size: 1.25rem;
+	}
+}*/
+@media screen and (max-width: 48em) {
+	blockquote {
+		margin-left: 1rem;
+		margin-right: 0;
+		padding: 0.5em;
+	}
+	.h1,
+	h1 {
+		font-size: 2.827rem;
+	}
+	.h2,
+	h2 {
+		font-size: 1.999rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.413rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.250rem;
+	}
+	.h5,
+	h5 {
+		font-size: 1.150rem;
+	}
+	.h6,
+	h6 {
+		font-size: 1rem;
+	}
 }
-ul:last-child,
-ol:last-child {
-    margin-bottom: 0;
+a,
+.md-def-url {
+	color: #007ee5;
+	text-decoration: none;
 }
-blockquote {
-    border-left: 4px solid #dfe2e5;
-    padding: 0 15px;
-    color: #777777;
-}
-blockquote blockquote {
-    padding-right: 0;
+a:hover {
+	text-decoration: underline;
 }
 table {
-    padding: 0;
-    word-break: initial;
+	border: 1px solid #e2e2e2;
+	margin-bottom: 20px
 }
-table tr {
-    border: 1px solid #dfe2e5;
-    margin: 0;
-    padding: 0;
-}
-table tr:nth-child(2n),
-thead {
-    background-color: #f8f8f8;
+table th,
+table td {
+	padding: 8px;
+	line-height: 1.5rem;
+	vertical-align: top;
+	border: 1px solid #e2e2e2;
 }
 table th {
-    font-weight: bold;
-    border: 1px solid #dfe2e5;
-    border-bottom: 0;
-    margin: 0;
-    padding: 6px 13px;
+	font-weight: normal;
+	background-color: #f0f7fd;
 }
-table td {
-    border: 1px solid #dfe2e5;
-    margin: 0;
-    padding: 6px 13px;
+table thead th {
+	vertical-align: bottom
 }
-table th:first-child,
-table td:first-child {
-    margin-top: 0;
+table caption+thead tr:first-child th,
+table caption+thead tr:first-child td,
+table colgroup+thead tr:first-child th,
+table colgroup+thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+	border-top: 0
 }
-table th:last-child,
-table td:last-child {
-    margin-bottom: 0;
+table tbody+tbody {
+	border-top: 2px solid #ddd
 }
-
-.CodeMirror-lines {
-    padding-left: 4px;
+code, .md-fences {
+	padding: .5em;
+	background: #f6f9fc;
+	border: 1px solid #d0d4d9;
+	border-radius: 3px;
+	padding: .1em;
+	font-size: 0.9rem !important;
+	margin-left: 0.2em;
+	margin-right: 0.2em;
 }
-
-.code-tooltip {
-    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
-    border-top: 1px solid #eef2f2;
-}
-
-.md-fences,
-code,
-tt {
-    border: 1px solid #e7eaed;
-    background-color: #f8f8f8;
-    border-radius: 3px;
-    padding: 0;
-    padding: 2px 4px 0px 4px;
-    font-size: 0.9em;
-}
-
-code {
-    background-color: #f3f4f4;
-    padding: 0 2px 0 2px;
-}
-
 .md-fences {
-    margin-bottom: 15px;
-    margin-top: 15px;
-    padding-top: 8px;
-    padding-bottom: 6px;
+	margin: 0 0 20px;
+	font-size: 1em;
+	padding: 0.3em 1em;
+  	padding-top: 0.4em;
+}
+.task-list{
+	padding-left: 0;
 }
 
-
-.md-task-list-item > input {
-  margin-left: -1.3em;
+.task-list-item {
+	padding-left:2.125rem;
 }
 
-@media print {
-    html {
-        font-size: 13px;
+/* Chrome 29+ */
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+    .task-list-item input:before {
+    	margin-top: -0.2rem;
     }
-    table,
-    pre {
-        page-break-inside: avoid;
-    }
-    pre {
-        word-wrap: break-word;
-    }
+
+    .task-list-item input:checked:before,
+	.task-list-item input[checked]:before {
+		margin-top: -0.2rem;
+	}
 }
 
-.md-fences {
-	background-color: #f8f8f8;
+blockquote {
+	margin: 0 0 1.11111rem;
+	padding: 0.5rem 1.11111rem 0 1.05556rem;
+	border-left: 2px solid rgba(0, 112, 224, 0.32);
+}
+blockquote,
+blockquote p {
+	line-height: 1.6;
+	color: #8f8f8f;
 }
 #write pre.md-meta-block {
-	padding: 1rem;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: #f7f7f7;
-    border: 0;
-    border-radius: 3px;
-    color: #777777;
-    margin-top: 0 !important;
+	min-height: 30px;
+	/* background: #f8f8f8; */
+	background: #E5E5E5;
+	padding: 1.5em;
+	font-weight: 300;
+	font-size: 1em;
+	padding-bottom: 1.5em;
+	padding-top: 3em;
+    margin-top: -1.5em;
+	color: #999;
+	border-left: 1000px #f8f8f8 solid;
+	margin-left: -1000px;
+	border-right: 1000px #f8f8f8 solid;
+	margin-right: -1000px;
+	margin-bottom: 2em;
 }
-
+.MathJax_Display {
+	font-size: 0.9em;
+	margin-top: 0.5em;
+	margin-bottom: 0;
+}
+p.mathjax-block,
+.mathjax-block {
+	padding-bottom: 0;
+}
 .mathjax-block>.code-tooltip {
-	bottom: .375rem;
-}
-
-.md-mathjax-midline {
-    background: #fafafa;
-}
-
-#write>h3.md-focus:before{
-	left: -1.5625rem;
-	top: .375rem;
-}
-#write>h4.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h5.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h6.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
+	bottom: 5px;
+	box-shadow: none;
 }
 .md-image>.md-meta {
-    /*border: 1px solid #ddd;*/
-    border-radius: 3px;
-    padding: 2px 0px 0px 4px;
-    font-size: 0.9em;
-    color: inherit;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+.md-image>img {
+	margin-top: 2px;
+}
+.md-image>.md-meta:first-of-type:before {
+	padding-left: 4px;
 }
 
-.md-tag {
-    color: #a7a7a7;
-    opacity: 1;
+#typora-source {
+	color: #555;
 }
 
-.md-toc { 
-    margin-top:20px;
-    padding-bottom:20px;
+/** ui for windows **/
+#md-searchpanel {
+    border-bottom: 1px solid #ccc;
 }
 
-.sidebar-tabs {
-    border-bottom: none;
+#md-searchpanel .btn {
+    border: 1px solid #ccc;
 }
 
-#typora-quick-open {
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
+#md-notification:before {
+	top: 14px;
 }
 
-#typora-quick-open-item {
-    background-color: #FAFAFA;
-    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
-    border-style: solid;
-    border-width: 1px;
+#md-notification {
+	background: #eee;
 }
 
-/** focus mode */
-.on-focus-mode blockquote {
-    border-left-color: rgba(85, 85, 85, 0.12);
-}
-
-header, .context-menu, .megamenu-content, footer{
-    font-family: "Segoe UI", "Arial", sans-serif;
-}
-
-.file-node-content:hover .file-node-icon,
-.file-node-content:hover .file-node-open-state{
-    visibility: visible;
+.megamenu-menu-panel .btn {
+	border: 1px solid #ccc;
 }
 
 .mac-seamless-mode #typora-sidebar {
-    background-color: #fafafa;
-    background-color: var(--side-bar-bg-color);
+  background-color: #f7f9fa;
 }
 
-.md-lang {
-    color: #b4654d;
+.pin-outline .outline-active {
+  color: #0070E0; 
 }
 
-/*.html-for-mac {
-    --item-hover-bg-color: #E6F0FE;
-}*/
-
-#md-notification .btn {
-    border: 0;
+.file-list-item {
+  border-bottom: 1px solid;
+  border-color: #E6E8EB;
 }
 
-.dropdown-menu .divider {
-    border-color: #e5e5e5;
-    opacity: 0.4;
+.file-list-item-summary {
+  font-weight: 400;
+  color: #637282; 
 }
 
-.ty-preferences .window-content {
-    background-color: #fafafa;
+.file-list-item.active {
+  color: #0070E0;
+  background-color: #E6E8EB;
 }
 
-.ty-preferences .nav-group-item.active {
-    color: white;
-    background: #999;
+.file-tree-node.active>.file-node-background {
+  background-color: #E6E8EB;
+} 
+
+.file-tree-node.active>.file-node-content {
+  color: #0070E0;
 }
 
-.menu-item-container a.menu-style-btn {
-    background-color: #f5f8fa;
-    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+.file-node-content {
+  color: #232323;
 }
 
+.sidebar-tab.active {
+  font-weight: 400;
+}
+
+code, kbd, pre, samp {
+  font-family: "Roboto Mono", Menlo, monospace;
+}
 
 
 </style>
@@ -676,10 +666,9 @@ header, .context-menu, .megamenu-content, footer{
   <meta name="description" content="ElectricalWireSizes GPL v3">
   <meta name="keywords" content="electrical, conductor, size, electricalwiresizes, nom-001-sede-2012, branch, feeder, ElectricalWireSizest">
   <meta name="author" content="Marco Polo Jácome Toss">
-<title>ElectricalWireSizes : Zpual</title>
-
+<title>ElectricalWireSizes - Módulo zpucu</title>
 </head>
 <body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><p><img src="https://raw.githubusercontent.com/jacometoss/PyEWS/652107a9dedfdff1dc38770a3deb567abf24c1bb/docs/logoElectricalWireSizes.svg" referrerpolicy="no-referrer"></p><p><a href='https://badge.fury.io/py/ElectricalWireSizes'><img src="https://badge.fury.io/py/ElectricalWireSizes.svg" referrerpolicy="no-referrer" alt="PyPI version"></a><span> </span><a href='https://pepy.tech/project/electricalwiresizes'><img src="https://static.pepy.tech/personalized-badge/electricalwiresizes?period=total&amp;units=none&amp;left_color=grey&amp;right_color=blue&amp;left_text=Downloads" referrerpolicy="no-referrer" alt="Downloads"></a><span> </span><a href='https://pepy.tech/project/electricalwiresizes'><img src="https://pepy.tech/badge/electricalwiresizes/month" referrerpolicy="no-referrer" alt="Downloads"></a><span> </span><a href='https://pypi.org/project/ElectricalWireSizes/'><img src="https://img.shields.io/badge/python-3%20%7C%203.5%20%7C%203.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue" referrerpolicy="no-referrer" alt="versons of python supported"></a><span> </span><a href='https://codeclimate.com/github/jacometoss/PyEWS/maintainability'><img src="https://api.codeclimate.com/v1/badges/27c48038801ee954796d/maintainability" referrerpolicy="no-referrer" alt="Maintainability"></a><span> </span><a href='https://www.codacy.com/gh/jacometoss/PyEWS/dashboard?utm_source=github.com&amp;amp;utm_medium=referral&amp;amp;utm_content=jacometoss/PyEWS&amp;amp;utm_campaign=Badge_Grade'><img src="https://app.codacy.com/project/badge/Grade/8d8575adf7e149999e6bc84c657fc94e" referrerpolicy="no-referrer" alt="Codacy Badge"></a></p><h2 id='constantes-de-impedancia-para-conductores-de-cobre-zpual'><span>Constantes de impedancia para conductores de cobre zpual</span></h2><p><span>Este módulo se utiliza internamente pero puede ser usado para calcular la resistencia de un conductor de corriente alterna a cualquier temperatura y factor de potencia. Las constantes mostradas </span><code>k</code><span> son las usadas en los cálculos y pueden utilizarse para dimensionar conductores en los diferentes sistemas de alimentación o circuitos derivados.</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="Python"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="python"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.52344px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">zpual</span>()</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div><div class="CodeMirror-gutters" style="display: none; height: 23px;"></div></div></div></pre><ul><li><code>type</code><span> : Selecciona la tubería y resistencia del conductor de corriente alterna. 1 (PVC), 2 (Aluminio), 3 (Acero).</span></li><li><code>ta</code><span> : La temperatura ambiente del lugar.</span></li><li><code>fp</code><span> : Factor de potencia de la carga.</span></li><li><code>view</code><span> :  Esta opción nos deja ver una tabla ordenada (1) y un arreglo (2).</span></li></ul><h2 id='información-requerida-en-el-módulo-zpual'><span>Información requerida en el módulo zpual</span></h2><p><span>El llenado del módulo requiere la información siguiente :</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="tex"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="tex"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.52344px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">#Type : Selecciona la tubería y resistencia del conductor de corriente alterna. 1 (PVC), 2 (Aluminio), 3 (Acero)</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">#Ta : La temperatura ambiente del lugar</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">#Fp : Factor de potencia de la carga</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">#View :  Esta opción nos deja ver una tabla ordenada (1) y un arreglo (2)</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 92px;"></div><div class="CodeMirror-gutters" style="display: none; height: 92px;"></div></div></div></pre><p><span>Importado </span><code>PyEWS</code><span> la información requerida en orden sería</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="python"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="python"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.52344px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">#Módulo de baja tensión para conductores de cobre para corriente directa</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">zpual</span>(<span class="cm-variable">Type</span>,<span class="cm-variable">Ta</span>,<span class="cm-variable">Fp</span>,<span class="cm-variable">View</span>)</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 46px;"></div><div class="CodeMirror-gutters" style="display: none; height: 46px;"></div></div></div></pre><blockquote><p><span>El módulo se limita a los conductores mostrados en el  </span><code>dbc</code><span> que son conductores comerciales. </span></p></blockquote><p>&nbsp;</p></div></div>
+<div id='write'  class=''><p><img src="https://raw.githubusercontent.com/jacometoss/PyEWS/652107a9dedfdff1dc38770a3deb567abf24c1bb/docs/logoElectricalWireSizes.svg" referrerpolicy="no-referrer"></p><p><a href='https://badge.fury.io/py/ElectricalWireSizes'><img src="https://badge.fury.io/py/ElectricalWireSizes.svg" referrerpolicy="no-referrer" alt="PyPI version"></a><span> </span><a href='https://pepy.tech/project/electricalwiresizes'><img src="https://static.pepy.tech/personalized-badge/electricalwiresizes?period=total&amp;units=none&amp;left_color=grey&amp;right_color=blue&amp;left_text=Downloads" referrerpolicy="no-referrer" alt="Downloads"></a><span> </span><a href='https://pepy.tech/project/electricalwiresizes'><img src="https://pepy.tech/badge/electricalwiresizes/month" referrerpolicy="no-referrer" alt="Downloads"></a><span> </span><a href='https://pypi.org/project/ElectricalWireSizes/'><img src="https://img.shields.io/badge/python-3%20%7C%203.5%20%7C%203.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue" referrerpolicy="no-referrer" alt="versons of python supported"></a><span> </span><a href='https://codeclimate.com/github/jacometoss/PyEWS/maintainability'><img src="https://api.codeclimate.com/v1/badges/27c48038801ee954796d/maintainability" referrerpolicy="no-referrer" alt="Maintainability"></a><a href='https://www.codacy.com/gh/jacometoss/PyEWS/dashboard?utm_source=github.com&amp;amp;utm_medium=referral&amp;amp;utm_content=jacometoss/PyEWS&amp;amp;utm_campaign=Badge_Grade'><img src="https://app.codacy.com/project/badge/Grade/8d8575adf7e149999e6bc84c657fc94e" referrerpolicy="no-referrer" alt="Codacy Badge"></a></p><p>&nbsp;</p><h1 id='módulo-zpucu'><span>Módulo zpucu</span></h1><p><span>Este módulo se utiliza internamente pero puede ser usado para calcular la resistencia de un conductor de corriente alterna a cualquier temperatura y factor de potencia. Las constantes mostradas </span><code>k</code><span> son las usadas en los cálculos y pueden ser usadas para dimensionar conductores en los diferentes sistemas de alimentación o circuitos derivados.</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="Python"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="python"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.52344px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">zpucu</span>()</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div><div class="CodeMirror-gutters" style="display: none; height: 23px;"></div></div></div></pre><ul><li><code>Type</code><span>  : Selecciona la tubería y resistencia del conductor de corriente alterna. 1 (PVC), 2 (Aluminio), 3 (Acero).</span></li><li><code>Ta</code><span>  : La temperatura ambiente del lugar.</span></li><li><code>Fp</code><span>  : Factor de potencia de la carga.</span></li><li><code>View</code><span>  :  Esta opción nos deja ver una tabla ordenada (1) y un arreglo (2).</span></li></ul><h2 id='argumentos-necesarios'><span>Argumentos necesarios</span></h2><p><span>El llenado del módulo requiere la información siguiente :</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="tex"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="tex"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.52344px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">#Type : Selecciona la tubería y resistencia del conductor de corriente alterna. 1 (PVC), 2 (Aluminio), 3 (Acero)</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">#Ta : La temperatura ambiente del lugar</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">#Fp : Factor de potencia de la carga</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">#View :  Esta opción nos deja ver una tabla ordenada (1) y un arreglo (2)</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 92px;"></div><div class="CodeMirror-gutters" style="display: none; height: 92px;"></div></div></div></pre><p><span>Importado </span><code>kelectric</code><span> la información requerida en orden sería</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="python"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="python"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.52344px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">#Módulo de baja tensión para conductores de cobre para corriente directa</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">zpucu</span>(<span class="cm-variable">Type</span>,<span class="cm-variable">Ta</span>,<span class="cm-variable">Fp</span>,<span class="cm-variable">View</span>)</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 46px;"></div><div class="CodeMirror-gutters" style="display: none; height: 46px;"></div></div></div></pre><blockquote><p><span>El módulo se limita a los conductores mostrados en el  </span><code>dbc</code><span> que son conductores comerciales. </span></p></blockquote><p>&nbsp;</p></div></div>
 </body>
 </html>

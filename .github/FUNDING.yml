@@ -1,5 +1,4 @@
 # These are supported funding model platforms
 
-github: jacometoss
-custom:
-  - paypal.me/projectoss
+github: [jacometoss]
+custom: paypal.me/projectoss

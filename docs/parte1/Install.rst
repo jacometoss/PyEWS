@@ -67,10 +67,6 @@ Los módulos disponibles por el momento son los siguientes :
 |   | para conductores de cobre y     | ricalwiresizes.org/icc.html>`__ |
 |   | aluminio.                       |                                 |
 +---+---------------------------------+---------------------------------+
-|10 | Módulo de baja tensión para     | distributioncu()                |
-|   | calcular pérdidas de tensión    |                                 |
-|   | por puntos de carga             |                                 |
-+---+---------------------------------+---------------------------------+
 
 Todos los módulos trabajan con unidades del Sistema Internacional y en
 versiones futuras versiones se incluirá el Sistema Ingles

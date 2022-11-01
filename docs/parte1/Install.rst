@@ -24,35 +24,59 @@ PyEWS Módulos
 
 Los módulos disponibles por el momento son los siguientes :
 
-+----+-----------------------------------------------+---------------+
-| Id | Descripción                                   | Módulo        |
-+====+===============================================+===============+
-| 1  | Módulo de baja tensión para conductores de    | mbtcu()       |
-|    | cobre clase B, C y D tensión hasta 2000V.     |               |
-+----+-----------------------------------------------+---------------+
-| 2  | Módulo de baja tensión para conductores de    | mbtal()       |
-|    | aluminio clase B, C y D, tensión hasta 2000V. |               |
-+----+-----------------------------------------------+---------------+
-| 3  | Módulo de baja tensión para conductores de    | mbtcustd()    |
-|    | cobre clase B, C y D en CD hasta 2000 V.      |               |
-+----+-----------------------------------------------+---------------+
-| 4  | Módulo para el cálculo de la impedancia para  | zpucu()       |
-|    | conductores de cobre.                         |               |
-+----+-----------------------------------------------+---------------+
-| 5  | Módulo para el cálculo de la impedancia para  | zpual()       |
-|    | conductores de aluminio.                      |               |
-+----+-----------------------------------------------+---------------+
-| 6  | Módulo para dimensionar múltiples conductores | dbcircuit()   |
-|    | de cobre y aluminio., corriente alterna.      |               |
-+----+-----------------------------------------------+---------------+
-| 7  | Módulo para dimensionar múltiples conductores | dbcircuitcd() |
-|    | de cobre, corriente directa.                  |               |
-+----+-----------------------------------------------+---------------+
-| 8  | Módulo para graficar resultados               | graph()       |
-+----+-----------------------------------------------+---------------+
-| 9  | Módulo de corto circuito para conductores     | icc()         |
-|    | en corriente alterna, aluminio y cobre.       |               |    
-+----+-----------------------------------------------+---------------+
++--------+-----------------------------+-----------------------------+
+| **Id** | **Descripción**             | **Módulo**                  |
++========+=============================+=============================+
+| 1      | Módulo de baja tensión      | `m                          |
+|        | (c.a.) para dimensionar     | btcu() <https://electricalw |
+|        | conductores de cobre en     | iresizes.org/mbtcu.html>`__ |
+|        | clase B, C y D, tensión     |                             |
+|        | máxima de servicio de 600V  |                             |
+|        | a 2000V.                    |                             |
++--------+-----------------------------+-----------------------------+
+| 2      | Módulo de baja tensión      | `m                          |
+|        | (c.a.) para dimensionar     | btal() <https://electricalw |
+|        | conductores de aluminio     | iresizes.org/mbtal.html>`__ |
+|        | clase B, C y D, tensión     |                             |
+|        | máxima de servicio de 600V  |                             |
+|        | a 2000V.                    |                             |
++--------+-----------------------------+-----------------------------+
+| 3      | Módulo de baja tensión      | `mbtcus                     |
+|        | (c.d.) para dimensionar     | td() <https://electricalwir |
+|        | conductores de cobre clase  | esizes.org/mbtcustd.tml>`__ |
+|        | B, C y D, tensión máxima de |                             |
+|        | servicio hasta 2000 V.      |                             |
++--------+-----------------------------+-----------------------------+
+| 4      | Módulo de impedancia en     | `z                          |
+|        | conductores de cobre.       | pucu() <https://electricalw |
+|        |                             | iresizes.org/zpucu.html>`__ |
++--------+-----------------------------+-----------------------------+
+| 5      | Módulo de impedancia en     | `z                          |
+|        | conductores de aluminio.    | pual() <https://electricalw |
+|        |                             | iresizes.org/zpual.html>`__ |
++--------+-----------------------------+-----------------------------+
+| 6      | Módulo para dimensionar     | `dbcircuit                  |
+|        | múltiples conductores de    | () <https://electricalwires |
+|        | cobre y aluminio en tensión | izes.org/dbcircuit.html>`__ |
+|        | alterna.                    |                             |
++--------+-----------------------------+-----------------------------+
+| 7      | Módulo para dimensionar     | `dbcircuitcd()              |
+|        | múltiples conductores de    |  <https://electricalwiresiz |
+|        | cobre en tensión de         | es.org/dbcircuitcd.html>`__ |
+|        | directa.                    |                             |
++--------+-----------------------------+-----------------------------+
+| 8      | Módulo de gráficas de       | `g                          |
+|        | barras.                     | raph() <https://electricalw |
+|        |                             | iresizes.org/graph.html>`__ |
++--------+-----------------------------+-----------------------------+
+| 9      | Módulo de corto circuito    | `icc() <https://electrica   |
+|        | (Icc) para conductores de   | lwiresizes.org/icc.html>`__ |
+|        | cobre y aluminio.           |                             |
++--------+-----------------------------+-----------------------------+
+| 10     | Módulo de baja tensión para | distributioncu()            |
+|        | calcular pérdidas de        |                             |
+|        | tensión por puntos de carga |                             |
++--------+-----------------------------+-----------------------------+
 
 Todos los módulos trabajan con unidades del Sistema Internacional y en
 versiones futuras versiones se incluirá el Sistema Ingles

@@ -25,7 +25,7 @@ PyEWS Módulos
 Los módulos disponibles por el momento son los siguientes :
 
 +---+---------------------------------+---------------------------------+
-|id | **Descripción**                 | **Módulo**                      |
+|Id | **Descripción**                 | **Módulo**                      |
 |   |                                 |                                 |
 +===+=================================+=================================+
 | 1 | Módulo de baja tensión (c.a.)   | `mbtcu() <https://electri       |

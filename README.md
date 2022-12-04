@@ -121,14 +121,14 @@ icc(1,75,200,60,1)
 
 ![](https://i.ibb.co/PwpdbTj/nivel-corto-circuito-conductores-cobre-aluminio.jpg)
 
-> En forma práctica los termoplásticos como el **PVC** tiene una temperatura de operación en corto circuito de 105,130, y 150 centígrados, en condiciones  normales esta es de 60,75 y 90 centígrados respectivamente. Los termoestables como el **XLPE** y **EPR** en corto circuito usan temperaturas de 250 centígrados cada uno para una temperatura de operación continua de 90 °C.
+> Los termoplásticos como el **PVC** tienen una temperatura de operación en corto circuito de 105,130, y 150 centígrados, en condiciones  normales esta temperatura es de 60,75 y 90 centígrados respectivamente. Los termoestables como son el **XLPE** y **EPR** en corto circuito se consideran temperaturas de 250 centígrados cada uno en relación a una temperatura de operación continua de 90 °C.
 
 ## **Desarrollador y versión**
 
 La versión 0.1.29rc1 es por el momento la más reciente. 
 
 ```text
-[Packqge]: ElectricalWireSizes 0.1.29
+[Packqge]: ElectricalWireSizes 0.1.30rc1
 [Autor]: Marco Polo Jácome Toss
 [Licencia]: GNU General Public License v3.0
 [Fecha]: 07-Julio-2022
@@ -136,6 +136,8 @@ La versión 0.1.29rc1 es por el momento la más reciente.
 ```
 
 ## **Control de versiones (Changelog)**
+
+**0.1.30rc1**:  Se modifica y clasifica las protecciones por sistema descartando las no comerciales. [*10.07.2022*]
 
 **0.1.29**: Versión estable, en esta nueva actualización se agrega al módulo `graph` una línea indicadora de pérdida de tensión.[*07.07.2022*]
 

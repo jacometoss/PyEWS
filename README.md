@@ -4,11 +4,11 @@
 
 # **Electrical Wire Sizes** 
 
-[Electrical Wires Sizes](https://electricalwiresizes.org/) es un paquete hecho en el lenguaje de programación Python creada con la finalidad de acortar el tiempo en el dimensionamiento de conductores eléctricos u obtención de las secciones de los conductores de una instalación eléctrica.
+[Electrical Wires Sizes](https://electricalwiresizes.org/) es un paquete hecho en el lenguaje de programación Python, creado con la finalidad de acortar el tiempo en el dimensionamiento de conductores eléctricos u obtención de las secciones de los conductores de una instalación eléctrica.
 
-Esta idea nace debido a la popularidad del lenguaje de programación Python y en la búsqueda de una aplicación en relación a este lenguaje dentro del área de ingeniería eléctrica. En la práctica esta librería le será útil cuando trate de dimensionar una cantidad considerable de alimentadores como circuitos derivados.
+Esta idea nace debido a la popularidad del lenguaje de programación Python y en la búsqueda de una aplicación en relación a este lenguaje dentro del área de ingeniería eléctrica. En la práctica este paquete le será de utilidad  cuando trate de dimensionar una cantidad considerable de alimentadores o circuitos derivados.
 
-El paquete cuenta por el momento con **9 módulos** que internamente son llamados para realizar el dimensionamiento de conductores en baja tensión especialmente conductores comerciales con aislamiento de 600V hasta 2000V.  Los resultados obtenidos con este paquete es posible obtenerlos en forma matricial o en formato tabla para una mejor comprensión.
+El paquete cuenta por el momento con **9 módulos** que internamente son llamados para realizar el dimensionamiento de conductores en baja tensión, especialmente conductores comerciales con aislamiento de 600V hasta 2000V,  adicionalmente los resultados que se obtengan con este paquete puede visualizarlos en formato tabla o arreglo matricial.
 
 La dependencia de este lenguaje de otros paquetes es baja únicamente usa `tabulate` en primer grado y en forma muy secundaría `numpy` y `matplotlib` no encontrándose limitado a una versión en especifico, estas últimas dos librerías se usan para graficar las pérdidas de tensión en los conductores cuando se utiliza corriente alterna.
 

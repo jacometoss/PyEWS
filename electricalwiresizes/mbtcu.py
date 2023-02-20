@@ -1,86 +1,36 @@
-'''
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-| PYEWS, ElectricalWireSizes, 10/07/2022                                 |
-| Version : 0.1.30rc1                                                    |
-| Autor : Marco Polo Jacome Toss                                         |
-| License: GNU Affero General Public License v3 (GPL-3.0)                |
-| Requires: Python >=3.5                                                 |
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-Changelog:
-
-0.1.30rc1: Se modifica y clasifica las protecciones por sistema descartando
-           las no comerciales.
-
-0.1.29:    Versión estable, en esta nueva actualización se agrega al módulo
-           graph una línea indicadora de pérdida de tensión.
-
-0.1.29rc1: Se modifican los módulos mbtcu, mbtal, mbtcustd, dbcircuit, dbcircuitcd
-           adicionando un nuevo argumento Fcond y condiciones para el cumplimento
-           del 125% de ampacidad en alimentadores y circuitos derivados sin considerar
-           cualquier factor de ajuste, todas las versiones anteriores no cuentan con
-           esta condición y esto puede causar error cuando se tienen las condiciones
-           ideales en un conductor, sin agrupar y a temperatura ambiente de 30°C.
-
-0.1.28   : Versión estable.
-
-0.1.28rc2: Separación de operaciones, conductor y protección.
-
-0.1.28rc1: En esta versión se actualiza las protecciones y se actualiza
-           la fórmula de corriente incluyendo el factor de sobrecorriente,
-           en la versión 0.1.27 no se logra ver la actualización de la
-           corriente nominal.
-
-0.1.27rc3: En esta versión los módulos se han clasificado e independizado
-           en distintos archivos además se mejora la salida de datos
-           del módulo dbcircuit para funciones futuras.
-
-0.1.27:    Versione estable.
-
-'''
 import math, time
 from tabulate import tabulate
-from .bd import dbConductorCu, dbConductorAl
-from .basicelecfunc import Rn, RnCd, Z, Rcd, dbc, FCT, zpucu, zpual
+from .bd import dbConductorCu
+from .basicelecfunc import Rn, Z, fct
 
 
 def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=None,S=None,Fp=None,View=None,Fsc=None,To=None,Break=None, Fcond=None):
 
     if(VF==None or VL==None or In==None or Nc==None or L==None or FA==None or Type==None or Ta==None or Vd==None or S==None or Fp==None or View==None or Fsc==None or To==None or Break==None or Fcond==None):
         t = time.localtime()
-        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                    ElectricalWireSizes                   ")
-        print("                 ",time.asctime(t))
-        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                                                          ")
-        print("                         ─▄▀─▄▀")
-        print("                         ──▀──▀")
-        print("                         █▀▀▀▀▀█▄")
-        print("                         █░░░░░█─█")
-        print("                         ▀▄▄▄▄▄▀▀")
-        print("                                                          ")
-        print("----------------------------------------------------------")
-        print("| Los parámetros no son correctos para el                |")
-        print("| módulo mbtcu(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View,Fsc,|")
-        print("|               To,Break,Fcond)                          |")
-        print("----------------------------------------------------------")
+        print('''
+                ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                   
+                                   ElectricalWireSizes                   
+          
+               ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                                                         
+                                        ─▄▀─▄▀
+                                        ──▀──▀
+                                        █▀▀▀▀▀█▄
+                                        █░░░░░█─█
+                                        ▀▄▄▄▄▄▀▀
+                                                                         
+               ----------------------------------------------------------
+               | Los parámetros no son correctos para el                |
+               | módulo mbtcu(VF,VL,In,Nc,L,FA,Type,Ta,Vd,S,Fp,View,Fsc,|
+               |               To,Break,Fcond)                          |
+               ----------------------------------------------------------''')
         return         
 
-    if Ta >= 60:
-        FT60=0.0
-    else :
-        FT60=round(math.sqrt((60-Ta)/(60-30)),3)
-
-    if Ta >= 75:
-        FT75=0.0
-    else :
-        FT75=round(math.sqrt((75-Ta)/(75-30)),3)
-
-
-    if Ta >= 90:
-        FT90=0.0
-    else :
-        FT90=round(math.sqrt((90-Ta)/(90-30)),3)
+    FT60=fct(Ta,60)
+    FT75=fct(Ta,75)
+    FT90=fct(Ta,90)
 
     #SITM
 
@@ -183,14 +133,14 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
                 if (To==60):
 
-                    if ((round(datos[i][5],3)*FA*FT60>=(In)) and (((round(datos[i][5],3))/In)>Fcond)):
+                    if ((round(datos[i][5],3)*FA*FT60>=(In)) and (((round(datos[i][5],3))/In)>=Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
 
                 elif (To==75):
 
-                    if ((round(datos[i][6],3)*FA*FT75>=(In)) and (((round(datos[i][6],3))/In)>Fcond)):
+                    if ((round(datos[i][6],3)*FA*FT75>=(In)) and (((round(datos[i][6],3))/In)>=Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -198,7 +148,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
                 elif (To==90):
                     
-                    if ((round(datos[i][7],3)*FA*FT90>=(In)) and (((round(datos[i][7],3))/In)>Fcond)):
+                    if ((round(datos[i][7],3)*FA*FT90>=(In)) and (((round(datos[i][7],3))/In)>=Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -221,7 +171,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                     datos[i].append('NA')
                     break
                     
-                elif (SITM[j]>=Nc*(In/Fsc)*Break):
+                elif (SITM[j]>=(Nc*In*Fsc*Break)):
                     datos[i].append(SITM[j])
                     break
                     
@@ -251,14 +201,14 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
                 if (To==60):
 
-                    if ((round(datos[i][5],3)*FA*FT60>=(In)) and (((round(datos[i][5],3))/In)>Fcond)):
+                    if ((round(datos[i][5],3)*FA*FT60>=(In)) and (((round(datos[i][5],3))/In)>=Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
 
                 elif (To==75):
 
-                    if ((round(datos[i][6],3)*FA*FT75>=(In)) and (((round(datos[i][6],3))/In)>Fcond)):
+                    if ((round(datos[i][6],3)*FA*FT75>=(In)) and (((round(datos[i][6],3))/In)>=Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -266,7 +216,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
                 elif (To==90):
                     
-                    if ((round(datos[i][7],3)*FA*FT90>=(In)) and (((round(datos[i][7],3))/In)>Fcond)):
+                    if ((round(datos[i][7],3)*FA*FT90>=(In)) and (((round(datos[i][7],3))/In)>=Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -283,7 +233,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                     datos[i].append('NA')
                     break
                     
-                elif (SITM[j]>=Nc*(In/Fsc)*Break):
+                elif (SITM[j]>=(Nc*In*Fsc*Break)):
                     datos[i].append(SITM[j])
                     break                     
         
@@ -312,14 +262,14 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                 
                 if (To==60):
 
-                    if ((round(datos[i][5],3)*FA*FT60>=(In)) and (((round(datos[i][5],3))/In)>Fcond)):
+                    if ((round(datos[i][5],3)*FA*FT60>=(In)) and (((round(datos[i][5],3))/In)>=Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
 
                 elif (To==75):
 
-                    if ((round(datos[i][6],3)*FA*FT75>=(In)) and (((round(datos[i][6],3))/In)>Fcond)):
+                    if ((round(datos[i][6],3)*FA*FT75>=(In)) and (((round(datos[i][6],3))/In)>=Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -327,7 +277,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
                 elif (To==90):
                     
-                    if ((round(datos[i][7],3)*FA*FT90>=(In)) and (((round(datos[i][7],3))/In)>Fcond)):
+                    if ((round(datos[i][7],3)*FA*FT90>=(In)) and (((round(datos[i][7],3))/In)>=Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -344,7 +294,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                     datos[i].append('NA')
                     break
                     
-                elif (SITM[j]>=Nc*(In/Fsc)*Break):
+                elif (SITM[j]>=(Nc*In*Fsc*Break)):
                     datos[i].append(SITM[j])
                     break
 
@@ -375,14 +325,14 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                 
                 if (To==60):
 
-                    if ((round(datos[i][5],3)*FA*FT60>=(In)) and (((round(datos[i][5],3))/In)>Fcond)):
+                    if ((round(datos[i][5],3)*FA*FT60>=(In)) and (((round(datos[i][5],3))/In)>=Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
 
                 elif (To==75):
 
-                    if ((round(datos[i][6],3)*FA*FT75>=(In)) and (((round(datos[i][6],3))/In)>Fcond)):
+                    if ((round(datos[i][6],3)*FA*FT75>=(In)) and (((round(datos[i][6],3))/In)>=Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -390,7 +340,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
 
                 elif (To==90):
                     
-                    if ((round(datos[i][7],3)*FA*FT90>=(In)) and (((round(datos[i][7],3))/In)>Fcond)):
+                    if ((round(datos[i][7],3)*FA*FT90>=(In)) and (((round(datos[i][7],3))/In)>=Fcond)):
                         datos[i].append('Yes')
                     else:
                         datos[i].append('Not')
@@ -405,7 +355,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
                     datos[i].append('NA')
                     break
                     
-                elif (SITM[j]>=Nc*(In/Fsc)*Break):
+                elif (SITM[j]>=(Nc*In*Fsc*Break)):
                     datos[i].append(SITM[j])
                     break
     if View == 1:

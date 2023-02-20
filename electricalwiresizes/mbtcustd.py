@@ -1,86 +1,35 @@
-'''
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-| PYEWS, ElectricalWireSizes, 10/07/2022                                 |
-| Version : 0.1.30rc1                                                    |
-| Autor : Marco Polo Jacome Toss                                         |
-| License: GNU Affero General Public License v3 (GPL-3.0)                |
-| Requires: Python >=3.5                                                 |
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-Changelog:
-
-0.1.30rc1: Se modifica y clasifica las protecciones por sistema descartando
-           las no comerciales.
-
-0.1.29:    Versión estable, en esta nueva actualización se agrega al módulo
-           graph una línea indicadora de pérdida de tensión.
-
-0.1.29rc1: Se modifican los módulos mbtcu, mbtal, mbtcustd, dbcircuit, dbcircuitcd
-           adicionando un nuevo argumento Fcond y condiciones para el cumplimento
-           del 125% de ampacidad en alimentadores y circuitos derivados sin considerar
-           cualquier factor de ajuste, todas las versiones anteriores no cuentan con
-           esta condición y esto puede causar error cuando se tienen las condiciones
-           ideales en un conductor, sin agrupar y a temperatura ambiente de 30°C.
-
-0.1.28   : Versión estable.
-
-0.1.28rc2: Separación de operaciones, conductor y protección.
-
-0.1.28rc1: En esta versión se actualiza las protecciones y se actualiza
-           la fórmula de corriente incluyendo el factor de sobrecorriente,
-           en la versión 0.1.27 no se logra ver la actualización de la
-           corriente nominal.
-
-0.1.27rc3: En esta versión los módulos se han clasificado e independizado
-           en distintos archivos además se mejora la salida de datos
-           del módulo dbcircuit para funciones futuras.
-
-0.1.27:    Versione estable.
-
-'''
-
 import math, time
 from tabulate import tabulate
-from .bd import dbConductorCuStd, SITM
-from .basicelecfunc import Rn, RnCd, Rcd
+from .bd import dbConductorCuStd
+from .basicelecfunc import RnCd, Rcd, fct
 
 def mbtcustd(Vcd=None,In=None,Nc=None,L=None,Class=None,Ta=None,Vd=None,View=None,Fsc=None, To=None, Break=None, Fcond=None):
 
     if(Vcd==None or In==None or Nc==None or L==None or Class==None or Ta==None or Vd==None or View==None or Fsc==None or To==None or Break==None or Fcond==None):
         t = time.localtime()
-        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                    ElectricalWireSizes                   ")
-        print("                 ",time.asctime(t))
-        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                                                          ")
-        print("                         ─▄▀─▄▀")
-        print("                         ──▀──▀")
-        print("                         █▀▀▀▀▀█▄")
-        print("                         █░░░░░█─█")
-        print("                         ▀▄▄▄▄▄▀▀")
-        print("                                                          ")
-        print("----------------------------------------------------------")
-        print("| Los parámetros no son correctos                        |")
-        print("| para el módulo mbtcustd(Vcd,In,Nc,L,Class,Ta,Vd,View,  |")
-        print("|                           Fsc,To,Break,Fcond)          |")
-        print("---------------------------------------------------------|")
+        print('''
+                 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                   
+                                   ElectricalWireSizes                   
+                          
+                 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                                                         
+                                        ─▄▀─▄▀
+                                        ──▀──▀
+                                        █▀▀▀▀▀█▄
+                                        █░░░░░█─█
+                                        ▀▄▄▄▄▄▀▀
+                                                                         
+                 ----------------------------------------------------------
+                 | Los parámetros no son correctos                        |
+                 | para el módulo mbtcustd(Vcd,In,Nc,L,Class,Ta,Vd,View,  |
+                 |                           Fsc,To,Break,Fcond)          |
+                 ---------------------------------------------------------|''')
         return  
-
-    if Ta >= 60:
-        FT60=0.0
-    else :
-        FT60=round(math.sqrt((60-Ta)/(60-30)),3)
-
-    if Ta >= 75:
-        FT75=0.0
-    else :
-        FT75=round(math.sqrt((75-Ta)/(75-30)),3)
-
-    if Ta >= 90:
-        FT90=0.0
-    else :
-        FT90=round(math.sqrt((90-Ta)/(90-30)),3)
-
+    
+    FT60=fct(Ta,60)
+    FT75=fct(Ta,75)
+    FT90=fct(Ta,90)
 
     if Class==1:
     #Conductores en ducto de PVC
@@ -161,26 +110,28 @@ def mbtcustd(Vcd=None,In=None,Nc=None,L=None,Class=None,Ta=None,Vd=None,View=Non
         
         if Vd > D1:
             if (To==60):
-                if ((round(datos[i][4],3)*FT60>=(In)) and (((round(datos[i][4],3))/In)>Fcond)):
+                if ((round(datos[i][2],3)*FT60>=(In)) and (((round(datos[i][2],3))/In)>=Fcond)):
                     datos[i].append('Yes')
                 else:
                     datos[i].append('Not')
 
             elif (To==75):
-                if ((round(datos[i][5],3)*FT75>=(In)) and (((round(datos[i][5],3))/In)>Fcond)):
+                if ((round(datos[i][3],3)*FT75>=(In)) and (((round(datos[i][3],3))/In)>=Fcond)):
                     datos[i].append('Yes')
                 else:
                     datos[i].append('Not')
             elif (To==90):
-                if ((round(datos[i][6],3)*FT90>=(In)) and (((round(datos[i][6],3))/In)>Fcond)):
+                if ((round(datos[i][4],3)*FT90>=(In)) and (((round(datos[i][4],3))/In)>=Fcond)):
                     datos[i].append('Yes')
                 else:
                     datos[i].append('Not')
         else:
             datos[i].append('Not')                
         
+        SITM=[0,15,20,30,40,50,60,70,80,90,100,110,125,150,175,200,225,250,300,350,400,450,500,600,700,800,1000,1200,1600,2000,2500,3000,4000,5000,6000]
+
         for j in range(len(SITM)):
-            if (SITM[j]>=Nc*(In/Fsc)*Break):
+            if (SITM[j]>=(Nc*In*Fsc*Break)):
                 datos[i].append(SITM[j])
                 break
                 

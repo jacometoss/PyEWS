@@ -1,61 +1,4 @@
-'''
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-| PYEWS, ElectricalWireSizes, 10/07/2022                                 |
-| Version : 0.1.30rc1                                                    |
-| Autor : Marco Polo Jacome Toss                                         |
-| License: GNU Affero General Public License v3 (GPL-3.0)                |
-| Requires: Python >=3.5                                                 |
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-Changelog:
-
-0.1.30rc1: Se modifica y clasifica las protecciones por sistema descartando
-           las no comerciales.
-
-0.1.29:    Versión estable, en esta nueva actualización se agrega al módulo
-           graph una línea indicadora de pérdida de tensión.
-
-0.1.29rc1: Se modifican los módulos mbtcu, mbtal, mbtcustd, dbcircuit, dbcircuitcd
-           adicionando un nuevo argumento Fcond y condiciones para el cumplimento
-           del 125% de ampacidad en alimentadores y circuitos derivados sin considerar
-           cualquier factor de ajuste, todas las versiones anteriores no cuentan con
-           esta condición y esto puede causar error cuando se tienen las condiciones
-           ideales en un conductor, sin agrupar y a temperatura ambiente de 30°C.
-
-0.1.28   : Versión estable.
-
-0.1.28rc2: Separación de operaciones, conductor y protección.
-
-0.1.28rc1: En esta versión se actualiza las protecciones y se actualiza
-           la fórmula de corriente incluyendo el factor de sobrecorriente,
-           en la versión 0.1.27 no se logra ver la actualización de la
-           corriente nominal.
-
-0.1.27rc3: En esta versión los módulos se han clasificado e independizado
-           en distintos archivos además se mejora la salida de datos
-           del módulo dbcircuit para funciones futuras.
-
-0.1.27:    Versione estable.
-
-'''
-
-'''
-from .kElectric import mbtcu
-from .kElectric import mbtal
-from .kElectric import mbtcustd
-from .kElectric import dbc
-from .kElectric import Rn
-from .kElectric import Z
-from .kElectric import dbcircuit
-from .kElectric import dbcircuitcd
-from .kElectric import zpual
-from .kElectric import zpucu
-from .kElectric import graph
-from .kElectric import version
-from .kElectric import icc
-
-'''
-from .basicelecfunc import Rn, RnCd, Z, Rcd, dbc, FCT, zpucu, zpual
+from .basicelecfunc import Rn, RnCd, Z, Rcd, dbc, fct, zpucu, zpual, sistemaIn
 from .dbcircuit import dbcircuit
 from .dbcircuitcd import dbcircuitcd
 from .graph import autolabel, graph
@@ -64,3 +7,5 @@ from .mbtal import mbtal
 from .mbtcustd import mbtcustd
 from .shortcircuit import icc
 from .version import version
+from .distributioncu  import redbtcu
+from .changelog import changelog

@@ -1,44 +1,3 @@
-'''
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-| PYEWS, ElectricalWireSizes, 10/07/2022                                 |
-| Version : 0.1.30rc1                                                    |
-| Autor : Marco Polo Jacome Toss                                         |
-| License: GNU Affero General Public License v3 (GPL-3.0)                |
-| Requires: Python >=3.5                                                 |
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-Changelog:
-
-0.1.30rc1: Se modifica y clasifica las protecciones por sistema descartando
-           las no comerciales.
-
-0.1.29:    Versión estable, en esta nueva actualización se agrega al módulo
-           graph una línea indicadora de pérdida de tensión.
-
-0.1.29rc1: Se modifican los módulos mbtcu, mbtal, mbtcustd, dbcircuit, dbcircuitcd
-           adicionando un nuevo argumento Fcond y condiciones para el cumplimento
-           del 125% de ampacidad en alimentadores y circuitos derivados sin considerar
-           cualquier factor de ajuste, todas las versiones anteriores no cuentan con
-           esta condición y esto puede causar error cuando se tienen las condiciones
-           ideales en un conductor, sin agrupar y a temperatura ambiente de 30°C.
-
-0.1.28   : Versión estable.
-
-0.1.28rc2: Separación de operaciones, conductor y protección.
-
-0.1.28rc1: En esta versión se actualiza las protecciones y se actualiza
-           la fórmula de corriente incluyendo el factor de sobrecorriente,
-           en la versión 0.1.27 no se logra ver la actualización de la
-           corriente nominal.
-
-0.1.27rc3: En esta versión los módulos se han clasificado e independizado
-           en distintos archivos además se mejora la salida de datos
-           del módulo dbcircuit para funciones futuras.
-
-0.1.27:    Versione estable.
-
-'''
-
 from tabulate import tabulate
 import math, time
 from .bd import dbConductorCu, dbConductorAl
@@ -47,22 +6,24 @@ def icc(conductor=None,T1=None,T2=None,fhz=None,view=None):
 
     if((conductor==None or T1==None or T2==None or fhz==None or view==None)):
         t = time.localtime()
-        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                    ElectricalWireSizes                      ")
-        print("                 ",time.asctime(t))
-        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                                                             ")
-        print("                         ─▄▀─▄▀")
-        print("                         ──▀──▀")
-        print("                         █▀▀▀▀▀█▄")
-        print("                         █░░░░░█─█")
-        print("                         ▀▄▄▄▄▄▀▀")
-        print("                                                             ")
-        print("-------------------------------------------------------------")
-        print("| Los parámetros no son correctos                           |")
-        print("| para el módulo                                            |")
-        print("| icc(conductor,T1,T2,fhz,view)                             |") 
-        print("----------------------------------------------- -------------")
+        print('''
+                 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                   
+                                   ElectricalWireSizes                       
+                 
+                 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+                                                                             
+                                        ─▄▀─▄▀ 
+                                        ──▀──▀ 
+                                        █▀▀▀▀▀█▄ 
+                                        █░░░░░█─█ 
+                                        ▀▄▄▄▄▄▀▀ 
+                                                                             
+                  ------------------------------------------------------------- 
+                  | Los parámetros no son correctos                           | 
+                  | para el módulo                                            | 
+                  | icc(Conductor,T1,T2,Fhz,View)                             |  
+                  ------------------------------------------------------------- ''')
         return  
     
     if conductor==1:

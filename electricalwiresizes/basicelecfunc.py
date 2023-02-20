@@ -1,43 +1,3 @@
-'''
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-| PYEWS, ElectricalWireSizes, 10/07/2022                                 |
-| Version : 0.1.30rc1                                                    |
-| Autor : Marco Polo Jacome Toss                                         |
-| License: GNU Affero General Public License v3 (GPL-3.0)                |
-| Requires: Python >=3.5                                                 |
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-Changelog:
-
-0.1.30rc1: Se modifica y clasifica las protecciones por sistema descartando
-           las no comerciales.
-
-0.1.29:    Versión estable, en esta nueva actualización se agrega al módulo
-           graph una línea indicadora de pérdida de tensión.
-
-0.1.29rc1: Se modifican los módulos mbtcu, mbtal, mbtcustd, dbcircuit, dbcircuitcd
-           adicionando un nuevo argumento Fcond y condiciones para el cumplimento
-           del 125% de ampacidad en alimentadores y circuitos derivados sin considerar
-           cualquier factor de ajuste, todas las versiones anteriores no cuentan con
-           esta condición y esto puede causar error cuando se tienen las condiciones
-           ideales en un conductor, sin agrupar y a temperatura ambiente de 30°C.
-
-0.1.28   : Versión estable.
-
-0.1.28rc2: Separación de operaciones, conductor y protección.
-
-0.1.28rc1: En esta versión se actualiza las protecciones y se actualiza
-           la fórmula de corriente incluyendo el factor de sobrecorriente,
-           en la versión 0.1.27 no se logra ver la actualización de la
-           corriente nominal.
-
-0.1.27rc3: En esta versión los módulos se han clasificado e independizado
-           en distintos archivos además se mejora la salida de datos
-           del módulo dbcircuit para funciones futuras.
-
-0.1.27:    Versione estable.
-
-'''
 import math, time
 from tabulate import tabulate
 from .bd import dbConductorCu, dbConductorAl, dbConductorCuStd
@@ -46,21 +6,22 @@ def Rn(Ra=None,T2=None):
     
     if(Ra==None or T2==None):
         t = time.localtime()
-        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                    ElectricalWireSizes                    ")
-        print("                 ",time.asctime(t))
-        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                                                           ")
-        print("                          ▄▀─▄▀")
-        print("                         ──▀──▀")
-        print("                         █▀▀▀▀▀█▄")
-        print("                         █░░░░░█─█")
-        print("                         ▀▄▄▄▄▄▀▀")
-        print("                                                           ")
-        print("-----------------------------------------------------------")
-        print("| Los parámetros no son correctos para el                 |")
-        print("| módulo Rn(Ra,T2)                                        |")
-        print("-----------------------------------------------------------")
+        print(''':::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                   
+                                   ElectricalWireSizes                    
+                                
+                 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                                                          
+                                         ▄▀─▄▀
+                                        ──▀──▀
+                                        █▀▀▀▀▀█▄
+                                        █░░░░░█─█
+                                        ▀▄▄▄▄▄▀▀
+                                                                          
+                 -----------------------------------------------------------
+                 | Los parámetros no son correctos para el                 |
+                 | módulo Rn(Ra,T2)                                        |
+                 -----------------------------------------------------------''')
         return
     
     Rb=(Ra/(234.5+75))*(234.5+T2)
@@ -70,21 +31,22 @@ def RnCd(Ra=None,T2=None):
 
     if(Ra==None or T2==None):
         t = time.localtime()
-        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                    ElectricalWireSizes                    ")
-        print("                 ",time.asctime(t))
-        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                                                           ")
-        print("                          ▄▀─▄▀")
-        print("                         ──▀──▀")
-        print("                         █▀▀▀▀▀█▄")
-        print("                         █░░░░░█─█")
-        print("                         ▀▄▄▄▄▄▀▀")
-        print("                                                           ")
-        print("-----------------------------------------------------------")
-        print("| Los parámetros no son correctos para el                 |")
-        print("| módulo RnCd(Ra,T2)                                      |")
-        print("-----------------------------------------------------------")
+        print(''':::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                  
+                                   ElectricalWireSizes                    
+                      
+                 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                                                          
+                                         ▄▀─▄▀
+                                        ──▀──▀
+                                        █▀▀▀▀▀█▄
+                                        █░░░░░█─█
+                                        ▀▄▄▄▄▄▀▀
+                                                                          
+                 -----------------------------------------------------------
+                 | Los parámetros no son correctos para el                 |
+                 | módulo RnCd(Ra,T2)                                      |
+                 -----------------------------------------------------------''')
         return
     
     Rb=(Ra/(234.5+75))*(234.5+T2)
@@ -107,21 +69,24 @@ def dbc(conductor=None):
 
     if(conductor==None):
         t = time.localtime()
-        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                    ElectricalWireSizes                    ")
-        print("                 ",time.asctime(t))
-        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                                                           ")
-        print("                          ▄▀─▄▀")
-        print("                         ──▀──▀")
-        print("                         █▀▀▀▀▀█▄")
-        print("                         █░░░░░█─█")
-        print("                         ▀▄▄▄▄▄▀▀")
-        print("                                                           ")
-        print("-----------------------------------------------------------")
-        print("| Los parámetros no son correctos para el                 |")
-        print("| módulo dbc(conductor)                                   |")
-        print("-----------------------------------------------------------")
+        print('''
+                :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                  
+                                   ElectricalWireSizes                    
+
+                :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                                                          
+                                         ▄▀─▄▀
+                                        ──▀──▀
+                                        █▀▀▀▀▀█▄
+                                        █░░░░░█─█
+                                        ▀▄▄▄▄▄▀▀
+                                                                          
+                -----------------------------------------------------------
+                | Los parámetros no son correctos para el                 |
+                | módulo dbc(Conductor)                                   |
+                -----------------------------------------------------------
+                ''')
         return  
 
     if conductor ==1:
@@ -132,79 +97,81 @@ def dbc(conductor=None):
         print(tabulate(dbConductorCuStd, headers=["AWG/KCM","R[A](Ω/km)", "R[B](Ω/km)","R[C](Ω/km)", "60°C", "75°C", "90°C","S[mm²]"], tablefmt='psql'))
     elif (conductor>3 or conductor<=0):
         t = time.localtime()
-        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                    ElectricalWireSizes                    ")
-        print("                 ",time.asctime(t))
-        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                                                           ")
-        print("                         ─▄▀─▄▀")
-        print("                         ──▀──▀")
-        print("                         █▀▀▀▀▀█▄")
-        print("                         █░░░░░█─█")
-        print("                         ▀▄▄▄▄▄▀▀")
-        print("                                                           ")
-        print("-----------------------------------------------------------")
-        print("| Por el momento tenemos únicamente tres opciones         |")
-        print("| Cobre 1, Aluminio 2, Cobre CD                           |")
-        print("-----------------------------------------------------------")        
+        print('''
+                :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                  
+                                   ElectricalWireSizes                    
+                               
+                :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                                                          
+                                        ─▄▀─▄▀
+                                        ──▀──▀
+                                        █▀▀▀▀▀█▄
+                                        █░░░░░█─█
+                                        ▀▄▄▄▄▄▀▀
+                                                                          
+                -----------------------------------------------------------
+                | Por el momento tenemos únicamente tres opciones         |
+                | Cobre 1, Aluminio 2, Cobre CD                           |
+                -----------------------------------------------------------''')        
     
-def FCT(Ta=None):
+def fct(Ta=None,To=None):
 
-    if(Ta==None):
+    if(Ta==None and To==None):
         t = time.localtime()
-        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                    ElectricalWireSizes                    ")
-        print("                 ",time.asctime(t))
-        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                                                           ")
-        print("                         ─▄▀─▄▀")
-        print("                         ──▀──▀")
-        print("                         █▀▀▀▀▀█▄")
-        print("                         █░░░░░█─█")
-        print("                         ▀▄▄▄▄▄▀▀")
-        print("                                                           ")
-        print("-----------------------------------------------------------")
-        print("| Los parámetros no son correctos para el                 |")
-        print("| módulo FCT(Ta)                                          |")
-        print("-----------------------------------------------------------")
+        print('''
+                :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                   
+                                   ElectricalWireSizes                    
+                     
+                 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                                                          
+                                        ─▄▀─▄▀
+                                        ──▀──▀
+                                        █▀▀▀▀▀█▄
+                                        █░░░░░█─█
+                                        ▀▄▄▄▄▄▀▀
+                                                                          
+                -----------------------------------------------------------
+                | Los parámetros no son correctos para el                 |
+                | módulo fct(Ta,To)                                          |
+                -----------------------------------------------------------''')
         return  
 
-    if Ta >= 60:
-        FT60=0.0
+    if To == 60:
+        FT=round(math.sqrt((60-Ta)/(60-30)),3)
+        return FT
+    elif To == 75:
+        FT = round(math.sqrt((75-Ta)/(75-30)),3)
+        return FT
+    elif To == 90:
+        FT = round(math.sqrt((90-Ta)/(90-30)),3)
+        return FT
     else:
-        FT60=round(math.sqrt((60-Ta)/(60-30)),3)
-        return FT60
-    if Ta >= 75:
-        FT75=0.0
-    else:
-        FT75=round(math.sqrt((75-Ta)/(75-30)),3)
-        return FT75
-    if Ta >= 90:
-        FT90=0.0
-    else :
-        FT90=round(math.sqrt((90-Ta)/(90-30)),3)
-        return FT90
+        return 0
 
 
 def zpucu(Type=None,Ta=None,Fp=None,View=None):
 
     if(Type==None or Ta==None or Fp==None or View==None):
         t = time.localtime()
-        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                    ElectricalWireSizes                    ")
-        print("                 ",time.asctime(t))
-        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                                                           ")
-        print("                         ─▄▀─▄▀")
-        print("                         ──▀──▀")
-        print("                         █▀▀▀▀▀█▄")
-        print("                         █░░░░░█─█")
-        print("                         ▀▄▄▄▄▄▀▀")
-        print("                                                           ")
-        print("-----------------------------------------------------------")
-        print("| Los parámetros no son correctos para el                 |")
-        print("| módulo zpucu(Type,Ta,Fp,View)                           |")
-        print("-----------------------------------------------------------")
+        print('''
+                 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                  
+                                   ElectricalWireSizes                    
+                            
+                 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                                                          
+                                        ─▄▀─▄▀
+                                        ──▀──▀
+                                        █▀▀▀▀▀█▄
+                                        █░░░░░█─█
+                                        ▀▄▄▄▄▄▀▀
+                                                                          
+                 -----------------------------------------------------------
+                 | Los parámetros no son correctos para el                 |
+                 | módulo zpucu(Type,Ta,Fp,View)                           |
+                -----------------------------------------------------------''')
         return 
 
     if Type==1:
@@ -267,21 +234,23 @@ def zpual(Type=None,Ta=None,Fp=None,View=None):
 
     if(Type==None or Ta==None or Fp==None or View==None):
         t = time.localtime()
-        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                    ElectricalWireSizes                    ")
-        print("                 ",time.asctime(t))
-        print(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("                                                           ")
-        print("                         ─▄▀─▄▀")
-        print("                         ──▀──▀")
-        print("                         █▀▀▀▀▀█▄")
-        print("                         █░░░░░█─█")
-        print("                         ▀▄▄▄▄▄▀▀")
-        print("                                                           ")
-        print("-----------------------------------------------------------")
-        print("| Los parámetros no son correctos para                    |")
-        print("| el módulo zpual(Type,Ta,Fp,View)                        |")
-        print("-----------------------------------------------------------")
+        print('''
+                 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                   
+                                   ElectricalWireSizes                    
+                              
+                 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                                                          
+                                        ─▄▀─▄▀
+                                        ──▀──▀
+                                        █▀▀▀▀▀█▄
+                                        █░░░░░█─█
+                                        ▀▄▄▄▄▄▀▀
+                                                                          
+                 -----------------------------------------------------------
+                 | Los parámetros no son correctos para                    |
+                 | el módulo zpual(Type,Ta,Fp,View)                        |
+                 -----------------------------------------------------------''')
         return     
     
 
@@ -336,3 +305,42 @@ def zpual(Type=None,Ta=None,Fp=None,View=None):
         return print(tabulate(datos, headers=["AWG/KCM","1F/2H", "2F/3H","3F/3H","3F/4H"], tablefmt='psql'))
     elif (View==2):
         return  datos 
+
+def sistemaIn(Data,i):
+   
+    if Data[i][2]=="1F/2H":
+        if (Data[i][5])==0:
+            In=0
+        else:    
+            In=round((Data[i][4])/((Data[i][5])*(Data[i][6])),3)
+        return In
+   
+    elif Data[i][2]=="2F/2H":
+        if (Data[i][5])==0:
+            In=0
+        else:  
+            In=round((Data[i][4])/((Data[i][5])*(Data[i][6])),3)
+        return In
+   
+
+    elif Data[i][2]=="2F/3H":
+        if (Data[i][5])==0:
+            In=0
+        else:  
+            In=round((Data[i][4])/(2*(Data[i][5])*(Data[i][6])),3)
+        return In
+    
+    elif Data[i][2]=="3F/3H":
+        if (Data[i][5])==0:
+            In=0
+        else:  
+            In=round((Data[i][4])/(math.sqrt(3)*(Data[i][5])*(Data[i][6])),3)
+        return In
+    
+    elif Data[i][2]=="3F/4H":
+        if (Data[i][5])==0:
+            In=0
+        else:  
+            In=round((Data[i][4])/(math.sqrt(3)*(Data[i][5])*(Data[i][6])),3)
+        return In
+                      

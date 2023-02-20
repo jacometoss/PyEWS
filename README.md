@@ -215,3 +215,5 @@ Vea la información de Licencia de `ElectricalWireSizes` para más detalle.
 ------
 
 Copyright ©2023  en adelante, [ElectricalWireSizes](https://electricalwiresizes.org/)
+
+<a href="https://www.safecreative.org/work/2302203559827" xmlns:cc="http://creativecommons.org/ns#" rel="cc:license"><img src="https://resources.safecreative.org/work/2302203559827/label/standard-300" style="border:0;" alt="Safe Creative #2302203559827"/></a>

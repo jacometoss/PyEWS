@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='ElectricalWireSizes',
-    version='0.1.30rc1',
+    version='0.1.30',
     url='https://electricalwiresizes.org/',
     project_urls={
         'Documentation': 'https://pyews.readthedocs.io/',
@@ -10,6 +10,7 @@ setup(
         'Funding': 'https://ko-fi.com/jacometoss',
         'Forum': 'https://k-denveloper.blogspot.com/',
         'Bug Tracker': 'https://github.com/jacometoss/PyEWS/issues',
+        'Course': 'https://electricalwiresizes/courses',
     },    
     license='GPL-3.0',
     author='Marco Polo Jacome Toss',
@@ -32,6 +33,7 @@ setup(
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Scientific/Engineering :: Physics',
         'Topic :: Scientific/Engineering :: Mathematics',

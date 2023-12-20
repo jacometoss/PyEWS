@@ -3,7 +3,7 @@ from tabulate import tabulate
 from .basicelecfunc import Rn, RnCd, Z, Rcd, dbc, fct, zpucu, zpual, sistemaIn
 from tabulate import tabulate 
 
-def  redbtcu(network=None,conductors=None,view=None):
+def  redbtal(network=None,conductors=None,view=None):
 
     if(network==None or conductors==None  or view==None):
         t = time.localtime()
@@ -22,14 +22,14 @@ def  redbtcu(network=None,conductors=None,view=None):
                                                                            
                  ------------------------------------------------------------- 
                  | Los parámetros no son correctos para el módulo            | 
-                 | redbtcu(network,conductors,view)                           | 
+                 | redbtal(network,conductors,view)                           | 
                  -------------------------------------------------------------''') 
         return 
 
     dtb=network[:][:]
 
-    iDCal=["14 AWG", "12 AWG", "10 AWG", "8 AWG", "6 AWG", "4 AWG", "2 AWG", "1/0 AWG", "2/0 AWG", "3/0 AWG", "4/0 AWG", "250 KCM", "300 KCM", "350 KCM", "400 KCM", "500 KCM", "600 KCM", "750 KCM", "1000 KCM"]
-    iDAlm=["","1F/2H","2F/3H","3F/3H","3F/4H"]
+    iDCal=["6 AWG", "4 AWG", "2 AWG", "1/0 AWG", "2/0 AWG", "3/0 AWG", "4/0 AWG", "250 KCM", "300 KCM", "350 KCM", "400 KCM", "500 KCM", "600 KCM", "750 KCM", "1000 KCM"]
+    iDAlm=["", "1F/2H","2F/3H","3F/3H","3F/4H"]
 
 
 

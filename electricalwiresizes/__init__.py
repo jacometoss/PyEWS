@@ -8,4 +8,5 @@ from .mbtcustd import mbtcustd
 from .shortcircuit import icc
 from .version import version
 from .distributioncu  import redbtcu
+from .distributional  import redbtal
 from .changelog import changelog

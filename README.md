@@ -1,4 +1,4 @@
-![ElectricalWireSizes](https://github.com/jacometoss/PyEWS/blob/master/docs/logoElectricalWireSizes.svg)
+![ElectricalWireSizes](https://raw.githubusercontent.com/jacometoss/PyEWS/2fe097817c0a3299ff52f7e05a943032aaa2ba82/docs/logoElectricalWireSizes.svg)
 
 [![PyPI version](https://badge.fury.io/py/ElectricalWireSizes.svg)](https://badge.fury.io/py/ElectricalWireSizes) [![Downloads](https://static.pepy.tech/personalized-badge/electricalwiresizes?period=total&units=none&left_color=grey&right_color=blue&left_text=Downloads)](https://pepy.tech/project/electricalwiresizes) [![Downloads](https://pepy.tech/badge/electricalwiresizes/month)](https://pepy.tech/project/electricalwiresizes) [![versons of python supported](https://img.shields.io/badge/python-3%20%7C%203.5%20%7C%203.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue)](https://pypi.org/project/ElectricalWireSizes/) [![Maintainability](https://api.codeclimate.com/v1/badges/27c48038801ee954796d/maintainability) ](https://codeclimate.com/github/jacometoss/PyEWS/maintainability) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/8d8575adf7e149999e6bc84c657fc94e)](https://www.codacy.com/gh/jacometoss/PyEWS/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jacometoss/PyEWS&amp;utm_campaign=Badge_Grade)
 
@@ -67,7 +67,7 @@ Un resumen de los módulos disponibles para este paquete se muestra en la tabla 
 | 7      | Módulo para dimensionar múltiples conductores de material cobre en corriente directa. | [dbcircuitcd()](https://electricalwiresizes.org/dbcircuitcd.html) |
 | 8      | Módulo de gráficas de barras para conductores en corriente alterna. | [graph()](https://electricalwiresizes.org/graph.html)        |
 | 9      | Módulo de corto circuito (Icc) para conductores de cobre y aluminio. | [icc()](https://electricalwiresizes.org/icc.html)            |
-| 10     | Módulo de pérdidas de tensión (c.a.) en conductores de material cobre  por cargas distribuidas. | [rebtcu()](https://electricalwiresizes.org/rebtcu.html)      |
+| 10     | Módulo de pérdidas de tensión (c.a.) en conductores de material cobre  por cargas distribuidas. | [redbtcu()](https://electricalwiresizes.org/rebtcu.html)     |
 
 ## **Base de datos de conductores**
 
@@ -138,17 +138,19 @@ icc(1,75,200,60,1)
 
 ## **Desarrollador**
 
-La versión `0.1.30` es por el momento la más reciente. 
+La versión `0.1.31rc1` es por el momento la más reciente. 
 
 ```text
-[Packqge]: ElectricalWireSizes 0.1.30
+[Packqge]: ElectricalWireSizes 0.1.31rc1
 [Autor]: Marco Polo Jácome Toss
 [Licencia]: GNU General Public License v3.0
-[Fecha]: 22-Febrero-2023
+[Fecha]: 12-Diciembre-2023
 [Páis]: México
 ```
 
 ## **Control de versiones (Changelog)**
+
+**0.1.3rc1**: En esta nueva versión, se han corregido algunos detalles en el módulo `dcircuitcd()` y `redbtcu()`. Estos errores incluían la omisión del factor de corrección por temperatura en el resumen general y un desplazamiento de columnas en el desglose. [*19.12.2023*]
 
 **0.1.30**:  Versión estable. Incluye un nuevo módulo para calcular pérdidas de tensión en distintos puntos de caga y se agrega la opción de capacidad de corriente en los conductores para los módulos `mbtcu()` y  `mbtal()`. Además, se actualizan las protecciones del módulo `mbtcustd()`. [*19.02.2023*]
 
@@ -177,7 +179,7 @@ La versión `0.1.30` es por el momento la más reciente.
 ```mermaid
 graph TD
 
-B[ElectricalWireSizes 0.1.30]-->db[(Database)]
+B[ElectricalWireSizes 0.1.31rc1]-->db[(Database)]
 	db -->|load| A[mbtcu]-->|result| I[graph]
     db -->|load| C[mbtal]-->|result| I[graph]	
     db -->|load| D[mbtcustd]
@@ -215,5 +217,3 @@ Vea la información de Licencia de `ElectricalWireSizes` para más detalle.
 ------
 
 Copyright ©2023  en adelante, [ElectricalWireSizes](https://electricalwiresizes.org/)
-
-<a href="https://www.safecreative.org/work/2302203559827" xmlns:cc="http://creativecommons.org/ns#" rel="cc:license"><img src="https://resources.safecreative.org/work/2302203559827/label/standard-72" style="border:0;" alt="Safe Creative #2302203559827"/></a>

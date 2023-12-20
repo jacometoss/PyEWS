@@ -34,8 +34,8 @@ def dbcircuitcd(carga=None,view=None):
         datos.append(mbtcustd(carga[i][1],carga[i][2],carga[i][3],carga[i][4],carga[i][5],carga[i][6],carga[i][7],carga[i][8],carga[i][9],carga[i][10],carga[i][11],carga[i][12])) 
         if view==1:
             print("Id [",i+1,"]============================================================================================================")
-            print(tabulate(datos[i], headers=["AWG/KCM","Kcd [A,B,C]", "", "60", "75", "90","%Vd","Nc", "In", "60", "75", "90", "Op", "ITM"], tablefmt='psql'))
-
+            print(tabulate(datos[i], headers=["AWG/KCM","Kcd [A,B,C]", "60", "75", "90","%Vd","Nc", "In", "60", "75", "90", "Op", "ITM"], tablefmt='psql'))
+    
 
 
         
@@ -51,7 +51,7 @@ def dbcircuitcd(carga=None,view=None):
                 dbcircuit[i].append(carga[i][2])
                 dbcircuit[i].append(carga[i][7]) 
                 dbcircuit[i].append("CD [+-]")
-                dbcircuit[i].append(fct(carga[i][6]))
+                dbcircuit[i].append(fct(carga[i][6],carga[i][10])) 
                 dbcircuit[i].append(datos[i][j][2])
                 dbcircuit[i].append(datos[i][j][3])
                 dbcircuit[i].append(datos[i][j][4])

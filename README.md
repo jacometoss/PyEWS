@@ -1,4 +1,4 @@
-![ElectricalWireSizes](https://raw.githubusercontent.com/jacometoss/PyEWS/2fe097817c0a3299ff52f7e05a943032aaa2ba82/docs/logoElectricalWireSizes.svg)
+![ElectricalWireSizes](https://raw.githubusercontent.com/jacometoss/PyEWS/bc984b669bf20ea1dfda808551b3471f83c8dc32/docs/logoElectricalWireSizes.svg)
 
 [![PyPI version](https://badge.fury.io/py/ElectricalWireSizes.svg)](https://badge.fury.io/py/ElectricalWireSizes) [![Downloads](https://static.pepy.tech/personalized-badge/electricalwiresizes?period=total&units=none&left_color=grey&right_color=blue&left_text=Downloads)](https://pepy.tech/project/electricalwiresizes) [![Downloads](https://pepy.tech/badge/electricalwiresizes/month)](https://pepy.tech/project/electricalwiresizes) [![versons of python supported](https://img.shields.io/badge/python-3%20%7C%203.5%20%7C%203.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue)](https://pypi.org/project/ElectricalWireSizes/) [![Maintainability](https://api.codeclimate.com/v1/badges/27c48038801ee954796d/maintainability) ](https://codeclimate.com/github/jacometoss/PyEWS/maintainability) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/8d8575adf7e149999e6bc84c657fc94e)](https://www.codacy.com/gh/jacometoss/PyEWS/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jacometoss/PyEWS&amp;utm_campaign=Badge_Grade)
 
@@ -6,7 +6,7 @@
 
 [Electrical Wires Sizes](https://electricalwiresizes.org/) es un paquete hecho en el lenguaje de programación Python, creado con la finalidad de acortar el tiempo en el dimensionamiento de conductores eléctricos u obtención de secciones de conductores para una instalación eléctrica. Esta idea nace debido a la popularidad del lenguaje de programación Python y en la búsqueda de una aplicación de este lenguaje dentro del área de ingeniería eléctrica, específicamente para baja tensión. 
 
-En la práctica este paquete le será útil cuando trate de dimensionar una cantidad considerable de alimentadores y circuitos derivados, la versión actual cuenta por el momento con **10 módulos**, necesarios para dimensionar conductores en corriente alterna y directa usando los métodos de pérdida de tensión y capacidad de corriente, por otra parte, los resultados pueden ser visualizados mediante una lista o tabla estructurada, esta última depende de una librería conocida como `tabulate`.
+En la práctica este paquete le será útil cuando trate de dimensionar una cantidad considerable de alimentadores y circuitos derivados, la versión actual cuenta por el momento con **11 módulos**, necesarios para dimensionar conductores en corriente alterna y directa usando los métodos de pérdida de tensión y capacidad de corriente, por otra parte, los resultados pueden ser visualizados mediante una lista o tabla estructurada, esta última depende de una librería conocida como `tabulate`.
 
 La relación de las dependencias de este paquete con otros es baja,  `tabulate` es una dependencia de primer grado, por otra parte,  `numpy` y `matplotlib` se encuentran en segundo grado, estos últimos son un paquetes y una librería, por tanto,  ambos no se limitan a una versión en especifico para el uso del paquete ElectricalWireSizes. 
 
@@ -56,18 +56,19 @@ pip install ElectricalWireSizes
 
 Un resumen de los módulos disponibles para este paquete se muestra en la tabla siguiente:
 
-| **Id** | **Descripción**                                              | **Módulo**                                                   |
-| ------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 1      | Módulo de baja tensión (c.a.) para el dimensionamiento de conductores de cobre (clase B, C y D)  tensión máxima de operación de 600V y 2000V. | [mbtcu()](https://electricalwiresizes.org/mbtcu.html)        |
-| 2      | Módulo de baja tensión (c.a.) para el dimensionamiento de conductores de aluminio (clase B, C y  D) tensión máxima de operación de 600V y 2000V. | [mbtal()](https://electricalwiresizes.org/mbtal.html)        |
-| 3      | Módulo de baja tensión (c.d.) para el dimensionamiento de conductores de cobre (clase B, C  y D) tensión máxima de operación de 600V y 200V. | [mbtcustd()](https://electricalwiresizes.org/mbtcustd.tml)   |
-| 4      | Módulo de impedancia en conductores de cobre comerciales.    | [zpucu()](https://electricalwiresizes.org/zpucu.html)        |
-| 5      | Módulo de impedancia en conductores de aluminio comerciales. | [zpual()](https://electricalwiresizes.org/zpual.html)        |
-| 6      | Módulo para el dimensionamiento de múltiples conductores de material cobre y aluminio en corriente alterna. | [dbcircuit()](https://electricalwiresizes.org/dbcircuit.html) |
-| 7      | Módulo para dimensionar múltiples conductores de material cobre en corriente directa. | [dbcircuitcd()](https://electricalwiresizes.org/dbcircuitcd.html) |
-| 8      | Módulo de gráficas de barras para conductores en corriente alterna. | [graph()](https://electricalwiresizes.org/graph.html)        |
-| 9      | Módulo de corto circuito (Icc) para conductores de cobre y aluminio. | [icc()](https://electricalwiresizes.org/icc.html)            |
-| 10     | Módulo de pérdidas de tensión (c.a.) en conductores de material cobre  por cargas distribuidas. | [redbtcu()](https://electricalwiresizes.org/rebtcu.html)     |
+| **Id** | **Descripción**                                              | **Módulo**                                       |
+| ------ | ------------------------------------------------------------ | ------------------------------------------------ |
+| 1      | Módulo de baja tensión (c.a.) para el dimensionamiento de conductores de cobre (clase B, C y D)  tensión máxima de operación de 600V y 2000V. | [mbtcu()](https://electricalwiresizes.org)       |
+| 2      | Módulo de baja tensión (c.a.) para el dimensionamiento de conductores de aluminio (clase B, C y  D) tensión máxima de operación de 600V y 2000V. | [mbtal()](https://electricalwiresizes.org)       |
+| 3      | Módulo de baja tensión (c.d.) para el dimensionamiento de conductores de cobre (clase B, C  y D) tensión máxima de operación de 600V y 200V. | [mbtcustd()](https://electricalwiresizes.org)    |
+| 4      | Módulo de impedancia en conductores de cobre comerciales.    | [zpucu()](https://electricalwiresizes.org)       |
+| 5      | Módulo de impedancia en conductores de aluminio comerciales. | [zpual()](https://electricalwiresizes.org)       |
+| 6      | Módulo para el dimensionamiento de múltiples conductores de material cobre y aluminio en corriente alterna. | [dbcircuit()](https://electricalwiresizes.org)   |
+| 7      | Módulo para dimensionar múltiples conductores de material cobre en corriente directa. | [dbcircuitcd()](https://electricalwiresizes.org) |
+| 8      | Módulo de gráficas de barras para conductores en corriente alterna. | [graph()](https://electricalwiresizes.org)       |
+| 9      | Módulo de corto circuito (Icc) para conductores de cobre y aluminio. | [icc()](https://electricalwiresizes.org)         |
+| 10     | Módulo de pérdidas de tensión (c.a.) en conductores de material cobre  por cargas distribuidas. | [redbtcu()](https://electricalwiresizes.org)     |
+| 11     | Módulo de pérdidas de tensión (c.a.) en conductores de material aluminio  por cargas distribuidas. | [redbtal()](https://electricalwiresizes.org)     |
 
 ## **Base de datos de conductores**
 
@@ -138,19 +139,21 @@ icc(1,75,200,60,1)
 
 ## **Desarrollador**
 
-La versión `0.1.31rc1` es por el momento la más reciente. 
+La versión `0.1.31rc2` es por el momento la más reciente. 
 
 ```text
-[Packqge]: ElectricalWireSizes 0.1.31rc1
+[Packqge]: ElectricalWireSizes 0.1.31rc2
 [Autor]: Marco Polo Jácome Toss
 [Licencia]: GNU General Public License v3.0
-[Fecha]: 12-Diciembre-2023
+[Fecha]: 20-Diciembre-2023
 [Páis]: México
 ```
 
 ## **Control de versiones (Changelog)**
 
-**0.1.3rc1**: En esta nueva versión, se han corregido algunos detalles en el módulo `dcircuitcd()` y `redbtcu()`. Estos errores incluían la omisión del factor de corrección por temperatura en el resumen general y un desplazamiento de columnas en el desglose. [*19.12.2023*]
+**0.1.31rc2**: En esta nueva versión, se han corregido ciertos detalles en el módulo `redbtcu()` y se ha incorpotado el módulo `redbtal()`. Se detectaron errores que implicaban la omisión de separación en ciertos elementos (como los calibres de conductores) y su invocación en el archivo de inicio. [*20.12.2023*]
+
+**0.1.31rc1**: En esta nueva versión, se han corregido algunos detalles en el módulo `dcircuitcd()` y `redbtcu()`. Estos errores incluían la omisión del factor de corrección por temperatura en el resumen general y un desplazamiento de columnas en el desglose. [*19.12.2023*]
 
 **0.1.30**:  Versión estable. Incluye un nuevo módulo para calcular pérdidas de tensión en distintos puntos de caga y se agrega la opción de capacidad de corriente en los conductores para los módulos `mbtcu()` y  `mbtal()`. Además, se actualizan las protecciones del módulo `mbtcustd()`. [*19.02.2023*]
 
@@ -174,12 +177,12 @@ La versión `0.1.31rc1` es por el momento la más reciente.
 
 **0.1.27rc1** - Presenta un nuevo campo para el ajuste de la protección conforme a la NOM-001-SEDE-2012 de instalaciones eléctricas. Los módulos que sufrieron cambios son: `mtbcu` ,`mbtal`, `dbcircuit` conforme a los requerimientos de protección y capacidad de conductores.  [*13.03.2022*]
 
-## Estructura del paquete
+## **Estructura del paquete**
 
 ```mermaid
 graph TD
 
-B[ElectricalWireSizes 0.1.31rc1]-->db[(Database)]
+B[ElectricalWireSizes 0.1.31rc2]-->db[(Database)]
 	db -->|load| A[mbtcu]-->|result| I[graph]
     db -->|load| C[mbtal]-->|result| I[graph]	
     db -->|load| D[mbtcustd]

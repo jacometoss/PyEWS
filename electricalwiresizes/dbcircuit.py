@@ -26,7 +26,7 @@ def dbcircuit(carga=None,view=None,conductor=None, output=None):
                                                                           
                  -------------------------------------------------------------
                  | Los parámetros no son correctos                           |
-                 | para el módulo dbcircuit(Load,View,Conductor,Output)     |
+                 | para el módulo dbcircuit(Load,View,Conductor,Output)      |
                  -------------------------------------------------------------''')
         return  
     

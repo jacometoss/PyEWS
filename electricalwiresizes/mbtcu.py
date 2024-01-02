@@ -9,7 +9,7 @@ def mbtcu(VF=None,VL=None,In=None,Nc=None,L=None,FA=None,Type=None,Ta=None,Vd=No
     if(VF==None or VL==None or In==None or Nc==None or L==None or FA==None or Type==None or Ta==None or Vd==None or S==None or Fp==None or View==None or Fsc==None or To==None or Break==None or Fcond==None):
         t = time.localtime()
         print('''
-                ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+               ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
                                    
                                    ElectricalWireSizes                   
           

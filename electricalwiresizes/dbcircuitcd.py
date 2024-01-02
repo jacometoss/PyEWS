@@ -9,7 +9,7 @@ def dbcircuitcd(carga=None,view=None):
     if(carga==None or view==None):
         t = time.localtime()
         print('''
-                 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+                 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
                                 
                                     ElectricalWireSizes                       
                              

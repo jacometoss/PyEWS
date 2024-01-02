@@ -8,7 +8,7 @@ def  redbtal(network=None,conductors=None,view=None):
     if(network==None or conductors==None  or view==None):
         t = time.localtime()
         print('''
-                 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+                 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
                                 
                                     ElectricalWireSizes                       
                              
@@ -22,7 +22,7 @@ def  redbtal(network=None,conductors=None,view=None):
                                                                            
                  ------------------------------------------------------------- 
                  | Los parámetros no son correctos para el módulo            | 
-                 | redbtal(network,conductors,view)                           | 
+                 | redbtal(network,conductors,view)                          | 
                  -------------------------------------------------------------''') 
         return 
 

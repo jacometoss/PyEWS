@@ -8,7 +8,7 @@ def  redbtcu(network=None,conductors=None,view=None):
     if(network==None or conductors==None  or view==None):
         t = time.localtime()
         print('''
-                 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+                 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
                                 
                                     ElectricalWireSizes                       
                              
@@ -22,7 +22,7 @@ def  redbtcu(network=None,conductors=None,view=None):
                                                                            
                  ------------------------------------------------------------- 
                  | Los parámetros no son correctos para el módulo            | 
-                 | redbtcu(network,conductors,view)                           | 
+                 | redbtcu(network,conductors,view)                          | 
                  -------------------------------------------------------------''') 
         return 
 

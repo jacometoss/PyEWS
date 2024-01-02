@@ -1,14 +1,14 @@
-![ElectricalWireSizes](https://raw.githubusercontent.com/jacometoss/PyEWS/bc984b669bf20ea1dfda808551b3471f83c8dc32/docs/logoElectricalWireSizes.svg)
+![ElectricalWireSizes](https://raw.githubusercontent.com/jacometoss/PyEWS/56e048a0bba953805fd0509fa18912c166007e63/docs/logoElectricalWireSizes.svg)
 
 [![PyPI version](https://badge.fury.io/py/ElectricalWireSizes.svg)](https://badge.fury.io/py/ElectricalWireSizes) [![Downloads](https://static.pepy.tech/personalized-badge/electricalwiresizes?period=total&units=none&left_color=grey&right_color=blue&left_text=Downloads)](https://pepy.tech/project/electricalwiresizes) [![Downloads](https://pepy.tech/badge/electricalwiresizes/month)](https://pepy.tech/project/electricalwiresizes) [![versons of python supported](https://img.shields.io/badge/python-3%20%7C%203.5%20%7C%203.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue)](https://pypi.org/project/ElectricalWireSizes/) [![Maintainability](https://api.codeclimate.com/v1/badges/27c48038801ee954796d/maintainability) ](https://codeclimate.com/github/jacometoss/PyEWS/maintainability) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/8d8575adf7e149999e6bc84c657fc94e)](https://www.codacy.com/gh/jacometoss/PyEWS/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jacometoss/PyEWS&amp;utm_campaign=Badge_Grade)
 
-# **Electrical Wire Sizes** 
+# **ElectricalWireSizes** 
 
-[Electrical Wires Sizes](https://electricalwiresizes.org/) es un paquete hecho en el lenguaje de programación Python, creado con la finalidad de acortar el tiempo en el dimensionamiento de conductores eléctricos u obtención de secciones de conductores para una instalación eléctrica. Esta idea nace debido a la popularidad del lenguaje de programación Python y en la búsqueda de una aplicación de este lenguaje dentro del área de ingeniería eléctrica, específicamente para baja tensión. 
+[ElectricalWiresSizes](https://electricalwiresizes.org/) es un paquete hecho en el lenguaje de programación Python, creado con la finalidad de acortar el tiempo en el dimensionamiento de conductores eléctricos u obtención de secciones de conductores para una instalación eléctrica. Esta idea nace debido a la popularidad del lenguaje de programación Python y en la búsqueda de una aplicación de este lenguaje dentro del área de ingeniería eléctrica, específicamente para baja tensión. 
 
-En la práctica este paquete le será útil cuando trate de dimensionar una cantidad considerable de alimentadores y circuitos derivados, la versión actual cuenta por el momento con **11 módulos**, necesarios para dimensionar conductores en corriente alterna y directa usando los métodos de pérdida de tensión y capacidad de corriente, por otra parte, los resultados pueden ser visualizados mediante una lista o tabla estructurada, esta última depende de una librería conocida como `tabulate`.
+En la práctica este paquete le será útil cuando trate de dimensionar una cantidad considerable de alimentadores y circuitos derivados, la versión actual cuenta por el momento con **12 módulos**, necesarios para dimensionar conductores en corriente alterna y directa usando los métodos de pérdida de tensión y capacidad de corriente, por otra parte, los resultados pueden ser visualizados mediante una lista o tabla estructurada, esta última depende de una librería conocida como `tabulate`.
 
-La relación de las dependencias de este paquete con otros es baja,  `tabulate` es una dependencia de primer grado, por otra parte,  `numpy` y `matplotlib` se encuentran en segundo grado, estos últimos son un paquetes y una librería, por tanto,  ambos no se limitan a una versión en especifico para el uso del paquete ElectricalWireSizes. 
+La relación de las dependencias de este paquete con otros es baja,  `tabulate` es una dependencia de primer grado, por otra parte,  `numpy` y `matplotlib` se encuentran en segundo grado, estos últimos son un paquete y una librería, por tanto,  ambos no se limitan a una versión en especifico para el uso del paquete ElectricalWireSizes. 
 
 La consulta de la versión de este paquete se realiza mediante la instrucción siguiente:
 
@@ -38,11 +38,11 @@ La vida es como una batería y en cada momento uno va perdiendo una pequeña par
 
 El [donativo](https://ko-fi.com/jacometoss) apoya a este proyecto, la aportación mínima es de $2 dólares, algo insignificante para algo de este nivel.
 
-## Curso instruccional ElectricalWireSizes
+## **Curso instruccional ElectricalWireSizes**
 
-Si eres de las personas que no les gusta esperar y desea impulsar el desarrollo del software libre puedes adquirir el curso instruccional, en este se explica la forma correcta de usar el paquete ElectricalWireSizes, para adquirirlo da [clic auí](https://electricalwiresizes.org/courses/ews0130).
+Si eres de las personas que no les gusta esperar y desea impulsar el desarrollo del software libre puedes adquirir el curso instruccional, en este se explica la forma correcta de usar el paquete ElectricalWireSizes, para adquirirlo da [clic aquí](https://electricalwiresizes.org/courses/ews0131).
 
-El curso esta estructurado en tres unidades y 20 lecciones, puedes consultar el contenido dando [clic aquí](https://electricalwiresizes.org/courses/ews0130).
+El curso esta estructurado en lecciones, puedes consultar el contenido dando [clic aquí](https://electricalwiresizes.org/courses/ews0131).
 
 ## **Instalación**
 
@@ -69,6 +69,7 @@ Un resumen de los módulos disponibles para este paquete se muestra en la tabla 
 | 9      | Módulo de corto circuito (Icc) para conductores de cobre y aluminio. | [icc()](https://electricalwiresizes.org)         |
 | 10     | Módulo de pérdidas de tensión (c.a.) en conductores de material cobre  por cargas distribuidas. | [redbtcu()](https://electricalwiresizes.org)     |
 | 11     | Módulo de pérdidas de tensión (c.a.) en conductores de material aluminio  por cargas distribuidas. | [redbtal()](https://electricalwiresizes.org)     |
+| 12     | Módulo de exportación de resultados en formato CSV.          | [list_to_csv()](https://electricalwiresizes.org) |
 
 ## **Base de datos de conductores**
 
@@ -139,17 +140,19 @@ icc(1,75,200,60,1)
 
 ## **Desarrollador**
 
-La versión `0.1.31rc2` es por el momento la más reciente. 
+La versión `0.1.31` es por el momento la más reciente. 
 
 ```text
-[Packqge]: ElectricalWireSizes 0.1.31rc2
+[Packqge]: ElectricalWireSizes 0.1.31
 [Autor]: Marco Polo Jácome Toss
 [Licencia]: GNU General Public License v3.0
-[Fecha]: 20-Diciembre-2023
+[Fecha]: 01/Enero/2023
 [Páis]: México
 ```
 
 ## **Control de versiones (Changelog)**
+
+**0.1.31**: En esta actualización, se ha introducido el módulo `list_to_csv()`, el cual facilita la exportación de los resultados obtenidos mediante los módulos de corriente alterna (`mbtcu()`, `mbtal()`). [*01.01.2024*]
 
 **0.1.31rc2**: En esta nueva versión, se han corregido ciertos detalles en el módulo `redbtcu()` y se ha incorpotado el módulo `redbtal()`. Se detectaron errores que implicaban la omisión de separación en ciertos elementos (como los calibres de conductores) y su invocación en el archivo de inicio. [*20.12.2023*]
 
@@ -179,12 +182,18 @@ La versión `0.1.31rc2` es por el momento la más reciente.
 
 ## **Estructura del paquete**
 
+![EWS.0.1.31](https://mermaid.ink/img/pako:eNqFk91O4zAQhV_FmitWClGSNj_NBdJCu7BIlIsiIa1TIccewCKJI8dG0KbvjtOyoogicuV4zudzPLbXwJVAyOFBs_aR3EyLpmhO6axCbrTkrLqVGhdyhR0J_NAfhcvj4xNR0qMpM6xkHf5aFg1xnyiJq_SVYqInv2ldGm4Hba-xs5XpyV-6tfBIJTtzZ9Qd754PsWcDy6qfWUIO0NOdc2fE57VbplmNBnXXkxldtdal-1bwZxC4CN8KLqnk_L08-1LVgmrc7v9LQFc9p6LkUnMrzXKYJxeULmyplTWyweU7c7GPPH20k0gRnsyVIedDQw6Jqx_En9NcfaThYpdnfijPfB-6HiyGFu88oj0PQsCDGnXNpHC3aj3QBZhHrLGA3A0F3jN3pgUUzcZJmTVq8dpwyI226IFtBTM4lcwdeA35Pas6N9uy5p9S9X-R-4V8DS-QjwM_mIzGURKMg0mWjRIPXiGPUj8KkyCepFGWxVkcZhsPVtsFAn-SpmmcREmYRXGchI5AIY3SV7t3sH0OmzfXdABD?type=png)
+
+## **Mermaid ElectricalWireSizes 0.1.31**
+
+
+
 ```mermaid
 graph TD
 
-B[ElectricalWireSizes 0.1.31rc2]-->db[(Database)]
-	db -->|load| A[mbtcu]-->|result| I[graph]
-    db -->|load| C[mbtal]-->|result| I[graph]	
+B[ElectricalWireSizes 0.1.31]-->db[(Database)]
+	db -->|load| A[mbtcu]-->|result| I[graph, list_to_csv]
+    db -->|load| C[mbtal]-->|result| I[graph, list_to_csv]	
     db -->|load| D[mbtcustd]
     db -->|parameters| E[zpucu]
     db -->|parameters| F[zpual]
@@ -209,7 +218,7 @@ B[ElectricalWireSizes 0.1.31rc2]-->db[(Database)]
 
 ## **Copyright**
 
-Copyright © 2023 en adelante, Marco Polo Jácome Toss (http://electricalwiresizes.org).
+©2024 en adelante, Marco Polo Jácome Toss (http://electricalwiresizes.org).
 
 Este programa es software libre: usted puede redistribuirlo y /o modificarlo bajo los términos de la Licencia General GNU (GNU **General Public License**) publicado por la Fundación para el Software Libre para la versión 3 de dicha Licencia o anterior, o cualquier versión posterior.
 
@@ -219,4 +228,4 @@ Vea la información de Licencia de `ElectricalWireSizes` para más detalle.
 
 ------
 
-Copyright ©2023  en adelante, [ElectricalWireSizes](https://electricalwiresizes.org/)
+©2024  en adelante, [ElectricalWireSizes](https://electricalwiresizes.org/)

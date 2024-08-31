@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>GFCI / AFCI - ElectricalWireSizes</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/scilab.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/lisp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/php.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DT6VLCNRN"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', "G-1DT6VLCNRN");
+        </script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="..">ElectricalWireSizes</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Inicio</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Cursos <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../ews130ci/" class="dropdown-item">ElectricalWireSizes</a>
+</li>
+                                    
+<li>
+    <a href="../faq/" class="dropdown-item">Preguntas frecuentes</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="https://ko-fi.com/jacometoss#" class="nav-link">Donar</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Documentos <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">GFCI / AFCI</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../faq/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#interruptores-afci-y-gfci" class="nav-link">Interruptores AFCI y GFCI</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#diferencias-gfci-y-afci" class="nav-link">Diferencias GFCI y AFCI</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tabla-comparativa-gfci-afci" class="nav-link">Tabla comparativa GFCI / AFCI</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#recomendaciones" class="nav-link">Recomendaciones</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p><img alt="ElectricalWireSizes" src="https://raw.githubusercontent.com/jacometoss/PyEWS/56e048a0bba953805fd0509fa18912c166007e63/docs/logoElectricalWireSizes.svg" /></p>
+<h1 id="interruptores-afci-y-gfci"><strong>Interruptores AFCI y GFCI</strong><a class="headerlink" href="#interruptores-afci-y-gfci" title="Permanent link">&para;</a></h1>
+<p>Los interruptores AFCI y GFCI son dispositivos de seguridad que se utilizan para proteger a las personas de descargas eléctricas. Si bien ambos tienen el mismo objetivo final, funcionan de manera diferente y brindan protección contra diferentes tipos de fallas eléctricas.</p>
+<p><img src="https://cdn11.bigcommerce.com/s-mivyx18b6b/images/stencil/1280x1280/products/9774/20936/644cb703bb4abbc0ee09189f9402df350012ebff__22521.1615938663.jpg?c=1" style="zoom: 25%;" /></p>
+<h2 id="diferencias-gfci-y-afci"><strong>Diferencias GFCI y AFCI</strong><a class="headerlink" href="#diferencias-gfci-y-afci" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Característica</strong></th>
+<th style="text-align: left;"><strong>AFCI</strong></th>
+<th style="text-align: left;"><strong>GFCI</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Tipo de falla que detecta</strong></td>
+<td style="text-align: left;">Arcos eléctricos</td>
+<td style="text-align: left;">Fugas de corriente a tierra</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ubicación de instalación</strong></td>
+<td style="text-align: left;">Dormitorios, salas de estar, áreas con riesgo de incendio</td>
+<td style="text-align: left;">Lugares húmedos, áreas con equipos electrónicos sensibles</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Costo</strong></td>
+<td style="text-align: left;">Más caro</td>
+<td style="text-align: left;">Más económico</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Método de detección</strong></td>
+<td style="text-align: left;">Análisis de la forma de onda de la corriente, sensores de detección de arco</td>
+<td style="text-align: left;">Sensor de detección de fugas a tierra</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Protección contra</strong></td>
+<td style="text-align: left;">Incendios causados por arcos eléctricos</td>
+<td style="text-align: left;">Descargas eléctricas causadas por fugas de corriente a tierra</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ejemplos de aplicaciones</strong></td>
+<td style="text-align: left;">Cableado de dormitorios, cableado de salas de estar, cableado de extensiones</td>
+<td style="text-align: left;">Tomas de corriente en baños, cocinas, cocheras, exteriores</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sensibilidad</strong></td>
+<td style="text-align: left;">Ajustable en algunos modelos</td>
+<td style="text-align: left;">Fija</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mantenimiento</strong></td>
+<td style="text-align: left;">Requiere pruebas periódicas</td>
+<td style="text-align: left;">No requiere mantenimiento regular</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Norma eléctrica</strong></td>
+<td style="text-align: left;">NEC Artículo 210.12                                                                    NOM Artículo 210-12</td>
+<td style="text-align: left;">NEC Artículo 210.8                                        NOM Artículo 210-8</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tabla-comparativa-gfci-afci"><strong>Tabla comparativa GFCI / AFCI</strong><a class="headerlink" href="#tabla-comparativa-gfci-afci" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Característica</strong></th>
+<th style="text-align: left;"><strong>AFCI</strong></th>
+<th style="text-align: left;"><strong>GFCI</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Tipo de falla que detecta</td>
+<td style="text-align: left;">Arcos eléctricos</td>
+<td style="text-align: left;">Fugas de corriente a tierra</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ubicación de instalación</td>
+<td style="text-align: left;">Dormitorios, salas de estar, áreas con riesgo de incendio</td>
+<td style="text-align: left;">Lugares húmedos, áreas con equipos electrónicos sensibles</td>
+</tr>
+<tr>
+<td style="text-align: left;">Costo</td>
+<td style="text-align: left;">Más caro</td>
+<td style="text-align: left;">Más económico</td>
+</tr>
+</tbody>
+</table>
+<h2 id="recomendaciones"><strong>Recomendaciones</strong><a class="headerlink" href="#recomendaciones" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Se recomienda instalar AFCI en dormitorios, salas de estar y otras áreas con riesgo de incendio.</li>
+<li>Se recomienda instalar GFCI en lugares húmedos y áreas con equipos electrónicos sensibles.</li>
+<li>Si no está seguro de qué tipo de interruptor necesita, consulte con un electricista calificado.</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>©2024 en adelante, <a href="https://electricalwiresizes.org/">ElectricalWireSizes</a></p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

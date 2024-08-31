@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Dimensionamiento de conductores elécticos en baja tensión">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>ElectricalWireSizes</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/scilab.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/lisp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/php.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DT6VLCNRN"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', "G-1DT6VLCNRN");
+        </script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href=".">ElectricalWireSizes</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem active">
+                                <a href="." class="nav-link">Inicio</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Cursos <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="ews130ci/" class="dropdown-item">ElectricalWireSizes</a>
+</li>
+                                    
+<li>
+    <a href="faq/" class="dropdown-item">Preguntas frecuentes</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="https://ko-fi.com/jacometoss#" class="nav-link">Donar</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Documentos <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="gfci_afci/" class="dropdown-item">GFCI / AFCI</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="ews130ci/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#electricalwiresizes" class="nav-link">ElectricalWireSizes</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#donativos" class="nav-link">Donativos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#curso-instruccional-electricalwiresizes" class="nav-link">Curso instruccional ElectricalWireSizes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#instalacion" class="nav-link">Instalación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#modulos" class="nav-link">Módulos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#base-de-datos-de-conductores" class="nav-link">Base de datos de conductores</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#graficar-resultados" class="nav-link">Graficar resultados</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#corto-circuito-en-conductores" class="nav-link">Corto circuito en conductores</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#desarrollador" class="nav-link">Desarrollador</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#control-de-versiones-changelog" class="nav-link">Control de versiones (Changelog)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#estructura-del-paquete" class="nav-link">Estructura del paquete</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#referencias" class="nav-link">Referencias</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#copyright" class="nav-link">Copyright</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p><img alt="ElectricalWireSizes" src="https://raw.githubusercontent.com/jacometoss/PyEWS/56e048a0bba953805fd0509fa18912c166007e63/docs/logoElectricalWireSizes.svg" /></p>
+<p><a href="https://badge.fury.io/py/ElectricalWireSizes"><img alt="PyPI version" src="https://badge.fury.io/py/ElectricalWireSizes.svg" /></a> <a href="https://pepy.tech/project/electricalwiresizes"><img alt="Downloads" src="https://static.pepy.tech/personalized-badge/electricalwiresizes?period=total&amp;units=none&amp;left_color=grey&amp;right_color=blue&amp;left_text=Downloads" /></a> <a href="https://pepy.tech/project/electricalwiresizes"><img alt="Downloads" src="https://pepy.tech/badge/electricalwiresizes/month" /></a> <a href="https://pypi.org/project/ElectricalWireSizes/"><img alt="versons of python supported" src="https://img.shields.io/badge/python-3%20%7C%203.5%20%7C%203.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue" /></a> <a href="https://codeclimate.com/github/jacometoss/PyEWS/maintainability"><img alt="Maintainability" src="https://api.codeclimate.com/v1/badges/27c48038801ee954796d/maintainability" /> </a> <a href="https://www.codacy.com/gh/jacometoss/PyEWS/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jacometoss/PyEWS&amp;utm_campaign=Badge_Grade"><img alt="Codacy Badge" src="https://app.codacy.com/project/badge/Grade/8d8575adf7e149999e6bc84c657fc94e" /></a></p>
+<h1 id="electricalwiresizes"><strong>ElectricalWireSizes</strong><a class="headerlink" href="#electricalwiresizes" title="Permanent link">&para;</a></h1>
+<p><a href="https://electricalwiresizes.org/">ElectricalWiresSizes</a> es un paquete hecho en el lenguaje de programación Python, creado con la finalidad de acortar el tiempo en el dimensionamiento de conductores eléctricos u obtención de secciones de conductores para una instalación eléctrica. Esta idea nace debido a la popularidad del lenguaje de programación Python y en la búsqueda de una aplicación de este lenguaje dentro del área de ingeniería eléctrica, específicamente para baja tensión. </p>
+<p>En la práctica este paquete le será útil cuando trate de dimensionar una cantidad considerable de alimentadores y circuitos derivados, la versión actual cuenta por el momento con <strong>12 módulos</strong>, necesarios para dimensionar conductores en corriente alterna y directa usando los métodos de pérdida de tensión y capacidad de corriente, por otra parte, los resultados pueden ser visualizados mediante una lista o tabla estructurada, esta última depende de una librería conocida como <code>tabulate</code>.</p>
+<p>La relación de las dependencias de este paquete con otros es baja,  <code>tabulate</code> es una dependencia de primer grado, por otra parte,  <code>numpy</code> y <code>matplotlib</code> se encuentran en segundo grado, estos últimos son un paquete y una librería, por tanto,  ambos no se limitan a una versión en especifico para el uso del paquete ElectricalWireSizes. </p>
+<p>La consulta de la versión de este paquete se realiza mediante la instrucción siguiente:</p>
+<pre><code class="language-python">version()
+</code></pre>
+<blockquote>
+<p>Este programa se basa en el Sistema Métrico Decimal y NOM-001-SEDE-2012 de Instalaciones Eléctricas publicada en el DOF de México, en futuras versiones se incluirá el Sistema Imperial y NEC-2020 exclusivo para Estados Unidos. </p>
+<p>&ldquo;Puedes apoyar el desarrollo de este proyecto mediante un donativo&rdquo;, <a href="https://ko-fi.com/jacometoss">clic aquí</a>.</p>
+</blockquote>
+<h2 id="donativos"><strong><a href="https://ko-fi.com/jacometoss">Donativos</a></strong><a class="headerlink" href="#donativos" title="Permanent link">&para;</a></h2>
+<p>¿Te gusta este proyecto?, puedes apoyarlo mediante un donativo</p>
+<p>La vida es como una batería y en cada momento uno va perdiendo una pequeña parte de esta cada día, puedes apoyar el desarrollo de este proyecto para que sea de mejor utilidad. Si desconoces del medio proporcionado puedes contactarme, se basa en el sistema de pagos de PayPal.</p>
+<p><a href="https://ko-fi.com/jacometoss">El apoyo es en forma representativa al precio de un café &hellip;</a></p>
+<pre><code>       ─▄▀─▄▀
+       ──▀──▀
+       █▀▀▀▀▀█▄
+       █░░░░░█─█
+       ▀▄▄▄▄▄▀▀
+   Url para donativos      
+https://ko-fi.com/jacometoss
+</code></pre>
+<p>El <a href="https://ko-fi.com/jacometoss">donativo</a> apoya a este proyecto, la aportación mínima es de $2 dólares, algo insignificante para algo de este nivel.</p>
+<h2 id="curso-instruccional-electricalwiresizes"><strong>Curso instruccional ElectricalWireSizes</strong><a class="headerlink" href="#curso-instruccional-electricalwiresizes" title="Permanent link">&para;</a></h2>
+<p>Si eres de las personas que no les gusta esperar y desea impulsar el desarrollo del software libre puedes adquirir el curso instruccional, en este se explica la forma correcta de usar el paquete ElectricalWireSizes, para adquirirlo da <a href="https://electricalwiresizes.org/courses/ews0131">clic aquí</a>.</p>
+<p>El curso esta estructurado en lecciones, puedes consultar el contenido dando <a href="https://electricalwiresizes.org/courses/ews0131">clic aquí</a>.</p>
+<h2 id="instalacion"><strong>Instalación</strong><a class="headerlink" href="#instalacion" title="Permanent link">&para;</a></h2>
+<p>La instalación de la última versión de este paquete se obtiene mediante la instrucción siguiente:</p>
+<pre><code class="language-Python">pip install ElectricalWireSizes
+</code></pre>
+<h2 id="modulos"><strong>Módulos</strong><a class="headerlink" href="#modulos" title="Permanent link">&para;</a></h2>
+<p>Un resumen de los módulos disponibles para este paquete se muestra en la tabla siguiente:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Id</strong></th>
+<th><strong>Descripción</strong></th>
+<th><strong>Módulo</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Módulo de baja tensión (c.a.) para el dimensionamiento de conductores de cobre (clase B, C y D)  tensión máxima de operación de 600V y 2000V.</td>
+<td><a href="https://electricalwiresizes.org">mbtcu()</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Módulo de baja tensión (c.a.) para el dimensionamiento de conductores de aluminio (clase B, C y  D) tensión máxima de operación de 600V y 2000V.</td>
+<td><a href="https://electricalwiresizes.org">mbtal()</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Módulo de baja tensión (c.d.) para el dimensionamiento de conductores de cobre (clase B, C  y D) tensión máxima de operación de 600V y 200V.</td>
+<td><a href="https://electricalwiresizes.org">mbtcustd()</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Módulo de impedancia en conductores de cobre comerciales.</td>
+<td><a href="https://electricalwiresizes.org">zpucu()</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Módulo de impedancia en conductores de aluminio comerciales.</td>
+<td><a href="https://electricalwiresizes.org">zpual()</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Módulo para el dimensionamiento de múltiples conductores de material cobre y aluminio en corriente alterna.</td>
+<td><a href="https://electricalwiresizes.org">dbcircuit()</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Módulo para dimensionar múltiples conductores de material cobre en corriente directa.</td>
+<td><a href="https://electricalwiresizes.org">dbcircuitcd()</a></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Módulo de gráficas de barras para conductores en corriente alterna.</td>
+<td><a href="https://electricalwiresizes.org">graph()</a></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Módulo de corto circuito (Icc) para conductores de cobre y aluminio.</td>
+<td><a href="https://electricalwiresizes.org">icc()</a></td>
+</tr>
+<tr>
+<td>10</td>
+<td>Módulo de pérdidas de tensión (c.a.) en conductores de material cobre  por cargas distribuidas.</td>
+<td><a href="https://electricalwiresizes.org">redbtcu()</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td>Módulo de pérdidas de tensión (c.a.) en conductores de material aluminio  por cargas distribuidas.</td>
+<td><a href="https://electricalwiresizes.org">redbtal()</a></td>
+</tr>
+<tr>
+<td>12</td>
+<td>Módulo de exportación de resultados en formato CSV.</td>
+<td><a href="https://electricalwiresizes.org">list_to_csv()</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="base-de-datos-de-conductores"><strong>Base de datos de conductores</strong><a class="headerlink" href="#base-de-datos-de-conductores" title="Permanent link">&para;</a></h2>
+<p>El paquete contiene un registro de conductores comerciales y en este se incluye las reactancias, ampacidades y secciones, se debe agregar que para ingresar al contenido debe importar correctamente el paquete con el módulo deseado e ingresar la instrucción siguiente:</p>
+<pre><code class="language-python">dbc(1)
+</code></pre>
+<h2 id="graficar-resultados"><strong>Graficar resultados</strong><a class="headerlink" href="#graficar-resultados" title="Permanent link">&para;</a></h2>
+<p>Mediante el uso de  <code>matplotlib</code> y <code>numpy</code>  es posible obtener un gráfico de las pérdidas de tensión alterna para los conductores comerciales de cobre o aluminio. El gráfico que se muestra al final del párrafo contiene las pérdidas de tensión de los conductores de material aluminio cuando se implementa un sistema monofásico de una fase dos hilos.</p>
+<p><img alt="graph" src="https://i.ibb.co/XFzQyZJ/Graph2.jpg" /></p>
+<p>El procedimiento para generar el gráfico anterior es usando las instrucciones siguientes:</p>
+<pre><code class="language-python">mydata=mbtal(127,220,55,1,45,1,1,35,3,1,0.9,2,1,60,1.25,1.25)
+graph(mydata,&quot;6 AWG&quot;,&quot;4/0 AWG&quot;, 8, 5, 2,&quot;k&quot;,1,3)
+</code></pre>
+<p>El llenado del módulo es un poco complejo y se requiere lo siguiente:</p>
+<ul>
+<li>Primero, realizar un cálculo con el módulo  <code>mbtcu</code>  o  <code>mbtal</code> y el resultado obtenido se guarda en una nueva variable; por ejemplo,  <code>mydata</code> .</li>
+<li>Segundo, se transfiere los resultados al módulo <code>graph</code> como se muestra en el bloque siguiente: </li>
+</ul>
+<pre><code class="language-python">graph(mydata,&quot;Calibre Inicial&quot;,&quot;Calibre Final&quot;, Ancho, Alto, Aluminio/Cobre, &quot;Color&quot;,Sistema)
+</code></pre>
+<p>Es posible limitar los conductores en el gráfico, por otra parte, las secciones de los conductores se deben escribir entre comillas dobles indicando un conductor inicial y un conductor final que se encuentre disponible en la base de datos, habría que decir también que el ancho y alto del gráfico debe estar en pulgadas y en formato <code>integer</code> o <code>float</code>. </p>
+<p>El gráfico puede únicamente contener un material conductor (<code>1:Cobre, 2:Aluminio</code>) y el color de las barras habitualmente son (<code>k: negro</code>, <code>b: azul</code>, <code>g:verde</code>, <code>r:rojo</code>), estos colores son estándar en reportes, no obstante, puede usar otros disponibles dentro de la paleta de colores de <code>matplotlib</code>. </p>
+<p>Finalmente, la selección del sistema (<code>1:1F-2H</code>,<code>2:2F-3H</code>,<code>3:3F-3H</code> y <code>4:3F:4H</code>) es indispensable indicarlo y conviene subrayar que el arreglo de datos (<code>mydata</code>) debe ser en formato lista y no tabla para que funcione correctamente el módulo <code>graph</code>.</p>
+<h2 id="corto-circuito-en-conductores"><strong>Corto circuito en conductores</strong><a class="headerlink" href="#corto-circuito-en-conductores" title="Permanent link">&para;</a></h2>
+<p>Desde la versión 0.1.22 se incluye el cálculo de corto circuito para los conductores de cobre y aluminio para tensión de corriente alterna, este módulo dimensiona un conductor en estado de corto circuito y se incluye desfasado de los módulos restantes para evitar un dimensionamiento excesivo y más cuando no existe un estudio de corto circuito formal.</p>
+<p>Algunas instrucciones de este módulo son:</p>
+<pre><code class="language-python">icc(conductor,t1,t2,fhz,view)
+'''
+    #conductor: Material conductor.
+    ---- 1:(1F-2H) 2:(2F-3H) 3:(3F-3H) 4:(3F-4H)
+    #t1: Temperatura de operación en °C.
+    #t2: Temperatura de corto circuito en °C.
+    #fhz: Frecuencia 50hz o 60hz.
+    #view: Modo de visualizar
+    ---- 1:(Tabla) 2:(Lista) 
+ '''
+</code></pre>
+<p>Un ejemplo práctico para obtener las corriente de corto circuito de los conductores comerciales de material cobre se muestra en el bloque siguiente:</p>
+<pre><code class="language-python">icc(1,75,200,60,1)
+</code></pre>
+<p><img alt="" src="https://i.ibb.co/PwpdbTj/nivel-corto-circuito-conductores-cobre-aluminio.jpg" /></p>
+<blockquote>
+<p>Los materiales termoplásticos son usados para el aislamiento de conductores de material cobre o aluminio, entre estos se encuentra el <strong>PVC</strong>, este tiene una temperatura de operación en corto circuito de 105, 130 y 150 grados centígrados. En condiciones  normales o de operación continua las temperaturas del aislamiento termoplástico son básicamente de 60, 75 y 90 grados centígrados, por tanto, en condiciones normales se deben relacionar con las temperaturas correspondientes. </p>
+<p>Los materiales termoestables son aislamientos de <strong>XLPE</strong> y <strong>EPR</strong> para conductores de material cobre o aluminio,  la temperatura  de corto circuito de estos aislamientos es de 250 grados centígrados y se relaciona con la temperatura operación continua de 90 °C del conductor.</p>
+</blockquote>
+<h2 id="desarrollador"><strong>Desarrollador</strong><a class="headerlink" href="#desarrollador" title="Permanent link">&para;</a></h2>
+<p>La versión <code>0.1.31</code> es por el momento la más reciente. </p>
+<pre><code class="language-text">[Packqge]: ElectricalWireSizes 0.1.31
+[Autor]: Marco Polo Jácome Toss
+[Licencia]: GNU General Public License v3.0
+[Fecha]: 01/Enero/2023
+[Páis]: México
+</code></pre>
+<h2 id="control-de-versiones-changelog"><strong>Control de versiones (Changelog)</strong><a class="headerlink" href="#control-de-versiones-changelog" title="Permanent link">&para;</a></h2>
+<p><strong>0.1.31</strong>: En esta actualización, se ha introducido el módulo <code>list_to_csv()</code>, el cual facilita la exportación de los resultados obtenidos mediante los módulos de corriente alterna (<code>mbtcu()</code>, <code>mbtal()</code>). [<em>01.01.2024</em>]</p>
+<p><strong>0.1.31rc2</strong>: En esta nueva versión, se han corregido ciertos detalles en el módulo <code>redbtcu()</code> y se ha incorpotado el módulo <code>redbtal()</code>. Se detectaron errores que implicaban la omisión de separación en ciertos elementos (como los calibres de conductores) y su invocación en el archivo de inicio. [<em>20.12.2023</em>]</p>
+<p><strong>0.1.31rc1</strong>: En esta nueva versión, se han corregido algunos detalles en el módulo <code>dcircuitcd()</code> y <code>redbtcu()</code>. Estos errores incluían la omisión del factor de corrección por temperatura en el resumen general y un desplazamiento de columnas en el desglose. [<em>19.12.2023</em>]</p>
+<p><strong>0.1.30</strong>:  Versión estable. Incluye un nuevo módulo para calcular pérdidas de tensión en distintos puntos de caga y se agrega la opción de capacidad de corriente en los conductores para los módulos <code>mbtcu()</code> y  <code>mbtal()</code>. Además, se actualizan las protecciones del módulo <code>mbtcustd()</code>. [<em>19.02.2023</em>]</p>
+<p><strong>0.1.30rc1</strong>:  Se modifica y clasifica las protecciones por sistema descartando las no comerciales. [<em>10.07.2022</em>]</p>
+<p><strong>0.1.29</strong>: Versión estable. En esta nueva actualización se agrega al módulo <code>graph</code> una línea indicadora de pérdida de tensión.[<em>07.07.2022</em>]</p>
+<p><strong>0.1.29rc1</strong>: Se modifican los módulos <code>mbtcu</code>, <code>mbtal</code>, <code>mbtcustd</code>, <code>dbcircuit</code>, <code>dbcircuitcd</code> adicionando un nuevo argumento <code>Fcond</code> y condiciones para el cumplimento del 125% de ampacidad en alimentadores y circuitos derivados sin considerar cualquier factor de ajuste. Todas las versiones anteriores no cuentan con esta condición y esto puede causar error cuando se tienen las condiciones ideales en un conductor, sin agrupar y a temperatura ambiente de 30°C. [<em>03.07.2022</em>]</p>
+<p><strong>0.1.28</strong>: Versión estable. [<em>15.06.2022</em>]</p>
+<p><strong>0.1.28rc2</strong>: Separación de operaciones entre conductor y protección.[<em>02.06.2022</em>]</p>
+<p><strong>0.1.28rc1</strong> - En esta versión se actualiza las protecciones y la fórmula de corriente incluyendo el factor de sobrecorriente. En la versión 0.1.27 no se logra ver la actualización de la corriente nominal en la lista o tabla. [<em>01.06.2022</em>]</p>
+<p><strong>0.1.27</strong> - Versión estable. [<em>20.04.2022</em>]</p>
+<p><strong>0.1.27rc3</strong> - En esta versión los módulos se han clasificado e independizado en distintos archivos, además se mejora la salida de datos del módulo <code>dbcircuit</code> para funciones futuras. [<em>20.04.2022</em>]</p>
+<p><strong>0.1.27rc2</strong> - Corrección de  fechas de actualización en módulos. Los módulos <code>mbtcustd</code>, <code>dbcircuitcd</code> fueron modificados conforme a los requerimientos de protección y capacidad de corriente de los conductores.  [<em>19.03.2022</em>]</p>
+<p><strong>0.1.27rc1</strong> - Presenta un nuevo campo para el ajuste de la protección conforme a la NOM-001-SEDE-2012 de instalaciones eléctricas. Los módulos que sufrieron cambios son: <code>mtbcu</code> ,<code>mbtal</code>, <code>dbcircuit</code> conforme a los requerimientos de protección y capacidad de conductores.  [<em>13.03.2022</em>]</p>
+<h2 id="estructura-del-paquete"><strong>Estructura del paquete</strong><a class="headerlink" href="#estructura-del-paquete" title="Permanent link">&para;</a></h2>
+<p><a href="https://mermaid.live/edit#pako:eNqNk1FvmzAQx7-K5adNIghDAoWHStuStpvU7CGTJs1ElbFvqzXAyBzTmpDvPgOdkqypND_Zd7-_7--zvafSKKAZ_WFF80i-LPM6r9_zVQkSrZai_KotbPQOWhL4zI_Ydja7VgV_sxQoCtHC261ToCqIi_elEaon73hVoOwGsrfQdiX25CMfC3ik1C0-oHmQ7S-nJG6caT8MWlH-hxYvqJdT5RbV-d6NsKICBNv2ZMV3TefcvQrcDICz8CrwiWspn9OrF1mruIXx_BNx85KAkfi3xHAEl73lqpDayk7jdoiTO843XWFNh7qG7bPm7lTy89hwohW7Xhskt0PLLsHlscMX4XM390c3Uk1-1pf8rE9Fn4_XMFUJT6o4eJJQj1ZgK6GVe377IZZTfIQKcpq5qYLvwl1_TvP64FDRodk81ZJmaDvwaNcogbDUwr2N6m-wEfU3Y06XNNvT3zSbLRjzk3Q-T-IouIpYEHr0yYXDcOGn4TxOWMxYmi5YcvDobtwi9NmCBXGUsjSIk-gq8igojcbeTx9m_DeHP5FGDrc"><img alt="EWS_0_1_31" src="https://mermaid.ink/img/pako:eNqNk1FvmzAQx7-K5adNIghDAoWHStuStpvU7CGTJs1ElbFvqzXAyBzTmpDvPgOdkqypND_Zd7-_7--zvafSKKAZ_WFF80i-LPM6r9_zVQkSrZai_KotbPQOWhL4zI_Ydja7VgV_sxQoCtHC261ToCqIi_elEaon73hVoOwGsrfQdiX25CMfC3ik1C0-oHmQ7S-nJG6caT8MWlH-hxYvqJdT5RbV-d6NsKICBNv2ZMV3TefcvQrcDICz8CrwiWspn9OrF1mruIXx_BNx85KAkfi3xHAEl73lqpDayk7jdoiTO843XWFNh7qG7bPm7lTy89hwohW7Xhskt0PLLsHlscMX4XM390c3Uk1-1pf8rE9Fn4_XMFUJT6o4eJJQj1ZgK6GVe377IZZTfIQKcpq5qYLvwl1_TvP64FDRodk81ZJmaDvwaNcogbDUwr2N6m-wEfU3Y06XNNvT3zSbLRjzk3Q-T-IouIpYEHr0yYXDcOGn4TxOWMxYmi5YcvDobtwi9NmCBXGUsjSIk-gq8igojcbeTx9m_DeHP5FGDrc?type=png" /></a></p>
+<pre><code class="language-mermaid">graph TD
+
+B[ElectricalWireSizes 0.1.31]--&gt;db[(Database)]
+    db --&gt;|load| A[mbtcu]--&gt;|result| I[graph, list_to_csv]
+    db --&gt;|load| C[mbtal]--&gt;|result| I[graph, list_to_csv]  
+    db --&gt;|load| D[mbtcustd]
+    db --&gt;|parameters| E[zpucu]
+    db --&gt;|parameters| F[zpual]
+    db --&gt;|parameters| J[icc]
+    E --&gt;|parameters| rd1[rebtcu]
+    F --&gt;|parameters| rd2[rebtal]
+    db --&gt;|loads| G[dbcircuit] --&gt; H[[Subroutine]]
+    H --&gt;|loads| k[mbtcu]--&gt; id1&gt;Not Graph]
+    H --&gt;|loads| l[mbtcu]--&gt; id1&gt;Not Graph]
+    db --&gt;|loads| M[dbcircuitcd] --&gt; N[[Subroutine]]
+    N --&gt;|loads| O[mbtstd]--&gt; id2&gt;Not Graph]   
+</code></pre>
+<h2 id="referencias"><strong>Referencias</strong><a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h2>
+<p>[1] Norma Oficial Mexicana NOM-001-SEDE-2012, Instalaciones Eléctricas (utilización)</p>
+<p>[2] Thue, W., 1978. Electrical Power Cable Engineering. 2nd ed. New York, Basel: Marcel Dekker Inc., p.34.</p>
+<p>[3] Norma Oficial Mexicana NOM-001-SEDE-2018, Instalaciones Eléctricas (utilización)</p>
+<h2 id="copyright"><strong>Copyright</strong><a class="headerlink" href="#copyright" title="Permanent link">&para;</a></h2>
+<p>©2024 en adelante, Marco Polo Jácome Toss (http://electricalwiresizes.org).</p>
+<p>Este programa es software libre: usted puede redistribuirlo y /o modificarlo bajo los términos de la Licencia General GNU (GNU <strong>General Public License</strong>) publicado por la Fundación para el Software Libre para la versión 3 de dicha Licencia o anterior, o cualquier versión posterior.</p>
+<p>Este programa se distribuye con la esperanza de que sea útil pero sin ninguna garantía; incluso sin la garantía implícita de comercialización o idoneidad para  un propósito en particular.</p>
+<p>Vea la información de Licencia de <code>ElectricalWireSizes</code> para más detalle.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>©2024 en adelante, <a href="https://electricalwiresizes.org/">ElectricalWireSizes</a></p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.5.3
+Build Date UTC : 2024-03-18 22:22:47.666132+00:00
+-->
